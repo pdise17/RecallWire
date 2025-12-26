@@ -2,7 +2,7 @@
 
 Complete pricing strategy, competitive analysis, and go-to-market materials for RecallWire's multi-tier pricing model.
 
-**Last Updated:** December 2024
+**Last Updated:** December 2025
 
 ---
 

@@ -2,7 +2,7 @@
 
 Documentation of medical device recall workflows from FDA initiation through hospital response and closure.
 
-**Last Updated:** December 2024
+**Last Updated:** December 2025
 
 ---
 

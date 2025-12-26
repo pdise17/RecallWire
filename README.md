@@ -132,10 +132,10 @@ Medical device recall workflows from FDA initiation through hospital response.
 
 | Directory | Documents | Last Updated |
 |-----------|-----------|--------------|
-| Deliverables | 12 | December 2024 |
-| Medical Devices | 7 | December 2024 |
-| Workflows | 6 | December 2024 |
-| **Total** | **25** | December 2024 |
+| Deliverables | 12 | December 2025 |
+| Medical Devices | 7 | December 2025 |
+| Workflows | 6 | December 2025 |
+| **Total** | **25** | December 2025 |
 
 ---
 

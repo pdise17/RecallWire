@@ -2,7 +2,7 @@
 
 Market intelligence on medical device manufacturers, FDA recall activity, hospital buyers, competitive landscape, and regulatory requirements for RecallWire market targeting.
 
-**Last Updated:** December 2024
+**Last Updated:** December 2025
 
 ---
 
