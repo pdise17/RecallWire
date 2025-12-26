@@ -15,6 +15,7 @@ This folder contains market intelligence on medical device manufacturers, focusi
 | [02-vendors-by-recall-count.md](./02-vendors-by-recall-count.md) | Vendors ranked by FDA recall events (2020-2024) |
 | [03-hospital-buyer-landscape.md](./03-hospital-buyer-landscape.md) | GPOs, IDNs, health systems, and key decision makers |
 | [04-device-categories-recall-patterns.md](./04-device-categories-recall-patterns.md) | Deep-dive analysis by device category: cardiovascular, respiratory, infusion, orthopedic, imaging, IVD, SaMD |
+| [05-competitive-landscape.md](./05-competitive-landscape.md) | Recall management solutions: ECRI, NotiSphere, Inmar, InVita, Armis, and market positioning |
 
 ## Key Insights
 
