@@ -16,6 +16,7 @@ This folder contains market intelligence on medical device manufacturers, focusi
 | [03-hospital-buyer-landscape.md](./03-hospital-buyer-landscape.md) | GPOs, IDNs, health systems, and key decision makers |
 | [04-device-categories-recall-patterns.md](./04-device-categories-recall-patterns.md) | Deep-dive analysis by device category: cardiovascular, respiratory, infusion, orthopedic, imaging, IVD, SaMD |
 | [05-competitive-landscape.md](./05-competitive-landscape.md) | Recall management solutions: ECRI, NotiSphere, Inmar, InVita, Armis, and market positioning |
+| [06-regulatory-timeline.md](./06-regulatory-timeline.md) | FDA, EU MDR, and accreditation requirements with deadlines and compliance timelines |
 
 ## Key Insights
 
