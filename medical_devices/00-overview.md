@@ -14,6 +14,7 @@ This folder contains market intelligence on medical device manufacturers, focusi
 | [01-top-companies-by-revenue.md](./01-top-companies-by-revenue.md) | Top 100+ medical device companies ranked by annual revenue |
 | [02-vendors-by-recall-count.md](./02-vendors-by-recall-count.md) | Vendors ranked by FDA recall events (2020-2024) |
 | [03-hospital-buyer-landscape.md](./03-hospital-buyer-landscape.md) | GPOs, IDNs, health systems, and key decision makers |
+| [04-device-categories-recall-patterns.md](./04-device-categories-recall-patterns.md) | Deep-dive analysis by device category: cardiovascular, respiratory, infusion, orthopedic, imaging, IVD, SaMD |
 
 ## Key Insights
 
