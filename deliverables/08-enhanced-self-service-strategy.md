@@ -2,12 +2,10 @@
 
 ## Executive Summary
 
-Enhanced self-service is a strategic initiative to improve margins at Starter, Professional, and Business tiers by reducing human support costs while maintaining (or improving) customer satisfaction. The goal is to shift from reactive support to proactive, AI-assisted guidance.
+Enhanced self-service is a strategic initiative to improve margins at Standard tier by reducing human support costs while maintaining (or improving) customer satisfaction. The goal is to shift from reactive support to proactive, AI-assisted guidance.
 
 **Margin impact potential:**
-- Starter: +5-8% net margin improvement
-- Professional: +6-10% net margin improvement
-- Business: +8-12% net margin improvement
+- Standard tier: +8-12% net margin improvement
 
 ---
 
@@ -56,13 +54,13 @@ Resolution (minutes to hours)
 
 **Tier availability:**
 
-| Capability | Starter | Professional | Business | Enterprise |
-|------------|---------|--------------|----------|------------|
-| Basic Q&A | Yes | Yes | Yes | Yes |
-| Workflow guidance | Limited | Yes | Yes | Yes |
-| Troubleshooting | - | Basic | Advanced | Advanced |
-| Account-specific context | - | - | Yes | Yes |
-| Custom training | - | - | - | Yes |
+| Capability | Standard | Enterprise |
+|------------|----------|------------|
+| Basic Q&A | Yes | Yes |
+| Workflow guidance | Yes | Yes |
+| Troubleshooting | Basic | Advanced |
+| Account-specific context | Limited | Yes |
+| Custom training | — | Yes |
 
 **Example interactions:**
 
@@ -159,7 +157,7 @@ Step 1 of 5: Review Alert Details
 
 ### 4. Community & Peer Support
 
-**RecallWire Community Forum** (Professional+ tiers):
+**RecallWire Community Forum** (All tiers):
 
 ```
 Community
@@ -218,12 +216,12 @@ Escalation Flow:
 
 **Escalation tiers:**
 
-| Issue Type | Starter | Professional | Business | Enterprise |
-|------------|---------|--------------|----------|------------|
-| Billing | Email (48hr) | Email (24hr) | Email (8hr) | Phone (4hr) |
-| Technical | Email (48hr) | Email (24hr) | Email (8hr) | Phone (4hr) |
-| Urgent (system down) | Email (24hr) | Email (8hr) | Phone (4hr) | Phone (1hr) |
-| Feature request | Community | Community | CSM | Dedicated CSM |
+| Issue Type | Standard | Enterprise |
+|------------|----------|------------|
+| Billing | Email (24hr) | Phone (4hr) |
+| Technical | Email (24hr) | Phone (4hr) |
+| Urgent (system down) | Email (8hr) | Phone (1hr) |
+| Feature request | Community | Dedicated CSM |
 
 ---
 
@@ -276,15 +274,14 @@ Quick Actions:
 ### Phase 2: Launch with Self-Service Tiers
 
 **Deliverables:**
-- [ ] Self-service onboarding flow (Starter)
-- [ ] Guided onboarding flow (Professional)
+- [ ] Self-service onboarding flow (Standard)
+- [ ] White-glove onboarding flow (Enterprise)
 - [ ] Community forum launch
 - [ ] Proactive health alerts
 - [ ] Smart escalation with context
 
 **Success metrics:**
-- Starter tier: <1 support ticket per customer per month
-- Professional tier: <0.5 tickets per customer per month
+- Standard tier: <1 support ticket per customer per month
 - Self-service resolution rate: 60%+
 
 ---
@@ -311,19 +308,17 @@ Quick Actions:
 
 | Tier | Customers | Support Cost/Customer | Total Support Cost |
 |------|-----------|----------------------|-------------------|
-| Starter | 200 | $150/yr | $30,000 |
-| Professional | 100 | $400/yr | $40,000 |
-| Business | 50 | $1,600/yr | $80,000 |
-| **Total** | **350** | - | **$150,000** |
+| Standard | 200 | $400/yr | $80,000 |
+| Enterprise | 50 | $3,000/yr | $150,000 |
+| **Total** | **250** | - | **$230,000** |
 
 ### Enhanced Self-Service Model (Target)
 
 | Tier | Customers | Support Cost/Customer | Total Support Cost | Savings |
 |------|-----------|----------------------|-------------------|---------|
-| Starter | 200 | $50/yr | $10,000 | $20,000 |
-| Professional | 100 | $150/yr | $15,000 | $25,000 |
-| Business | 50 | $800/yr | $40,000 | $40,000 |
-| **Total** | **350** | - | **$65,000** | **$85,000** |
+| Standard | 200 | $150/yr | $30,000 | $50,000 |
+| Enterprise | 50 | $2,500/yr | $125,000 | $25,000 |
+| **Total** | **250** | - | **$155,000** | **$75,000** |
 
 ### Investment Required
 
@@ -340,14 +335,14 @@ Quick Actions:
 
 ```
 Year 1:
-  Support savings: $85,000
+  Support savings: $75,000
   Investment: $55,000 (one-time) + $18,000 (ongoing)
-  Net benefit: $12,000
+  Net benefit: $2,000
 
 Year 2+:
-  Support savings: $85,000
+  Support savings: $75,000
   Investment: $18,000 (ongoing)
-  Net benefit: $67,000/year
+  Net benefit: $57,000/year
 ```
 
 ---
@@ -363,7 +358,7 @@ Year 2+:
 | **AI Assistant satisfaction** | 4.0/5.0 | Post-interaction rating |
 | **Time to resolution (self-service)** | <5 min | From question to answer |
 | **Escalation rate** | <20% | Queries requiring human |
-| **Support tickets per customer** | <0.5/mo | Starter/Pro average |
+| **Support tickets per customer** | <0.5/mo | Standard tier average |
 | **Onboarding completion rate** | 90% | Self-service onboarding |
 
 ### Dashboard View
@@ -387,8 +382,8 @@ Year 2+:
 │                                                             │
 │  ─────────────────────────────────────────────────────────  │
 │                                                             │
-│  Support Tickets (Non-Enterprise)                           │
-│  This month: 127 │ Last month: 156 │ Change: ↓ 19%         │
+│  Support Tickets (Standard Tier)                            │
+│  This month: 87 │ Last month: 112 │ Change: ↓ 22%          │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -397,23 +392,17 @@ Year 2+:
 
 ## Marketing Self-Service as a Feature
 
-### For Starter Tier
+### For Standard Tier
 
 > **Get answers instantly, 24/7**
 >
-> RecallWire Assistant is always available to answer your questions, guide you through workflows, and help you stay compliant. No waiting for support tickets—get help the moment you need it.
+> RecallWire Assistant is always available to answer your questions, guide you through workflows, and help you stay compliant. No waiting for support tickets—get help the moment you need it. Plus, connect with peers in the RecallWire Community.
 
-### For Professional Tier
-
-> **Support that scales with you**
->
-> Access our comprehensive help center, video tutorials, and AI-powered assistant. When you need human help, our priority support team responds within 24 hours. Plus, connect with peers in the RecallWire Community.
-
-### For Business Tier
+### For Enterprise Tier
 
 > **White-glove onboarding, self-service efficiency**
 >
-> Start with dedicated implementation support, then enjoy the freedom of powerful self-service tools. Your shared Customer Success Manager is always available for strategic guidance, while day-to-day questions are answered instantly.
+> Start with dedicated implementation support and your own Customer Success Manager. Day-to-day questions are answered instantly by our AI-powered assistant, while strategic guidance is always just a call away.
 
 ---
 
@@ -430,3 +419,8 @@ Enhanced self-service transforms support from a cost center to a competitive adv
 | **Scalability** | Support costs don't scale linearly with customers |
 
 The key insight: **Self-service isn't about reducing support—it's about providing better, faster support at scale.**
+
+---
+
+*Document updated: December 2025*
+*Reflects simplified two-tier pricing model (Standard + Enterprise)*

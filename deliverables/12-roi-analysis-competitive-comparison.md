@@ -4,8 +4,8 @@
 
 This document provides data-driven ROI analysis comparing:
 1. **RecallWire vs. Manual processes** (spreadsheets, paper, email)
-2. **RecallWire vs. Budget competitors** (PAR Excellence/NotiSphere)
-3. **RecallWire vs. Enterprise competitors** (OneRecall, ECRI)
+2. **RecallWire Standard vs. PAR Excellence** (budget tier comparison)
+3. **RecallWire Enterprise vs. Inmar OneRecall & ECRI** (enterprise tier comparison)
 
 **Key finding:** Budget solutions like PAR Excellence that lack action tracking create significant audit and compliance risk. The "savings" from choosing a cheaper solution can be wiped out by a single compliance failure, lawsuit, or audit finding.
 
@@ -24,8 +24,6 @@ Based on industry data and competitor claims:
 | Cross-facility coordination | 2-8 hours | 30 min | 85%+ |
 | Documentation/audit trail | 1-2 hours | Automatic | 95%+ |
 | Audit preparation | 40+ hours | 30 min | 99% |
-
-**Source:** [TraceLink claims 40% reduction](https://www.tracelink.com/resources/resource-center/reduce-recall-management-time-by-40-percent) in admin time and [47% reduction in shelf walks](https://www.tracelink.com/resources/resource-center/introducing-tracelink-digital-recalls). One 70+ site health system estimates saving **21,000+ pharmacy hours per year**.
 
 ### Staffing Reality
 
@@ -87,7 +85,7 @@ Based on industry data and competitor claims:
 
 ## Part 3: ROI by Scenario
 
-### Scenario A: Single Facility Hospital (100 beds)
+### Scenario A: Single Facility Hospital
 
 #### Manual Process (Current State)
 
@@ -99,103 +97,150 @@ Based on industry data and competitor claims:
 | Risk exposure (expected value) | $15,000 |
 | **Total** | **$48,500** |
 
-#### With RecallWire (Single Facility Complete - $199/mo)
+#### With RecallWire Standard ($4,999/yr)
 
 | Cost Category | Annual Cost |
 |---------------|-------------|
-| RecallWire subscription | $2,388 |
+| RecallWire Standard | $4,999 |
 | Staff time (0.05 FTE) | $4,000 |
 | Audit prep time (2 hrs × 4 audits) | $400 |
 | Risk exposure (reduced) | $3,000 |
-| **Total** | **$9,788** |
+| **Total** | **$12,399** |
 
 #### ROI Summary
 
 | Metric | Value |
 |--------|-------|
-| Annual savings | $38,712 |
-| ROI | **1,521%** |
-| Payback period | **23 days** |
+| Annual savings | $36,101 |
+| ROI | **622%** |
+| Payback period | **51 days** |
 
 ---
 
-### Scenario B: Multi-Location Health System (15 locations)
+### Scenario B: Multi-Location Practice (5 locations)
 
 #### Manual Process (Current State)
 
 | Cost Category | Annual Cost |
 |---------------|-------------|
-| Staff time (1.5 FTEs) | $130,000 |
-| Coordination overhead | $25,000 |
-| Tools/subscriptions | $3,000 |
-| Audit prep time | $20,000 |
-| Risk exposure (expected value) | $50,000 |
-| **Total** | **$228,000** |
+| Staff time (0.75 FTE) | $65,000 |
+| Coordination overhead | $10,000 |
+| Tools/subscriptions | $1,500 |
+| Audit prep time | $12,000 |
+| Risk exposure (expected value) | $30,000 |
+| **Total** | **$118,500** |
 
-#### With RecallWire (Business tier - $799/mo)
+#### With RecallWire Standard ($4,999/yr)
 
 | Cost Category | Annual Cost |
 |---------------|-------------|
-| RecallWire subscription | $9,588 |
-| Staff time (0.25 FTE) | $22,000 |
-| Coordination (automated) | $5,000 |
-| Audit prep time | $2,000 |
-| Risk exposure (reduced) | $10,000 |
-| **Total** | **$48,588** |
+| RecallWire Standard (1-5 locations) | $4,999 |
+| Staff time (0.15 FTE) | $13,000 |
+| Coordination (automated) | $2,500 |
+| Audit prep time | $1,500 |
+| Risk exposure (reduced) | $6,000 |
+| **Total** | **$27,999** |
 
 #### ROI Summary
 
 | Metric | Value |
 |--------|-------|
-| Annual savings | $179,412 |
-| ROI | **1,770%** |
+| Annual savings | $90,501 |
+| ROI | **1,711%** |
 | Payback period | **20 days** |
 
 ---
 
-### Scenario C: Large Academic Medical Center (50+ locations)
+### Scenario C: Regional Health System (25 locations)
+
+#### Manual Process (Current State)
+
+| Cost Category | Annual Cost |
+|---------------|-------------|
+| Staff time (2 FTEs) | $175,000 |
+| Coordination overhead | $35,000 |
+| Tools/subscriptions | $5,000 |
+| Audit prep time | $25,000 |
+| Risk exposure (expected value) | $60,000 |
+| **Total** | **$300,000** |
+
+#### With RecallWire Enterprise ($35,000/yr)
+
+| Cost Category | Annual Cost |
+|---------------|-------------|
+| RecallWire Enterprise | $35,000 |
+| Staff time (0.35 FTE) | $30,000 |
+| Coordination (automated) | $7,000 |
+| Audit prep time | $3,000 |
+| Risk exposure (reduced) | $12,000 |
+| **Total** | **$87,000** |
+
+#### ROI Summary
+
+| Metric | Value |
+|--------|-------|
+| Annual savings | $213,000 |
+| ROI | **509%** |
+| Payback period | **60 days** |
+
+---
+
+### Scenario D: Large Academic Medical Center (75 locations)
 
 #### Current State (Competitor Solution + Manual Gaps)
 
 | Cost Category | Annual Cost |
 |---------------|-------------|
-| Current platform (e.g., TraceLink) | $50,000 |
+| Current platform (OneRecall/ECRI) | $65,000 |
 | Remaining manual work (2 FTEs) | $175,000 |
 | Coordination overhead | $50,000 |
 | Audit prep time | $25,000 |
 | Risk exposure | $75,000 |
-| **Total** | **$375,000** |
+| **Total** | **$390,000** |
 
-#### With RecallWire Enterprise ($42,500/yr)
+#### With RecallWire Enterprise Plus ($60,000/yr)
 
 | Cost Category | Annual Cost |
 |---------------|-------------|
-| RecallWire Enterprise | $42,500 |
+| RecallWire Enterprise Plus | $60,000 |
 | Staff time (0.5 FTE) | $45,000 |
 | Coordination (automated) | $10,000 |
 | Audit prep time | $5,000 |
 | Risk exposure (reduced) | $20,000 |
-| **Total** | **$122,500** |
+| **Total** | **$140,000** |
 
 #### ROI Summary
 
 | Metric | Value |
 |--------|-------|
-| Annual savings | $252,500 |
-| ROI | **673%** |
-| Payback period | **2 months** |
+| Annual savings | $250,000 |
+| ROI | **317%** |
+| Payback period | **88 days** |
 
 ---
 
 ## Part 4: RecallWire vs. Competitors
 
-### RecallWire vs. PAR Excellence/NotiSphere
+### RecallWire Standard vs. PAR Excellence/NotiSphere
 
-**PAR Excellence positioning:** Budget solution at ~$200/month
+**PAR Excellence positioning:** Budget solution at ~$200/month (~$2,400/yr)
+
+**Notable customers:** Mayo Clinic, BJC Healthcare, Ochsner Health, Baptist Health, Novant Health, UChicago Medicine, Children's National, Nationwide Children's
+
+**Key metrics (from NotiSphere deck):**
+- 95% reduction in recall processing time
+- 90% reduction in false recall notices
+- 16+ days average faster alert delivery
+- Only 40% of alerts actually applicable (60% filtered)
+
+**Case Study: Baptist Health (9 hospitals)**
+- Successfully defended Joint Commission audit using NotiSphere
+- Recall Coordinator was able to "professionally and confidently respond" to TJC questions
+- 1-hour training per user
 
 #### The Critical Gap: Task Tracking vs. Recall Action Tracking
 
-Based on competitive analysis, PAR Excellence tracks at the **task level** (communication status), but does NOT track **Recall Actions** (what you do with affected inventory after identification).
+Despite the Baptist Health success, based on product analysis PAR Excellence tracks at the **task level** (communication status), but does NOT track **Recall Actions** (what you do with affected inventory after identification).
 
 **What PAR Excellence tracks (Task Level):**
 - Did you receive the notification? ✓
@@ -238,8 +283,8 @@ Per [FDA 21 CFR Part 806](https://www.fda.gov/medical-devices/postmarket-require
 
 #### Feature Comparison
 
-| Capability | RecallWire | PAR Excellence |
-|------------|------------|----------------|
+| Capability | RecallWire Standard | PAR Excellence |
+|------------|---------------------|----------------|
 | Alert notifications | Yes | Yes |
 | Inventory matching | Yes | Yes |
 | Acknowledgement tracking | Yes | Yes |
@@ -253,7 +298,7 @@ Per [FDA 21 CFR Part 806](https://www.fda.gov/medical-devices/postmarket-require
 | **Photo/evidence capture** | **Yes** | **No** |
 | AI-powered guidance | Yes | No |
 | Compliance reporting | One-click, complete | Task-level only |
-| Price (single facility) | $199/mo | ~$200/mo |
+| Price (1-5 locations) | $4,999/yr | ~$2,400/yr |
 
 #### The Audit Risk: Quantified
 
@@ -268,14 +313,14 @@ Without Recall Action tracking, facilities face significant audit exposure:
 | **Total expected annual risk** | | | **$42,500** |
 
 **The math:**
-- PAR Excellence: $200/mo = $2,400/year + $42,500 risk = **$44,900 effective cost**
-- RecallWire: $199/mo = $2,388/year + $5,000 risk = **$7,388 effective cost**
+- PAR Excellence: $2,400/year + $42,500 risk = **$44,900 effective cost**
+- RecallWire Standard: $4,999/year + $5,000 risk = **$9,999 effective cost**
 
-**RecallWire is 6x better value** when Recall Action documentation risk is factored in.
+**RecallWire is 4.5x better value** when Recall Action documentation risk is factored in.
 
 #### Sales Messaging
 
-> "PAR Excellence tells you THAT you have a recall. RecallWire tells you that AND guides you through exactly what to do about it—quarantine, return, destroy, or correct—with complete documentation at every step. When Joint Commission asks 'What did you do with these recalled items?', PAR users show an acknowledgement. RecallWire users show a complete audit trail with photos, sign-offs, and timestamps. Same price—completely different protection."
+> "PAR Excellence tells you THAT you have a recall. RecallWire tells you that AND guides you through exactly what to do about it—quarantine, return, destroy, or correct—with complete documentation at every step. When Joint Commission asks 'What did you do with these recalled items?', PAR users show an acknowledgement. RecallWire users show a complete audit trail with photos, sign-offs, and timestamps. For an extra $200/month, you get completely different protection."
 
 #### Discovery Questions for Prospects
 
@@ -289,7 +334,7 @@ When selling against PAR Excellence, ask prospects:
 
 ---
 
-### RecallWire vs. OneRecall (Market Leader)
+### RecallWire Enterprise vs. OneRecall (Market Leader)
 
 **OneRecall positioning:** 60% market share, enterprise-focused, premium pricing
 
@@ -301,8 +346,8 @@ When selling against PAR Excellence, ask prospects:
 | Audit trail | Complete | Complete |
 | Public pricing | **Yes** | No |
 | SMB accessibility | **Yes** | No |
-| Implementation time | 12 weeks | 6+ months |
-| Price (enterprise) | $40-45k | $60-80k (est.) |
+| Implementation time | 4-8 weeks | 6+ months |
+| Price (enterprise) | $25K-75K | $25K-75K+ (est.) |
 
 #### Value Comparison
 
@@ -310,31 +355,50 @@ When selling against PAR Excellence, ask prospects:
 |--------|------------|-----------|
 | Alert speed improvement | 25-45 days faster | 27 days faster |
 | Processing reduction | 60%+ | 80% (rapidID) |
-| Price | $40-45k | $60-80k |
-| **Value per dollar** | **Higher** | Lower |
+| Price transparency | **Published** | Contact sales |
+| Platform age | Modern | 2004 legacy |
+| AI Assistant | **Yes** | Limited |
 
 #### Sales Messaging
 
-> "OneRecall pioneered this market 20 years ago, and they've earned their 60% market share. But they're also charging 2004 prices for 2004 technology. RecallWire gives you equivalent capabilities—including AI-powered matching—at 40% lower cost, with transparent pricing and faster implementation."
+> "OneRecall pioneered this market 20 years ago, and they've earned their 60% market share. But they're also running 2004 technology. RecallWire gives you equivalent capabilities—including AI-powered matching—with transparent pricing, modern UX, and faster implementation. Same protection, better experience."
 
 ---
 
-### RecallWire vs. ECRI Alerts
+### RecallWire Enterprise vs. ECRI Alerts (Premium Enterprise)
 
-**ECRI positioning:** Premium, 50+ years expertise, often bundled
+**ECRI positioning:** Premium, 50+ years expertise, often bundled. 30,000+ users worldwide.
+
+**Verified ECRI Pricing (Mount Sinai Proposal, August 2025):**
+
+| ECRI Product | Annual Price |
+|--------------|-------------|
+| Alerts Workflow + Automatch + Data Standardization | **$75,878** |
+| Full Suite (with Capital Guide + Supply Guide) | $263,841 |
 
 | Capability | RecallWire | ECRI |
 |------------|------------|------|
-| Alert sources | FDA + comprehensive | FDA + proprietary |
-| Early detection | Real-time | "Days/weeks ahead of FDA" |
+| Alert sources | FDA + comprehensive | FDA + proprietary (ahead of FDA) |
+| Inventory matching | AI-powered | AutoMatch (up to 90% time reduction) |
 | Standalone product | **Yes** | Often bundled |
 | Pricing transparency | **Yes** | No |
 | AI assistant | **Yes** | No |
-| Price | $40-45k | $50-100k (est.) |
+| Dedicated advisor | No | Yes (Recall Advisor included) |
+| Cybersecurity alerts | Limited | Yes |
+| Price | $25K-75K | **$75,878** (verified) |
+
+#### Value Comparison
+
+| Metric | RecallWire Enterprise | ECRI Alerts |
+|--------|----------------------|-------------|
+| Price (comparable deployment) | $45,000-60,000 | $75,878 |
+| **Savings vs. ECRI** | **$16-31K/year (21-41%)** | — |
+| AI-powered guidance | Yes | No |
+| Published pricing | Yes | No |
 
 #### Sales Messaging
 
-> "ECRI has unmatched expertise—50 years in patient safety. But you're paying for their entire research operation when you just need recall management. RecallWire gives you focused, AI-powered recall management at a fraction of the cost."
+> "ECRI has unmatched expertise—50 years in patient safety. But at $76K for Alerts Workflow alone—or $264K for their full suite—you're paying a significant premium. RecallWire delivers AI-powered recall management at $45-60K for comparable deployments, saving you $16-31K annually. That's 21-41% less for equivalent core capabilities, plus AI guidance ECRI doesn't offer."
 
 ---
 
@@ -406,12 +470,11 @@ Payback (days) = (recallwire_subscription / Annual Savings) × 365
 
 | Locations | RecallWire Tier | Annual Cost | Est. Savings | ROI |
 |-----------|-----------------|-------------|--------------|-----|
-| 1 | Single Facility Complete | $2,388 | $35,000+ | 1,400%+ |
-| 5 | Professional | $4,788 | $75,000+ | 1,400%+ |
-| 10 | Business | $9,588 | $125,000+ | 1,200%+ |
-| 20 | Business | $9,588 | $175,000+ | 1,700%+ |
-| 50 | Enterprise | $42,500 | $250,000+ | 500%+ |
-| 100 | Enterprise Plus | $55,000 | $400,000+ | 600%+ |
+| 1-5 | Standard | $4,999 | $50,000-90,000 | 900-1,700%+ |
+| 6-20 | Enterprise | $25,000-35,000 | $150,000-200,000 | 500-700%+ |
+| 21-50 | Enterprise | $35,000-50,000 | $200,000-275,000 | 450-650%+ |
+| 51-100 | Enterprise Plus | $50,000-70,000 | $275,000-375,000 | 400-550%+ |
+| 100+ | Enterprise Premier | $75,000+ | $400,000+ | 400%+ |
 
 ---
 
@@ -427,23 +490,28 @@ Payback (days) = (recallwire_subscription / Annual Savings) × 365
 ### "PAR Excellence is cheaper"
 
 **Response:**
-> "They're the same price, actually—$199 vs. $200. But here's the difference: if PAR doesn't track your actions and resolutions, you're saving $12/year while taking on $40,000+ in audit risk. One Joint Commission finding costs more than 50 years of RecallWire subscriptions. Is that a bet you want to make?"
+> "PAR is $2,400/year. RecallWire Standard is $4,999/year—about $200 more per month. But here's the difference: PAR doesn't track your recall actions and resolutions. You're saving $2,600/year while taking on $40,000+ in audit risk. One Joint Commission finding costs more than 15 years of that difference. Is that a bet you want to make?"
 
 **Data point:** Average compliance remediation costs $100,000+.
 
 ### "OneRecall is the industry standard"
 
 **Response:**
-> "They are—60% market share. But they're also charging enterprise prices without enterprise transparency. We've seen their deals run $60-80k for what we offer at $40-45k. Same AI matching, same audit trail, same compliance—40% less cost. And we'll be live in 12 weeks, not 6 months."
+> "They are—60% market share. But they're also running 20-year-old technology without transparent pricing. We compete at the same price points with modern AI matching, a better user experience, and pricing you can see upfront. Same protection, faster implementation, no surprises."
 
 **Data point:** [OneRecall case studies](https://www.inmar.com/case-studies/healthcare/onerecall-response-time) show similar time savings to RecallWire claims.
+
+### "ECRI is the gold standard for patient safety"
+
+**Response:**
+> "ECRI absolutely has unmatched expertise—50 years in patient safety. But we've seen their actual enterprise pricing: $76K for Alerts Workflow alone, or $264K if they bundle in Capital Guide and Supply Guide. RecallWire delivers equivalent recall management at $45-60K—that's $16-31K in savings, or 21-41% less. Same audit trail, same compliance, with AI-powered guidance they don't offer."
+
+**Data point:** ECRI Mount Sinai proposal (August 2025) shows $75,878 for Alerts Workflow + Automatch + Data Standardization; full suite at $263,841.
 
 ### "We can't afford a new system right now"
 
 **Response:**
-> "You're already paying for recall management—in staff time. A 15-location system typically has 1-2 FTEs doing recall work. That's $130,000/year. RecallWire Business is $9,500/year and reduces that to 0.25 FTE. You're not adding a cost—you're cutting one by 85%."
-
-**Data point:** [TraceLink's 70+ site customer](https://www.tracelink.com/resources/resource-center/reduce-recall-management-time-by-40-percent) saves 21,000 hours/year.
+> "You're already paying for recall management—in staff time. A 25-location system typically has 2 FTEs doing recall work. That's $175,000/year. RecallWire Enterprise is $35,000/year and reduces that to 0.35 FTE. You're not adding a cost—you're cutting one by 80%."
 
 ### "What if we have a patient safety incident anyway?"
 
@@ -456,30 +524,28 @@ Payback (days) = (recallwire_subscription / Annual Savings) × 365
 
 ## Summary: The ROI Story
 
-### For Budget-Conscious Buyers (vs. PAR Excellence)
+### For Standard Tier Buyers (vs. PAR Excellence)
 
-> **Same price. Complete Recall Action documentation.**
+> **Complete Recall Action documentation for $200/month more.**
 >
-> RecallWire costs $199/month—essentially the same as PAR Excellence. But there's a critical difference: PAR tracks that you *received* a recall (task-level). RecallWire tracks what you *did about it* (Recall Action-level)—quarantine, return, destroy, or correct—with guided workflows, sign-offs, and complete documentation. When Joint Commission asks "What was the disposition of these recalled items?", PAR users have an acknowledgement. RecallWire users have a complete audit trail.
+> RecallWire Standard costs $4,999/year—about $200/month more than PAR Excellence. But there's a critical difference: PAR tracks that you *received* a recall (task-level). RecallWire tracks what you *did about it* (Recall Action-level)—quarantine, return, destroy, or correct—with guided workflows, sign-offs, and complete documentation. When Joint Commission asks "What was the disposition of these recalled items?", PAR users have an acknowledgement. RecallWire users have a complete audit trail.
 
 ### For Enterprise Buyers (vs. OneRecall/ECRI)
 
-> **Enterprise capabilities. Transparent pricing. 40% savings.**
+> **Enterprise capabilities. Transparent pricing. Modern AI.**
 >
-> RecallWire delivers the same AI-powered matching, the same multi-facility coordination, the same audit-ready documentation as solutions costing $60-80k. Our price: $40-45k. No opaque quotes, no 6-month implementations, no surprises.
+> RecallWire delivers AI-powered matching, multi-facility coordination, and audit-ready documentation. Compared to ECRI at $76K, RecallWire Enterprise saves you $16-31K annually—21-41% less. Compared to OneRecall, you get transparent pricing, modern UX, and faster implementation. Same protection, better experience.
 
 ### For Manual Process Users
 
 > **Stop paying for recalls with your team's time.**
 >
-> Every hour spent manually triaging alerts costs you $50+ in labor. RecallWire automates 80% of that work. A 15-location system saves $175,000/year in labor costs alone. The platform pays for itself in 20 days.
+> Every hour spent manually triaging alerts costs you $50+ in labor. RecallWire automates 80% of that work. A 25-location system saves $175,000/year in labor costs alone. The platform pays for itself in 60 days.
 
 ---
 
 ## Sources
 
-- [TraceLink: 40% reduction in recall management time](https://www.tracelink.com/resources/resource-center/reduce-recall-management-time-by-40-percent)
-- [TraceLink: 47% reduction in shelf walks](https://www.tracelink.com/resources/resource-center/introducing-tracelink-digital-recalls)
 - [Inmar OneRecall Case Studies](https://www.inmar.com/case-studies/healthcare/onerecall-response-time)
 - [CMS Hospital Price Transparency Enforcement](https://www.cms.gov/newsroom/fact-sheets/hospital-price-transparency-enforcement-updates)
 - [Joint Commission Accreditation Standards](https://www.ncbi.nlm.nih.gov/books/NBK557846/)
@@ -487,3 +553,11 @@ Payback (days) = (recallwire_subscription / Annual Savings) × 365
 - [Qualityze: Medical Device Recall Management](https://www.qualityze.com/blogs/medical-device-recall-management-guidelines)
 - [Identimedical: Hospital Supply Chain Fails](https://identimedical.com/top-ten-list-of-common-hospital-supply-chain-fails/)
 - [ASHP: Guidance on Medication Recalls](https://www.ashp.org/-/media/assets/pharmacy-practice/resource-centers/patient-safety/doc/Guidance-on-Drug-Recall-Management.pdf)
+- ECRI Mount Sinai Proposal (August 2025)
+- NotiSphere Mount Sinai Deck (2024)
+- Baptist Health Case Study (June 2022)
+
+---
+
+*Document updated: December 2025*
+*Reflects simplified two-tier pricing model: Standard ($4,999/yr) and Enterprise (starting at $25,000/yr)*

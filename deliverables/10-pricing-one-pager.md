@@ -6,84 +6,55 @@ No hidden fees. No per-user charges. Just straightforward pricing based on your 
 
 ---
 
-## Most Popular: Single Facility Complete
+## Two Simple Plans
 
-**$199/month** ($1,999/year)
-
-Everything a single-location hospital needs for complete recall compliance:
-
-- 1 location
-- Full FDA medical device & drug recall coverage
-- Medical Devices bundle included (Radiology + Surgical)
-- AI-powered RecallWire Assistant (50 queries/mo)
-- Guided resolution workflows
-- Audit-ready documentation
-- Self-service support
-
-[Start Free Trial →]
-
----
-
-## Plans
-
-| | Starter | Professional | Business | Enterprise |
-|--|---------|--------------|----------|------------|
-| **Monthly** | $149 | $399 | $799 | Custom |
-| **Annual** | $1,499/yr | $3,999/yr | $7,999/yr | From $40,000/yr |
-| | *Save $289* | *Save $789* | *Save $1,589* | *Contact us* |
+| | Standard | Enterprise |
+|--|----------|------------|
+| **Annual Price** | $4,999/yr | Starting at $25,000/yr |
+| **Monthly Price** | $449/mo | Contact Sales |
+| **Locations** | 1-5 | 6+ |
+| **Best for** | Clinics, ASCs, small practices | Health systems, hospital networks |
+| | [Start Free Trial →] | [Contact Sales →] |
 
 ---
 
 ## What's Included
 
-| Feature | Starter | Professional | Business | Enterprise |
-|---------|:-------:|:------------:|:--------:|:----------:|
-| **Locations** | 1 | Up to 5 | Up to 20 | Unlimited |
-| | | | | |
-| **Core Features** | | | | |
-| Real-time FDA alerts | Yes | Yes | Yes | Yes |
-| Inventory matching | Basic | Advanced | Advanced | Custom |
-| Guided resolution workflow | Yes | Yes | Yes | Yes |
-| Audit trail & compliance docs | Yes | Yes | Yes | Yes |
-| Dashboard & reporting | Core | Advanced | Custom | Custom |
-| | | | | |
-| **AI Features** | | | | |
-| RecallWire Assistant | 50/mo | 200/mo | 1,000/mo | Unlimited |
-| AI-powered matching | - | - | Yes | Yes |
-| Smart prioritization | - | - | Yes | Yes |
-| | | | | |
-| **Multi-Facility** | | | | |
-| Multi-facility hierarchy | - | Yes | Yes | Yes |
-| Department routing | - | Basic | Advanced | Custom |
-| Cross-location reporting | - | Yes | Yes | Yes |
-| SLA management | - | Basic | Advanced | Custom |
-| | | | | |
-| **Integrations** | | | | |
-| CSV import | Yes | Yes | Yes | Yes |
-| API access (read) | - | Yes | Yes | Yes |
-| API access (write) | - | - | Yes | Yes |
-| SSO | - | Ready | Yes | Yes |
-| Custom integrations | - | - | - | Yes |
-| | | | | |
-| **Support** | | | | |
-| Help center & AI Assistant | Yes | Yes | Yes | Yes |
-| Email support | - | 24hr | 8hr | 4hr |
-| Phone support | - | - | Yes | Yes |
-| Dedicated CSM | - | - | Shared | Dedicated |
-| Implementation | Self-serve | Guided | White-glove | Dedicated team |
-
----
-
-## Add More Locations
-
-Need more locations than your plan includes?
-
-| Your Plan | Additional Location Price |
-|-----------|--------------------------|
-| Starter | $99/mo per location |
-| Professional | $69/mo per location |
-| Business | $49/mo per location |
-| Enterprise | Included (unlimited) |
+| Feature | Standard | Enterprise |
+|---------|:--------:|:----------:|
+| **Locations** | 1-5 | 6+ (unlimited at higher tiers) |
+| | | |
+| **Core Features** | | |
+| Real-time FDA alerts | Yes | Yes |
+| Inventory matching | Advanced | AI-powered |
+| Guided resolution workflow | Yes | Custom workflows |
+| Audit trail & compliance docs | Yes | Enhanced |
+| Dashboard & reporting | Advanced | Custom |
+| | | |
+| **AI Features** | | |
+| RecallWire Assistant | 500/mo | 2,000-Unlimited |
+| AI-powered matching | Limited | Full |
+| Smart prioritization | — | Yes |
+| | | |
+| **Multi-Facility** | | |
+| Multi-facility hierarchy | Yes (up to 5) | Yes |
+| Department routing | Basic | Advanced/Custom |
+| Cross-location reporting | Yes | Yes |
+| SLA management | Basic | Advanced/Custom |
+| | | |
+| **Integrations** | | |
+| CSV import | Yes | Yes |
+| API access (read) | Yes | Yes |
+| API access (write) | — | Yes |
+| SSO | — | Yes |
+| Custom integrations | — | Yes |
+| | | |
+| **Support** | | |
+| Help center & AI Assistant | Yes | Yes |
+| Email support | 24hr response | 4-8hr response |
+| Phone support | — | Yes |
+| Dedicated CSM | — | Shared/Dedicated |
+| Implementation | Self-serve + call | White-glove |
 
 ---
 
@@ -91,24 +62,24 @@ Need more locations than your plan includes?
 
 Extend your coverage beyond medical devices and basic drug recalls.
 
-| Category | Monthly | Annual | What's Covered |
-|----------|---------|--------|----------------|
-| Food & Dietary | $99 | $999 | FDA food, USDA, state health departments |
-| Pharmaceutical+ | $149 | $1,499 | Enhanced drug coverage, DEA, state boards |
-| Laboratory | $79 | $799 | Lab equipment, reagents, diagnostics |
-| Radiology/Imaging | $79 | $799 | Imaging equipment, contrast agents |
-| Surgical/OR | $99 | $999 | Surgical instruments, implants, OR equipment |
+| Category | Annual | What's Covered |
+|----------|--------|----------------|
+| Food & Dietary | $999/yr | FDA food, USDA, state health departments |
+| Pharmaceutical+ | $1,499/yr | Enhanced drug coverage, DEA, state boards |
+| Laboratory | $799/yr | Lab equipment, reagents, diagnostics |
+| Radiology/Imaging | $799/yr | Imaging equipment, contrast agents |
+| Surgical/OR | $999/yr | Surgical instruments, implants, OR equipment |
 
 ### Bundles (Save up to 31%)
 
-| Bundle | Includes | Monthly | Annual |
-|--------|----------|---------|--------|
-| **Healthcare Complete** | All 5 categories | $349 | $3,499 |
-| **Medical Devices** | Radiology + Surgical | $150 | $1,499 |
-| **Clinical Bundle** | Lab + Radiology + Surgical | $199 | $1,999 |
-| **Compliance Bundle** | Food + Pharmaceutical+ | $199 | $1,999 |
+| Bundle | Includes | Annual |
+|--------|----------|--------|
+| **Healthcare Complete** | All 5 categories | $3,499/yr |
+| **Medical Devices** | Radiology + Surgical | $1,499/yr |
+| **Clinical Bundle** | Lab + Radiology + Surgical | $1,999/yr |
+| **Compliance Bundle** | Food + Pharmaceutical+ | $1,999/yr |
 
-*Category add-ons available for Professional, Business, and Enterprise plans.*
+*Category add-ons available for both Standard and Enterprise plans.*
 
 ---
 
@@ -125,12 +96,12 @@ Let our experts manage your recall operations end-to-end. We triage alerts, coor
 | Daily alert triage | Yes | Yes | Yes |
 | Weekly summary reports | Yes | Yes | Yes |
 | Quarterly compliance reviews | Yes | Yes | Yes |
-| Active response management | - | Yes | Yes |
-| Stakeholder notifications | - | Yes | Yes |
-| Monthly compliance calls | - | Yes | Yes |
-| Dedicated recall specialist | - | - | Yes |
-| Vendor/manufacturer communication | - | - | Yes |
-| On-site audit support | - | - | Yes |
+| Active response management | — | Yes | Yes |
+| Stakeholder notifications | — | Yes | Yes |
+| Monthly compliance calls | — | Yes | Yes |
+| Dedicated recall specialist | — | — | Yes |
+| Vendor/manufacturer communication | — | — | Yes |
+| On-site audit support | — | — | Yes |
 
 ### RMaaS Add-On Services
 
@@ -151,22 +122,25 @@ Let our experts manage your recall operations end-to-end. We triage alerts, coor
 A location is any distinct facility where you manage inventory and respond to recalls—hospitals, clinics, surgery centers, imaging centers, etc. Multiple departments within one facility count as one location.
 
 **Can I upgrade my plan anytime?**
-Yes. Upgrades take effect immediately, and we'll prorate the difference. Downgrades take effect at your next billing cycle.
+Yes. Upgrades take effect immediately, and we'll prorate the difference. Moving from Standard to Enterprise triggers a sales conversation to ensure the right fit.
 
 **What happens if I exceed my RecallWire Assistant queries?**
-We'll notify you when you reach 80% of your limit. If you exceed your limit, you can purchase additional query packs ($49 for 100 queries) or upgrade to a higher tier.
+We'll notify you when you reach 80% of your limit. If you exceed your limit, you can purchase additional query packs ($49 for 100 queries) or upgrade to Enterprise.
 
 **Do you offer discounts for nonprofits or government?**
 Yes. Contact us for special pricing for qualifying organizations.
 
 **What's included in implementation?**
-- **Starter:** Self-serve onboarding with help center and video guides
-- **Professional:** Guided onboarding with setup assistance
-- **Business:** White-glove implementation with training sessions
-- **Enterprise:** Dedicated implementation team, custom integration support
+- **Standard:** Self-serve onboarding with help center, video guides, and an onboarding call
+- **Enterprise:** White-glove implementation with dedicated team, training sessions, and custom configuration
 
 **Is there a free trial?**
-Yes. Start a 14-day free trial of the Professional plan. No credit card required.
+Yes. Start a 14-day free trial of the Standard plan. No credit card required.
+
+**How does RecallWire compare to competitors?**
+- vs **PAR Excellence**: RecallWire offers complete recall lifecycle management with AI guidance; PAR is notification-only
+- vs **ECRI**: RecallWire starts at 1/3 the cost with comparable coverage and AI-powered assistance
+- vs **Inmar OneRecall**: RecallWire offers transparent pricing and modern AI on a platform built for today
 
 ---
 
@@ -174,29 +148,35 @@ Yes. Start a 14-day free trial of the Professional plan. No credit card required
 
 | | |
 |--|--|
-| **Start Free Trial** | Try Professional free for 14 days |
+| **Start Free Trial** | Try Standard free for 14 days |
 | **Schedule Demo** | See RecallWire in action |
-| **Contact Sales** | For Business and Enterprise inquiries |
+| **Contact Sales** | For Enterprise inquiries |
 | **Talk to Us** | Questions? We're here to help |
 
 ---
 
 ## Enterprise Inquiries
 
-For organizations with 20+ locations or complex requirements:
+For organizations with 6+ locations:
 
 **What you get:**
-- Unlimited locations
-- All category modules included
+- Flexible location tiers (6-35, 36-100, 100+)
+- Priority AI Assistant access
 - Dedicated Customer Success Manager
 - Custom implementation and training
-- Premium support with 4-hour SLA
+- Premium support with 4-8 hour SLA
+- SSO and custom integrations
 - Flexible contract terms
 
-**Starting at $40,000/year**
+**Starting at $25,000/year**
 
 [Contact Enterprise Sales →]
 
 ---
 
 *All prices in USD. Annual plans billed annually. Monthly plans billed monthly with no long-term commitment.*
+
+---
+
+*Document updated: December 2025*
+*Reflects simplified two-tier pricing model*

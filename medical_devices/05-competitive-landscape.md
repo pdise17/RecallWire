@@ -70,6 +70,7 @@ These are the primary direct competitors - purpose-built solutions for healthcar
 | **Type** | Independent nonprofit |
 | **HQ** | Plymouth Meeting, PA |
 | **Members/Clients** | 5,000+ |
+| **Users** | 30,000+ unique users worldwide |
 | **Status** | Market leader |
 
 **Product Overview**
@@ -80,10 +81,13 @@ ECRI's Alerts Workflow is the most established recall management solution in hea
 | Feature | Description |
 |---------|-------------|
 | **Early Alerts** | Notifies users days/weeks/months ahead of FDA |
-| **AutoMatch** | Automatically matches recalls to inventory |
+| **AutoMatch** | Automatically matches recalls to inventory - claims up to 90% time reduction |
 | **Multi-Department** | Supply chain, clinical engineering, IT, pharmacy, lab |
-| **Personalized Dashboards** | Real-time tracking across facilities |
+| **Personalized Dashboards** | Coordinator Dashboard with drill-down visibility |
 | **Workday Integration** | Only solution with native Workday connector |
+| **Cybersecurity Alerts** | Medical Technology Cybersecurity Alerts |
+| **Dedicated Advisor** | Recall Advisor for training, implementation, policy review |
+| **Data Standardization** | Data standardization and normalization services |
 
 **Strengths**
 - Industry-leading alert timeliness (ahead of FDA)
@@ -92,17 +96,26 @@ ECRI's Alerts Workflow is the most established recall management solution in hea
 - Comprehensive device database
 - 95% membership renewal rate
 - Members report 50-90% reduction in resolution times
+- Strict conflict of interest policy (no industry gifts/grants)
+- Dedicated Recall Advisor included
 
 **Weaknesses**
+- Premium pricing (~$76K for Alerts alone, $264K for full suite)
 - Nonprofit model may limit R&D investment
-- Membership-based pricing less transparent
+- Complex membership structure (often requires bundling)
 - Legacy technology stack
 - Bundled with other ECRI services (may be overkill for smaller orgs)
 
-**Pricing Model**
-- Membership-based (not publicly disclosed)
-- Typically bundled with other ECRI services (PriceGuide, device evaluations)
-- Contact required for quotes
+**Pricing Model (Verified - Mount Sinai Proposal, August 2025)**
+
+| ECRI Product | Annual Price |
+|--------------|-------------|
+| Capital Guide | $143,319 |
+| Supply Guide | $44,644 |
+| Alerts Workflow + Automatch + Data Standardization | $75,878 |
+| **Full Suite** | **$263,841** |
+
+*Bundle discount: Alerts drops to $58,598 if purchased with Supply Guide*
 
 **Target Customers**
 - Large health systems and IDNs
@@ -120,6 +133,7 @@ ECRI's Alerts Workflow is the most established recall management solution in hea
 | **Acquisition** | January 2025 |
 | **Focus** | Recall notification communications |
 | **Model** | Two-sided platform (providers + manufacturers) |
+| **Provider Network** | 1,200+ providers |
 
 **Product Overview**
 
@@ -128,11 +142,24 @@ NotiSphere pioneered a communications platform connecting healthcare providers d
 **Key Features**
 | Feature | Description |
 |---------|-------------|
-| **Two-Sided Network** | Connects providers and manufacturers |
-| **Alert Filtering** | Only 2.5% of alerts apply to typical client |
-| **Electronic Connectivity** | Replaces mail/fax with digital |
+| **Two-Sided Network** | Connects providers and manufacturers directly |
+| **Alert Filtering** | Only 40% of alerts apply (60% filtered as non-applicable) |
+| **Electronic Connectivity** | Replaces paper mail/fax with digital |
 | **Backorder/Shortage Tracking** | Beyond recalls |
 | **Manufacturer Portal** | Proactive alert delivery |
+| **Two-Way Communication** | Verified communication between suppliers and providers |
+
+**Key Metrics (from NotiSphere deck)**
+- 16+ days average faster alert delivery
+- 95% reduction in recall processing time
+- 90% reduction in false recall notices
+- Only 40% of alerts actually applicable to recipients
+
+**Market Statistics (from NotiSphere deck)**
+- 600,000 recalled items still available in acute care facilities (some 2+ years old)
+- 438 million units recalled in 2022; 600 million in 2021
+- 117,000 recall alerts received by large health system annually
+- 500,000 trees used annually for paper recall alerts
 
 **Strengths**
 - Network effects (both sides of market)
@@ -140,24 +167,38 @@ NotiSphere pioneered a communications platform connecting healthcare providers d
 - Modern cloud architecture
 - Strong customer advocacy (open letter campaign)
 - Now backed by PAR Excellence resources
+- Proven Joint Commission audit defense (Baptist Health case study)
+- Direct manufacturer-provider communication
 
 **Weaknesses**
 - Acquired - integration uncertainty
 - Dependent on manufacturer adoption
 - Less comprehensive device database than ECRI
 - Limited patient identification features
+- Tracks notification/acknowledgment but NOT recall action disposition (quarantine, return, destroy)
+- No guided resolution workflow or role-based sign-offs documented
+
+**Case Study: Baptist Health (9 hospitals)**
+- Successfully demonstrated recall processes to Joint Commission
+- Recall Coordinator was able to "professionally and confidently respond" to TJC questions
+- 1-hour training per user; centralized visibility with independent site management
 
 **Notable Customers**
+- Mayo Clinic
 - BJC Healthcare
-- Froedtert
+- Ochsner Health
+- Baptist Health
+- Novant Health
+- UChicago Medicine
+- Children's National
+- Nationwide Children's
 - Children's Hospital Los Angeles
-- Phoenix Children's Hospital
-- UC Davis Health
-- Valley Children's Hospital
+- WMC Health
 
 **Pricing Model**
 - Not publicly disclosed
-- Likely SaaS subscription
+- Estimated ~$200/month range
+- Budget positioning vs. enterprise competitors
 
 ---
 
@@ -489,17 +530,41 @@ quadrantChart
 
 ## Pricing Landscape
 
-| Solution | Model | Estimated Range | Notes |
-|----------|-------|-----------------|-------|
-| **ECRI** | Membership | $50K-$500K+/yr | Bundled with other services |
-| **NotiSphere** | SaaS | Unknown | Per-facility likely |
-| **Inmar OneRecall** | Enterprise | $25K-$200K+/yr | Volume-based |
-| **InVita UDITracker** | Per-facility | $15K-$100K+/yr | Based on case volume |
-| **PAR Excellence** | Platform | $50K-$500K+/yr | Comprehensive platform |
-| **Armis** | Per-device | $5-$15/device/yr | Security pricing |
-| **Greenlight Guru** | SaaS | $25K-$150K+/yr | Per-user component |
+| Solution | Model | Price Range | Source |
+|----------|-------|-------------|--------|
+| **ECRI Alerts Workflow** | Membership | **$75,878/yr** (verified) | Mount Sinai proposal, Aug 2025 |
+| **ECRI Full Suite** | Bundled | **$263,841/yr** (verified) | Includes Capital Guide + Supply Guide + Alerts |
+| **TraceLink** | Per-user | **$38K-$67K/yr** (verified) | Mount Sinai proposal, Oct 2024 |
+| **TraceLink** | Per-site | FREE (1-3 sites), $600-800/site | Per-site alternative model |
+| **NotiSphere/PAR** | SaaS | ~$200/month (est.) | Budget positioning |
+| **Inmar OneRecall** | Enterprise | $25K-$200K+/yr (est.) | Volume-based |
+| **InVita UDITracker** | Per-facility | $15K-$100K+/yr (est.) | Based on case volume |
+| **Armis** | Per-device | $5-$15/device/yr (est.) | Security pricing |
+| **Greenlight Guru** | SaaS | $25K-$150K+/yr (est.) | Per-user component |
 
-*Note: Pricing is estimated based on industry benchmarks and should be verified.*
+### Verified Pricing Details
+
+**ECRI (Mount Sinai Proposal, August 2025)**
+| Product | Annual Price |
+|---------|-------------|
+| Capital Guide | $143,319 |
+| Supply Guide | $44,644 |
+| Alerts Workflow + Automatch + Data Standardization | $75,878 |
+| **Full Suite** | **$263,841** |
+
+*Alerts Workflow discounted to $58,598 if bundled with Supply Guide (-$17,280)*
+
+**TraceLink (Mount Sinai Proposal, October 2024)**
+| Users | Annual Price | Per-User |
+|-------|-------------|----------|
+| 100 | $38,195 | $382 |
+| 150 | $51,695 | $345 |
+| 200 | $63,422 | $317 |
+| 215 | $67,337 | $313 |
+
+- Implementation: $4,000 one-time
+- Additional users: $300/user
+- 3-year term required
 
 ## Market Gaps & Opportunities
 

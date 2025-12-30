@@ -14,32 +14,12 @@ This document outlines two strategic initiatives:
 
 ## Part 1: Land & Expand Strategy
 
-### The Challenge
+### Two-Tier Pricing Foundation
 
-PAR Excellence offers single location + medical devices at ~$200/mo. To compete:
-- We need a compelling entry point at or below $200/mo
-- But we have a superior solution we want customers to eventually adopt fully
-- We need mechanisms to naturally expand the relationship over time
-
-### Entry Point: "Single Facility Complete"
-
-**New package:** $199/mo ($1,999/yr)
-
-| Included | Value |
-|----------|-------|
-| 1 location | $149 value |
-| Medical Devices bundle (Radiology + Surgical) | $150 value |
-| Base coverage (FDA devices + drugs) | Included |
-| 50 AI Assistant queries/month | Included |
-| Self-service support | Included |
-| **Total value** | $299 |
-| **Package price** | **$199** (33% savings) |
-
-**Positioning:** "Everything a single-facility hospital needs for complete recall compliance—$199/month, no hidden fees."
-
-**vs. PAR Excellence:** Same price point, but with AI Assistant included as differentiator.
-
----
+| Tier | Annual Price | Locations | Target |
+|------|-------------|-----------|--------|
+| **Standard** | $4,999/yr | 1-5 | Clinics, ASCs, small practices |
+| **Enterprise** | Starting at $25,000/yr | 6+ | Health systems, hospital networks |
 
 ### The Expand Framework
 
@@ -48,13 +28,14 @@ PAR Excellence offers single location + medical devices at ~$200/mo. To compete:
 
 | Activity | Trigger | Outcome |
 |----------|---------|---------|
-| Self-service onboarding | Sign-up | Customer live in <24 hours |
+| Self-service onboarding (Standard) | Sign-up | Customer live in <24 hours |
+| White-glove onboarding (Enterprise) | Contract signed | Dedicated implementation |
 | First recall response | First alert | Customer sees workflow value |
 | AI Assistant usage | Questions arise | Customer experiences AI differentiation |
 | Weekly digest emails | Automated | Ongoing engagement |
 
 **Success metrics:**
-- Time to first value: <48 hours
+- Time to first value: <48 hours (Standard), <2 weeks (Enterprise)
 - First recall resolved: <14 days
 - AI Assistant used: >10 queries in first month
 
@@ -65,11 +46,11 @@ PAR Excellence offers single location + medical devices at ~$200/mo. To compete:
 
 | Activity | Trigger | Upsell Opportunity |
 |----------|---------|-------------------|
-| Usage approaching limits | 80% of AI queries | Upgrade tier or query pack |
-| Second location mentioned | Support conversation | Add location ($99/mo) |
+| Usage approaching limits | 80% of AI queries | Query pack or Enterprise upgrade |
+| Additional locations mentioned | Support conversation | Enterprise upgrade |
 | Compliance audit coming | Calendar/conversation | RMaaS audit prep service |
-| Staff turnover | Support pattern | RMaaS or training services |
-| Manual processes observed | Usage patterns | Workflow automation (Business tier) |
+| Staff turnover | Support pattern | RMaaS services |
+| Complex workflow needs | Feature requests | Enterprise upgrade |
 
 **Expansion triggers to track:**
 - AI query usage rate
@@ -85,21 +66,21 @@ PAR Excellence offers single location + medical devices at ~$200/mo. To compete:
 
 | Expansion Type | Trigger | Offer |
 |----------------|---------|-------|
-| **Add locations** | New facility, acquisition | $99/mo per location or tier upgrade |
-| **Add categories** | Food service, lab, pharma mentioned | Category add-ons or bundles |
-| **Upgrade tier** | Multi-user needs, API requests | Professional ($399/mo) |
-| **Add RMaaS** | Staffing challenges, audit prep | RMaaS packages (see Part 2) |
-| **Upgrade AI** | Query limit hits, power user | Higher tier or query packs |
+| **Add locations** | New facility, acquisition | Enterprise upgrade |
+| **Add categories** | Food service, lab, pharma mentioned | Category add-ons |
+| **Upgrade tier** | Multi-location needs, API requests | Standard → Enterprise |
+| **Add RMaaS** | Staffing challenges, audit prep | RMaaS packages |
+| **Upgrade AI** | Query limit hits, power user | Enterprise for unlimited |
 
 ---
 
-#### Stage 4: Enterprise (Year 2+)
-**Goal:** Convert successful mid-market to enterprise relationships
+#### Stage 4: Enterprise Relationship (Year 2+)
+**Goal:** Deepen enterprise relationships and maximize LTV
 
 | Signal | Approach |
 |--------|----------|
-| Multiple locations added organically | Propose enterprise consolidation |
-| High AI usage, sophisticated needs | Propose Business or Enterprise tier |
+| Multiple locations, growing needs | Propose Enterprise Plus/Premier |
+| High AI usage, sophisticated needs | Expand capabilities |
 | RMaaS success | Expand RMaaS scope |
 | Renewal approaching | Executive business review |
 
@@ -111,12 +92,12 @@ PAR Excellence offers single location + medical devices at ~$200/mo. To compete:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│ ⚠️ You've used 45 of 50 AI Assistant queries this month    │
+│ ⚠️ You've used 450 of 500 AI Assistant queries this month   │
 │                                                             │
-│ Upgrade to Professional for 200 queries/month, or          │
+│ Upgrade to Enterprise for unlimited queries, or            │
 │ add a query pack (100 queries for $49)                     │
 │                                                             │
-│ [Upgrade Plan]  [Add Query Pack]  [Remind Me Later]        │
+│ [Upgrade to Enterprise]  [Add Query Pack]  [Remind Later]  │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -124,16 +105,17 @@ PAR Excellence offers single location + medical devices at ~$200/mo. To compete:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│ 💡 Did you know? Professional plans include:                │
+│ 💡 Did you know? Enterprise plans include:                  │
 │                                                             │
-│ • Multi-facility hierarchy (manage up to 5 locations)      │
-│ • Department routing (alerts go to the right people)       │
-│ • API access (connect to your inventory system)            │
+│ • Unlimited locations                                       │
+│ • Unlimited AI Assistant queries                           │
+│ • Custom workflows and automation                          │
+│ • Dedicated Customer Success Manager                       │
+│ • Priority phone support                                   │
 │                                                             │
-│ You're currently managing recalls manually across teams.   │
-│ See how automation could save you 10+ hours/month.         │
+│ You're managing 4 locations. Enterprise might be right.    │
 │                                                             │
-│ [See Professional Features]  [Maybe Later]                 │
+│ [See Enterprise Features]  [Maybe Later]                   │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -141,11 +123,11 @@ PAR Excellence offers single location + medical devices at ~$200/mo. To compete:
 
 | User Action | Upsell Prompt |
 |-------------|---------------|
-| Tries to add 2nd location | "Add locations for $99/mo each, or upgrade to Professional (5 locations) for $399/mo" |
-| Searches for food recall | "Food & Dietary coverage available as add-on ($99/mo)" |
-| Asks AI about complex workflow | "Custom workflows available in Business tier" |
-| Exports data manually | "API access available in Professional tier" |
-| Invites 5+ users | "Need more users? Professional includes unlimited users with role management" |
+| Tries to add 6th location | "You've reached the Standard limit. Upgrade to Enterprise for unlimited locations." |
+| Searches for food recall | "Food & Dietary coverage available as add-on ($999/yr)" |
+| Asks AI about complex workflow | "Custom workflows available in Enterprise tier" |
+| Exports data manually | "Full API access available in Enterprise tier" |
+| Hits AI query limit | "Upgrade to Enterprise for unlimited AI queries" |
 
 #### 4. Lifecycle Emails
 
@@ -153,67 +135,45 @@ PAR Excellence offers single location + medical devices at ~$200/mo. To compete:
 |--------|-------|------|
 | Day 7 | "How's your first week?" | Engagement check |
 | Day 30 | "Your first month recap" | Value reinforcement |
-| Day 60 | "Unlock more with Professional" | Soft upsell |
+| Day 60 | "Unlock more with Enterprise" | Soft upsell |
 | Day 90 | "Quarterly compliance check" | RMaaS introduction |
 | Renewal -60 | "Your year in review" | Expansion conversation |
 | Renewal -30 | "Renewal + upgrade options" | Upsell opportunity |
-
-#### 5. In-App Expansion Center
-
-```
-Account → Expansion Opportunities
-
-┌─────────────────────────────────────────────────────────────┐
-│ Recommended for Your Organization                          │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│ 🏥 Add Another Location                                    │
-│    You mentioned "East Campus" in a support conversation.  │
-│    Add it for $99/mo to centralize recall management.      │
-│    [Add Location]                                          │
-│                                                             │
-│ 🍽️ Food & Dietary Coverage                                 │
-│    Your facility has dietary services. Add food recall     │
-│    coverage for complete compliance. $99/mo                │
-│    [Add Coverage]                                          │
-│                                                             │
-│ 🤖 RMaaS: Audit Preparation                                │
-│    Joint Commission survey coming up? Let our experts      │
-│    prepare your documentation. Starting at $1,500          │
-│    [Learn More]                                            │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
-```
 
 ---
 
 ### Expansion Revenue Model
 
-#### Typical Customer Journey (Single Facility)
+#### Typical Standard Customer Journey
 
-| Stage | Timeline | MRR | Cumulative ARR |
-|-------|----------|-----|----------------|
-| Land | Month 1 | $199 | $2,388 |
-| Add query pack | Month 4 | $199 + $49 | $2,976 |
-| Add Food category | Month 6 | $298 | $3,576 |
-| Upgrade to Professional | Month 10 | $399 | $4,788 |
-| Add RMaaS Audit Prep | Month 11 | $399 + $500 | $5,388 |
-| **Year 1 total revenue** | | | **~$4,200** |
+| Stage | Timeline | Annual Value | Notes |
+|-------|----------|--------------|-------|
+| Land | Month 1 | $4,999 | Standard tier |
+| Add category | Month 4 | $5,998 | +Food & Dietary ($999) |
+| Add RMaaS Essentials | Month 8 | $11,986 | +$499/mo ($5,988/yr) |
+| **Year 1 total** | | **~$9,000** | Blended |
 
-**Expansion multiplier:** 2.1x (from $1,999 entry to ~$4,200 Year 1)
+**Expansion multiplier:** 1.8x (from $4,999 entry to ~$9,000 Year 1)
 
-#### Typical Customer Journey (Multi-Location)
+#### Typical Standard → Enterprise Journey
 
-| Stage | Timeline | MRR | Cumulative ARR |
-|-------|----------|-----|----------------|
-| Land (Professional) | Month 1 | $399 | $4,788 |
-| Add Clinical bundle | Month 3 | $598 | $7,176 |
-| Add 3 locations | Month 6 | $805 | $9,660 |
-| Upgrade to Business | Month 9 | $799 | $9,588 |
-| Add RMaaS Core | Month 12 | $799 + $999 | $21,576 |
-| **Year 1 total revenue** | | | **~$12,000** |
+| Stage | Timeline | Annual Value | Notes |
+|-------|----------|--------------|-------|
+| Land (Standard) | Month 1 | $4,999 | 5 locations |
+| Upgrade to Enterprise | Month 6 | $25,000 | Added 3 more locations |
+| Add RMaaS Core | Month 9 | $36,988 | +$999/mo ($11,988/yr) |
+| **Year 1 total** | | **~$22,000** | Blended |
 
-**Expansion multiplier:** 2.5x (from $4,788 entry to ~$12,000 Year 1)
+**Expansion multiplier:** 4.4x (from $4,999 entry to ~$22,000 Year 1)
+
+#### Enterprise + RMaaS Journey
+
+| Stage | Timeline | Annual Value | Notes |
+|-------|----------|--------------|-------|
+| Land (Enterprise) | Month 1 | $35,000 | 25 locations |
+| Add RMaaS Core | Month 3 | $46,988 | +$999/mo |
+| Upgrade RMaaS Complete | Month 9 | $64,988 | +$2,499/mo |
+| **Year 1 total** | | **~$50,000** | Blended |
 
 ---
 
@@ -225,11 +185,11 @@ Account → Expansion Opportunities
 
 | Provider | Target Customer | Service Type |
 |----------|-----------------|--------------|
-| [IQVIA MedTech](https://www.iqvia.com/solutions/industry-segments/medtech/commercial-solutions/iqvia-medtech-recall-and-field-action-program) | Device manufacturers | Recall execution (outbound) |
-| [Sedgwick](https://www.sedgwick.com/product-recall/industries/medical-device/) | Device manufacturers | Recall logistics & notifications |
-| [Quest International](https://www.questinc.com/oemservices/healthcare-recall-and-field-corrective-action-services) | Device manufacturers | Field corrective actions |
+| IQVIA MedTech | Device manufacturers | Recall execution (outbound) |
+| Sedgwick | Device manufacturers | Recall logistics & notifications |
+| Quest International | Device manufacturers | Field corrective actions |
 | ECRI | Healthcare facilities | Software only (no managed service) |
-| OneRecall | Healthcare facilities | Software only (no managed service) |
+| Inmar OneRecall | Healthcare facilities | Software only (no managed service) |
 | PAR/NotiSphere | Healthcare facilities | Software only (no managed service) |
 | **RecallWire** | Healthcare facilities | **Software + Managed Service** |
 
@@ -332,6 +292,33 @@ Everything in Core, plus:
 
 ---
 
+### RMaaS Packaging with Software Tiers
+
+| Software Tier | RMaaS Availability | Bundle Discount |
+|---------------|-------------------|-----------------|
+| Standard | All RMaaS tiers | 10% off RMaaS |
+| Enterprise | All RMaaS tiers | 15% off RMaaS |
+| Enterprise Plus | All RMaaS tiers + custom | 20% off RMaaS |
+
+#### Example Bundles
+
+**"Standard + Essentials" (Small Practice)**
+- Standard: $4,999/yr
+- RMaaS Essentials: $499/mo × 12 = $5,988/yr (10% discount = $5,389)
+- **Total: ~$10,388/yr**
+
+**"Standard + Core" (ASC/Imaging Center)**
+- Standard: $4,999/yr
+- RMaaS Core: $999/mo × 12 = $11,988/yr (10% discount = $10,789)
+- **Total: ~$15,788/yr**
+
+**"Enterprise + Complete" (Health System)**
+- Enterprise: $35,000/yr
+- RMaaS Complete: $2,499/mo × 12 = $29,988/yr (15% discount = $25,490)
+- **Total: ~$60,490/yr**
+
+---
+
 ### RMaaS Delivery Model
 
 #### Technology + Human Hybrid
@@ -391,31 +378,30 @@ Everything in Core, plus:
 
 ---
 
-### RMaaS Packaging with Software Tiers
+### RMaaS Differentiation
 
-| Software Tier | RMaaS Availability | Bundle Discount |
-|---------------|-------------------|-----------------|
-| Starter | Essentials only | 10% off RMaaS |
-| Professional | Essentials, Core | 15% off RMaaS |
-| Business | All tiers | 20% off RMaaS |
-| Enterprise | All tiers + custom | Custom pricing |
+#### vs. Hiring Internal Staff
 
-#### Example Bundles
+| Dimension | Internal Hire | RMaaS Core |
+|-----------|---------------|------------|
+| Annual cost | $65,000+ (salary + benefits) | $11,988 |
+| Expertise | Single person, learning curve | Team of specialists |
+| Coverage | PTO, sick days, turnover risk | Continuous coverage |
+| Scalability | Need to hire more | Scales with needs |
+| Regulatory knowledge | Depends on individual | Built-in expertise |
 
-**"Compliance Complete" (Small Hospital)**
-- Single Facility Complete: $199/mo
-- RMaaS Essentials: $499/mo (10% discount = $449)
-- **Total: $648/mo ($7,776/yr)**
+**ROI message:** "RMaaS Core costs less than 20% of a full-time hire, with better expertise and no coverage gaps."
 
-**"Hands-Free" (ASC/Imaging Center)**
-- Starter: $149/mo
-- RMaaS Core: $999/mo (10% discount = $899)
-- **Total: $1,048/mo ($12,576/yr)**
+#### vs. Competitors (Software Only)
 
-**"Enterprise Managed" (Health System)**
-- Enterprise Standard: $40,000/yr
-- RMaaS Complete (system-wide): $2,499/mo × 12 = $29,988/yr
-- **Total: ~$70,000/yr**
+| Capability | Competitors | RecallWire + RMaaS |
+|------------|-------------|-------------------|
+| Alert triage | Customer does it | We do it |
+| Response coordination | Customer does it | We do it |
+| Documentation | Customer creates | We create, customer approves |
+| Audit preparation | Customer scrambles | We prepare proactively |
+| Regulatory guidance | Help articles | Live expert access |
+| Staffing risk | Customer's problem | Our problem |
 
 ---
 
@@ -447,52 +433,12 @@ Everything in Core, plus:
 
 ---
 
-### RMaaS Differentiation
-
-#### vs. Hiring Internal Staff
-
-| Dimension | Internal Hire | RMaaS Core |
-|-----------|---------------|------------|
-| Annual cost | $65,000+ (salary + benefits) | $11,988 |
-| Expertise | Single person, learning curve | Team of specialists |
-| Coverage | PTO, sick days, turnover risk | Continuous coverage |
-| Scalability | Need to hire more | Scales with needs |
-| Regulatory knowledge | Depends on individual | Built-in expertise |
-
-**ROI message:** "RMaaS Core costs less than 20% of a full-time hire, with better expertise and no coverage gaps."
-
-#### vs. Competitors (Software Only)
-
-| Capability | Competitors | RecallWire + RMaaS |
-|------------|-------------|-------------------|
-| Alert triage | Customer does it | We do it |
-| Response coordination | Customer does it | We do it |
-| Documentation | Customer creates | We create, customer approves |
-| Audit preparation | Customer scrambles | We prepare proactively |
-| Regulatory guidance | Help articles | Live expert access |
-| Staffing risk | Customer's problem | Our problem |
-
----
-
-### RMaaS Success Metrics
-
-| Metric | Target | Measurement |
-|--------|--------|-------------|
-| Time to recall resolution | 50% faster than self-service | Platform data |
-| Audit readiness score | 95%+ compliance | Quarterly assessments |
-| Customer effort score | <2 (low effort) | Post-interaction surveys |
-| Staff time saved | 20+ hours/month | Customer surveys |
-| RMaaS retention rate | >90% annual | Renewal data |
-| RMaaS expansion rate | 30%+ upgrade to higher tier | Upgrade tracking |
-
----
-
 ## Summary: Combined Strategy
 
 ### The Full Picture
 
 ```
-Entry Point ($199/mo)
+Standard Entry ($4,999/yr)
         │
         ▼
 ┌───────────────────────────────────────────────────────────────┐
@@ -501,15 +447,15 @@ Entry Point ($199/mo)
 │                                                               │
 │  Software Expansion          RMaaS Expansion                  │
 │  ─────────────────          ────────────────                  │
-│  • Add locations            • RMaaS Essentials ($499)         │
-│  • Add categories           • RMaaS Core ($999)               │
-│  • Upgrade tiers            • RMaaS Complete ($2,499)         │
-│  • Add AI queries           • Add-on services                 │
+│  • Add categories           • RMaaS Essentials ($499/mo)      │
+│  • Upgrade to Enterprise    • RMaaS Core ($999/mo)            │
+│  • Add locations            • RMaaS Complete ($2,499/mo)      │
+│  • Expand AI usage          • Add-on services                 │
 │                                                               │
 │                      │                                        │
 │                      ▼                                        │
-│            Enterprise Relationship                            │
-│            ($40k-100k+ annually)                              │
+│            Enterprise + RMaaS Relationship                    │
+│            ($50k-100k+ annually)                              │
 │                                                               │
 └───────────────────────────────────────────────────────────────┘
 ```
@@ -518,28 +464,21 @@ Entry Point ($199/mo)
 
 | Customer Type | Entry | Year 1 | Year 2 | Year 3 |
 |---------------|-------|--------|--------|--------|
-| Single facility (software only) | $2,000 | $3,500 | $4,500 | $5,000 |
-| Single facility + RMaaS | $2,000 | $10,000 | $12,000 | $14,000 |
-| Multi-location (software only) | $4,800 | $8,000 | $12,000 | $15,000 |
-| Multi-location + RMaaS | $4,800 | $25,000 | $35,000 | $45,000 |
-| Enterprise + RMaaS | $40,000 | $70,000 | $85,000 | $100,000 |
+| Standard (software only) | $4,999 | $6,000 | $7,000 | $8,000 |
+| Standard + RMaaS | $4,999 | $15,000 | $18,000 | $22,000 |
+| Enterprise (software only) | $25,000 | $30,000 | $40,000 | $50,000 |
+| Enterprise + RMaaS | $25,000 | $60,000 | $75,000 | $90,000 |
 
 ### Key Takeaways
 
-1. **Entry pricing ($199/mo)** beats PAR Excellence while preserving upsell paths
+1. **Two-tier model simplifies entry** - Standard at $4,999/yr, Enterprise at $25K+
 2. **Built-in expansion triggers** create natural upgrade moments
 3. **RMaaS is a true differentiator** - no competitor offers managed services to healthcare facilities
-4. **RMaaS dramatically increases LTV** - 3-5x higher than software-only customers
+4. **RMaaS dramatically increases LTV** - 2-3x higher than software-only customers
 5. **RMaaS improves retention** - higher switching costs, deeper relationship
 6. **RMaaS margins are healthy** - 48-70% depending on tier
 
 ---
 
-## Next Steps
-
-1. **Finalize Single Facility Complete package** at $199/mo
-2. **Build expansion triggers** into product roadmap
-3. **Develop RMaaS pilot program** with 5-10 customers
-4. **Create RMaaS sales materials** and training
-5. **Hire initial RMaaS team** (2-3 specialists to start)
-6. **Launch RMaaS beta** with existing customers showing need signals
+*Document updated: December 2025*
+*Reflects simplified two-tier pricing model (Standard + Enterprise)*
