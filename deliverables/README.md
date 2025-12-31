@@ -8,20 +8,21 @@ Complete pricing strategy, competitive analysis, and go-to-market materials for 
 
 ## Document Overview
 
-| # | Document | Category | Audience | Description |
-|---|----------|----------|----------|-------------|
-| 01 | [Current State Analysis](./01-current-state-analysis.md) | Foundation | Internal | Product capabilities and pricing challenge analysis |
-| 02 | [Competitive Analysis](./02-competitive-analysis.md) | Foundation | Internal | Market landscape and competitor intelligence |
-| 03 | [Pricing Recommendations](./03-pricing-recommendations.md) | Strategy | Internal | Original 4-tier pricing proposal |
-| 04 | [Implementation Roadmap](./04-implementation-roadmap.md) | Strategy | Internal | 5-phase launch plan with milestones |
-| 05 | [Pricing Addendum](./05-pricing-addendum.md) | Strategy | Internal | Usage-based pricing and industry expansion |
-| 06 | [Multi-Dimensional Pricing](./06-multi-dimensional-pricing-model.md) | Strategy | Internal | Complete pricing architecture (4 dimensions) |
-| 07 | [Enterprise Pricing & Margins](./07-enterprise-pricing-margins.md) | Finance | Internal | Margin analysis and enterprise tier structure |
-| 08 | [Enhanced Self-Service](./08-enhanced-self-service-strategy.md) | Operations | Internal | Self-service strategy for margin improvement |
-| 09 | [Enterprise Use Case](./09-enterprise-use-case-academic-medical-center.md) | Sales | External | Sales document for large health systems |
-| 10 | [Pricing One-Pager](./10-pricing-one-pager.md) | Marketing | External | Customer-facing pricing page content |
-| 11 | [Land & Expand + RMaaS](./11-land-expand-and-rmaas-strategy.md) | Strategy | Internal | Growth strategy and managed services |
-| 12 | [ROI Analysis](./12-roi-analysis-competitive-comparison.md) | Sales | Internal/External | ROI calculator and competitive positioning |
+| # | Document | Category | Audience | Status |
+|---|----------|----------|----------|--------|
+| 01 | [Current State Analysis](./01-current-state-analysis.md) | Foundation | Internal | Reference |
+| 02 | [Competitive Analysis](./02-competitive-analysis.md) | Foundation | Internal | Active |
+| 03 | [Pricing Recommendations](./03-pricing-recommendations.md) | Strategy | Internal | Archived (superseded by 10) |
+| 04 | [Implementation Roadmap](./04-implementation-roadmap.md) | Strategy | Internal | Active |
+| 06 | [Multi-Dimensional Pricing](./06-multi-dimensional-pricing-model.md) | Strategy | Internal | Reference |
+| 08 | [Enhanced Self-Service](./08-enhanced-self-service-strategy.md) | Operations | Internal | Active |
+| 09 | [Enterprise Use Case](./09-enterprise-use-case-academic-medical-center.md) | Sales | External | Active |
+| 10 | [Pricing One-Pager](./10-pricing-one-pager.md) | Marketing | External | **Current** |
+| 11 | [Land & Expand + RMaaS](./11-land-expand-and-rmaas-strategy.md) | Strategy | Internal | Active |
+| 12 | [ROI Analysis](./12-roi-analysis-competitive-comparison.md) | Sales | Both | Active |
+| 13 | [Per-User Pricing Assessment](./13-per-user-pricing-assessment.md) | Strategy | Internal | Reference (not recommended) |
+
+**Note:** Documents 05 and 07 were consolidated into document 06 during the December 2025 pricing simplification.
 
 ---
 
@@ -38,8 +39,8 @@ Complete pricing strategy, competitive analysis, and go-to-market materials for 
 | Document | Use When |
 |----------|----------|
 | [Multi-Dimensional Pricing](./06-multi-dimensional-pricing-model.md) | Understanding full pricing architecture |
-| [Enterprise Pricing & Margins](./07-enterprise-pricing-margins.md) | Evaluating deal profitability |
 | [Land & Expand + RMaaS](./11-land-expand-and-rmaas-strategy.md) | Planning customer growth and RMaaS launch |
+| [ROI Analysis](./12-roi-analysis-competitive-comparison.md) | Evaluating deal profitability and competitive positioning |
 
 ### For Product/Engineering
 | Document | Use When |
@@ -53,54 +54,49 @@ Complete pricing strategy, competitive analysis, and go-to-market materials for 
 ## Document Relationships
 
 ```
-FOUNDATION (Start Here)
+FOUNDATION
 │
-├── 01-Current State Analysis
-│   └── Feeds into → 03-Pricing Recommendations
-│
-├── 02-Competitive Analysis
-│   └── Feeds into → 03-Pricing Recommendations
-│                  → 12-ROI Analysis
-│
-STRATEGY (Core Decisions)
-│
-├── 03-Pricing Recommendations (Original 4-tier proposal)
-│   └── Extended by → 05-Pricing Addendum (usage-based, industry expansion)
-│                   → 06-Multi-Dimensional Pricing (complete architecture)
-│
-├── 06-Multi-Dimensional Pricing (Master pricing document)
-│   ├── Locations + Tiers + Categories + Usage Limits
-│   └── Informs → 07-Enterprise Pricing & Margins
-│              → 10-Pricing One-Pager
-│
-├── 07-Enterprise Pricing & Margins
-│   └── Informs → 09-Enterprise Use Case
-│              → 12-ROI Analysis
-│
-OPERATIONS & GROWTH
-│
-├── 04-Implementation Roadmap
-│   └── Sequence for launching new pricing
-│
-├── 08-Enhanced Self-Service Strategy
-│   └── Margin improvement for lower tiers
+├── 01-Current State Analysis ─────┐
+│   (Product capabilities)         │
+│                                  ├──→ 06-Multi-Dimensional Pricing
+├── 02-Competitive Analysis ───────┤    (Master pricing architecture)
+│   (Market landscape)             │
+│                                  │
+STRATEGY                           │
+│                                  ▼
+├── 06-Multi-Dimensional Pricing ──┬──→ 10-Pricing One-Pager (Current)
+│   (4 dimensions: Location,       │    (Customer-facing pricing)
+│    Tier, Category, Usage)        │
+│                                  └──→ 09-Enterprise Use Case
+│                                       (Sales document)
 │
 ├── 11-Land & Expand + RMaaS Strategy
-│   ├── Entry pricing: Single Facility Complete ($199/mo)
-│   ├── Expansion mechanisms
-│   └── RMaaS managed service offering
+│   (Growth mechanics, managed services)
 │
-CUSTOMER-FACING
+OPERATIONS
 │
-├── 09-Enterprise Use Case (Sales)
-│   └── For large health system prospects (Mount Sinai profile)
+├── 04-Implementation Roadmap
+│   (Launch sequence)
 │
-├── 10-Pricing One-Pager (Marketing)
-│   └── Website/collateral pricing content
+├── 08-Enhanced Self-Service Strategy
+│   (Margin improvement)
 │
-└── 12-ROI Analysis (Sales/Marketing)
-    └── Competitive positioning and value justification
+SALES ENABLEMENT
+│
+├── 09-Enterprise Use Case ◄─── Uses ROI data
+│   (Large health system sales)
+│
+├── 10-Pricing One-Pager ◄────── SOURCE OF TRUTH
+│   (2-tier model: Standard $4,999 / Enterprise $25K+)
+│
+└── 12-ROI Analysis
+    (Value justification, competitive positioning)
 ```
+
+**Pricing Evolution:**
+- 03: Original 4-tier proposal (archived)
+- 05, 07: Extended analysis (consolidated into 06)
+- 10: **Current 2-tier simplified model**
 
 ---
 
@@ -180,20 +176,6 @@ Original 4-tier pricing proposal with feature segmentation and go-to-market cons
 
 ---
 
-#### [05 - Pricing Addendum](./05-pricing-addendum.md)
-**Category:** Strategy | **Audience:** Internal
-
-Supplemental analysis addressing usage-based pricing for high-volume facilities and food/supply chain industry expansion.
-
-**Topics Covered:**
-- Alert volume tiers for enterprise (protects AWS costs)
-- Food/supply chain expansion opportunity (7.8% of OneRecall alerts)
-- Updated competitive intelligence from new sources
-
-**Relationship:** Extends original Pricing Recommendations (03). Informs Multi-Dimensional Pricing (06).
-
----
-
 #### [06 - Multi-Dimensional Pricing Model](./06-multi-dimensional-pricing-model.md)
 **Category:** Strategy | **Audience:** Internal
 
@@ -222,29 +204,7 @@ Supplemental analysis addressing usage-based pricing for high-volume facilities 
 | Compliance (Food + Pharma+) | $199 | 20% |
 | Healthcare Complete (All 5) | $349 | 31% |
 
-**Relationship:** Central pricing document. Informs Enterprise Pricing (07), Pricing One-Pager (10), and product implementation.
-
----
-
-#### [07 - Enterprise Pricing & Margins](./07-enterprise-pricing-margins.md)
-**Category:** Finance | **Audience:** Internal
-
-Financial analysis of enterprise pricing with margin projections and cost modeling.
-
-**Enterprise Sweet Spot:** $40-45k/year
-
-**Margin Analysis at $42,500:**
-- Gross margin: ~50%
-- Net margin: ~32%
-
-**Enterprise Tiers:**
-| Tier | Annual | Locations | Alerts/yr |
-|------|--------|-----------|-----------|
-| Enterprise Standard | $40,000 | Up to 50 | 100k |
-| Enterprise Plus | $55,000 | Up to 100 | 250k |
-| Enterprise Premier | $75,000+ | Unlimited | Unlimited |
-
-**Relationship:** Informs Enterprise Use Case (09) and deal pricing decisions.
+**Relationship:** Central pricing document. Informs Pricing One-Pager (10) and product implementation.
 
 ---
 
@@ -382,27 +342,13 @@ PAR Excellence tracks at the **task level** (acknowledgement), but NOT at the **
 
 ---
 
-## Pricing Summary
-
-### Entry Point
-| Package | Monthly | Annual | Includes |
-|---------|---------|--------|----------|
-| **Single Facility Complete** | $199 | $1,999 | 1 location + Medical Devices bundle + AI |
+## Pricing Summary (Current 2-Tier Model)
 
 ### Core Tiers
-| Tier | Monthly | Annual | Locations |
-|------|---------|--------|-----------|
-| Starter | $149 | $1,499 | 1 |
-| Professional | $399 | $3,999 | Up to 5 |
-| Business | $799 | $7,999 | Up to 20 |
-| Enterprise | Custom | $40,000+ | Unlimited |
-
-### Enterprise Tiers
-| Tier | Annual | Locations | AI Queries |
-|------|--------|-----------|------------|
-| Enterprise Standard | $40,000 | Up to 50 | 2,000/mo |
-| Enterprise Plus | $55,000 | Up to 100 | 5,000/mo |
-| Enterprise Premier | $75,000+ | Unlimited | Unlimited |
+| Tier | Annual | Locations | Features |
+|------|--------|-----------|----------|
+| **Standard** | $4,999/year | 1-5 | Full recall lifecycle, AI assistant, audit documentation |
+| **Enterprise** | Starting at $25,000/year | 6+ | Multi-facility coordination, custom integrations, dedicated success |
 
 ### Category Add-Ons
 | Category | Monthly | Annual |
@@ -426,16 +372,14 @@ PAR Excellence tracks at the **task level** (acknowledgement), but NOT at the **
 
 ## Key Strategic Decisions
 
-| Decision | Recommendation | Rationale |
-|----------|----------------|-----------|
-| Primary pricing metric | Per-location | Customer comprehension, healthcare industry standard |
-| Competitive entry point | $199/mo (Single Facility Complete) | Matches PAR Excellence, includes AI differentiator |
-| AI feature gating | Business+ tiers for advanced AI | Protects margins, creates upgrade path |
-| Category modules | Add-on model | Enables industry expansion without base complexity |
-| Usage limits | Enforced with overages | Protects AWS costs (Bedrock, Textract) |
-| Enterprise sweet spot | $40-45k | Undercuts OneRecall/ECRI, healthy margins |
-| Managed services | RMaaS offering | Unique differentiator, 3-5x LTV improvement |
-| Self-service investment | Prioritize | Critical for lower-tier margin sustainability |
+| Decision | Current Approach | Rationale |
+|----------|------------------|-----------|
+| Pricing model | 2-tier (Standard/Enterprise) | Simplified buyer journey, clear upgrade path |
+| Standard tier | $4,999/year (1-5 locations) | Competitive with PAR, accessible entry |
+| Enterprise tier | $25,000+ (6+ locations) | Undercuts OneRecall/ECRI significantly |
+| Category modules | Add-on model ($799-$1,499/yr) | Enables expansion without base complexity |
+| Managed services | RMaaS offering ($499-$2,499/mo) | Unique differentiator, no competitor offers this |
+| Pricing transparency | Published rates | Differentiator vs. "contact sales" competitors |
 
 ---
 
@@ -449,6 +393,23 @@ PAR Excellence tracks at the **task level** (acknowledgement), but NOT at the **
 - [FDA 21 CFR Part 806 - Corrections and Removals](https://www.fda.gov/medical-devices/postmarket-requirements-devices/recalls-corrections-and-removals-devices)
 - [FDA 21 CFR Part 810 - Medical Device Recall Authority](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-810)
 - Competitor materials (OneRecall, TraceLink, PAR/NotiSphere decks)
+
+---
+
+## Related Documentation
+
+| Folder | Relevance |
+|--------|-----------|
+| [Sales](../sales/README.md) | Battlecards use pricing/ROI data from here |
+| [Creatives](../creatives/README.md) | Design briefs for sales deck, one-pagers |
+| [Medical Devices](../medical_devices/README.md) | Market context for competitive positioning |
+| [Workflows](../workflows/README.md) | Product capabilities that inform pricing |
+
+### Key Cross-References
+- Competitive analysis (02) → Sales battlecards
+- ROI analysis (12) → Sales deck stats, email campaigns
+- Enterprise use case (09) → Direct sales document
+- Pricing one-pager (10) → Website, creatives design source
 
 ---
 

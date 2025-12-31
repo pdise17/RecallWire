@@ -98,5 +98,14 @@ See [00-overview.md](./00-overview.md) for key insights and cross-reference anal
 
 ## Related Documentation
 
-- [Workflows: Recall Processes](../workflows/README.md) - How recalls flow through the system
-- [Deliverables: Pricing Strategy](../deliverables/README.md) - Pricing and go-to-market materials
+| Folder | Relevance |
+|--------|-----------|
+| [Workflows](../workflows/README.md) | How recalls flow from FDA through hospital resolution |
+| [Deliverables](../deliverables/README.md) | Pricing strategy, ROI analysis, go-to-market |
+| [Sales](../sales/README.md) | Competitive battlecards using this market data |
+| [Creatives](../creatives/README.md) | Marketing materials referencing these insights |
+
+### Key Cross-References
+- Competitive landscape (05) → Sales battlecards
+- Hospital buyer landscape (03) → Enterprise use case (deliverables/09)
+- Regulatory timeline (06) → Workflow compliance requirements

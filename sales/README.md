@@ -56,4 +56,21 @@ RecallWire RMaaS is a unique differentiator in every competitive scenario:
 
 ---
 
+## Related Documentation
+
+| Folder | Relevance |
+|--------|-----------|
+| [Deliverables](../deliverables/README.md) | Pricing (10), ROI analysis (12), Enterprise use case (09) |
+| [Medical Devices](../medical_devices/README.md) | Competitive landscape (05), market intelligence |
+| [Workflows](../workflows/README.md) | Product differentiation through workflow coverage |
+| [Creatives](../creatives/README.md) | Sales deck, one-pagers, email templates |
+
+### Key Cross-References
+- Pricing one-pager (deliverables/10) → Current pricing for proposals
+- ROI analysis (deliverables/12) → Value justification data
+- Competitive landscape (medical_devices/05) → Market positioning context
+- Sales deck brief (creatives/01) → Presentation materials
+
+---
+
 *Last updated: December 2025*

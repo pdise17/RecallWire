@@ -9,11 +9,19 @@ Comprehensive business documentation for RecallWire, including pricing strategy,
 ```
 biz-recallwire/
 ├── README.md                    # This file
+├── CHANGELOG.md                 # Decision history & pricing evolution
+├── SITEMAP.md                   # Visual navigation map
 ├── deliverables/                # Pricing strategy & go-to-market
 │   └── README.md
 ├── medical_devices/             # Market intelligence & research
 │   └── README.md
-└── workflows/                   # Recall process documentation
+├── workflows/                   # Recall process documentation
+│   └── README.md
+├── sales/                       # Competitive battlecards & campaigns
+│   └── README.md
+├── creatives/                   # Marketing material briefs
+│   └── README.md
+└── templates/                   # Document templates for new additions
     └── README.md
 ```
 
@@ -31,16 +39,15 @@ Complete pricing architecture, competitive analysis, and sales enablement materi
 |----------|-------------|
 | [01 - Current State Analysis](./deliverables/01-current-state-analysis.md) | Product capabilities and pricing challenge |
 | [02 - Competitive Analysis](./deliverables/02-competitive-analysis.md) | Market landscape and competitor intelligence |
-| [03 - Pricing Recommendations](./deliverables/03-pricing-recommendations.md) | Original 4-tier pricing proposal |
+| [03 - Pricing Recommendations](./deliverables/03-pricing-recommendations.md) | Original 4-tier pricing proposal (archived) |
 | [04 - Implementation Roadmap](./deliverables/04-implementation-roadmap.md) | 5-phase launch plan |
-| [05 - Pricing Addendum](./deliverables/05-pricing-addendum.md) | Usage-based pricing, industry expansion |
 | [06 - Multi-Dimensional Pricing](./deliverables/06-multi-dimensional-pricing-model.md) | Complete pricing architecture (4 dimensions) |
-| [07 - Enterprise Pricing & Margins](./deliverables/07-enterprise-pricing-margins.md) | Margin analysis, enterprise tier structure |
 | [08 - Enhanced Self-Service](./deliverables/08-enhanced-self-service-strategy.md) | Self-service strategy for margin improvement |
 | [09 - Enterprise Use Case](./deliverables/09-enterprise-use-case-academic-medical-center.md) | Sales document for large health systems |
-| [10 - Pricing One-Pager](./deliverables/10-pricing-one-pager.md) | Customer-facing pricing content |
+| [10 - Pricing One-Pager](./deliverables/10-pricing-one-pager.md) | **Current pricing** - 2-tier model |
 | [11 - Land & Expand + RMaaS](./deliverables/11-land-expand-and-rmaas-strategy.md) | Growth strategy and managed services |
 | [12 - ROI Analysis](./deliverables/12-roi-analysis-competitive-comparison.md) | ROI calculator and competitive positioning |
+| [13 - Per-User Pricing Assessment](./deliverables/13-per-user-pricing-assessment.md) | Per-user model evaluation (not recommended) |
 
 ---
 
@@ -79,6 +86,38 @@ Medical device recall workflows from FDA initiation through hospital response.
 
 ---
 
+### [Sales](./sales/README.md)
+
+**Competitive Battlecards & Campaign Playbooks**
+
+Sales enablement materials for competitive positioning and outbound campaigns.
+
+| Document | Description |
+|----------|-------------|
+| [Battlecard: Inmar OneRecall](./sales/battlecard-inmar-onerecall.md) | Enterprise competitor (60% market share) |
+| [Battlecard: ECRI](./sales/battlecard-ecri.md) | Premium enterprise competitor |
+| [Battlecard: PAR Excellence](./sales/battlecard-par-excellence.md) | Budget competitor positioning |
+| [Hot Recall Campaign](./sales/campaign-hot-recall-outreach.md) | Outbound campaign playbook |
+
+---
+
+### [Creatives](./creatives/README.md)
+
+**Marketing Material Briefs**
+
+Design briefs for Canva, including sales deck, one-pagers, social content, and email templates.
+
+| Document | Description |
+|----------|-------------|
+| [Launch Runbook](./creatives/00-launch-runbook.md) | **START HERE** - Strategic launch roadmap |
+| [Sales Deck](./creatives/01-sales-deck.md) | 12-slide pitch deck brief |
+| [One-Pagers](./creatives/02-one-pagers.md) | Executive, Operations, IT versions |
+| [LinkedIn/Social](./creatives/03-linkedin-social.md) | Content series and templates |
+| [Email Templates](./creatives/05-email-templates.md) | Hot recall campaign sequences |
+| [Movie Posters](./creatives/06-movie-poster-prompts.md) | AI image generation prompts |
+
+---
+
 ## Quick Links
 
 ### For Sales
@@ -100,14 +139,14 @@ Medical device recall workflows from FDA initiation through hospital response.
 
 ## Key Metrics
 
-### Pricing Summary
+### Pricing Summary (Current 2-Tier Model)
 
-| Tier | Monthly | Annual | Target |
-|------|---------|--------|--------|
-| Starter | $149 | $1,499 | Single facility |
-| Professional | $399 | $3,999 | Up to 5 locations |
-| Business | $799 | $7,999 | Up to 20 locations |
-| Enterprise | Custom | $40,000+ | 50+ locations |
+| Tier | Annual | Target |
+|------|--------|--------|
+| **Standard** | $4,999/year | 1-5 locations |
+| **Enterprise** | Starting at $25,000/year | 6+ locations |
+
+**Add-Ons:** Category modules ($799-$1,499/yr), RMaaS managed services ($499-$2,499/mo)
 
 ### Market Intelligence
 
@@ -132,10 +171,25 @@ Medical device recall workflows from FDA initiation through hospital response.
 
 | Directory | Documents | Last Updated |
 |-----------|-----------|--------------|
-| Deliverables | 12 | December 2025 |
+| Deliverables | 10 | December 2025 |
 | Medical Devices | 7 | December 2025 |
 | Workflows | 6 | December 2025 |
-| **Total** | **25** | December 2025 |
+| Sales | 4 | December 2025 |
+| Creatives | 8 | December 2025 |
+| Templates | 5 | December 2025 |
+| **Total** | **40** | December 2025 |
+
+**See also:** [SITEMAP.md](./SITEMAP.md) (visual navigation) | [CHANGELOG.md](./CHANGELOG.md) (decision history)
+
+### Key Document Status
+
+| Document | Purpose | Status | Last Updated |
+|----------|---------|--------|--------------|
+| `deliverables/10-pricing-one-pager.md` | Current pricing | **Source of Truth** | Dec 31, 2025 |
+| `deliverables/12-roi-analysis.md` | ROI data for sales | Active | Dec 30, 2025 |
+| `sales/battlecard-*.md` | Competitive positioning | Active | Dec 31, 2025 |
+| `creatives/00-launch-runbook.md` | Launch roadmap | Active | Dec 31, 2025 |
+| `medical_devices/05-competitive.md` | Market landscape | Active | Dec 30, 2025 |
 
 ---
 

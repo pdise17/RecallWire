@@ -64,5 +64,14 @@ All workflow documents include Mermaid diagrams:
 
 ## Related Documentation
 
-- [Medical Devices: Regulatory Timeline](../medical_devices/06-regulatory-timeline.md) - FDA deadlines and compliance requirements
-- [Medical Devices: Device Categories](../medical_devices/04-device-categories-recall-patterns.md) - Recall patterns by device type
+| Folder | Relevance |
+|--------|-----------|
+| [Medical Devices](../medical_devices/README.md) | Market context, device categories, regulatory requirements |
+| [Deliverables](../deliverables/README.md) | Product positioning references these workflows |
+| [Sales](../sales/README.md) | Battlecards reference workflow complexity as differentiator |
+| [Creatives](../creatives/README.md) | Marketing materials visualize these processes |
+
+### Key Cross-References
+- Regulatory timeline (medical_devices/06) → Workflow compliance deadlines
+- Device categories (medical_devices/04) → Category-specific workflow variations
+- ROI analysis (deliverables/12) → Time savings from workflow automation
