@@ -257,6 +257,62 @@ Industry-specific data sources for market research:
 
 ---
 
+## Git Workflow (Required)
+
+**CRITICAL:** All changes MUST go through a branch and pull request. NEVER commit directly to main.
+
+1. **Pre-Work: Always Pull Latest**
+   - **Before starting ANY work**, ensure you have the latest code
+   - This applies whether on main or a feature branch
+   ```bash
+   # If on main (starting new work)
+   git pull
+
+   # If on a feature branch (resuming work)
+   git pull                        # get latest branch changes
+   git fetch origin main           # check if main has updates
+   git rebase origin/main          # incorporate main's changes if needed
+   ```
+
+2. **Branch and PR Workflow**
+   - Create a feature branch for ALL changes: `git checkout -b feature/descriptive-name`
+   - Make commits on the feature branch
+   - Push the branch and create a PR to main
+   - Branch naming: `feature/`, `fix/`, `refactor/`, `docs/` prefixes
+
+3. **Commit Authorship**
+   - Commits should appear from the repository owner's git user
+   - Do NOT include `Co-Authored-By: Claude` trailers
+   - Do NOT include emoji prefixes or "Generated with Claude Code" messages
+   - Write clean, professional commit messages as if written by a human developer
+
+4. **Commit Message Format**
+   ```
+   Short summary of changes (50 chars or less)
+
+   Optional longer description if needed. Explain what and why,
+   not how. Wrap at 72 characters.
+   ```
+
+5. **Example Workflow**
+   ```bash
+   # Always pull latest first
+   git pull
+
+   # Create feature branch
+   git checkout -b docs/update-pricing
+
+   # Make changes and commit
+   git add .
+   git commit -m "Update pricing one-pager with RMaaS tiers"
+
+   # Push and create PR
+   git push -u origin docs/update-pricing
+   gh pr create --title "Update pricing one-pager" --body "Updates pricing documentation with new RMaaS tier details."
+   ```
+
+---
+
 ## Repository Structure
 
 ```
