@@ -1,0 +1,1179 @@
+# Health Systems Pattern Matching Configuration
+# Defines identification patterns for US health systems
+#
+# Pattern Matching Rules:
+# 1. Check exclude_patterns first (if match, skip this system)
+# 2. Check state_patterns for hospital's state (more precise)
+# 3. Check general patterns (broader match)
+#
+# Pattern Syntax: Python regex (case-insensitive)
+# - Use \b for word boundaries
+# - Use .* for wildcards
+# - Use (?!...) for negative lookahead
+#
+
+health_systems:
+  version: '1.0'
+  last_updated: '2025-01-22'
+  description: Top 50+ US Health Systems for pattern matching
+  systems:
+  - id: hca
+    name: HCA Healthcare
+    headquarters: Nashville, TN
+    type: for-profit
+    hospital_count_estimate: 187
+    patterns:
+    - HCA\b
+    - Medical City
+    - HealthONE
+    - Tristar
+    - MountainStar
+    - Mission Hospital.*Asheville
+    - Parallon
+    state_patterns:
+      TX:
+      - Medical City
+      - Las Palmas
+      - Del Sol
+      - Rio Grande
+      FL:
+      - Brandon Regional
+      - Blake Medical
+      - Citrus Memorial
+      - Doctors Hospital.*FL
+      - Fawcett
+      - JFK Medical
+      - Kendall Regional
+      - Lawnwood
+      - Largo Medical
+      - Memorial Hospital.*Jacksonville
+      - NCH
+      - Northwest Medical Center
+      - Northside Hospital.*FL
+      - Ocala Regional
+      - Orange Park
+      - Osceola Regional
+      - Palms West
+      - Plantation General
+      - Poinciana
+      - Regional Medical Center Bayonet
+      - St. Lucie
+      - Twin Cities.*FL
+      - University Hospital.*FL
+      - West Florida
+      - Westside Regional
+      CO:
+      - HealthONE
+      - Swedish Medical
+      - Sky Ridge
+      - Rose Medical
+      - North Suburban
+      - Presbyterian/St Luke's.*Denver
+      - Medical Center of Aurora
+      - Spalding Rehab
+      TN:
+      - TriStar
+      - Centennial
+      - Hendersonville
+      - Horizon
+      - Parkridge
+      - Southern Hills
+      - Skyline
+      - Summit
+      CA:
+      - Good Samaritan.*San Jose
+      - Los Robles
+      - Regional Medical Center.*San Jose
+      - Riverside Community
+      NV:
+      - MountainView
+      - Southern Hills.*NV
+      - Sunrise
+      - Valley Health System
+      VA:
+      - Chippenham
+      - Henrico Doctors
+      - John Randolph
+      - Johnston-Willis
+      - Parham Doctors
+      - Retreat Doctors
+      - Spotsylvania Regional
+      GA:
+      - Cartersville Medical
+      - Coliseum Medical
+      - Eastside Medical
+      - Fairview Park
+      - Redmond Regional
+  - id: commonspirit
+    name: CommonSpirit Health
+    headquarters: Chicago, IL
+    type: nonprofit
+    hospital_count_estimate: 137
+    patterns:
+    - CommonSpirit
+    - \bCHI\b
+    - Dignity Health
+    - Catholic Health Initiatives
+    - St\.? Joseph.*Health
+    - Mercy.*CHI
+    state_patterns:
+      CA:
+      - Dignity Health
+      - Marian Regional
+      - Mercy.*CA
+      - Dominican
+      - Sequoia
+      - St. Mary.*CA
+      - Woodland Memorial
+      TX:
+      - CHI St. Luke
+      - Baylor St. Luke
+      - St. Joseph.*TX
+      NE:
+      - CHI Health
+      - Immanuel
+      - Lakeside
+      - Midlands
+      - Nebraska Heart
+      AZ:
+      - Dignity Health.*AZ
+      - Chandler Regional
+      - Mercy Gilbert
+      - St. Joseph.*Phoenix
+      KY:
+      - CHI Saint Joseph
+      OH:
+      - Mercy Health.*OH
+      CO:
+      - CommonSpirit.*CO
+      - Penrose
+      - St. Francis.*CO
+  - id: ascension
+    name: Ascension
+    headquarters: St. Louis, MO
+    type: nonprofit
+    hospital_count_estimate: 136
+    patterns:
+    - Ascension
+    - St\.? Vincent.*Ascension
+    - Providence.*Ascension
+    state_patterns:
+      MI:
+      - Ascension.*MI
+      - St. John.*MI
+      - Borgess
+      - Genesys
+      - Providence.*MI
+      - St. Mary.*MI
+      WI:
+      - Ascension.*WI
+      - Columbia St. Mary
+      - Ministry
+      IN:
+      - Ascension St. Vincent
+      - St. Vincent.*IN
+      - Peyton Manning
+      TX:
+      - Ascension Seton
+      - Dell Seton
+      - Seton.*TX
+      TN:
+      - Ascension Saint Thomas
+      - Saint Thomas.*TN
+      FL:
+      - Ascension Sacred Heart
+      - Sacred Heart.*FL
+      - St. Vincent.*FL
+      NY:
+      - Our Lady of Lourdes.*NY
+      MD:
+      - Ascension Saint Agnes
+      OK:
+      - Ascension St. John.*OK
+      - Jane Phillips
+      KS:
+      - Ascension Via Christi
+  - id: lifepoint
+    name: LifePoint Health
+    headquarters: Brentwood, TN
+    type: for-profit
+    hospital_count_estimate: 65
+    patterns:
+    - LifePoint
+    state_patterns:
+      VA:
+      - LewisGale
+      - Clinch Valley
+      - Danville Regional
+      - Sovah Health
+      WV:
+      - Raleigh General
+      - Williamson
+      KY:
+      - Clark Regional
+      - Georgetown Community
+      - Lake Cumberland
+      - Logan Memorial
+      - Bourbon Community
+      TN:
+      - NorthCrest
+      - Sumner Regional
+      - Livingston Regional
+  - id: trinity
+    name: Trinity Health
+    headquarters: Livonia, MI
+    type: nonprofit
+    hospital_count_estimate: 93
+    patterns:
+    - Trinity Health
+    - Mercy Health.*Trinity
+    - St\.? Joseph Mercy
+    - St\.? Mary Mercy
+    state_patterns:
+      MI:
+      - Trinity Health.*MI
+      - St. Joseph Mercy
+      - St. Mary Mercy
+      - Mercy Health.*MI
+      OH:
+      - Trinity.*OH
+      - Mount Carmel
+      IN:
+      - Saint Joseph Health System
+      IA:
+      - MercyOne
+      - Mercy Medical Center.*IA
+      ID:
+      - Saint Alphonsus
+      NJ:
+      - St. Francis.*NJ
+      NY:
+      - St. Peter's Health Partners
+      MA:
+      - Mercy Medical Center.*MA
+  - id: chs
+    name: Community Health Systems
+    headquarters: Franklin, TN
+    type: for-profit
+    hospital_count_estimate: 69
+    patterns:
+    - Community Health Systems
+    state_patterns:
+      AL:
+      - Grandview Medical
+      - Crestwood Medical
+      AZ:
+      - Northwest Medical Center.*AZ
+      - Oro Valley
+      FL:
+      - Bayfront Health
+      - Northwest.*FL
+      IN:
+      - Bluffton Regional
+      - Dukes Memorial
+      PA:
+      - Berwick Hospital
+      - Brandywine
+      - Easton Hospital
+      - Jennersville
+      - Pottstown Memorial
+      TN:
+      - Tennova
+      - Dyersburg Regional
+      - Lakeway Regional
+  - id: advocate
+    name: Advocate Health
+    headquarters: Charlotte, NC
+    type: nonprofit
+    hospital_count_estimate: 69
+    patterns:
+    - Advocate
+    - Aurora Health
+    - Atrium Health
+    state_patterns:
+      IL:
+      - Advocate.*IL
+      - Christ Medical
+      - Good Samaritan.*IL
+      - Lutheran General
+      - South Suburban
+      - Trinity.*IL
+      WI:
+      - Aurora.*WI
+      - Aurora Medical Center
+      - Aurora St. Luke's
+      - Aurora Sinai
+      NC:
+      - Atrium Health
+      - Carolinas Medical
+      - Levine Children's
+      - Mercy.*Charlotte
+      GA:
+      - Atrium Health.*GA
+      - Floyd Medical
+  - id: tenet
+    name: Tenet Healthcare
+    headquarters: Dallas, TX
+    type: for-profit
+    hospital_count_estimate: 60
+    patterns:
+    - Tenet
+    - USPI
+    state_patterns:
+      TX:
+      - Baptist.*San Antonio
+      - Nacogdoches Medical
+      - Resolute Health
+      CA:
+      - Desert Regional
+      - Emanuel Medical
+      - Doctors Hospital.*CA
+      - Doctors Medical Center.*CA
+      - Fountain Valley Regional
+      - Placentia-Linda
+      - San Ramon Regional
+      - Sierra Vista Regional
+      FL:
+      - Coral Gables
+      - Delray Medical
+      - Good Samaritan.*FL
+      - Hialeah
+      - North Shore.*FL
+      - Palm Beach Gardens
+      - Palmetto General
+      - St. Mary's.*FL
+      - West Boca
+      AZ:
+      - Abrazo
+      - Carondelet
+      - Maryvale
+      AL:
+      - Brookwood Baptist
+  - id: providence
+    name: Providence
+    headquarters: Renton, WA
+    type: nonprofit
+    hospital_count_estimate: 52
+    patterns:
+    - Providence(?! .*Ascension)
+    - Swedish.*Seattle
+    - Kadlec
+    state_patterns:
+      WA:
+      - Providence.*WA
+      - Swedish
+      - Kadlec
+      - St. Peter.*WA
+      OR:
+      - Providence.*OR
+      - St. Vincent.*OR
+      - Milwaukie
+      - Medford
+      - Hood River
+      CA:
+      - Providence.*CA
+      - St. Joseph.*CA
+      - St. Jude.*CA
+      - Little Company of Mary
+      - Mission Hospital.*CA
+      - Torrance Memorial
+      AK:
+      - Providence Alaska
+      MT:
+      - Providence.*MT
+      - St. Patrick.*MT
+  - id: uhs
+    name: Universal Health Services
+    headquarters: King of Prussia, PA
+    type: for-profit
+    hospital_count_estimate: 28
+    patterns:
+    - Universal Health Services
+    state_patterns:
+      NV:
+      - Valley Health System.*NV
+      - Valley Hospital.*NV
+      - Summerlin
+      - Centennial Hills
+      - Henderson
+      - Desert Springs
+      DC:
+      - George Washington University Hospital
+      TX:
+      - Texoma Medical
+      - Doctors Hospital.*Laredo
+      CA:
+      - Corona Regional
+      - Inland Valley
+  - id: kaiser
+    name: Kaiser Permanente
+    headquarters: Oakland, CA
+    type: nonprofit
+    hospital_count_estimate: 40
+    patterns:
+    - Kaiser
+    state_patterns:
+      CA:
+      - Kaiser.*CA
+      OR:
+      - Kaiser.*OR
+      WA:
+      - Kaiser.*WA
+      CO:
+      - Kaiser.*CO
+      GA:
+      - Kaiser.*GA
+      HI:
+      - Kaiser.*HI
+      VA:
+      - Kaiser.*VA
+      MD:
+      - Kaiser.*MD
+      DC:
+      - Kaiser.*DC
+  - id: bswh
+    name: Baylor Scott & White Health
+    headquarters: Dallas, TX
+    type: nonprofit
+    hospital_count_estimate: 52
+    patterns:
+    - Baylor Scott.*White
+    - Baylor.*Medical Center
+    - Scott.*White
+    state_patterns:
+      TX:
+      - Baylor
+      - Scott & White
+      - Hillcrest.*Waco
+  - id: upmc
+    name: UPMC
+    headquarters: Pittsburgh, PA
+    type: nonprofit
+    hospital_count_estimate: 40
+    patterns:
+    - \bUPMC\b
+    - University of Pittsburgh Medical
+    state_patterns:
+      PA:
+      - UPMC
+      - Magee-Womens
+      - Western Psychiatric
+      NY:
+      - UPMC.*NY
+      MD:
+      - UPMC.*MD
+  - id: northwell
+    name: Northwell Health
+    headquarters: New Hyde Park, NY
+    type: nonprofit
+    hospital_count_estimate: 22
+    patterns:
+    - Northwell
+    - North Shore.*University
+    - Long Island Jewish
+    - LIJ\b
+    - Lenox Hill
+    - Staten Island University
+    state_patterns:
+      NY:
+      - North Shore University
+      - Long Island Jewish
+      - Lenox Hill
+      - Staten Island University
+      - Glen Cove
+      - Plainview
+      - Syosset
+      - Huntington
+      - Southside
+      - Peconic Bay
+      - Mather
+      - South Shore University
+  - id: christus
+    name: CHRISTUS Health
+    headquarters: Irving, TX
+    type: nonprofit
+    hospital_count_estimate: 50
+    patterns:
+    - CHRISTUS
+    - Christus
+    state_patterns:
+      TX:
+      - CHRISTUS.*TX
+      - Spohn
+      - Santa Rosa
+      - St. Michael.*TX
+      - St. Elizabeth.*TX
+      LA:
+      - CHRISTUS.*LA
+      - St. Frances Cabrini
+      - St. Patrick.*LA
+      AR:
+      - CHRISTUS.*AR
+      - St. Michael.*AR
+      NM:
+      - CHRISTUS St. Vincent
+  - id: adventhealth
+    name: AdventHealth
+    headquarters: Altamonte Springs, FL
+    type: nonprofit
+    hospital_count_estimate: 50
+    patterns:
+    - AdventHealth
+    - Advent Health
+    - Florida Hospital
+    state_patterns:
+      FL:
+      - AdventHealth.*FL
+      - Florida Hospital
+      CO:
+      - AdventHealth.*CO
+      - Porter
+      - Littleton
+      - Castle Rock
+      - Parker
+      GA:
+      - AdventHealth.*GA
+      - Gordon
+      - Murray
+      - Redmond
+      NC:
+      - AdventHealth.*NC
+      - Park Ridge
+      TX:
+      - AdventHealth.*TX
+      - Texas Health.*AdventHealth
+      WI:
+      - AdventHealth.*WI
+      KS:
+      - AdventHealth.*KS
+      - Shawnee Mission
+  - id: sutter
+    name: Sutter Health
+    headquarters: Sacramento, CA
+    type: nonprofit
+    hospital_count_estimate: 22
+    patterns:
+    - Sutter
+    - Alta Bates
+    - California Pacific Medical
+    - CPMC
+    - Eden Medical
+    - Mills-Peninsula
+    - Palo Alto Medical Foundation
+    state_patterns:
+      CA:
+      - Sutter
+      - Alta Bates
+      - CPMC
+      - California Pacific
+      - Eden Medical
+      - Mills-Peninsula
+      - Memorial Medical.*Modesto
+      - Novato Community
+      - St. Luke's.*SF
+  - id: ochsner
+    name: Ochsner Health
+    headquarters: New Orleans, LA
+    type: nonprofit
+    hospital_count_estimate: 46
+    patterns:
+    - Ochsner
+    state_patterns:
+      LA:
+      - Ochsner
+      MS:
+      - Ochsner.*MS
+  - id: intermountain
+    name: Intermountain Health
+    headquarters: Salt Lake City, UT
+    type: nonprofit
+    hospital_count_estimate: 33
+    patterns:
+    - Intermountain
+    - SCL Health
+    state_patterns:
+      UT:
+      - Intermountain.*UT
+      - LDS Hospital
+      - Primary Children's
+      - McKay-Dee
+      - Utah Valley
+      ID:
+      - Intermountain.*ID
+      - Cassia Regional
+      CO:
+      - SCL Health
+      - Lutheran.*CO
+      - Good Samaritan.*CO
+      - St. Joseph.*CO
+      MT:
+      - SCL Health.*MT
+      NV:
+      - Intermountain.*NV
+  - id: spectrum
+    name: Corewell Health
+    headquarters: Grand Rapids, MI
+    type: nonprofit
+    hospital_count_estimate: 22
+    patterns:
+    - Corewell
+    - Spectrum Health
+    - Beaumont
+    state_patterns:
+      MI:
+      - Spectrum
+      - Beaumont
+      - Corewell
+      - Butterworth
+      - Blodgett
+      - Helen DeVos
+  - id: piedmont
+    name: Piedmont Healthcare
+    headquarters: Atlanta, GA
+    type: nonprofit
+    hospital_count_estimate: 18
+    patterns:
+    - Piedmont(?! Medical)
+    state_patterns:
+      GA:
+      - Piedmont Atlanta
+      - Piedmont Fayette
+      - Piedmont Henry
+      - Piedmont Newton
+      - Piedmont Mountainside
+      - Piedmont Newnan
+      - Piedmont Columbus
+      - Piedmont Athens
+      - Piedmont Walton
+      - Piedmont Eastside
+  - id: penn_medicine
+    name: Penn Medicine
+    headquarters: Philadelphia, PA
+    type: nonprofit
+    hospital_count_estimate: 9
+    patterns:
+    - Penn Medicine
+    - Hospital of the University of Pennsylvania
+    - Penn Presbyterian
+    - Pennsylvania Hospital
+    - Chester County Hospital
+    - Lancaster General
+    state_patterns:
+      PA:
+      - Penn Medicine
+      - HUP
+      - Pennsylvania Hospital
+      - Chester County
+      - Lancaster General
+      - Princeton
+      NJ:
+      - Penn Medicine.*NJ
+      - Princeton
+  - id: nyp
+    name: NewYork-Presbyterian
+    headquarters: New York, NY
+    type: nonprofit
+    hospital_count_estimate: 10
+    patterns:
+    - New York.?Presbyterian
+    - NY.?Presbyterian
+    - NYP\b
+    state_patterns:
+      NY:
+      - NewYork-Presbyterian
+      - NY-Presbyterian
+      - Weill Cornell
+      - Columbia University Medical
+      - Allen Hospital
+      - Lawrence Hospital
+      - Hudson Valley
+      - Queens.*Presbyterian
+  - id: mount_sinai
+    name: Mount Sinai Health System
+    headquarters: New York, NY
+    type: nonprofit
+    hospital_count_estimate: 8
+    state_patterns:
+      NY:
+      - Mount Sinai
+      - Mt\.? Sinai
+      - N\.?Y\.?\s?Eye and Ear
+      - NYEE
+      - Eye and Ear Infirmary
+    notes: 'Validated: $25-45K system deal target'
+  - id: nyu_langone
+    name: NYU Langone Health
+    headquarters: New York, NY
+    type: nonprofit
+    hospital_count_estimate: 6
+    patterns:
+    - NYU Langone
+    - NYU.*Medical
+    - Tisch Hospital
+    - Rusk Rehabilitation
+    state_patterns:
+      NY:
+      - NYU Langone
+      - Tisch Hospital
+      - Rusk
+      - Hospital for Joint Diseases
+      FL:
+      - NYU Langone.*FL
+  - id: montefiore
+    name: Montefiore Health System
+    headquarters: Bronx, NY
+    type: nonprofit
+    hospital_count_estimate: 11
+    patterns:
+    - Montefiore
+    - Einstein.*Bronx
+    state_patterns:
+      NY:
+      - Montefiore
+      - Moses
+      - Weiler
+      - Wakefield
+      - Nyack
+      - White Plains.*Montefiore
+      - New Rochelle.*Montefiore
+      - St. Luke's Cornwall
+  - id: mass_general_brigham
+    name: Mass General Brigham
+    headquarters: Somerville, MA
+    type: nonprofit
+    hospital_count_estimate: 12
+    patterns:
+    - Mass General Brigham
+    - Massachusetts General
+    - Brigham and Women
+    - Partners HealthCare
+    state_patterns:
+      MA:
+      - Massachusetts General
+      - Brigham and Women
+      - McLean
+      - Spaulding Rehabilitation
+      - Newton-Wellesley
+      - North Shore Medical
+      - Faulkner
+      - Martha's Vineyard
+      - Nantucket Cottage
+  - id: cleveland_clinic
+    name: Cleveland Clinic
+    headquarters: Cleveland, OH
+    type: nonprofit
+    hospital_count_estimate: 23
+    patterns:
+    - Cleveland Clinic
+    state_patterns:
+      OH:
+      - Cleveland Clinic
+      - Fairview
+      - Hillcrest.*Cleveland
+      - Marymount.*Cleveland
+      - South Pointe
+      - Lutheran.*Cleveland
+      - Medina
+      - Akron General
+      FL:
+      - Cleveland Clinic.*FL
+      - Weston
+      - Indian River
+      NV:
+      - Cleveland Clinic.*NV
+      - Lou Ruvo
+      AB:
+      - Cleveland Clinic.*Canada
+  - id: mayo
+    name: Mayo Clinic
+    headquarters: Rochester, MN
+    type: nonprofit
+    hospital_count_estimate: 22
+    patterns:
+    - Mayo Clinic
+    - Mayo\b
+    state_patterns:
+      MN:
+      - Mayo Clinic.*MN
+      - Rochester Methodist
+      - Saint Marys.*Rochester
+      AZ:
+      - Mayo Clinic.*AZ
+      - Mayo.*Phoenix
+      - Mayo.*Scottsdale
+      FL:
+      - Mayo Clinic.*FL
+      - Mayo.*Jacksonville
+      WI:
+      - Mayo Clinic Health System.*WI
+      - Franciscan.*La Crosse
+      - Eau Claire
+      IA:
+      - Mayo Clinic Health System.*IA
+  - id: johns_hopkins
+    name: Johns Hopkins Medicine
+    headquarters: Baltimore, MD
+    type: nonprofit
+    hospital_count_estimate: 6
+    patterns:
+    - Johns Hopkins
+    - JHH\b
+    state_patterns:
+      MD:
+      - Johns Hopkins
+      - Howard County General
+      - Suburban Hospital
+      - Sibley
+      DC:
+      - Sibley Memorial
+      FL:
+      - Johns Hopkins All Children's
+  - id: emory
+    name: Emory Healthcare
+    headquarters: Atlanta, GA
+    type: nonprofit
+    hospital_count_estimate: 11
+    patterns:
+    - Emory(?! .*University Hospital.*AL)
+    state_patterns:
+      GA:
+      - Emory University Hospital
+      - Emory Midtown
+      - Emory Saint Joseph
+      - Emory Johns Creek
+      - Emory Decatur
+      - Emory Hillandale
+  - id: duke
+    name: Duke Health
+    headquarters: Durham, NC
+    type: nonprofit
+    hospital_count_estimate: 3
+    patterns:
+    - Duke University
+    - Duke Health
+    - Duke Regional
+    state_patterns:
+      NC:
+      - Duke University
+      - Duke Regional
+      - Duke Raleigh
+  - id: memorial_hermann
+    name: Memorial Hermann Health System
+    headquarters: Houston, TX
+    type: nonprofit
+    hospital_count_estimate: 17
+    patterns:
+    - Memorial Hermann
+    state_patterns:
+      TX:
+      - Memorial Hermann
+  - id: houston_methodist
+    name: Houston Methodist
+    headquarters: Houston, TX
+    type: nonprofit
+    hospital_count_estimate: 8
+    patterns:
+    - Houston Methodist
+    - Methodist Hospital.*Houston
+    state_patterns:
+      TX:
+      - Houston Methodist
+      - Methodist.*Houston
+  - id: texas_health
+    name: Texas Health Resources
+    headquarters: Arlington, TX
+    type: nonprofit
+    hospital_count_estimate: 29
+    patterns:
+    - Texas Health
+    state_patterns:
+      TX:
+      - Texas Health
+  - id: orlando_health
+    name: Orlando Health
+    headquarters: Orlando, FL
+    type: nonprofit
+    hospital_count_estimate: 17
+    patterns:
+    - Orlando Health
+    - Orlando Regional
+    - Arnold Palmer
+    - Winnie Palmer
+    state_patterns:
+      FL:
+      - Orlando Health
+      - Orlando Regional
+      - Arnold Palmer
+      - Winnie Palmer
+      - Dr. P. Phillips
+      - South Seminole
+      - Health Central
+  - id: baptist_health_fl
+    name: Baptist Health South Florida
+    headquarters: Coral Gables, FL
+    type: nonprofit
+    hospital_count_estimate: 12
+    patterns:
+    - Baptist Health.*South Florida
+    - Baptist Hospital.*Miami
+    - South Miami Hospital
+    - Doctors Hospital.*Miami
+    - Homestead Hospital
+    - Mariners Hospital
+    - Fishermen's.*Community
+    state_patterns:
+      FL:
+      - Baptist Health South Florida
+      - Baptist Hospital.*FL
+      - South Miami
+      - Homestead
+      - Mariners
+      - Fishermen
+      - West Kendall
+  - id: baptist_health_ky
+    name: Baptist Health (Kentucky)
+    headquarters: Louisville, KY
+    type: nonprofit
+    hospital_count_estimate: 9
+    patterns:
+    - Baptist Health.*Kentucky
+    - Baptist Health.*KY
+    state_patterns:
+      KY:
+      - Baptist Health.*KY
+      - Baptist Health Louisville
+      - Baptist Health Lexington
+      - Baptist Health La Grange
+      - Baptist Health Richmond
+      - Baptist Health Corbin
+      - Baptist Health Paducah
+      - Baptist Health Madisonville
+      - Baptist Health Hardin
+  - id: baptist_health_ar
+    name: Baptist Health (Arkansas)
+    headquarters: Little Rock, AR
+    type: nonprofit
+    hospital_count_estimate: 11
+    patterns:
+    - Baptist Health.*Arkansas
+    - Baptist Health.*AR
+    state_patterns:
+      AR:
+      - Baptist Health.*AR
+      - Baptist Health Medical Center
+  - id: wellstar
+    name: Wellstar Health System
+    headquarters: Marietta, GA
+    type: nonprofit
+    hospital_count_estimate: 11
+    patterns:
+    - WellStar
+    - Wellstar
+    state_patterns:
+      GA:
+      - Wellstar
+      - WellStar
+      - Kennestone
+      - Cobb
+      - Douglas
+      - Paulding
+      - Spalding Regional
+      - Sylvan Grove
+      - North Fulton
+  - id: bon_secours_mercy
+    name: Bon Secours Mercy Health
+    headquarters: Cincinnati, OH
+    type: nonprofit
+    hospital_count_estimate: 50
+    patterns:
+    - Bon Secours
+    - Mercy Health(?!.*Trinity)
+    state_patterns:
+      OH:
+      - Mercy Health.*OH
+      - Mercy.*Cincinnati
+      - Mercy.*Toledo
+      - Mercy.*Youngstown
+      - Mercy.*Springfield
+      KY:
+      - Mercy Health.*KY
+      - Bon Secours.*KY
+      VA:
+      - Bon Secours.*VA
+      - St. Francis.*VA
+      - St. Mary's.*VA
+      - Memorial Regional.*VA
+      - Southampton Memorial
+      SC:
+      - Bon Secours St. Francis
+  - id: geisinger
+    name: Geisinger
+    headquarters: Danville, PA
+    type: nonprofit
+    hospital_count_estimate: 10
+    patterns:
+    - Geisinger
+    state_patterns:
+      PA:
+      - Geisinger
+      NJ:
+      - Geisinger.*NJ
+  - id: sanford
+    name: Sanford Health
+    headquarters: Sioux Falls, SD
+    type: nonprofit
+    hospital_count_estimate: 47
+    patterns:
+    - Sanford(?! .*USD)
+    state_patterns:
+      SD:
+      - Sanford.*SD
+      - Sanford USD
+      ND:
+      - Sanford.*ND
+      MN:
+      - Sanford.*MN
+  - id: banner
+    name: Banner Health
+    headquarters: Phoenix, AZ
+    type: nonprofit
+    hospital_count_estimate: 33
+    patterns:
+    - Banner(?! .*Boswell)
+    state_patterns:
+      AZ:
+      - Banner.*AZ
+      - Banner University
+      - Banner Estrella
+      - Banner Gateway
+      - Banner Thunderbird
+      - Banner Del E. Webb
+      - Banner Boswell
+      - Banner Baywood
+      - Banner Desert
+      - Banner Goldfield
+      - Banner Ironwood
+      - Banner Payson
+      - Banner Casa Grande
+      CO:
+      - Banner.*CO
+      - Banner Fort Collins
+      - Banner Health Center.*CO
+      - North Colorado
+      - McKee Medical
+      WY:
+      - Banner.*WY
+      NE:
+      - Banner.*NE
+  - id: inova
+    name: Inova Health System
+    headquarters: Falls Church, VA
+    type: nonprofit
+    hospital_count_estimate: 6
+    patterns:
+    - Inova
+    state_patterns:
+      VA:
+      - Inova
+  - id: sentara
+    name: Sentara Healthcare
+    headquarters: Norfolk, VA
+    type: nonprofit
+    hospital_count_estimate: 12
+    patterns:
+    - Sentara
+    state_patterns:
+      VA:
+      - Sentara
+      NC:
+      - Sentara.*NC
+      - Sentara Albemarle
+  - id: nyc_hhc
+    name: NYC Health + Hospitals
+    headquarters: New York, NY
+    type: public
+    hospital_count_estimate: 11
+    patterns:
+    - NYC Health.*Hospital
+    - Health.*Hospitals Corporation
+    state_patterns:
+      NY:
+      - Bellevue
+      - Elmhurst Hospital Center
+      - Jacobi
+      - Kings County Hospital
+      - Lincoln Medical
+      - Metropolitan Hospital.*NY
+      - Queens Hospital Center
+      - Woodhull
+      - Harlem Hospital
+      - Coney Island Hospital
+      - North Central Bronx
+  - id: uchealth
+    name: UCHealth
+    headquarters: Aurora, CO
+    type: nonprofit
+    hospital_count_estimate: 13
+    patterns:
+    - UCHealth
+    - University of Colorado Hospital
+    state_patterns:
+      CO:
+      - UCHealth
+      - University of Colorado Hospital
+      - Poudre Valley
+      - Medical Center of the Rockies
+      - Memorial Hospital.*CO Springs
+      - Highlands Ranch
+      WY:
+      - UCHealth.*WY
+  - id: scripps
+    name: Scripps Health
+    headquarters: San Diego, CA
+    type: nonprofit
+    hospital_count_estimate: 5
+    patterns:
+    - Scripps(?! Research)
+    state_patterns:
+      CA:
+      - Scripps
+  - id: sharp
+    name: Sharp HealthCare
+    headquarters: San Diego, CA
+    type: nonprofit
+    hospital_count_estimate: 7
+    patterns:
+    - Sharp(?! .*Memorial.*OK)
+    state_patterns:
+      CA:
+      - Sharp
+  - id: adventist_west
+    name: Adventist Health (West)
+    headquarters: Roseville, CA
+    type: nonprofit
+    hospital_count_estimate: 28
+    patterns:
+    - Adventist Health(?!.*System)
+    state_patterns:
+      CA:
+      - Adventist Health.*CA
+      - Adventist.*Bakersfield
+      - Adventist.*Glendale
+      - Adventist.*Hanford
+      - Adventist.*Lodi
+      - Adventist.*Reedley
+      - Adventist.*Selma
+      - Adventist.*Sonora
+      - Adventist.*Tulare
+      - Adventist.*Ukiah
+      - Adventist.*Willits
+      - Feather River
+      - Frank R. Howard
+      - St. Helena
+      - Simi Valley
+      OR:
+      - Adventist Health.*OR
+      - Adventist.*Portland
+      - Adventist.*Tillamook
+      HI:
+      - Adventist Health Castle

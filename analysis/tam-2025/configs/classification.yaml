@@ -1,0 +1,368 @@
+# Hospital Classification Configuration
+# Defines all weights, thresholds, and pricing parameters for TAM analysis
+#
+# Usage: This config drives the classify_hospitals.py workflow
+# All calculations are: base × multiplier × adjustments
+#
+# Version History:
+# - v1.0 (2025-01): Initial release with system-level pricing
+
+classification:
+  version: "1.0"
+  last_updated: "2025-01-22"
+  review_schedule: "quarterly"
+
+  # ═══════════════════════════════════════════════════════════════════════
+  # TIER CLASSIFICATION
+  # Assigns hospitals to pricing tiers based on bed count
+  # ═══════════════════════════════════════════════════════════════════════
+  tier_thresholds:
+    standard:
+      id: "standard"
+      name: "Standard"
+      min_beds: 0
+      max_beds: 49
+      description: "Small facilities, critical access hospitals"
+
+    enterprise:
+      id: "enterprise"
+      name: "Enterprise"
+      min_beds: 50
+      max_beds: 399
+      description: "Mid-size community hospitals"
+
+    enterprise_plus:
+      id: "enterprise_plus"
+      name: "Enterprise Plus"
+      min_beds: 400
+      max_beds: 799
+      description: "Large regional hospitals"
+
+    enterprise_premier:
+      id: "enterprise_premier"
+      name: "Enterprise Premier"
+      min_beds: 800
+      max_beds: null  # No upper limit
+      description: "Major academic medical centers, flagship hospitals"
+
+  # ═══════════════════════════════════════════════════════════════════════
+  # INDIVIDUAL PRICING MODEL
+  # Per-hospital pricing when sold as standalone deals
+  # Formula: base_price + (beds × per_bed_rate)
+  # ═══════════════════════════════════════════════════════════════════════
+  individual_pricing:
+    base_prices:
+      standard: 5000
+      enterprise: 21000
+      enterprise_plus: 45000
+      enterprise_premier: 75000
+
+    per_bed_rates:
+      standard: 0            # Flat rate for small facilities
+      enterprise: 30         # $30 per bed above base
+      enterprise_plus: 30    # $30 per bed above base
+      enterprise_premier: 30 # $30 per bed above base
+
+    # Price caps to prevent outliers
+    price_caps:
+      standard: 5000
+      enterprise: 45000
+      enterprise_plus: 75000
+      enterprise_premier: 200000
+
+    # Monthly pricing (divide annual by 12, no additional discount)
+    monthly_divisor: 12
+
+  # ═══════════════════════════════════════════════════════════════════════
+  # SYSTEM-LEVEL PRICING MODEL
+  # Per-hospital pricing when sold as part of health system deal
+  # Formula: base_price × size_multiplier × system_discount
+  # ═══════════════════════════════════════════════════════════════════════
+  system_pricing:
+    # Base price per hospital in a system deal
+    base_price: 4000
+
+    # Size multiplier based on individual hospital beds
+    size_multipliers:
+      - max_beds: 199
+        multiplier: 1.00
+        label: "Small"
+      - max_beds: 499
+        multiplier: 1.25
+        label: "Medium"
+      - max_beds: 999
+        multiplier: 1.50
+        label: "Large"
+      - max_beds: null  # 1000+
+        multiplier: 1.75
+        label: "Major"
+
+    # System-level discount based on total hospitals in system
+    system_discounts:
+      - min_hospitals: 1
+        max_hospitals: 5
+        discount: 0.00
+        label: "Small System"
+      - min_hospitals: 6
+        max_hospitals: 19
+        discount: 0.05
+        label: "Mid-Size System"
+      - min_hospitals: 20
+        max_hospitals: 49
+        discount: 0.10
+        label: "Large System"
+      - min_hospitals: 50
+        max_hospitals: 99
+        discount: 0.15
+        label: "Major System"
+      - min_hospitals: 100
+        max_hospitals: null
+        discount: 0.20
+        label: "Mega System"
+
+  # ═══════════════════════════════════════════════════════════════════════
+  # ENTITY TYPE CLASSIFICATION
+  # Determines if hospital is independent or part of health system
+  # ═══════════════════════════════════════════════════════════════════════
+  entity_classification:
+    types:
+      - id: "system_member"
+        name: "Health System Member"
+        description: "Part of an identified health system"
+        pricing_model: "system"
+
+      - id: "independent"
+        name: "Independent Hospital"
+        description: "Not affiliated with identified health systems"
+        pricing_model: "individual"
+
+    # Pattern matching confidence thresholds
+    matching:
+      # Minimum confidence to assign system membership
+      confidence_threshold: 0.80
+      # Prefer state-specific patterns over general patterns
+      state_pattern_priority: true
+      # Check exclude patterns before matching
+      exclude_first: true
+
+  # ═══════════════════════════════════════════════════════════════════════
+  # SEGMENT CLASSIFICATION
+  # Categorizes hospitals by facility type for targeting
+  # ═══════════════════════════════════════════════════════════════════════
+  segment_classification:
+    segments:
+      - id: "academic"
+        name: "Academic Medical Center"
+        patterns:
+          - "University"
+          - "Medical School"
+          - "Teaching"
+          - "Academic"
+        min_beds: 400
+        priority_boost: 2
+        description: "Research and teaching hospitals"
+
+      - id: "regional"
+        name: "Regional Medical Center"
+        patterns:
+          - "Regional"
+          - "Medical Center"
+        min_beds: 200
+        max_beds: 799
+        priority_boost: 1
+        description: "Large community hospitals serving regions"
+
+      - id: "community"
+        name: "Community Hospital"
+        patterns: []  # Default for hospitals 50-399 beds
+        min_beds: 50
+        max_beds: 399
+        priority_boost: 0
+        description: "Standard community hospitals"
+
+      - id: "critical_access"
+        name: "Critical Access Hospital"
+        patterns:
+          - "Critical Access"
+          - "CAH"
+        max_beds: 25
+        rural_only: true
+        priority_boost: -1
+        description: "Rural critical access hospitals"
+
+      - id: "specialty"
+        name: "Specialty Hospital"
+        patterns:
+          - "Children"
+          - "Pediatric"
+          - "Orthopedic"
+          - "Rehabilitation"
+          - "Psychiatric"
+          - "Cancer"
+          - "Heart"
+          - "Eye"
+          - "Women"
+        priority_boost: 1
+        description: "Specialty-focused facilities"
+
+  # ═══════════════════════════════════════════════════════════════════════
+  # PRIORITY SCORING MODEL
+  # Composite score for deal prioritization (0-100 scale)
+  # Formula: sum(factor × weight) normalized to 100
+  # ═══════════════════════════════════════════════════════════════════════
+  priority_scoring:
+    enabled: true
+    max_score: 100
+
+    # Factor weights (must sum to 1.0)
+    weights:
+      revenue_potential: 0.30    # Based on price
+      strategic_value: 0.25      # System deals, flagship hospitals
+      accessibility: 0.25        # Greenfield vs displacement
+      size_factor: 0.20          # Bed count
+
+    # Revenue potential scoring (based on price percentile)
+    revenue_scoring:
+      - max_price: 10000
+        score: 20
+      - max_price: 25000
+        score: 40
+      - max_price: 50000
+        score: 60
+      - max_price: 75000
+        score: 80
+      - max_price: null
+        score: 100
+
+    # Strategic value factors
+    strategic_scoring:
+      system_flagship: 20        # Largest hospital in system
+      system_member: 10          # Any system member
+      academic_center: 15        # Academic/teaching hospital
+      regional_anchor: 10        # Regional medical center
+      independent_large: 5       # Large independent hospital
+
+    # Accessibility scoring (greenfield = easier sale)
+    accessibility_scoring:
+      greenfield_estimate: 0.40  # % of market using manual processes
+      greenfield_score: 80       # Score for likely greenfield
+      displacement_score: 40     # Score for likely displacement
+
+    # Size factor scoring
+    size_scoring:
+      - max_beds: 50
+        score: 20
+      - max_beds: 200
+        score: 40
+      - max_beds: 500
+        score: 60
+      - max_beds: 1000
+        score: 80
+      - max_beds: null
+        score: 100
+
+  # ═══════════════════════════════════════════════════════════════════════
+  # GEOGRAPHIC ADJUSTMENTS
+  # Optional multipliers by state/region
+  # ═══════════════════════════════════════════════════════════════════════
+  geographic_adjustments:
+    enabled: false  # Set to true to apply state multipliers
+
+    # State-level multipliers (default 1.0 if not listed)
+    state_multipliers:
+      CA: 1.10
+      NY: 1.10
+      TX: 1.05
+      FL: 1.05
+
+    # Region definitions for analysis
+    regions:
+      northeast:
+        states: ["CT", "MA", "ME", "NH", "NJ", "NY", "PA", "RI", "VT"]
+        name: "Northeast"
+      southeast:
+        states: ["AL", "AR", "FL", "GA", "KY", "LA", "MS", "NC", "SC", "TN", "VA", "WV"]
+        name: "Southeast"
+      midwest:
+        states: ["IA", "IL", "IN", "KS", "MI", "MN", "MO", "ND", "NE", "OH", "SD", "WI"]
+        name: "Midwest"
+      southwest:
+        states: ["AZ", "NM", "OK", "TX"]
+        name: "Southwest"
+      west:
+        states: ["AK", "CA", "CO", "HI", "ID", "MT", "NV", "OR", "UT", "WA", "WY"]
+        name: "West"
+
+  # ═══════════════════════════════════════════════════════════════════════
+  # OUTPUT CONFIGURATION
+  # Defines which columns to generate in enriched output
+  # ═══════════════════════════════════════════════════════════════════════
+  output:
+    # Columns to add to enriched CSV
+    columns:
+      - name: "entity_type"
+        type: "string"
+        description: "system_member or independent"
+
+      - name: "parent_system"
+        type: "string"
+        description: "Name of parent health system (if applicable)"
+
+      - name: "parent_system_id"
+        type: "string"
+        description: "ID for system rollup"
+
+      - name: "tier"
+        type: "string"
+        description: "Pricing tier assignment"
+
+      - name: "segment"
+        type: "string"
+        description: "Hospital segment classification"
+
+      - name: "individual_price"
+        type: "float"
+        description: "Price if sold individually"
+
+      - name: "system_price"
+        type: "float"
+        description: "Price if sold as part of system deal"
+
+      - name: "effective_price"
+        type: "float"
+        description: "Actual price based on entity type"
+
+      - name: "priority_score"
+        type: "integer"
+        description: "Deal priority score (0-100)"
+
+      - name: "region"
+        type: "string"
+        description: "Geographic region"
+
+# ═══════════════════════════════════════════════════════════════════════════
+# EXAMPLE CALCULATIONS
+# ═══════════════════════════════════════════════════════════════════════════
+#
+# Example 1: Large Independent Hospital (600 beds, Ohio)
+# - Tier: Enterprise Plus (400-799 beds)
+# - Individual Price: $45,000 + (600 × $30) = $63,000
+# - Entity Type: Independent
+# - Effective Price: $63,000
+# - Priority Score: 70 (high revenue, large size, displacement)
+#
+# Example 2: Mount Sinai Hospital (1,171 beds, NY, system member)
+# - Tier: Enterprise Premier (800+ beds)
+# - Individual Price: $75,000 + (1171 × $30) = $110,130 (capped at $200K)
+# - System Price: $4,000 × 1.75 (1000+ beds) × 0.95 (5% discount) = $6,650
+# - Entity Type: System Member (Mount Sinai Health System)
+# - Effective Price: $6,650
+# - Priority Score: 85 (strategic system, major hospital)
+#
+# Example 3: Rural CAH (20 beds, Iowa, independent)
+# - Tier: Standard (<50 beds)
+# - Individual Price: $5,000 (flat)
+# - Entity Type: Independent
+# - Effective Price: $5,000
+# - Priority Score: 30 (low revenue, small, likely greenfield)
+# ═══════════════════════════════════════════════════════════════════════════
