@@ -279,6 +279,143 @@
             font-size: 13px;
         }
 
+        .tab-container {
+            margin-bottom: 24px;
+        }
+
+        .tab-buttons {
+            display: flex;
+            gap: 0;
+            border-bottom: 2px solid var(--border);
+            margin-bottom: 24px;
+        }
+
+        .tab-btn {
+            padding: 12px 24px;
+            border: none;
+            background: none;
+            font-size: 14px;
+            font-weight: 600;
+            color: #6B7280;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -2px;
+            transition: all 0.2s;
+        }
+
+        .tab-btn:hover {
+            color: var(--primary-blue);
+        }
+
+        .tab-btn.active {
+            color: var(--primary-blue);
+            border-bottom-color: var(--accent-teal);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .system-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 16px;
+            border-left: 4px solid var(--accent-teal);
+        }
+
+        .system-card h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--primary-blue);
+        }
+
+        .system-meta {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+            font-size: 13px;
+            color: #6B7280;
+        }
+
+        .system-meta span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .system-pricing {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+        }
+
+        .system-pricing .individual {
+            color: #6B7280;
+            font-size: 13px;
+        }
+
+        .system-pricing .individual s {
+            color: #9CA3AF;
+        }
+
+        .system-pricing .system-deal {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--accent-teal);
+        }
+
+        .discount-badge {
+            background: #D1FAE5;
+            color: #047857;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .value-prop-box {
+            background: linear-gradient(135deg, #00B4A0, #00A090);
+            color: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .value-prop-box h3 {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+
+        .value-prop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .value-prop-item {
+            text-align: center;
+        }
+
+        .value-prop-item .number {
+            font-size: 32px;
+            font-weight: 800;
+        }
+
+        .value-prop-item .label {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
         @media (max-width: 768px) {
             .charts-grid {
                 grid-template-columns: 1fr;
@@ -309,17 +446,26 @@
                 <div class="card-subtitle">Across 50 states + territories</div>
             </div>
             <div class="card">
-                <div class="card-label">Average Deal Size</div>
-                <div class="card-value">$22,576</div>
-                <div class="card-subtitle">Per hospital annually</div>
+                <div class="card-label">Health Systems Identified</div>
+                <div class="card-value">46</div>
+                <div class="card-subtitle">854 affiliated hospitals</div>
             </div>
             <div class="card">
-                <div class="card-label">Enterprise+ Opportunities</div>
-                <div class="card-value teal">585</div>
-                <div class="card-subtitle">$45K+ deal potential</div>
+                <div class="card-label">System-Level TAM</div>
+                <div class="card-value teal">$12.7M</div>
+                <div class="card-subtitle">46 deals vs 854 individual</div>
             </div>
         </div>
 
+        <!-- View Tabs -->
+        <div class="tab-container">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="individual">Individual Hospitals</button>
+                <button class="tab-btn" data-tab="systems">Health Systems</button>
+            </div>
+
+            <!-- Individual Hospitals Tab -->
+            <div class="tab-content active" id="individual-tab">
         <!-- Charts -->
         <div class="charts-grid">
             <div class="chart-card">
@@ -401,6 +547,98 @@
                 </table>
             </div>
         </div>
+            </div><!-- End Individual Tab -->
+
+            <!-- Health Systems Tab -->
+            <div class="tab-content" id="systems-tab">
+                <!-- Value Proposition -->
+                <div class="value-prop-box">
+                    <h3>Health System Strategy: Why Target Systems?</h3>
+                    <div class="value-prop-grid">
+                        <div class="value-prop-item">
+                            <div class="number">46</div>
+                            <div class="label">System deals</div>
+                        </div>
+                        <div class="value-prop-item">
+                            <div class="number">854</div>
+                            <div class="label">Hospitals covered</div>
+                        </div>
+                        <div class="value-prop-item">
+                            <div class="number">$12.7M</div>
+                            <div class="label">System TAM</div>
+                        </div>
+                        <div class="value-prop-item">
+                            <div class="number">46%</div>
+                            <div class="label">Avg volume discount</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- System Pricing Formula -->
+                <div class="formula-section">
+                    <h3>System Volume Discount Formula</h3>
+                    <div class="formula-grid">
+                        <div class="formula-tier">
+                            <h4>6-35 Locations</h4>
+                            <code>40% discount<br>off individual hospital TAM</code>
+                        </div>
+                        <div class="formula-tier">
+                            <h4>36-100 Locations</h4>
+                            <code>50% discount<br>off individual hospital TAM</code>
+                        </div>
+                        <div class="formula-tier">
+                            <h4>100+ Locations</h4>
+                            <code>55% discount<br>off individual hospital TAM</code>
+                        </div>
+                        <div class="formula-tier">
+                            <h4>Floor Price</h4>
+                            <code>$500/location minimum<br>ensures baseline revenue</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Systems Chart -->
+                <div class="charts-grid">
+                    <div class="chart-card">
+                        <h3>Top 15 Health Systems by Deal Value</h3>
+                        <div class="chart-container">
+                            <canvas id="systemsChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-card">
+                        <h3>System vs Individual Pricing</h3>
+                        <div class="chart-container">
+                            <canvas id="systemCompareChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Health Systems List -->
+                <div class="section">
+                    <div class="table-container">
+                        <div class="table-header">
+                            <h3>All Health Systems (46)</h3>
+                            <input type="text" class="search-box" id="systemSearchInput" placeholder="Search systems...">
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Health System</th>
+                                    <th>Hospitals</th>
+                                    <th>Total Beds</th>
+                                    <th>States</th>
+                                    <th>Individual TAM</th>
+                                    <th>System Deal</th>
+                                    <th>Discount</th>
+                                </tr>
+                            </thead>
+                            <tbody id="systemsTableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div><!-- End Systems Tab -->
+        </div><!-- End Tab Container -->
     </div>
 
     <div class="footer">
@@ -687,6 +925,165 @@
                     renderTable(dashboardData.topOpportunities.filter(h => h.package === filter));
                 }
             });
+        });
+
+        // =====================
+        // HEALTH SYSTEMS DATA
+        // =====================
+        const healthSystemsData = [
+            { system: "HCA Healthcare", hospitals: 77, beds: 23288, states: 6, individualTam: 2720000, systemPrice: 1360000, discount: 50 },
+            { system: "Ascension", hospitals: 85, beds: 19108, states: 17, individualTam: 2210600, systemPrice: 1105000, discount: 50 },
+            { system: "Mercy", hospitals: 74, beds: 15187, states: 19, individualTam: 1793800, systemPrice: 897000, discount: 50 },
+            { system: "Baptist Health", hospitals: 45, beds: 15075, states: 11, individualTam: 1613100, systemPrice: 807000, discount: 50 },
+            { system: "Kaiser Permanente", hospitals: 37, beds: 9905, states: 5, individualTam: 1195100, systemPrice: 598000, discount: 50 },
+            { system: "Providence", hospitals: 42, beds: 9665, states: 10, individualTam: 1151200, systemPrice: 576000, discount: 50 },
+            { system: "AdventHealth", hospitals: 38, beds: 9693, states: 9, individualTam: 1056900, systemPrice: 528000, discount: 50 },
+            { system: "CommonSpirit Health", hospitals: 36, beds: 4854, states: 8, individualTam: 687100, systemPrice: 344000, discount: 50 },
+            { system: "UPMC", hospitals: 26, beds: 6350, states: 2, individualTam: 710400, systemPrice: 426000, discount: 40 },
+            { system: "Texas Health Resources", hospitals: 23, beds: 5380, states: 1, individualTam: 656000, systemPrice: 394000, discount: 40 },
+            { system: "Banner Health", hospitals: 21, beds: 5515, states: 4, individualTam: 620800, systemPrice: 372000, discount: 40 },
+            { system: "Corewell Health", hospitals: 19, beds: 5505, states: 2, individualTam: 612300, systemPrice: 367000, discount: 40 },
+            { system: "CHRISTUS Health", hospitals: 18, beds: 5091, states: 2, individualTam: 567300, systemPrice: 340000, discount: 40 },
+            { system: "SSM Health", hospitals: 18, beds: 4416, states: 4, individualTam: 545200, systemPrice: 327000, discount: 40 },
+            { system: "Baylor Scott & White", hospitals: 28, beds: 4094, states: 1, individualTam: 525100, systemPrice: 315000, discount: 40 },
+            { system: "Piedmont Healthcare", hospitals: 18, beds: 3636, states: 2, individualTam: 495500, systemPrice: 297000, discount: 40 },
+            { system: "Ochsner Health", hospitals: 23, beds: 3801, states: 3, individualTam: 493000, systemPrice: 296000, discount: 40 },
+            { system: "Mayo Clinic", hospitals: 19, beds: 4075, states: 4, individualTam: 400900, systemPrice: 241000, discount: 40 },
+            { system: "Atrium Health", hospitals: 14, beds: 3066, states: 3, individualTam: 379500, systemPrice: 228000, discount: 40 },
+            { system: "Novant Health", hospitals: 11, beds: 3460, states: 1, individualTam: 377500, systemPrice: 226000, discount: 40 },
+            { system: "Advocate Aurora", hospitals: 8, beds: 3652, states: 1, individualTam: 357400, systemPrice: 214000, discount: 40 },
+            { system: "Intermountain Health", hospitals: 13, beds: 2298, states: 4, individualTam: 293500, systemPrice: 176000, discount: 40 },
+            { system: "Bon Secours Mercy Health", hospitals: 10, beds: 2172, states: 3, individualTam: 291700, systemPrice: 175000, discount: 40 },
+            { system: "WellStar Health", hospitals: 9, beds: 2466, states: 1, individualTam: 286000, systemPrice: 172000, discount: 40 },
+            { system: "Indiana University Health", hospitals: 12, beds: 3036, states: 1, individualTam: 282100, systemPrice: 169000, discount: 40 },
+            { system: "Sutter Health", hospitals: 13, beds: 1645, states: 1, individualTam: 248200, systemPrice: 149000, discount: 40 },
+            { system: "Trinity Health", hospitals: 8, beds: 2026, states: 1, individualTam: 242000, systemPrice: 145000, discount: 40 },
+            { system: "Sanford Health", hospitals: 21, beds: 1562, states: 4, individualTam: 221300, systemPrice: 133000, discount: 40 },
+            { system: "Geisinger", hospitals: 8, beds: 1478, states: 1, individualTam: 197400, systemPrice: 118000, discount: 40 },
+            { system: "OSF HealthCare", hospitals: 10, beds: 1245, states: 2, individualTam: 173400, systemPrice: 104000, discount: 40 }
+        ];
+
+        // Tab switching
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+                this.classList.add('active');
+                const tabId = this.dataset.tab + '-tab';
+                document.getElementById(tabId).classList.add('active');
+
+                // Initialize systems charts when tab is shown
+                if (this.dataset.tab === 'systems' && !window.systemsChartsInitialized) {
+                    initSystemsCharts();
+                    window.systemsChartsInitialized = true;
+                }
+            });
+        });
+
+        // Initialize systems charts
+        function initSystemsCharts() {
+            // Top 15 Systems Chart
+            const top15 = healthSystemsData.slice(0, 15);
+            new Chart(document.getElementById('systemsChart'), {
+                type: 'bar',
+                data: {
+                    labels: top15.map(s => s.system),
+                    datasets: [{
+                        label: 'System Deal',
+                        data: top15.map(s => s.systemPrice),
+                        backgroundColor: colors.teal,
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: (ctx) => formatCurrency(ctx.raw)
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            ticks: { callback: (value) => formatCurrency(value) }
+                        }
+                    }
+                }
+            });
+
+            // Comparison Chart
+            const top8 = healthSystemsData.slice(0, 8);
+            new Chart(document.getElementById('systemCompareChart'), {
+                type: 'bar',
+                data: {
+                    labels: top8.map(s => s.system.split(' ')[0]),
+                    datasets: [
+                        {
+                            label: 'Individual TAM',
+                            data: top8.map(s => s.individualTam),
+                            backgroundColor: '#E5E7EB',
+                            borderRadius: 6
+                        },
+                        {
+                            label: 'System Deal',
+                            data: top8.map(s => s.systemPrice),
+                            backgroundColor: colors.teal,
+                            borderRadius: 6
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'top' },
+                        tooltip: {
+                            callbacks: {
+                                label: (ctx) => ctx.dataset.label + ': ' + formatCurrency(ctx.raw)
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: { callback: (value) => formatCurrency(value) }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Populate systems table
+        function renderSystemsTable(data) {
+            const tbody = document.getElementById('systemsTableBody');
+            tbody.innerHTML = data.map(s => `
+                <tr>
+                    <td><strong>${s.system}</strong></td>
+                    <td>${s.hospitals}</td>
+                    <td>${s.beds.toLocaleString()}</td>
+                    <td>${s.states}</td>
+                    <td><span style="color: #9CA3AF; text-decoration: line-through;">$${(s.individualTam/1000).toFixed(0)}K</span></td>
+                    <td><strong style="color: #00B4A0;">$${(s.systemPrice/1000).toFixed(0)}K</strong></td>
+                    <td><span class="discount-badge">${s.discount}% off</span></td>
+                </tr>
+            `).join('');
+        }
+
+        renderSystemsTable(healthSystemsData);
+
+        // Systems search
+        document.getElementById('systemSearchInput').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase();
+            const filtered = healthSystemsData.filter(s =>
+                s.system.toLowerCase().includes(query)
+            );
+            renderSystemsTable(filtered);
         });
     </script>
 </body>

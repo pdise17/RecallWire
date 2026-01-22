@@ -59,6 +59,54 @@ Enterprise Premier:
 
 3. **Clear thresholds**: 50/400/800 bed thresholds create defensible, easy-to-explain tier boundaries.
 
+## Health System Rollup
+
+### Summary
+
+| Metric | Value |
+|--------|-------|
+| **Health Systems Identified** | 46 |
+| **Affiliated Hospitals** | 854 |
+| **System-Level TAM** | $12.7M |
+| **Individual TAM (same hospitals)** | $23.4M |
+| **Average Volume Discount** | 46% |
+
+### System Pricing Formula
+
+System deals receive volume discounts based on location count:
+
+| Locations | Discount | Rationale |
+|-----------|----------|-----------|
+| 6-35 | 40% | Regional systems, single sales cycle |
+| 36-100 | 50% | Large systems, enterprise deployment |
+| 100+ | 55% | National chains, strategic accounts |
+
+**Floor:** $500/location minimum ensures baseline revenue.
+
+### Top 10 Health Systems
+
+| System | Hospitals | Individual TAM | System Deal | Discount |
+|--------|----------:|--------------:|------------:|---------:|
+| HCA Healthcare | 77 | $2.72M | $1.36M | 50% |
+| Ascension | 85 | $2.21M | $1.11M | 50% |
+| Mercy | 74 | $1.79M | $897K | 50% |
+| Baptist Health | 45 | $1.61M | $807K | 50% |
+| Kaiser Permanente | 37 | $1.20M | $598K | 50% |
+| Providence | 42 | $1.15M | $576K | 50% |
+| AdventHealth | 38 | $1.06M | $528K | 50% |
+| CommonSpirit Health | 36 | $687K | $344K | 50% |
+| UPMC | 26 | $710K | $426K | 40% |
+| Texas Health Resources | 23 | $656K | $394K | 40% |
+
+### Strategic Value
+
+**Why target health systems?**
+
+1. **Sales Efficiency:** 46 deals covers 854 hospitals (18.5x leverage)
+2. **Predictable Revenue:** Multi-year enterprise contracts
+3. **Reduced CAC:** One procurement cycle per system
+4. **Expansion Potential:** Land-and-expand within system
+
 ## Files
 
 | File | Description |
@@ -66,6 +114,7 @@ Enterprise Premier:
 | `dashboard.html` | Interactive dashboard for strategy team demos |
 | `hospitals_pricing.csv` | Full dataset with package assignments |
 | `dashboard_data.json` | Aggregated data for dashboard |
+| `health_systems.json` | Health system rollup data |
 
 ## Usage
 

@@ -1,0 +1,3814 @@
+{
+  "summary": {
+    "total_systems": 46,
+    "total_system_hospitals": 842,
+    "total_unaffiliated": 3713,
+    "system_tam": 13818000.0,
+    "individual_tam": 24053800.0
+  },
+  "systems": [
+    {
+      "system": "Ascension",
+      "hospital_count": 85,
+      "total_beds": 19108,
+      "state_count": 17,
+      "states": "AL, AR, CO, CT, FL...",
+      "individual_tam": 2210600.0,
+      "system_price": 1105000.0,
+      "system_tier": "Enterprise Plus",
+      "discount_pct": 50.0,
+      "per_location": 13000,
+      "top_hospitals": [
+        {
+          "name": "Ascension Via Christi Hospitals Wichita, Inc.",
+          "city": "Wichita",
+          "state": "KS",
+          "beds": 1412,
+          "revenue_m": 2118.0,
+          "package": "Enterprise Premier",
+          "price": 93600.0
+        },
+        {
+          "name": "Ascension St. Vincent Hospital",
+          "city": "Indianapolis",
+          "state": "IN",
+          "beds": 779,
+          "revenue_m": 1168.5,
+          "package": "Enterprise Plus",
+          "price": 64000.0
+        },
+        {
+          "name": "Ascension St. John Medical Center",
+          "city": "Tulsa",
+          "state": "OK",
+          "beds": 703,
+          "revenue_m": 1054.5,
+          "package": "Enterprise Plus",
+          "price": 60200.0
+        },
+        {
+          "name": "Ascension St. John Hospital",
+          "city": "Detroit",
+          "state": "MI",
+          "beds": 625,
+          "revenue_m": 937.5,
+          "package": "Enterprise Plus",
+          "price": 56300.0
+        },
+        {
+          "name": "Chi St. Vincent Infirmary",
+          "city": "Little Rock",
+          "state": "AR",
+          "beds": 615,
+          "revenue_m": 922.5,
+          "package": "Enterprise Plus",
+          "price": 55800.0
+        },
+        {
+          "name": "Ascension St. Vincent's Riverside",
+          "city": "Jacksonville",
+          "state": "FL",
+          "beds": 584,
+          "revenue_m": 876.0,
+          "package": "Enterprise Plus",
+          "price": 54300.0
+        },
+        {
+          "name": "Ascension Saint Thomas Hospital",
+          "city": "Nashville",
+          "state": "TN",
+          "beds": 571,
+          "revenue_m": 856.5,
+          "package": "Enterprise Plus",
+          "price": 53600.0
+        },
+        {
+          "name": "Mercy Health St. Vincent Medical Center",
+          "city": "Toledo",
+          "state": "OH",
+          "beds": 568,
+          "revenue_m": 852.0,
+          "package": "Enterprise Plus",
+          "price": 53500.0
+        },
+        {
+          "name": "Ascension All Saints Hospital",
+          "city": "Racine",
+          "state": "WI",
+          "beds": 553,
+          "revenue_m": 829.5,
+          "package": "Enterprise Plus",
+          "price": 52700.0
+        },
+        {
+          "name": "Ascension Sacred Heart Pensacola",
+          "city": "Pensacola",
+          "state": "FL",
+          "beds": 547,
+          "revenue_m": 820.5,
+          "package": "Enterprise Plus",
+          "price": 52400.0
+        }
+      ]
+    },
+    {
+      "system": "HCA Healthcare",
+      "hospital_count": 77,
+      "total_beds": 23288,
+      "state_count": 6,
+      "states": "CO, FL, GU, KY, TN...",
+      "individual_tam": 2720000.0,
+      "system_price": 1360000.0,
+      "system_tier": "Enterprise Plus",
+      "discount_pct": 50.0,
+      "per_location": 17662,
+      "top_hospitals": [
+        {
+          "name": "Medical City Dallas",
+          "city": "Dallas",
+          "state": "TX",
+          "beds": 963,
+          "revenue_m": 1444.5,
+          "package": "Enterprise Premier",
+          "price": 80000.0
+        },
+        {
+          "name": "HCA Florida Jfk Hospital",
+          "city": "Atlantis",
+          "state": "FL",
+          "beds": 796,
+          "revenue_m": 1194.0,
+          "package": "Enterprise Plus",
+          "price": 64900.0
+        },
+        {
+          "name": "Tristar Centennial Medical Center",
+          "city": "Nashville",
+          "state": "TN",
+          "beds": 733,
+          "revenue_m": 1099.5,
+          "package": "Enterprise Plus",
+          "price": 61700.0
+        },
+        {
+          "name": "HCA Houston Healthcare Kingwood",
+          "city": "Kingwood",
+          "state": "TX",
+          "beds": 620,
+          "revenue_m": 930.0,
+          "package": "Enterprise Plus",
+          "price": 56100.0
+        },
+        {
+          "name": "Medical City Plano",
+          "city": "Plano",
+          "state": "TX",
+          "beds": 567,
+          "revenue_m": 850.5,
+          "package": "Enterprise Plus",
+          "price": 53400.0
+        },
+        {
+          "name": "HCA Florida Ocala Hospital",
+          "city": "Ocala",
+          "state": "FL",
+          "beds": 545,
+          "revenue_m": 817.5,
+          "package": "Enterprise Plus",
+          "price": 52300.0
+        },
+        {
+          "name": "HCA Florida North Florida Hospital",
+          "city": "Gainesville",
+          "state": "FL",
+          "beds": 528,
+          "revenue_m": 792.0,
+          "package": "Enterprise Plus",
+          "price": 51500.0
+        },
+        {
+          "name": "HCA Houston Healthcare Clear Lake",
+          "city": "Webster",
+          "state": "TX",
+          "beds": 528,
+          "revenue_m": 792.0,
+          "package": "Enterprise Plus",
+          "price": 51500.0
+        },
+        {
+          "name": "HCA Florida West Hospital",
+          "city": "Pensacola",
+          "state": "FL",
+          "beds": 515,
+          "revenue_m": 772.5,
+          "package": "Enterprise Plus",
+          "price": 50800.0
+        },
+        {
+          "name": "HCA Houston Healthcare Medical Center",
+          "city": "Houston",
+          "state": "TX",
+          "beds": 508,
+          "revenue_m": 762.0,
+          "package": "Enterprise Plus",
+          "price": 50500.0
+        }
+      ]
+    },
+    {
+      "system": "Mercy",
+      "hospital_count": 74,
+      "total_beds": 15187,
+      "state_count": 19,
+      "states": "AR, AZ, CA, CO, IA...",
+      "individual_tam": 1793800.0,
+      "system_price": 897000.0,
+      "system_tier": "Enterprise Plus",
+      "discount_pct": 50.0,
+      "per_location": 12122,
+      "top_hospitals": [
+        {
+          "name": "Mercy Hospital Springfield",
+          "city": "Springfield",
+          "state": "MO",
+          "beds": 866,
+          "revenue_m": 1299.0,
+          "package": "Enterprise Premier",
+          "price": 77100.0
+        },
+        {
+          "name": "Mercy Hospital St. Louis",
+          "city": "Saint Louis",
+          "state": "MO",
+          "beds": 859,
+          "revenue_m": 1288.5,
+          "package": "Enterprise Premier",
+          "price": 76900.0
+        },
+        {
+          "name": "Mercy Hospital South",
+          "city": "Saint Louis",
+          "state": "MO",
+          "beds": 767,
+          "revenue_m": 1150.5,
+          "package": "Enterprise Plus",
+          "price": 63400.0
+        },
+        {
+          "name": "Scripps Mercy Hospital",
+          "city": "San Diego",
+          "state": "CA",
+          "beds": 700,
+          "revenue_m": 1050.0,
+          "package": "Enterprise Plus",
+          "price": 60100.0
+        },
+        {
+          "name": "Mercy Hospital",
+          "city": "Coon Rapids",
+          "state": "MN",
+          "beds": 573,
+          "revenue_m": 859.5,
+          "package": "Enterprise Plus",
+          "price": 53700.0
+        },
+        {
+          "name": "Mercy Medical Center",
+          "city": "Canton",
+          "state": "OH",
+          "beds": 520,
+          "revenue_m": 780.0,
+          "package": "Enterprise Plus",
+          "price": 51100.0
+        },
+        {
+          "name": "Mercy Catholic Medical Center- Mercy Fitzgerald",
+          "city": "Darby",
+          "state": "PA",
+          "beds": 447,
+          "revenue_m": 670.5,
+          "package": "Enterprise Plus",
+          "price": 47400.0
+        },
+        {
+          "name": "Upmc Mercy",
+          "city": "Pittsburgh",
+          "state": "PA",
+          "beds": 435,
+          "revenue_m": 652.5,
+          "package": "Enterprise Plus",
+          "price": 46800.0
+        },
+        {
+          "name": "Mercy Health-St Rita's Medical Center",
+          "city": "Lima",
+          "state": "OH",
+          "beds": 424,
+          "revenue_m": 636.0,
+          "package": "Enterprise Plus",
+          "price": 46200.0
+        },
+        {
+          "name": "Mercy Hospital of Buffalo",
+          "city": "Buffalo",
+          "state": "NY",
+          "beds": 387,
+          "revenue_m": 580.5,
+          "package": "Enterprise",
+          "price": 39200.0
+        }
+      ]
+    },
+    {
+      "system": "Baptist Health",
+      "hospital_count": 45,
+      "total_beds": 15075,
+      "state_count": 11,
+      "states": "AL, AR, FL, IN, KY...",
+      "individual_tam": 1613100.0,
+      "system_price": 807000.0,
+      "system_tier": "Enterprise Plus",
+      "discount_pct": 50.0,
+      "per_location": 17933,
+      "top_hospitals": [
+        {
+          "name": "Baptist Medical Center",
+          "city": "San Antonio",
+          "state": "TX",
+          "beds": 1285,
+          "revenue_m": 1927.5,
+          "package": "Enterprise Premier",
+          "price": 89700.0
+        },
+        {
+          "name": "Baptist Medical Center Jacksonville",
+          "city": "Jacksonville",
+          "state": "FL",
+          "beds": 1229,
+          "revenue_m": 1843.5,
+          "package": "Enterprise Premier",
+          "price": 88100.0
+        },
+        {
+          "name": "Baptist Hospital of Miami",
+          "city": "Miami",
+          "state": "FL",
+          "beds": 948,
+          "revenue_m": 1422.0,
+          "package": "Enterprise Premier",
+          "price": 79600.0
+        },
+        {
+          "name": "North Carolina Baptist Hospital",
+          "city": "Winston-Salem",
+          "state": "NC",
+          "beds": 885,
+          "revenue_m": 1327.5,
+          "package": "Enterprise Premier",
+          "price": 77700.0
+        },
+        {
+          "name": "Integris Baptist Medical Center, Inc",
+          "city": "Oklahoma City",
+          "state": "OK",
+          "beds": 876,
+          "revenue_m": 1314.0,
+          "package": "Enterprise Premier",
+          "price": 77400.0
+        },
+        {
+          "name": "Baptist Health Medical Center-Little Rock",
+          "city": "Little Rock",
+          "state": "AR",
+          "beds": 807,
+          "revenue_m": 1210.5,
+          "package": "Enterprise Premier",
+          "price": 75300.0
+        },
+        {
+          "name": "Mississippi Baptist Medical Center",
+          "city": "Jackson",
+          "state": "MS",
+          "beds": 639,
+          "revenue_m": 958.5,
+          "package": "Enterprise Plus",
+          "price": 57000.0
+        },
+        {
+          "name": "Brookwood Baptist Medical Center",
+          "city": "Vestavia",
+          "state": "AL",
+          "beds": 595,
+          "revenue_m": 892.5,
+          "package": "Enterprise Plus",
+          "price": 54800.0
+        },
+        {
+          "name": "Baptist Hospital",
+          "city": "Pensacola",
+          "state": "FL",
+          "beds": 569,
+          "revenue_m": 853.5,
+          "package": "Enterprise Plus",
+          "price": 53500.0
+        },
+        {
+          "name": "Baptist Health Louisville",
+          "city": "Louisville",
+          "state": "KY",
+          "beds": 519,
+          "revenue_m": 778.5,
+          "package": "Enterprise Plus",
+          "price": 51000.0
+        }
+      ]
+    },
+    {
+      "system": "Providence",
+      "hospital_count": 42,
+      "total_beds": 9665,
+      "state_count": 10,
+      "states": "AK, AL, CA, CO, KS...",
+      "individual_tam": 1151200.0,
+      "system_price": 576000.0,
+      "system_tier": "Enterprise Plus",
+      "discount_pct": 50.0,
+      "per_location": 13714,
+      "top_hospitals": [
+        {
+          "name": "Swedish Medical Center",
+          "city": "Seattle",
+          "state": "WA",
+          "beds": 697,
+          "revenue_m": 1045.5,
+          "package": "Enterprise Plus",
+          "price": 59900.0
+        },
+        {
+          "name": "Providence Mission Hospital",
+          "city": "Mission Viejo",
+          "state": "CA",
+          "beds": 565,
+          "revenue_m": 847.5,
+          "package": "Enterprise Plus",
+          "price": 53300.0
+        },
+        {
+          "name": "The Hospitals of Providence Memorial Campus",
+          "city": "El Paso",
+          "state": "TX",
+          "beds": 486,
+          "revenue_m": 729.0,
+          "package": "Enterprise Plus",
+          "price": 49300.0
+        },
+        {
+          "name": "Providence Portland Medical Center",
+          "city": "Portland",
+          "state": "OR",
+          "beds": 483,
+          "revenue_m": 724.5,
+          "package": "Enterprise Plus",
+          "price": 49200.0
+        },
+        {
+          "name": "Providence St. Joseph Hospital",
+          "city": "Orange",
+          "state": "CA",
+          "beds": 462,
+          "revenue_m": 693.0,
+          "package": "Enterprise Plus",
+          "price": 48100.0
+        },
+        {
+          "name": "Swedish Medical Center",
+          "city": "Englewood",
+          "state": "CO",
+          "beds": 408,
+          "revenue_m": 612.0,
+          "package": "Enterprise Plus",
+          "price": 45400.0
+        },
+        {
+          "name": "Providence Alaska Medical Center",
+          "city": "Anchorage",
+          "state": "AK",
+          "beds": 401,
+          "revenue_m": 601.5,
+          "package": "Enterprise Plus",
+          "price": 45100.0
+        },
+        {
+          "name": "Providence Medical Center",
+          "city": "Kansas City",
+          "state": "KS",
+          "beds": 400,
+          "revenue_m": 600.0,
+          "package": "Enterprise Plus",
+          "price": 45000.0
+        },
+        {
+          "name": "Providence Little Co of Mary Med Ctr San Pedro",
+          "city": "San Pedro",
+          "state": "CA",
+          "beds": 387,
+          "revenue_m": 580.5,
+          "package": "Enterprise",
+          "price": 39200.0
+        },
+        {
+          "name": "Swedish Medical Center / Cherry Hill",
+          "city": "Seattle",
+          "state": "WA",
+          "beds": 376,
+          "revenue_m": 564.0,
+          "package": "Enterprise",
+          "price": 38600.0
+        }
+      ]
+    },
+    {
+      "system": "AdventHealth",
+      "hospital_count": 38,
+      "total_beds": 9693,
+      "state_count": 9,
+      "states": "CO, FL, GA, IL, KS...",
+      "individual_tam": 1056900.0,
+      "system_price": 528000.0,
+      "system_tier": "Enterprise Plus",
+      "discount_pct": 50.0,
+      "per_location": 13895,
+      "top_hospitals": [
+        {
+          "name": "Adventhealth Orlando",
+          "city": "Orlando",
+          "state": "FL",
+          "beds": 3289,
+          "revenue_m": 4933.5,
+          "package": "Enterprise Premier",
+          "price": 150200.0
+        },
+        {
+          "name": "Adventhealth Tampa",
+          "city": "Tampa",
+          "state": "FL",
+          "beds": 626,
+          "revenue_m": 939.0,
+          "package": "Enterprise Plus",
+          "price": 56400.0
+        },
+        {
+          "name": "Adventhealth Ocala",
+          "city": "Ocala",
+          "state": "FL",
+          "beds": 385,
+          "revenue_m": 577.5,
+          "package": "Enterprise",
+          "price": 39100.0
+        },
+        {
+          "name": "Adventhealth Porter",
+          "city": "Denver",
+          "state": "CO",
+          "beds": 368,
+          "revenue_m": 552.0,
+          "package": "Enterprise",
+          "price": 38100.0
+        },
+        {
+          "name": "Adventhealth Shawnee Mission",
+          "city": "Shawnee Mission",
+          "state": "KS",
+          "beds": 363,
+          "revenue_m": 544.5,
+          "package": "Enterprise",
+          "price": 37800.0
+        },
+        {
+          "name": "Adventhealth Daytona Beach",
+          "city": "Daytona Beach",
+          "state": "FL",
+          "beds": 362,
+          "revenue_m": 543.0,
+          "package": "Enterprise",
+          "price": 37700.0
+        },
+        {
+          "name": "Adventhealth Waterman",
+          "city": "Tavares",
+          "state": "FL",
+          "beds": 269,
+          "revenue_m": 403.5,
+          "package": "Enterprise",
+          "price": 32200.0
+        },
+        {
+          "name": "Adventhealth Heart of Florida",
+          "city": "Davenport",
+          "state": "FL",
+          "beds": 268,
+          "revenue_m": 402.0,
+          "package": "Enterprise",
+          "price": 32100.0
+        },
+        {
+          "name": "Uchicago Medicine Adventhealth Hinsdale",
+          "city": "Hinsdale",
+          "state": "IL",
+          "beds": 261,
+          "revenue_m": 391.5,
+          "package": "Enterprise",
+          "price": 31700.0
+        },
+        {
+          "name": "Adventhealth Central Texas",
+          "city": "Killeen",
+          "state": "TX",
+          "beds": 232,
+          "revenue_m": 348.0,
+          "package": "Enterprise",
+          "price": 29900.0
+        }
+      ]
+    },
+    {
+      "system": "Kaiser Permanente",
+      "hospital_count": 37,
+      "total_beds": 9905,
+      "state_count": 5,
+      "states": "CA, HI, OR, TX, WA",
+      "individual_tam": 1195100.0,
+      "system_price": 598000.0,
+      "system_tier": "Enterprise Plus",
+      "discount_pct": 50.0,
+      "per_location": 16162,
+      "top_hospitals": [
+        {
+          "name": "Kaiser Foundation Hospital - Zion",
+          "city": "San Diego",
+          "state": "CA",
+          "beds": 659,
+          "revenue_m": 988.5,
+          "package": "Enterprise Plus",
+          "price": 58000.0
+        },
+        {
+          "name": "Kaiser Foundation Hospital - Sacramento",
+          "city": "Sacramento",
+          "state": "CA",
+          "beds": 628,
+          "revenue_m": 942.0,
+          "package": "Enterprise Plus",
+          "price": 56500.0
+        },
+        {
+          "name": "Kaiser Foundation Hospital - Los Angeles",
+          "city": "Los Angeles",
+          "state": "CA",
+          "beds": 507,
+          "revenue_m": 760.5,
+          "package": "Enterprise Plus",
+          "price": 50400.0
+        },
+        {
+          "name": "Kaiser Foundation Hospital and Rehab Center",
+          "city": "Vallejo",
+          "state": "CA",
+          "beds": 475,
+          "revenue_m": 712.5,
+          "package": "Enterprise Plus",
+          "price": 48800.0
+        },
+        {
+          "name": "Kaiser Foundation Hospital Fontana",
+          "city": "Fontana",
+          "state": "CA",
+          "beds": 438,
+          "revenue_m": 657.0,
+          "package": "Enterprise Plus",
+          "price": 46900.0
+        },
+        {
+          "name": "Kaiser Foundation Hospital - Oakland/richmond",
+          "city": "Oakland",
+          "state": "CA",
+          "beds": 396,
+          "revenue_m": 594.0,
+          "package": "Enterprise",
+          "price": 39800.0
+        },
+        {
+          "name": "Kaiser Foundation Hospital - Walnut Creek",
+          "city": "Walnut Creek",
+          "state": "CA",
+          "beds": 362,
+          "revenue_m": 543.0,
+          "package": "Enterprise",
+          "price": 37700.0
+        },
+        {
+          "name": "Kaiser Foundation Hospital - Downey",
+          "city": "Downey",
+          "state": "CA",
+          "beds": 352,
+          "revenue_m": 528.0,
+          "package": "Enterprise",
+          "price": 37100.0
+        },
+        {
+          "name": "Kaiser Permanente Central Hospital",
+          "city": "Seattle",
+          "state": "WA",
+          "beds": 346,
+          "revenue_m": 519.0,
+          "package": "Enterprise",
+          "price": 36800.0
+        },
+        {
+          "name": "Kaiser Foundation Hospital - Roseville",
+          "city": "Roseville",
+          "state": "CA",
+          "beds": 340,
+          "revenue_m": 510.0,
+          "package": "Enterprise",
+          "price": 36400.0
+        }
+      ]
+    },
+    {
+      "system": "CommonSpirit Health",
+      "hospital_count": 36,
+      "total_beds": 4854,
+      "state_count": 8,
+      "states": "AZ, GA, IA, KY, ND...",
+      "individual_tam": 687100.0,
+      "system_price": 344000.0,
+      "system_tier": "Enterprise Plus",
+      "discount_pct": 50.0,
+      "per_location": 9556,
+      "top_hospitals": [
+        {
+          "name": "Chi St. Luke's Health Baylor College of Medicine Me",
+          "city": "Houston",
+          "state": "TX",
+          "beds": 881,
+          "revenue_m": 1321.5,
+          "package": "Enterprise Premier",
+          "price": 77600.0
+        },
+        {
+          "name": "Chi Health Creighton University Medical Center - B",
+          "city": "Omaha",
+          "state": "NE",
+          "beds": 400,
+          "revenue_m": 600.0,
+          "package": "Enterprise Plus",
+          "price": 45000.0
+        },
+        {
+          "name": "Chi Health Immanuel",
+          "city": "Omaha",
+          "state": "NE",
+          "beds": 356,
+          "revenue_m": 534.0,
+          "package": "Enterprise",
+          "price": 37400.0
+        },
+        {
+          "name": "Chi St. Joseph Health Regional Hospital",
+          "city": "Bryan",
+          "state": "TX",
+          "beds": 316,
+          "revenue_m": 474.0,
+          "package": "Enterprise",
+          "price": 35000.0
+        },
+        {
+          "name": "Chi St. Alexius Health",
+          "city": "Bismarck",
+          "state": "ND",
+          "beds": 287,
+          "revenue_m": 430.5,
+          "package": "Enterprise",
+          "price": 33200.0
+        },
+        {
+          "name": "Chi St. Lukes Health Memorial Lufkin",
+          "city": "Lufkin",
+          "state": "TX",
+          "beds": 279,
+          "revenue_m": 418.5,
+          "package": "Enterprise",
+          "price": 32800.0
+        },
+        {
+          "name": "Chi Health St. Elizabeth",
+          "city": "Lincoln",
+          "state": "NE",
+          "beds": 265,
+          "revenue_m": 397.5,
+          "package": "Enterprise",
+          "price": 31900.0
+        },
+        {
+          "name": "Chi Saint Joseph East",
+          "city": "Lexington",
+          "state": "KY",
+          "beds": 217,
+          "revenue_m": 325.5,
+          "package": "Enterprise",
+          "price": 29000.0
+        },
+        {
+          "name": "Chi Health Mercy Council Bluffs",
+          "city": "Council Bluffs",
+          "state": "IA",
+          "beds": 194,
+          "revenue_m": 291.0,
+          "package": "Enterprise",
+          "price": 27700.0
+        },
+        {
+          "name": "Chi Memorial Hospital- Georgia",
+          "city": "Fort Oglethorpe",
+          "state": "GA",
+          "beds": 179,
+          "revenue_m": 268.5,
+          "package": "Enterprise",
+          "price": 26800.0
+        }
+      ]
+    },
+    {
+      "system": "Baylor Scott & White",
+      "hospital_count": 28,
+      "total_beds": 4094,
+      "state_count": 1,
+      "states": "TX",
+      "individual_tam": 525100.0,
+      "system_price": 315000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 11250,
+      "top_hospitals": [
+        {
+          "name": "Baylor University Medical Center",
+          "city": "Dallas",
+          "state": "TX",
+          "beds": 914,
+          "revenue_m": 1371.0,
+          "package": "Enterprise Premier",
+          "price": 78600.0
+        },
+        {
+          "name": "Baylor Scott & White Medical Center - Temple",
+          "city": "Temple",
+          "state": "TX",
+          "beds": 645,
+          "revenue_m": 967.5,
+          "package": "Enterprise Plus",
+          "price": 57300.0
+        },
+        {
+          "name": "Baylor Scott and White All Saints Medical Center",
+          "city": "Fort Worth",
+          "state": "TX",
+          "beds": 538,
+          "revenue_m": 807.0,
+          "package": "Enterprise Plus",
+          "price": 52000.0
+        },
+        {
+          "name": "Baylor Scott and White Medical Center Irving",
+          "city": "Irving",
+          "state": "TX",
+          "beds": 288,
+          "revenue_m": 432.0,
+          "package": "Enterprise",
+          "price": 33300.0
+        },
+        {
+          "name": "Baylor Scott & White Medical Center Grapevine",
+          "city": "Grapevine",
+          "state": "TX",
+          "beds": 273,
+          "revenue_m": 409.5,
+          "package": "Enterprise",
+          "price": 32400.0
+        },
+        {
+          "name": "Baylor Scott & White Medical Center - Hillcrest",
+          "city": "Waco",
+          "state": "TX",
+          "beds": 260,
+          "revenue_m": 390.0,
+          "package": "Enterprise",
+          "price": 31600.0
+        },
+        {
+          "name": "Baylor Regional Medical Center at Plano",
+          "city": "Plano",
+          "state": "TX",
+          "beds": 160,
+          "revenue_m": 240.0,
+          "package": "Enterprise",
+          "price": 25600.0
+        },
+        {
+          "name": "Baylor Scott and White Medical Center Lake Pointe",
+          "city": "Rowlett",
+          "state": "TX",
+          "beds": 148,
+          "revenue_m": 222.0,
+          "package": "Enterprise",
+          "price": 24900.0
+        },
+        {
+          "name": "Baylor Scott & White Medical Center- College Stati",
+          "city": "College Station",
+          "state": "TX",
+          "beds": 135,
+          "revenue_m": 202.5,
+          "package": "Enterprise",
+          "price": 24200.0
+        },
+        {
+          "name": "Baylor Scott & White Medical Center- Waxahachie",
+          "city": "Waxahachie",
+          "state": "TX",
+          "beds": 129,
+          "revenue_m": 193.5,
+          "package": "Enterprise",
+          "price": 24000.0
+        }
+      ]
+    },
+    {
+      "system": "UPMC",
+      "hospital_count": 26,
+      "total_beds": 6350,
+      "state_count": 2,
+      "states": "NY, PA",
+      "individual_tam": 710400.0,
+      "system_price": 426000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 16385,
+      "top_hospitals": [
+        {
+          "name": "Upmc Presbyterian Shadyside",
+          "city": "Pittsburgh",
+          "state": "PA",
+          "beds": 1577,
+          "revenue_m": 2365.5,
+          "package": "Enterprise Premier",
+          "price": 98500.0
+        },
+        {
+          "name": "Upmc Pinnacle Hospitals",
+          "city": "Harrisburg",
+          "state": "PA",
+          "beds": 717,
+          "revenue_m": 1075.5,
+          "package": "Enterprise Plus",
+          "price": 60900.0
+        },
+        {
+          "name": "Upmc Altoona",
+          "city": "Altoona",
+          "state": "PA",
+          "beds": 398,
+          "revenue_m": 597.0,
+          "package": "Enterprise",
+          "price": 39900.0
+        },
+        {
+          "name": "Magee Womens Hospital of Upmc Health System",
+          "city": "Pittsburgh",
+          "state": "PA",
+          "beds": 363,
+          "revenue_m": 544.5,
+          "package": "Enterprise",
+          "price": 37800.0
+        },
+        {
+          "name": "Upmc Passavant",
+          "city": "Pittsburgh",
+          "state": "PA",
+          "beds": 346,
+          "revenue_m": 519.0,
+          "package": "Enterprise",
+          "price": 36800.0
+        },
+        {
+          "name": "Upmc Hamot",
+          "city": "Erie",
+          "state": "PA",
+          "beds": 343,
+          "revenue_m": 514.5,
+          "package": "Enterprise",
+          "price": 36600.0
+        },
+        {
+          "name": "Upmc Washington",
+          "city": "Washington",
+          "state": "PA",
+          "beds": 260,
+          "revenue_m": 390.0,
+          "package": "Enterprise",
+          "price": 31600.0
+        },
+        {
+          "name": "Upmc Williamsport",
+          "city": "Williamsport",
+          "state": "PA",
+          "beds": 255,
+          "revenue_m": 382.5,
+          "package": "Enterprise",
+          "price": 31300.0
+        },
+        {
+          "name": "Upmc St. Margaret",
+          "city": "Pittsburgh",
+          "state": "PA",
+          "beds": 250,
+          "revenue_m": 375.0,
+          "package": "Enterprise",
+          "price": 31000.0
+        },
+        {
+          "name": "Upmc Horizon",
+          "city": "Greenville",
+          "state": "PA",
+          "beds": 201,
+          "revenue_m": 301.5,
+          "package": "Enterprise",
+          "price": 28100.0
+        }
+      ]
+    },
+    {
+      "system": "Ochsner Health",
+      "hospital_count": 23,
+      "total_beds": 3801,
+      "state_count": 3,
+      "states": "AL, LA, MS",
+      "individual_tam": 493000.0,
+      "system_price": 296000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 12870,
+      "top_hospitals": [
+        {
+          "name": "Ochsner Medical Center",
+          "city": "New Orleans",
+          "state": "LA",
+          "beds": 989,
+          "revenue_m": 1483.5,
+          "package": "Enterprise Premier",
+          "price": 80800.0
+        },
+        {
+          "name": "Ochsner Lafayette General Medical Center",
+          "city": "Lafayette",
+          "state": "LA",
+          "beds": 501,
+          "revenue_m": 751.5,
+          "package": "Enterprise Plus",
+          "price": 50100.0
+        },
+        {
+          "name": "Ochsner Lsu Health Shreveport",
+          "city": "Shreveport",
+          "state": "LA",
+          "beds": 395,
+          "revenue_m": 592.5,
+          "package": "Enterprise",
+          "price": 39700.0
+        },
+        {
+          "name": "Ochsner Lsu Health Monroe",
+          "city": "Monroe",
+          "state": "LA",
+          "beds": 247,
+          "revenue_m": 370.5,
+          "package": "Enterprise",
+          "price": 30800.0
+        },
+        {
+          "name": "Christus Ochsner St. Patrick Hospital",
+          "city": "Lake Charles",
+          "state": "LA",
+          "beds": 230,
+          "revenue_m": 345.0,
+          "package": "Enterprise",
+          "price": 29800.0
+        },
+        {
+          "name": "Ochsner Rush Hospital",
+          "city": "Meridian",
+          "state": "MS",
+          "beds": 215,
+          "revenue_m": 322.5,
+          "package": "Enterprise",
+          "price": 28900.0
+        },
+        {
+          "name": "Ochsner St. Mary",
+          "city": "Morgan City",
+          "state": "LA",
+          "beds": 164,
+          "revenue_m": 246.0,
+          "package": "Enterprise",
+          "price": 25900.0
+        },
+        {
+          "name": "Ochsner Medical Center - Baton Rouge",
+          "city": "Baton Rouge",
+          "state": "LA",
+          "beds": 162,
+          "revenue_m": 243.0,
+          "package": "Enterprise",
+          "price": 25700.0
+        },
+        {
+          "name": "Ochsner University Hospital and Clinics",
+          "city": "Lafayette",
+          "state": "LA",
+          "beds": 116,
+          "revenue_m": 174.0,
+          "package": "Enterprise",
+          "price": 23300.0
+        },
+        {
+          "name": "Ochsner Acadia General Hospital",
+          "city": "Crowley",
+          "state": "LA",
+          "beds": 113,
+          "revenue_m": 169.5,
+          "package": "Enterprise",
+          "price": 23200.0
+        }
+      ]
+    },
+    {
+      "system": "Texas Health Resources",
+      "hospital_count": 23,
+      "total_beds": 5380,
+      "state_count": 1,
+      "states": "TX",
+      "individual_tam": 656000.0,
+      "system_price": 394000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 17130,
+      "top_hospitals": [
+        {
+          "name": "South Texas Health System Behavioral",
+          "city": "Edinburg",
+          "state": "TX",
+          "beds": 870,
+          "revenue_m": 1305.0,
+          "package": "Enterprise Premier",
+          "price": 77200.0
+        },
+        {
+          "name": "Texas Health Presbyterian Hospital Dallas",
+          "city": "Dallas",
+          "state": "TX",
+          "beds": 866,
+          "revenue_m": 1299.0,
+          "package": "Enterprise Premier",
+          "price": 77100.0
+        },
+        {
+          "name": "Texas Health Harris Methodist Hospital Southwest F",
+          "city": "Fort Worth",
+          "state": "TX",
+          "beds": 630,
+          "revenue_m": 945.0,
+          "package": "Enterprise Plus",
+          "price": 56600.0
+        },
+        {
+          "name": "Texas Health Harris Methodist Fort Worth",
+          "city": "Fort Worth",
+          "state": "TX",
+          "beds": 610,
+          "revenue_m": 915.0,
+          "package": "Enterprise Plus",
+          "price": 55600.0
+        },
+        {
+          "name": "Texas Health Arlington Memorial Hospital",
+          "city": "Arlington",
+          "state": "TX",
+          "beds": 369,
+          "revenue_m": 553.5,
+          "package": "Enterprise",
+          "price": 38200.0
+        },
+        {
+          "name": "Texas Health Heb",
+          "city": "Bedford",
+          "state": "TX",
+          "beds": 286,
+          "revenue_m": 429.0,
+          "package": "Enterprise",
+          "price": 33200.0
+        },
+        {
+          "name": "Texas Health Presbyterian Hospital Denton",
+          "city": "Denton",
+          "state": "TX",
+          "beds": 255,
+          "revenue_m": 382.5,
+          "package": "Enterprise",
+          "price": 31300.0
+        },
+        {
+          "name": "Texas Health Huguley Hospital Fort Worth South",
+          "city": "Burleson",
+          "state": "TX",
+          "beds": 213,
+          "revenue_m": 319.5,
+          "package": "Enterprise",
+          "price": 28800.0
+        },
+        {
+          "name": "Texas Health Presbyterian Hospital Plano",
+          "city": "Plano",
+          "state": "TX",
+          "beds": 203,
+          "revenue_m": 304.5,
+          "package": "Enterprise",
+          "price": 28200.0
+        },
+        {
+          "name": "University of Texas Health Science Center at Tyler",
+          "city": "Tyler",
+          "state": "TX",
+          "beds": 182,
+          "revenue_m": 273.0,
+          "package": "Enterprise",
+          "price": 26900.0
+        }
+      ]
+    },
+    {
+      "system": "Banner Health",
+      "hospital_count": 21,
+      "total_beds": 5515,
+      "state_count": 4,
+      "states": "AZ, CA, CO, NV",
+      "individual_tam": 620800.0,
+      "system_price": 372000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 17714,
+      "top_hospitals": [
+        {
+          "name": "Banner - University Medical Center Phoenix",
+          "city": "Phoenix",
+          "state": "AZ",
+          "beds": 766,
+          "revenue_m": 1149.0,
+          "package": "Enterprise Plus",
+          "price": 63400.0
+        },
+        {
+          "name": "Banner - University Medical Center Tucson Campus",
+          "city": "Tucson",
+          "state": "AZ",
+          "beds": 625,
+          "revenue_m": 937.5,
+          "package": "Enterprise Plus",
+          "price": 56300.0
+        },
+        {
+          "name": "Banner Desert Medical Center",
+          "city": "Mesa",
+          "state": "AZ",
+          "beds": 595,
+          "revenue_m": 892.5,
+          "package": "Enterprise Plus",
+          "price": 54800.0
+        },
+        {
+          "name": "Banner Thunderbird Medical Center",
+          "city": "Glendale",
+          "state": "AZ",
+          "beds": 561,
+          "revenue_m": 841.5,
+          "package": "Enterprise Plus",
+          "price": 53100.0
+        },
+        {
+          "name": "Banner Boswell Medical Center",
+          "city": "Sun City",
+          "state": "AZ",
+          "beds": 434,
+          "revenue_m": 651.0,
+          "package": "Enterprise Plus",
+          "price": 46700.0
+        },
+        {
+          "name": "Banner Del E. Webb Medical Center",
+          "city": "Sun City West",
+          "state": "AZ",
+          "beds": 394,
+          "revenue_m": 591.0,
+          "package": "Enterprise",
+          "price": 39700.0
+        },
+        {
+          "name": "Banner North Colorado Medical Center",
+          "city": "Greeley",
+          "state": "CO",
+          "beds": 378,
+          "revenue_m": 567.0,
+          "package": "Enterprise",
+          "price": 38700.0
+        },
+        {
+          "name": "Banner Baywood Medical Center",
+          "city": "Mesa",
+          "state": "AZ",
+          "beds": 359,
+          "revenue_m": 538.5,
+          "package": "Enterprise",
+          "price": 37600.0
+        },
+        {
+          "name": "Banner Estrella Medical Center",
+          "city": "Phoenix",
+          "state": "AZ",
+          "beds": 317,
+          "revenue_m": 475.5,
+          "package": "Enterprise",
+          "price": 35000.0
+        },
+        {
+          "name": "Banner-University Medical Center South Campus",
+          "city": "Tucson",
+          "state": "AZ",
+          "beds": 245,
+          "revenue_m": 367.5,
+          "package": "Enterprise",
+          "price": 30700.0
+        }
+      ]
+    },
+    {
+      "system": "Sanford Health",
+      "hospital_count": 21,
+      "total_beds": 1562,
+      "state_count": 4,
+      "states": "IA, MN, ND, SD",
+      "individual_tam": 221300.0,
+      "system_price": 133000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 6333,
+      "top_hospitals": [
+        {
+          "name": "Sanford",
+          "city": "Fargo",
+          "state": "ND",
+          "beds": 752,
+          "revenue_m": 1128.0,
+          "package": "Enterprise Plus",
+          "price": 62700.0
+        },
+        {
+          "name": "Sanford Medical Center Bismarck",
+          "city": "Bismarck",
+          "state": "ND",
+          "beds": 233,
+          "revenue_m": 349.5,
+          "package": "Enterprise",
+          "price": 30000.0
+        },
+        {
+          "name": "Sanford Bemidji Medical Center",
+          "city": "Bemidji",
+          "state": "MN",
+          "beds": 118,
+          "revenue_m": 177.0,
+          "package": "Enterprise",
+          "price": 23400.0
+        },
+        {
+          "name": "Sanford Worthington Medical Center",
+          "city": "Worthington",
+          "state": "MN",
+          "beds": 55,
+          "revenue_m": 82.5,
+          "package": "Enterprise",
+          "price": 20200.0
+        },
+        {
+          "name": "Sanford Aberdeen Medical Center",
+          "city": "Aberdeen",
+          "state": "SD",
+          "beds": 48,
+          "revenue_m": 72.0,
+          "package": "Standard",
+          "price": 5000.0
+        },
+        {
+          "name": "Sanford Medical Center Thief River Falls",
+          "city": "Thief River Falls",
+          "state": "MN",
+          "beds": 36,
+          "revenue_m": 54.0,
+          "package": "Standard",
+          "price": 5000.0
+        },
+        {
+          "name": "Sanford Luverne Medical Center",
+          "city": "Luverne",
+          "state": "MN",
+          "beds": 28,
+          "revenue_m": 42.0,
+          "package": "Standard",
+          "price": 5000.0
+        },
+        {
+          "name": "Sanford Canby Medical Center",
+          "city": "Canby",
+          "state": "MN",
+          "beds": 27,
+          "revenue_m": 40.5,
+          "package": "Standard",
+          "price": 5000.0
+        },
+        {
+          "name": "Sanford Sheldon Medical Center",
+          "city": "Sheldon",
+          "state": "IA",
+          "beds": 25,
+          "revenue_m": 37.5,
+          "package": "Standard",
+          "price": 5000.0
+        },
+        {
+          "name": "Sanford Tracy Medical Center",
+          "city": "Tracy",
+          "state": "MN",
+          "beds": 25,
+          "revenue_m": 37.5,
+          "package": "Standard",
+          "price": 5000.0
+        }
+      ]
+    },
+    {
+      "system": "Mayo Clinic",
+      "hospital_count": 19,
+      "total_beds": 4075,
+      "state_count": 4,
+      "states": "AZ, FL, MN, WI",
+      "individual_tam": 400900.0,
+      "system_price": 241000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 12684,
+      "top_hospitals": [
+        {
+          "name": "Mayo Clinic Hospital Rochester",
+          "city": "Rochester",
+          "state": "MN",
+          "beds": 2059,
+          "revenue_m": 3088.5,
+          "package": "Enterprise Premier",
+          "price": 113100.0
+        },
+        {
+          "name": "Mayo Clinic Health System in La Crosse",
+          "city": "La Crosse",
+          "state": "WI",
+          "beds": 345,
+          "revenue_m": 517.5,
+          "package": "Enterprise",
+          "price": 36700.0
+        },
+        {
+          "name": "Mayo Clinic",
+          "city": "Jacksonville",
+          "state": "FL",
+          "beds": 307,
+          "revenue_m": 460.5,
+          "package": "Enterprise",
+          "price": 34400.0
+        },
+        {
+          "name": "Mayo Clinic Health System in Eau Claire",
+          "city": "Eau Claire",
+          "state": "WI",
+          "beds": 304,
+          "revenue_m": 456.0,
+          "package": "Enterprise",
+          "price": 34300.0
+        },
+        {
+          "name": "Mayo Clinic Hospital",
+          "city": "Phoenix",
+          "state": "AZ",
+          "beds": 280,
+          "revenue_m": 420.0,
+          "package": "Enterprise",
+          "price": 32800.0
+        },
+        {
+          "name": "Mayo Clinic Health System - Mankato",
+          "city": "Mankato",
+          "state": "MN",
+          "beds": 272,
+          "revenue_m": 408.0,
+          "package": "Enterprise",
+          "price": 32300.0
+        },
+        {
+          "name": "Mayo Clinic Health System Southeast Mn Region",
+          "city": "Albert Lea",
+          "state": "MN",
+          "beds": 181,
+          "revenue_m": 271.5,
+          "package": "Enterprise",
+          "price": 26900.0
+        },
+        {
+          "name": "Mayo Clinic Health System - Fairmont",
+          "city": "Fairmont",
+          "state": "MN",
+          "beds": 57,
+          "revenue_m": 85.5,
+          "package": "Enterprise",
+          "price": 20400.0
+        },
+        {
+          "name": "Mayo Clinic Health System - Red Wing",
+          "city": "Red Wing",
+          "state": "MN",
+          "beds": 50,
+          "revenue_m": 75.0,
+          "package": "Enterprise",
+          "price": 20000.0
+        },
+        {
+          "name": "Mayo Clinic Health System-Northland",
+          "city": "Barron",
+          "state": "WI",
+          "beds": 29,
+          "revenue_m": 43.5,
+          "package": "Standard",
+          "price": 5000.0
+        }
+      ]
+    },
+    {
+      "system": "Corewell Health",
+      "hospital_count": 19,
+      "total_beds": 5505,
+      "state_count": 2,
+      "states": "MI, TX",
+      "individual_tam": 612300.0,
+      "system_price": 367000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 19316,
+      "top_hospitals": [
+        {
+          "name": "Corewell Health Grand Rapids Hospitals Butterworth",
+          "city": "Grand Rapids",
+          "state": "MI",
+          "beds": 1135,
+          "revenue_m": 1702.5,
+          "package": "Enterprise Premier",
+          "price": 85200.0
+        },
+        {
+          "name": "Corewell Health William Beaumont University Hospit",
+          "city": "Royal Oak",
+          "state": "MI",
+          "beds": 1031,
+          "revenue_m": 1546.5,
+          "package": "Enterprise Premier",
+          "price": 82100.0
+        },
+        {
+          "name": "Corewell Health Dearborn Hospital",
+          "city": "Dearborn",
+          "state": "MI",
+          "beds": 623,
+          "revenue_m": 934.5,
+          "package": "Enterprise Plus",
+          "price": 56200.0
+        },
+        {
+          "name": "Baptist Beaumont Hospital",
+          "city": "Beaumont",
+          "state": "TX",
+          "beds": 483,
+          "revenue_m": 724.5,
+          "package": "Enterprise Plus",
+          "price": 49200.0
+        },
+        {
+          "name": "Corewell Health Lakeland Hospitals St. Joseph Hospi",
+          "city": "St. Joseph",
+          "state": "MI",
+          "beds": 313,
+          "revenue_m": 469.5,
+          "package": "Enterprise",
+          "price": 34800.0
+        },
+        {
+          "name": "Corewell Health Beaumont Grosse Pointe Hospital",
+          "city": "Grosse Pointe",
+          "state": "MI",
+          "beds": 311,
+          "revenue_m": 466.5,
+          "package": "Enterprise",
+          "price": 34700.0
+        },
+        {
+          "name": "Corewell Health Farmington Hills Hospital",
+          "city": "Farmington Hills",
+          "state": "MI",
+          "beds": 305,
+          "revenue_m": 457.5,
+          "package": "Enterprise",
+          "price": 34300.0
+        },
+        {
+          "name": "Corewell Health Wayne Hospital",
+          "city": "Wayne",
+          "state": "MI",
+          "beds": 259,
+          "revenue_m": 388.5,
+          "package": "Enterprise",
+          "price": 31600.0
+        },
+        {
+          "name": "Beaumont Hospital, Troy",
+          "city": "Troy",
+          "state": "MI",
+          "beds": 254,
+          "revenue_m": 381.0,
+          "package": "Enterprise",
+          "price": 31300.0
+        },
+        {
+          "name": "Corewell Health Trenton Hospital",
+          "city": "Trenton",
+          "state": "MI",
+          "beds": 195,
+          "revenue_m": 292.5,
+          "package": "Enterprise",
+          "price": 27700.0
+        }
+      ]
+    },
+    {
+      "system": "Piedmont Healthcare",
+      "hospital_count": 18,
+      "total_beds": 3636,
+      "state_count": 2,
+      "states": "GA, SC",
+      "individual_tam": 495500.0,
+      "system_price": 297000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 16500,
+      "top_hospitals": [
+        {
+          "name": "Piedmont Augusta Hospital",
+          "city": "Augusta",
+          "state": "GA",
+          "beds": 551,
+          "revenue_m": 826.5,
+          "package": "Enterprise Plus",
+          "price": 52600.0
+        },
+        {
+          "name": "Piedmont Hospital",
+          "city": "Atlanta",
+          "state": "GA",
+          "beds": 458,
+          "revenue_m": 687.0,
+          "package": "Enterprise Plus",
+          "price": 47900.0
+        },
+        {
+          "name": "Piedmont Columbus Regional Midtown",
+          "city": "Columbus",
+          "state": "GA",
+          "beds": 417,
+          "revenue_m": 625.5,
+          "package": "Enterprise Plus",
+          "price": 45900.0
+        },
+        {
+          "name": "Piedmont Athens Regional Medical Center",
+          "city": "Athens",
+          "state": "GA",
+          "beds": 315,
+          "revenue_m": 472.5,
+          "package": "Enterprise",
+          "price": 34900.0
+        },
+        {
+          "name": "Piedmont Medical Center",
+          "city": "Rock Hill",
+          "state": "SC",
+          "beds": 288,
+          "revenue_m": 432.0,
+          "package": "Enterprise",
+          "price": 33300.0
+        },
+        {
+          "name": "Piedmont Macon Medical Center",
+          "city": "Macon",
+          "state": "GA",
+          "beds": 250,
+          "revenue_m": 375.0,
+          "package": "Enterprise",
+          "price": 31000.0
+        },
+        {
+          "name": "Piedmont Fayette Hospital",
+          "city": "Fayetteville",
+          "state": "GA",
+          "beds": 221,
+          "revenue_m": 331.5,
+          "package": "Enterprise",
+          "price": 29300.0
+        },
+        {
+          "name": "Piedmont Eastside Medical Center",
+          "city": "Snellville",
+          "state": "GA",
+          "beds": 200,
+          "revenue_m": 300.0,
+          "package": "Enterprise",
+          "price": 28000.0
+        },
+        {
+          "name": "Piedmont Newnan Hospital, Inc",
+          "city": "Newnan",
+          "state": "GA",
+          "beds": 143,
+          "revenue_m": 214.5,
+          "package": "Enterprise",
+          "price": 24600.0
+        },
+        {
+          "name": "Piedmont Henry Hospital",
+          "city": "Stockbridge",
+          "state": "GA",
+          "beds": 122,
+          "revenue_m": 183.0,
+          "package": "Enterprise",
+          "price": 23600.0
+        }
+      ]
+    },
+    {
+      "system": "SSM Health",
+      "hospital_count": 18,
+      "total_beds": 4416,
+      "state_count": 4,
+      "states": "IL, MO, OK, WI",
+      "individual_tam": 545200.0,
+      "system_price": 327000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 18167,
+      "top_hospitals": [
+        {
+          "name": "SSM Health St. Mary's Hospital - St. Louis",
+          "city": "Richmond Heights",
+          "state": "MO",
+          "beds": 690,
+          "revenue_m": 1035.0,
+          "package": "Enterprise Plus",
+          "price": 59600.0
+        },
+        {
+          "name": "SSM Health St. Anthony Hospital - Oklahoma City",
+          "city": "Oklahoma City",
+          "state": "OK",
+          "beds": 686,
+          "revenue_m": 1029.0,
+          "package": "Enterprise Plus",
+          "price": 59400.0
+        },
+        {
+          "name": "SSM Health Depaul Hospital St. Louis",
+          "city": "Bridgeton",
+          "state": "MO",
+          "beds": 538,
+          "revenue_m": 807.0,
+          "package": "Enterprise Plus",
+          "price": 52000.0
+        },
+        {
+          "name": "SSM Health St. Mary's Hospital - Madison",
+          "city": "Madison",
+          "state": "WI",
+          "beds": 440,
+          "revenue_m": 660.0,
+          "package": "Enterprise Plus",
+          "price": 47000.0
+        },
+        {
+          "name": "SSM Health St. Joseph Hospital-St Charles",
+          "city": "Saint Charles",
+          "state": "MO",
+          "beds": 362,
+          "revenue_m": 543.0,
+          "package": "Enterprise",
+          "price": 37700.0
+        },
+        {
+          "name": "SSM Health Saint Louis University Hospital",
+          "city": "Saint Louis",
+          "state": "MO",
+          "beds": 356,
+          "revenue_m": 534.0,
+          "package": "Enterprise",
+          "price": 37400.0
+        },
+        {
+          "name": "SSM Health St. Anthony Hospital - Midwest",
+          "city": "Midwest City",
+          "state": "OK",
+          "beds": 255,
+          "revenue_m": 382.5,
+          "package": "Enterprise",
+          "price": 31300.0
+        },
+        {
+          "name": "SSM Health St. Clare Hospital - Fenton",
+          "city": "Fenton",
+          "state": "MO",
+          "beds": 180,
+          "revenue_m": 270.0,
+          "package": "Enterprise",
+          "price": 26800.0
+        },
+        {
+          "name": "SSM Health St. Mary's Hospital - Jefferson City",
+          "city": "Jefferson City",
+          "state": "MO",
+          "beds": 154,
+          "revenue_m": 231.0,
+          "package": "Enterprise",
+          "price": 25300.0
+        },
+        {
+          "name": "SSM Health St. Agnes Hospital-Fond Du Lac",
+          "city": "Fond Du Lac",
+          "state": "WI",
+          "beds": 151,
+          "revenue_m": 226.5,
+          "package": "Enterprise",
+          "price": 25100.0
+        }
+      ]
+    },
+    {
+      "system": "CHRISTUS Health",
+      "hospital_count": 18,
+      "total_beds": 5091,
+      "state_count": 2,
+      "states": "LA, TX",
+      "individual_tam": 567300.0,
+      "system_price": 340000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 18889,
+      "top_hospitals": [
+        {
+          "name": "Christus Spohn Hospital Corpus Christi",
+          "city": "Corpus Christi",
+          "state": "TX",
+          "beds": 1040,
+          "revenue_m": 1560.0,
+          "package": "Enterprise Premier",
+          "price": 82400.0
+        },
+        {
+          "name": "Christus Southeast Texas- St. Elizabeth",
+          "city": "Beaumont",
+          "state": "TX",
+          "beds": 666,
+          "revenue_m": 999.0,
+          "package": "Enterprise Plus",
+          "price": 58400.0
+        },
+        {
+          "name": "Christus Santa Rosa Medical Center",
+          "city": "San Antonio",
+          "state": "TX",
+          "beds": 601,
+          "revenue_m": 901.5,
+          "package": "Enterprise Plus",
+          "price": 55100.0
+        },
+        {
+          "name": "Christus Good Shepherd Medical Center",
+          "city": "Longview",
+          "state": "TX",
+          "beds": 574,
+          "revenue_m": 861.0,
+          "package": "Enterprise Plus",
+          "price": 53800.0
+        },
+        {
+          "name": "Christus Mother Frances Hospital",
+          "city": "Tyler",
+          "state": "TX",
+          "beds": 537,
+          "revenue_m": 805.5,
+          "package": "Enterprise Plus",
+          "price": 51900.0
+        },
+        {
+          "name": "Christus St. Michael Health System",
+          "city": "Texarkana",
+          "state": "TX",
+          "beds": 404,
+          "revenue_m": 606.0,
+          "package": "Enterprise Plus",
+          "price": 45200.0
+        },
+        {
+          "name": "Christus St. Frances Cabrini Hospital",
+          "city": "Alexandria",
+          "state": "LA",
+          "beds": 293,
+          "revenue_m": 439.5,
+          "package": "Enterprise",
+          "price": 33600.0
+        },
+        {
+          "name": "Christus Shreveport-Bossier Health System",
+          "city": "Shreveport",
+          "state": "LA",
+          "beds": 242,
+          "revenue_m": 363.0,
+          "package": "Enterprise",
+          "price": 30500.0
+        },
+        {
+          "name": "Christus Santa Rosa Hospital-San Marcos",
+          "city": "San Marcos",
+          "state": "TX",
+          "beds": 170,
+          "revenue_m": 255.0,
+          "package": "Enterprise",
+          "price": 26200.0
+        },
+        {
+          "name": "Christus Spohn Hospital Alice",
+          "city": "Alice",
+          "state": "TX",
+          "beds": 135,
+          "revenue_m": 202.5,
+          "package": "Enterprise",
+          "price": 24200.0
+        }
+      ]
+    },
+    {
+      "system": "Atrium Health",
+      "hospital_count": 14,
+      "total_beds": 3066,
+      "state_count": 3,
+      "states": "GA, NC, OH",
+      "individual_tam": 379500.0,
+      "system_price": 228000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 16286,
+      "top_hospitals": [
+        {
+          "name": "Atrium Health Navicent the Medical Center",
+          "city": "Macon",
+          "state": "GA",
+          "beds": 637,
+          "revenue_m": 955.5,
+          "package": "Enterprise Plus",
+          "price": 56900.0
+        },
+        {
+          "name": "Atrium Health Cabarrus",
+          "city": "Concord",
+          "state": "NC",
+          "beds": 457,
+          "revenue_m": 685.5,
+          "package": "Enterprise Plus",
+          "price": 47900.0
+        },
+        {
+          "name": "Atrium Health Pineville",
+          "city": "Charlotte",
+          "state": "NC",
+          "beds": 344,
+          "revenue_m": 516.0,
+          "package": "Enterprise",
+          "price": 36700.0
+        },
+        {
+          "name": "Atrium Medical Center",
+          "city": "Franklin",
+          "state": "OH",
+          "beds": 328,
+          "revenue_m": 492.0,
+          "package": "Enterprise",
+          "price": 35700.0
+        },
+        {
+          "name": "Atrium Health Floyd Medical Center",
+          "city": "Rome",
+          "state": "GA",
+          "beds": 284,
+          "revenue_m": 426.0,
+          "package": "Enterprise",
+          "price": 33100.0
+        },
+        {
+          "name": "Atrium Health Cleveland",
+          "city": "Shelby",
+          "state": "NC",
+          "beds": 241,
+          "revenue_m": 361.5,
+          "package": "Enterprise",
+          "price": 30500.0
+        },
+        {
+          "name": "Carolinas Healthcare System-Blue Ridge",
+          "city": "Morganton",
+          "state": "NC",
+          "beds": 204,
+          "revenue_m": 306.0,
+          "package": "Enterprise",
+          "price": 28300.0
+        },
+        {
+          "name": "Atrium Health Union",
+          "city": "Monroe",
+          "state": "NC",
+          "beds": 157,
+          "revenue_m": 235.5,
+          "package": "Enterprise",
+          "price": 25400.0
+        },
+        {
+          "name": "Atrium Health University City",
+          "city": "Charlotte",
+          "state": "NC",
+          "beds": 130,
+          "revenue_m": 195.0,
+          "package": "Enterprise",
+          "price": 24000.0
+        },
+        {
+          "name": "Atrium Health Lincoln",
+          "city": "Lincolnton",
+          "state": "NC",
+          "beds": 110,
+          "revenue_m": 165.0,
+          "package": "Enterprise",
+          "price": 23000.0
+        }
+      ]
+    },
+    {
+      "system": "Sutter Health",
+      "hospital_count": 13,
+      "total_beds": 1645,
+      "state_count": 1,
+      "states": "CA",
+      "individual_tam": 248200.0,
+      "system_price": 149000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 11462,
+      "top_hospitals": [
+        {
+          "name": "Sutter Medical Center, Sacramento",
+          "city": "Sacramento",
+          "state": "CA",
+          "beds": 523,
+          "revenue_m": 784.5,
+          "package": "Enterprise Plus",
+          "price": 51200.0
+        },
+        {
+          "name": "Sutter Roseville Medical Center",
+          "city": "Roseville",
+          "state": "CA",
+          "beds": 328,
+          "revenue_m": 492.0,
+          "package": "Enterprise",
+          "price": 35700.0
+        },
+        {
+          "name": "Sutter Santa Rosa Regional Hospital",
+          "city": "Santa Rosa",
+          "state": "CA",
+          "beds": 170,
+          "revenue_m": 255.0,
+          "package": "Enterprise",
+          "price": 26200.0
+        },
+        {
+          "name": "Sutter Solano Medical Center",
+          "city": "Vallejo",
+          "state": "CA",
+          "beds": 111,
+          "revenue_m": 166.5,
+          "package": "Enterprise",
+          "price": 23000.0
+        },
+        {
+          "name": "Sutter Delta Medical Center",
+          "city": "Antioch",
+          "state": "CA",
+          "beds": 111,
+          "revenue_m": 166.5,
+          "package": "Enterprise",
+          "price": 23000.0
+        },
+        {
+          "name": "Sutter Auburn Faith Hospital",
+          "city": "Auburn",
+          "state": "CA",
+          "beds": 97,
+          "revenue_m": 145.5,
+          "package": "Enterprise",
+          "price": 22400.0
+        },
+        {
+          "name": "Sutter Tracy Community Hospital",
+          "city": "Tracy",
+          "state": "CA",
+          "beds": 82,
+          "revenue_m": 123.0,
+          "package": "Enterprise",
+          "price": 21600.0
+        },
+        {
+          "name": "Sutter Amador Hospital",
+          "city": "Jackson",
+          "state": "CA",
+          "beds": 52,
+          "revenue_m": 78.0,
+          "package": "Enterprise",
+          "price": 20100.0
+        },
+        {
+          "name": "Sutter Coast Hospital",
+          "city": "Crescent City",
+          "state": "CA",
+          "beds": 49,
+          "revenue_m": 73.5,
+          "package": "Standard",
+          "price": 5000.0
+        },
+        {
+          "name": "Sutter Davis Hospital",
+          "city": "Davis",
+          "state": "CA",
+          "beds": 48,
+          "revenue_m": 72.0,
+          "package": "Standard",
+          "price": 5000.0
+        }
+      ]
+    },
+    {
+      "system": "Intermountain Health",
+      "hospital_count": 13,
+      "total_beds": 2298,
+      "state_count": 4,
+      "states": "CO, ID, MT, UT",
+      "individual_tam": 293500.0,
+      "system_price": 176000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 13538,
+      "top_hospitals": [
+        {
+          "name": "Intermountain Medical Center",
+          "city": "Murray",
+          "state": "UT",
+          "beds": 520,
+          "revenue_m": 780.0,
+          "package": "Enterprise Plus",
+          "price": 51100.0
+        },
+        {
+          "name": "Intermountain Health Saint Joseph Hospital",
+          "city": "Denver",
+          "state": "CO",
+          "beds": 400,
+          "revenue_m": 600.0,
+          "package": "Enterprise Plus",
+          "price": 45000.0
+        },
+        {
+          "name": "Intermountain Health Utah Valley Hospital",
+          "city": "Provo",
+          "state": "UT",
+          "beds": 395,
+          "revenue_m": 592.5,
+          "package": "Enterprise",
+          "price": 39700.0
+        },
+        {
+          "name": "Intermountain Health St. Mary's Regional Hospital",
+          "city": "Grand Junction",
+          "state": "CO",
+          "beds": 346,
+          "revenue_m": 519.0,
+          "package": "Enterprise",
+          "price": 36800.0
+        },
+        {
+          "name": "Intermountain Health Good Samaritan Hospital",
+          "city": "Lafayette",
+          "state": "CO",
+          "beds": 234,
+          "revenue_m": 351.0,
+          "package": "Enterprise",
+          "price": 30100.0
+        },
+        {
+          "name": "Intermountain Health Platte Valley Hospital",
+          "city": "Brighton",
+          "state": "CO",
+          "beds": 98,
+          "revenue_m": 147.0,
+          "package": "Enterprise",
+          "price": 22400.0
+        },
+        {
+          "name": "Intermountain Health St. James Hospital",
+          "city": "Butte",
+          "state": "MT",
+          "beds": 98,
+          "revenue_m": 147.0,
+          "package": "Enterprise",
+          "price": 22400.0
+        },
+        {
+          "name": "Intermountain Health Alta View Hospital",
+          "city": "Sandy",
+          "state": "UT",
+          "beds": 70,
+          "revenue_m": 105.0,
+          "package": "Enterprise",
+          "price": 21000.0
+        },
+        {
+          "name": "Intermountain Health Layton Hospital",
+          "city": "Layton",
+          "state": "UT",
+          "beds": 43,
+          "revenue_m": 64.5,
+          "package": "Standard",
+          "price": 5000.0
+        },
+        {
+          "name": "Intermountain Health Spanish Fork Hospital",
+          "city": "Spanish Fork",
+          "state": "UT",
+          "beds": 33,
+          "revenue_m": 49.5,
+          "package": "Standard",
+          "price": 5000.0
+        }
+      ]
+    },
+    {
+      "system": "Indiana University Health",
+      "hospital_count": 12,
+      "total_beds": 3036,
+      "state_count": 1,
+      "states": "IN",
+      "individual_tam": 282100.0,
+      "system_price": 169000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 14083,
+      "top_hospitals": [
+        {
+          "name": "Indiana University Health",
+          "city": "Indianapolis",
+          "state": "IN",
+          "beds": 1733,
+          "revenue_m": 2599.5,
+          "package": "Enterprise Premier",
+          "price": 103200.0
+        },
+        {
+          "name": "Indiana University Health Ball Memorial Hospital",
+          "city": "Muncie",
+          "state": "IN",
+          "beds": 379,
+          "revenue_m": 568.5,
+          "package": "Enterprise",
+          "price": 38800.0
+        },
+        {
+          "name": "IU Health Bloomington Hospital",
+          "city": "Bloomington",
+          "state": "IN",
+          "beds": 297,
+          "revenue_m": 445.5,
+          "package": "Enterprise",
+          "price": 33800.0
+        },
+        {
+          "name": "Indiana University Health Arnett Hospital",
+          "city": "Lafayette",
+          "state": "IN",
+          "beds": 191,
+          "revenue_m": 286.5,
+          "package": "Enterprise",
+          "price": 27500.0
+        },
+        {
+          "name": "Indiana University Health North Hospital",
+          "city": "Carmel",
+          "state": "IN",
+          "beds": 149,
+          "revenue_m": 223.5,
+          "package": "Enterprise",
+          "price": 25000.0
+        },
+        {
+          "name": "IU Health West Hospital",
+          "city": "Avon",
+          "state": "IN",
+          "beds": 127,
+          "revenue_m": 190.5,
+          "package": "Enterprise",
+          "price": 23800.0
+        },
+        {
+          "name": "IU Health Jay",
+          "city": "Portland",
+          "state": "IN",
+          "beds": 35,
+          "revenue_m": 52.5,
+          "package": "Standard",
+          "price": 5000.0
+        },
+        {
+          "name": "Indiana University Health Paoli Hospital",
+          "city": "Paoli",
+          "state": "IN",
+          "beds": 25,
+          "revenue_m": 37.5,
+          "package": "Standard",
+          "price": 5000.0
+        },
+        {
+          "name": "Indiana University Health Tipton Hospital Inc",
+          "city": "Tipton",
+          "state": "IN",
+          "beds": 25,
+          "revenue_m": 37.5,
+          "package": "Standard",
+          "price": 5000.0
+        },
+        {
+          "name": "Indiana University Health White Memorial Hospital",
+          "city": "Monticello",
+          "state": "IN",
+          "beds": 25,
+          "revenue_m": 37.5,
+          "package": "Standard",
+          "price": 5000.0
+        }
+      ]
+    },
+    {
+      "system": "Novant Health",
+      "hospital_count": 11,
+      "total_beds": 3460,
+      "state_count": 1,
+      "states": "NC",
+      "individual_tam": 377500.0,
+      "system_price": 226000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 20545,
+      "top_hospitals": [
+        {
+          "name": "Novant Health Forsyth Medical Center",
+          "city": "Winston-Salem",
+          "state": "NC",
+          "beds": 912,
+          "revenue_m": 1368.0,
+          "package": "Enterprise Premier",
+          "price": 78500.0
+        },
+        {
+          "name": "Novant Health Presbyterian Medical Center",
+          "city": "Charlotte",
+          "state": "NC",
+          "beds": 877,
+          "revenue_m": 1315.5,
+          "package": "Enterprise Premier",
+          "price": 77400.0
+        },
+        {
+          "name": "Novant Health New Hanover Regional Medical Center",
+          "city": "Wilmington",
+          "state": "NC",
+          "beds": 769,
+          "revenue_m": 1153.5,
+          "package": "Enterprise Plus",
+          "price": 63500.0
+        },
+        {
+          "name": "Novant Health Rowan Medical Center",
+          "city": "Salisbury",
+          "state": "NC",
+          "beds": 308,
+          "revenue_m": 462.0,
+          "package": "Enterprise",
+          "price": 34500.0
+        },
+        {
+          "name": "Novant Health Thomasville Medical Center",
+          "city": "Thomasville",
+          "state": "NC",
+          "beds": 149,
+          "revenue_m": 223.5,
+          "package": "Enterprise",
+          "price": 25000.0
+        },
+        {
+          "name": "Novant Health Medical Park Hospital",
+          "city": "Winston-Salem",
+          "state": "NC",
+          "beds": 136,
+          "revenue_m": 204.0,
+          "package": "Enterprise",
+          "price": 24300.0
+        },
+        {
+          "name": "Novant Health Matthews Medical Center",
+          "city": "Matthews",
+          "state": "NC",
+          "beds": 102,
+          "revenue_m": 153.0,
+          "package": "Enterprise",
+          "price": 22600.0
+        },
+        {
+          "name": "Novant Health Huntersville Medical Center",
+          "city": "Huntersville",
+          "state": "NC",
+          "beds": 75,
+          "revenue_m": 112.5,
+          "package": "Enterprise",
+          "price": 21200.0
+        },
+        {
+          "name": "Novant Health Brunswick Medical Center",
+          "city": "Supply",
+          "state": "NC",
+          "beds": 60,
+          "revenue_m": 90.0,
+          "package": "Enterprise",
+          "price": 20500.0
+        },
+        {
+          "name": "Novant Health Mint Hill Medical Center",
+          "city": "Charlotte",
+          "state": "NC",
+          "beds": 36,
+          "revenue_m": 54.0,
+          "package": "Standard",
+          "price": 5000.0
+        }
+      ]
+    },
+    {
+      "system": "OSF HealthCare",
+      "hospital_count": 10,
+      "total_beds": 1245,
+      "state_count": 2,
+      "states": "IL, MI",
+      "individual_tam": 173400.0,
+      "system_price": 104000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 10400,
+      "top_hospitals": [
+        {
+          "name": "Osf Little Company of Mary Medical Center",
+          "city": "Evergreen Park",
+          "state": "IL",
+          "beds": 298,
+          "revenue_m": 447.0,
+          "package": "Enterprise",
+          "price": 33900.0
+        },
+        {
+          "name": "Osf Saint Anthony's Health Center",
+          "city": "Alton",
+          "state": "IL",
+          "beds": 296,
+          "revenue_m": 444.0,
+          "package": "Enterprise",
+          "price": 33800.0
+        },
+        {
+          "name": "Osf Heart of Mary Medical Center",
+          "city": "Urbana",
+          "state": "IL",
+          "beds": 268,
+          "revenue_m": 402.0,
+          "package": "Enterprise",
+          "price": 32100.0
+        },
+        {
+          "name": "Osf Sacred Heart Medical Center",
+          "city": "Danville",
+          "state": "IL",
+          "beds": 210,
+          "revenue_m": 315.0,
+          "package": "Enterprise",
+          "price": 28600.0
+        },
+        {
+          "name": "Osf Saint Elizabeth Medical Center",
+          "city": "Ottawa",
+          "state": "IL",
+          "beds": 50,
+          "revenue_m": 75.0,
+          "package": "Enterprise",
+          "price": 20000.0
+        },
+        {
+          "name": "Osf Saint Paul Medical Center",
+          "city": "Mendota",
+          "state": "IL",
+          "beds": 25,
+          "revenue_m": 37.5,
+          "package": "Standard",
+          "price": 5000.0
+        },
+        {
+          "name": "Osf Saint Luke Medical Center",
+          "city": "Kewanee",
+          "state": "IL",
+          "beds": 25,
+          "revenue_m": 37.5,
+          "package": "Standard",
+          "price": 5000.0
+        },
+        {
+          "name": "Osf Saint Clare Medical Center",
+          "city": "Princeton",
+          "state": "IL",
+          "beds": 25,
+          "revenue_m": 37.5,
+          "package": "Standard",
+          "price": 5000.0
+        },
+        {
+          "name": "Osf Saint Francis Hospital",
+          "city": "Escanaba",
+          "state": "MI",
+          "beds": 25,
+          "revenue_m": 37.5,
+          "package": "Standard",
+          "price": 5000.0
+        },
+        {
+          "name": "Osf Holy Family Medical Center",
+          "city": "Monmouth",
+          "state": "IL",
+          "beds": 23,
+          "revenue_m": 34.5,
+          "package": "Standard",
+          "price": 5000.0
+        }
+      ]
+    },
+    {
+      "system": "Bon Secours Mercy Health",
+      "hospital_count": 10,
+      "total_beds": 2172,
+      "state_count": 3,
+      "states": "NY, SC, VA",
+      "individual_tam": 291700.0,
+      "system_price": 175000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 17500,
+      "top_hospitals": [
+        {
+          "name": "Bon Secours St. Marys Hospital",
+          "city": "Richmond",
+          "state": "VA",
+          "beds": 391,
+          "revenue_m": 586.5,
+          "package": "Enterprise",
+          "price": 39500.0
+        },
+        {
+          "name": "Bon Secours Maryview Medical Center",
+          "city": "Portsmouth",
+          "state": "VA",
+          "beds": 346,
+          "revenue_m": 519.0,
+          "package": "Enterprise",
+          "price": 36800.0
+        },
+        {
+          "name": "Bon Secours Southside Medical Center",
+          "city": "Petersburg",
+          "state": "VA",
+          "beds": 300,
+          "revenue_m": 450.0,
+          "package": "Enterprise",
+          "price": 34000.0
+        },
+        {
+          "name": "Bon Secours Memorial Regional Medical Center",
+          "city": "Mechanicsville",
+          "state": "VA",
+          "beds": 225,
+          "revenue_m": 337.5,
+          "package": "Enterprise",
+          "price": 29500.0
+        },
+        {
+          "name": "Bon Secours Southampton Memorial Hospital",
+          "city": "Franklin",
+          "state": "VA",
+          "beds": 221,
+          "revenue_m": 331.5,
+          "package": "Enterprise",
+          "price": 29300.0
+        },
+        {
+          "name": "Bon Secours-St Francis Xavier Hospital",
+          "city": "Charleston",
+          "state": "SC",
+          "beds": 204,
+          "revenue_m": 306.0,
+          "package": "Enterprise",
+          "price": 28300.0
+        },
+        {
+          "name": "Bon Secours Community Hospital",
+          "city": "Port Jervis",
+          "state": "NY",
+          "beds": 141,
+          "revenue_m": 211.5,
+          "package": "Enterprise",
+          "price": 24600.0
+        },
+        {
+          "name": "Bon Secours St. Francis Medical Center",
+          "city": "Midlothian",
+          "state": "VA",
+          "beds": 130,
+          "revenue_m": 195.0,
+          "package": "Enterprise",
+          "price": 24000.0
+        },
+        {
+          "name": "Bon Secours Mary Immaculate Hospital",
+          "city": "Newport News",
+          "state": "VA",
+          "beds": 110,
+          "revenue_m": 165.0,
+          "package": "Enterprise",
+          "price": 23000.0
+        },
+        {
+          "name": "Bon Secours Richmond Community Hospital",
+          "city": "Richmond",
+          "state": "VA",
+          "beds": 104,
+          "revenue_m": 156.0,
+          "package": "Enterprise",
+          "price": 22700.0
+        }
+      ]
+    },
+    {
+      "system": "WellStar Health",
+      "hospital_count": 9,
+      "total_beds": 2466,
+      "state_count": 1,
+      "states": "GA",
+      "individual_tam": 286000.0,
+      "system_price": 172000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 19111,
+      "top_hospitals": [
+        {
+          "name": "Wellstar Kennestone Regional Medical Center",
+          "city": "Marietta",
+          "state": "GA",
+          "beds": 633,
+          "revenue_m": 949.5,
+          "package": "Enterprise Plus",
+          "price": 56700.0
+        },
+        {
+          "name": "Wellstar Mcg Health, Affiliated With Med Col",
+          "city": "Augusta",
+          "state": "GA",
+          "beds": 632,
+          "revenue_m": 948.0,
+          "package": "Enterprise Plus",
+          "price": 56700.0
+        },
+        {
+          "name": "Wellstar Cobb Medical Center",
+          "city": "Austell",
+          "state": "GA",
+          "beds": 382,
+          "revenue_m": 573.0,
+          "package": "Enterprise",
+          "price": 38900.0
+        },
+        {
+          "name": "Wellstar West Georgia Medical Center",
+          "city": "Lagrange",
+          "state": "GA",
+          "beds": 276,
+          "revenue_m": 414.0,
+          "package": "Enterprise",
+          "price": 32600.0
+        },
+        {
+          "name": "Wellstar North Fulton Medical Center",
+          "city": "Roswell",
+          "state": "GA",
+          "beds": 167,
+          "revenue_m": 250.5,
+          "package": "Enterprise",
+          "price": 26000.0
+        },
+        {
+          "name": "Wellstar Spalding Medical Center",
+          "city": "Griffin",
+          "state": "GA",
+          "beds": 160,
+          "revenue_m": 240.0,
+          "package": "Enterprise",
+          "price": 25600.0
+        },
+        {
+          "name": "Wellstar Douglas Medical Center",
+          "city": "Douglasville",
+          "state": "GA",
+          "beds": 108,
+          "revenue_m": 162.0,
+          "package": "Enterprise",
+          "price": 22900.0
+        },
+        {
+          "name": "Wellstar Paulding Medical Center",
+          "city": "Hiram",
+          "state": "GA",
+          "beds": 83,
+          "revenue_m": 124.5,
+          "package": "Enterprise",
+          "price": 21600.0
+        },
+        {
+          "name": "Wellstar Sylvan Grove Medical Center",
+          "city": "Jackson",
+          "state": "GA",
+          "beds": 25,
+          "revenue_m": 37.5,
+          "package": "Standard",
+          "price": 5000.0
+        }
+      ]
+    },
+    {
+      "system": "Advocate Aurora",
+      "hospital_count": 8,
+      "total_beds": 3652,
+      "state_count": 1,
+      "states": "IL",
+      "individual_tam": 357400.0,
+      "system_price": 214000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 26750,
+      "top_hospitals": [
+        {
+          "name": "Advocate Illinois Masonic Medical Center",
+          "city": "Chicago",
+          "state": "IL",
+          "beds": 997,
+          "revenue_m": 1495.5,
+          "package": "Enterprise Premier",
+          "price": 81100.0
+        },
+        {
+          "name": "Advocate Christ Hospital & Medical Center",
+          "city": "Oak Lawn",
+          "state": "IL",
+          "beds": 695,
+          "revenue_m": 1042.5,
+          "package": "Enterprise Plus",
+          "price": 59800.0
+        },
+        {
+          "name": "Advocate Lutheran General Hospital",
+          "city": "Park Ridge",
+          "state": "IL",
+          "beds": 638,
+          "revenue_m": 957.0,
+          "package": "Enterprise Plus",
+          "price": 57000.0
+        },
+        {
+          "name": "Advocate Good Samaritan Hospital",
+          "city": "Downers Grove",
+          "state": "IL",
+          "beds": 366,
+          "revenue_m": 549.0,
+          "package": "Enterprise",
+          "price": 38000.0
+        },
+        {
+          "name": "Advocate Condell Medical Center",
+          "city": "Libertyville",
+          "state": "IL",
+          "beds": 284,
+          "revenue_m": 426.0,
+          "package": "Enterprise",
+          "price": 33100.0
+        },
+        {
+          "name": "Advocate Trinity Hospital",
+          "city": "Chicago",
+          "state": "IL",
+          "beds": 263,
+          "revenue_m": 394.5,
+          "package": "Enterprise",
+          "price": 31800.0
+        },
+        {
+          "name": "Advocate Sherman Hospital",
+          "city": "Elgin",
+          "state": "IL",
+          "beds": 255,
+          "revenue_m": 382.5,
+          "package": "Enterprise",
+          "price": 31300.0
+        },
+        {
+          "name": "Advocate Good Shepherd Hospital",
+          "city": "Barrington",
+          "state": "IL",
+          "beds": 154,
+          "revenue_m": 231.0,
+          "package": "Enterprise",
+          "price": 25300.0
+        }
+      ]
+    },
+    {
+      "system": "Trinity Health",
+      "hospital_count": 8,
+      "total_beds": 2026,
+      "state_count": 1,
+      "states": "MI",
+      "individual_tam": 242000.0,
+      "system_price": 145000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 18125,
+      "top_hospitals": [
+        {
+          "name": "Trinity Health Ann Arbor Hospital",
+          "city": "Ann Arbor",
+          "state": "MI",
+          "beds": 505,
+          "revenue_m": 757.5,
+          "package": "Enterprise Plus",
+          "price": 50300.0
+        },
+        {
+          "name": "Trinity Health Oakland Hospital",
+          "city": "Pontiac",
+          "state": "MI",
+          "beds": 395,
+          "revenue_m": 592.5,
+          "package": "Enterprise",
+          "price": 39700.0
+        },
+        {
+          "name": "Trinity Health Muskegon Hospital",
+          "city": "Muskegon",
+          "state": "MI",
+          "beds": 382,
+          "revenue_m": 573.0,
+          "package": "Enterprise",
+          "price": 38900.0
+        },
+        {
+          "name": "Trinity Health Livonia Hospital",
+          "city": "Livonia",
+          "state": "MI",
+          "beds": 273,
+          "revenue_m": 409.5,
+          "package": "Enterprise",
+          "price": 32400.0
+        },
+        {
+          "name": "Trinity Health Grand Rapids Hospital",
+          "city": "Grand Rapids",
+          "state": "MI",
+          "beds": 230,
+          "revenue_m": 345.0,
+          "package": "Enterprise",
+          "price": 29800.0
+        },
+        {
+          "name": "Trinity Health Livingston Hospital",
+          "city": "Howell",
+          "state": "MI",
+          "beds": 136,
+          "revenue_m": 204.0,
+          "package": "Enterprise",
+          "price": 24300.0
+        },
+        {
+          "name": "Trinity Health Grand Haven Hospital",
+          "city": "Grand Haven",
+          "state": "MI",
+          "beds": 81,
+          "revenue_m": 121.5,
+          "package": "Enterprise",
+          "price": 21600.0
+        },
+        {
+          "name": "Trinity Health Shelby Hospital",
+          "city": "Shelby",
+          "state": "MI",
+          "beds": 24,
+          "revenue_m": 36.0,
+          "package": "Standard",
+          "price": 5000.0
+        }
+      ]
+    },
+    {
+      "system": "Geisinger",
+      "hospital_count": 8,
+      "total_beds": 1478,
+      "state_count": 1,
+      "states": "PA",
+      "individual_tam": 197400.0,
+      "system_price": 118000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 14750,
+      "top_hospitals": [
+        {
+          "name": "Geisinger Medical Center",
+          "city": "Danville",
+          "state": "PA",
+          "beds": 553,
+          "revenue_m": 829.5,
+          "package": "Enterprise Plus",
+          "price": 52700.0
+        },
+        {
+          "name": "Geisinger Wyoming Valley Medical Center",
+          "city": "Wilkes Barre",
+          "state": "PA",
+          "beds": 328,
+          "revenue_m": 492.0,
+          "package": "Enterprise",
+          "price": 35700.0
+        },
+        {
+          "name": "Geisinger Community Medical Center",
+          "city": "Scranton",
+          "state": "PA",
+          "beds": 293,
+          "revenue_m": 439.5,
+          "package": "Enterprise",
+          "price": 33600.0
+        },
+        {
+          "name": "Geisinger-Lewistown Hospital",
+          "city": "Lewistown",
+          "state": "PA",
+          "beds": 123,
+          "revenue_m": 184.5,
+          "package": "Enterprise",
+          "price": 23600.0
+        },
+        {
+          "name": "Geisinger-Bloomsburg Hospital",
+          "city": "Bloomsburg",
+          "state": "PA",
+          "beds": 76,
+          "revenue_m": 114.0,
+          "package": "Enterprise",
+          "price": 21300.0
+        },
+        {
+          "name": "Geisinger St. Luke's Hospital",
+          "city": "Orwigsburg",
+          "state": "PA",
+          "beds": 60,
+          "revenue_m": 90.0,
+          "package": "Enterprise",
+          "price": 20500.0
+        },
+        {
+          "name": "Geisinger Jersey Shore Hospital",
+          "city": "Jersey Shore",
+          "state": "PA",
+          "beds": 25,
+          "revenue_m": 37.5,
+          "package": "Standard",
+          "price": 5000.0
+        },
+        {
+          "name": "Geisinger Medical Center Muncy",
+          "city": "Muncy",
+          "state": "PA",
+          "beds": 20,
+          "revenue_m": 30.0,
+          "package": "Standard",
+          "price": 5000.0
+        }
+      ]
+    },
+    {
+      "system": "Memorial Hermann",
+      "hospital_count": 7,
+      "total_beds": 4159,
+      "state_count": 1,
+      "states": "TX",
+      "individual_tam": 352600.0,
+      "system_price": 212000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 30286,
+      "top_hospitals": [
+        {
+          "name": "Memorial Hermann Hospital System",
+          "city": "Houston",
+          "state": "TX",
+          "beds": 1515,
+          "revenue_m": 2272.5,
+          "package": "Enterprise Premier",
+          "price": 96700.0
+        },
+        {
+          "name": "Memorial Hermann Texas Medical Center",
+          "city": "Houston",
+          "state": "TX",
+          "beds": 1098,
+          "revenue_m": 1647.0,
+          "package": "Enterprise Premier",
+          "price": 84100.0
+        },
+        {
+          "name": "Memorial Hermann Memorial City Medical Center",
+          "city": "Houston",
+          "state": "TX",
+          "beds": 821,
+          "revenue_m": 1231.5,
+          "package": "Enterprise Premier",
+          "price": 75800.0
+        },
+        {
+          "name": "Memorial Hermann Katy Hospital",
+          "city": "Katy",
+          "state": "TX",
+          "beds": 294,
+          "revenue_m": 441.0,
+          "package": "Enterprise",
+          "price": 33700.0
+        },
+        {
+          "name": "Memorial Hermann Northeast Hospital",
+          "city": "Humble",
+          "state": "TX",
+          "beds": 242,
+          "revenue_m": 363.0,
+          "package": "Enterprise",
+          "price": 30500.0
+        },
+        {
+          "name": "Memorial Hermann Sugar Land Hospital",
+          "city": "Sugar Land",
+          "state": "TX",
+          "beds": 179,
+          "revenue_m": 268.5,
+          "package": "Enterprise",
+          "price": 26800.0
+        },
+        {
+          "name": "Memorial Hermann Surgical Hospital Kingwood",
+          "city": "Kingwood",
+          "state": "TX",
+          "beds": 10,
+          "revenue_m": 15.0,
+          "package": "Standard",
+          "price": 5000.0
+        }
+      ]
+    },
+    {
+      "system": "Houston Methodist",
+      "hospital_count": 7,
+      "total_beds": 2955,
+      "state_count": 1,
+      "states": "TX",
+      "individual_tam": 285600.0,
+      "system_price": 171000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 24429,
+      "top_hospitals": [
+        {
+          "name": "Houston Methodist Hospital",
+          "city": "Houston",
+          "state": "TX",
+          "beds": 1299,
+          "revenue_m": 1948.5,
+          "package": "Enterprise Premier",
+          "price": 90200.0
+        },
+        {
+          "name": "Houston Methodist Sugarland Hospital",
+          "city": "Sugar Land",
+          "state": "TX",
+          "beds": 340,
+          "revenue_m": 510.0,
+          "package": "Enterprise",
+          "price": 36400.0
+        },
+        {
+          "name": "Houston Methodist Willowbrook Hospital",
+          "city": "Houston",
+          "state": "TX",
+          "beds": 313,
+          "revenue_m": 469.5,
+          "package": "Enterprise",
+          "price": 34800.0
+        },
+        {
+          "name": "Houston Methodist West Hospital",
+          "city": "Houston",
+          "state": "TX",
+          "beds": 302,
+          "revenue_m": 453.0,
+          "package": "Enterprise",
+          "price": 34100.0
+        },
+        {
+          "name": "Houston Methodist the Woodlands Hospital",
+          "city": "The Woodlands",
+          "state": "TX",
+          "beds": 293,
+          "revenue_m": 439.5,
+          "package": "Enterprise",
+          "price": 33600.0
+        },
+        {
+          "name": "Houston Methodist Baytown Hospital",
+          "city": "Baytown",
+          "state": "TX",
+          "beds": 230,
+          "revenue_m": 345.0,
+          "package": "Enterprise",
+          "price": 29800.0
+        },
+        {
+          "name": "Houston Methodist Clear Lake Hospital",
+          "city": "Nassau Bay",
+          "state": "TX",
+          "beds": 178,
+          "revenue_m": 267.0,
+          "package": "Enterprise",
+          "price": 26700.0
+        }
+      ]
+    },
+    {
+      "system": "Emory Healthcare",
+      "hospital_count": 6,
+      "total_beds": 2163,
+      "state_count": 1,
+      "states": "GA",
+      "individual_tam": 238100.0,
+      "system_price": 143000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 23833,
+      "top_hospitals": [
+        {
+          "name": "Emory University Hospital",
+          "city": "Atlanta",
+          "state": "GA",
+          "beds": 661,
+          "revenue_m": 991.5,
+          "package": "Enterprise Plus",
+          "price": 58100.0
+        },
+        {
+          "name": "Emory University Hospital Midtown",
+          "city": "Atlanta",
+          "state": "GA",
+          "beds": 481,
+          "revenue_m": 721.5,
+          "package": "Enterprise Plus",
+          "price": 49100.0
+        },
+        {
+          "name": "Emory Decatur Hospital",
+          "city": "Decatur",
+          "state": "GA",
+          "beds": 451,
+          "revenue_m": 676.5,
+          "package": "Enterprise Plus",
+          "price": 47600.0
+        },
+        {
+          "name": "St. Francis Hospital- Emory Healthcare",
+          "city": "Columbus",
+          "state": "GA",
+          "beds": 376,
+          "revenue_m": 564.0,
+          "package": "Enterprise",
+          "price": 38600.0
+        },
+        {
+          "name": "Emory Johns Creek Hospital",
+          "city": "Johns Creek",
+          "state": "GA",
+          "beds": 110,
+          "revenue_m": 165.0,
+          "package": "Enterprise",
+          "price": 23000.0
+        },
+        {
+          "name": "Emory Hillandale Hospital",
+          "city": "Lithonia",
+          "state": "GA",
+          "beds": 84,
+          "revenue_m": 126.0,
+          "package": "Enterprise",
+          "price": 21700.0
+        }
+      ]
+    },
+    {
+      "system": "Northwestern Medicine",
+      "hospital_count": 6,
+      "total_beds": 1673,
+      "state_count": 1,
+      "states": "IL",
+      "individual_tam": 193100.0,
+      "system_price": 116000.0,
+      "system_tier": "Enterprise",
+      "discount_pct": 40.0,
+      "per_location": 19333,
+      "top_hospitals": [
+        {
+          "name": "Northwestern Memorial Hospital",
+          "city": "Chicago",
+          "state": "IL",
+          "beds": 894,
+          "revenue_m": 1341.0,
+          "package": "Enterprise Premier",
+          "price": 78000.0
+        },
+        {
+          "name": "Northwestern Medicine Central Dupage Hospital",
+          "city": "Winfield",
+          "state": "IL",
+          "beds": 361,
+          "revenue_m": 541.5,
+          "package": "Enterprise",
+          "price": 37700.0
+        },
+        {
+          "name": "Northwestern Medicine Mchenry Hospital",
+          "city": "Mchenry",
+          "state": "IL",
+          "beds": 177,
+          "revenue_m": 265.5,
+          "package": "Enterprise",
+          "price": 26600.0
+        },
+        {
+          "name": "Northwestern Medicine Delnor Community Hospital",
+          "city": "Geneva",
+          "state": "IL",
+          "beds": 118,
+          "revenue_m": 177.0,
+          "package": "Enterprise",
+          "price": 23400.0
+        },
+        {
+          "name": "Northwestern Medicine Kishwaukee Hospital",
+          "city": "Dekalb",
+          "state": "IL",
+          "beds": 98,
+          "revenue_m": 147.0,
+          "package": "Enterprise",
+          "price": 22400.0
+        },
+        {
+          "name": "Northwestern Medicine Valley West Hospital",
+          "city": "Sandwich",
+          "state": "IL",
+          "beds": 25,
+          "revenue_m": 37.5,
+          "package": "Standard",
+          "price": 5000.0
+        }
+      ]
+    },
+    {
+      "system": "Mount Sinai Health System",
+      "hospital_count": 5,
+      "total_beds": 4417,
+      "state_count": 2,
+      "states": "FL, NY",
+      "individual_tam": 358300.0,
+      "system_price": 358000.0,
+      "system_tier": "Standard",
+      "discount_pct": 0.0,
+      "per_location": 71600,
+      "top_hospitals": [
+        {
+          "name": "Mount Sinai Hospital",
+          "city": "New York",
+          "state": "NY",
+          "beds": 1171,
+          "revenue_m": 1756.5,
+          "package": "Enterprise Premier",
+          "price": 86300.0
+        },
+        {
+          "name": "Mount Sinai Beth Israel",
+          "city": "New York",
+          "state": "NY",
+          "beds": 1111,
+          "revenue_m": 1666.5,
+          "package": "Enterprise Premier",
+          "price": 84500.0
+        },
+        {
+          "name": "Mount Sinai West",
+          "city": "New York",
+          "state": "NY",
+          "beds": 1028,
+          "revenue_m": 1542.0,
+          "package": "Enterprise Premier",
+          "price": 82000.0
+        },
+        {
+          "name": "Mount Sinai Medical Center of Florida, Inc",
+          "city": "Miami Beach",
+          "state": "FL",
+          "beds": 672,
+          "revenue_m": 1008.0,
+          "package": "Enterprise Plus",
+          "price": 58700.0
+        },
+        {
+          "name": "Mount Sinai South Nassau",
+          "city": "Oceanside",
+          "state": "NY",
+          "beds": 435,
+          "revenue_m": 652.5,
+          "package": "Enterprise Plus",
+          "price": 46800.0
+        }
+      ]
+    },
+    {
+      "system": "Cleveland Clinic",
+      "hospital_count": 5,
+      "total_beds": 2482,
+      "state_count": 2,
+      "states": "FL, OH",
+      "individual_tam": 230200.0,
+      "system_price": 230000.0,
+      "system_tier": "Standard",
+      "discount_pct": 0.0,
+      "per_location": 46000,
+      "top_hospitals": [
+        {
+          "name": "Cleveland Clinic",
+          "city": "Cleveland",
+          "state": "OH",
+          "beds": 1267,
+          "revenue_m": 1900.5,
+          "package": "Enterprise Premier",
+          "price": 89200.0
+        },
+        {
+          "name": "Cleveland Clinic Martin North Hospital",
+          "city": "Stuart",
+          "state": "FL",
+          "beds": 521,
+          "revenue_m": 781.5,
+          "package": "Enterprise Plus",
+          "price": 51100.0
+        },
+        {
+          "name": "Cleveland Clinic Indian River Hospital",
+          "city": "Vero Beach",
+          "state": "FL",
+          "beds": 332,
+          "revenue_m": 498.0,
+          "package": "Enterprise",
+          "price": 35900.0
+        },
+        {
+          "name": "Cleveland Clinic Hospital",
+          "city": "Weston",
+          "state": "FL",
+          "beds": 236,
+          "revenue_m": 354.0,
+          "package": "Enterprise",
+          "price": 30200.0
+        },
+        {
+          "name": "Cleveland Clinic Avon Hospital",
+          "city": "Avon",
+          "state": "OH",
+          "beds": 126,
+          "revenue_m": 189.0,
+          "package": "Enterprise",
+          "price": 23800.0
+        }
+      ]
+    },
+    {
+      "system": "Vanderbilt University Medical Center",
+      "hospital_count": 4,
+      "total_beds": 1580,
+      "state_count": 1,
+      "states": "TN",
+      "individual_tam": 161800.0,
+      "system_price": 162000.0,
+      "system_tier": "Standard",
+      "discount_pct": 0.0,
+      "per_location": 40500,
+      "top_hospitals": [
+        {
+          "name": "Vanderbilt University Medical Center",
+          "city": "Nashville",
+          "state": "TN",
+          "beds": 1091,
+          "revenue_m": 1636.5,
+          "package": "Enterprise Premier",
+          "price": 83900.0
+        },
+        {
+          "name": "Vanderbilt Wilson County Hospital",
+          "city": "Lebanon",
+          "state": "TN",
+          "beds": 250,
+          "revenue_m": 375.0,
+          "package": "Enterprise",
+          "price": 31000.0
+        },
+        {
+          "name": "Vanderbilt Tullahoma-Harton Hospital",
+          "city": "Tullahoma",
+          "state": "TN",
+          "beds": 135,
+          "revenue_m": 202.5,
+          "package": "Enterprise",
+          "price": 24200.0
+        },
+        {
+          "name": "Vanderbilt Bedford Hospital",
+          "city": "Shelbyville",
+          "state": "TN",
+          "beds": 104,
+          "revenue_m": 156.0,
+          "package": "Enterprise",
+          "price": 22700.0
+        }
+      ]
+    },
+    {
+      "system": "UC Health",
+      "hospital_count": 3,
+      "total_beds": 1369,
+      "state_count": 1,
+      "states": "CA",
+      "individual_tam": 137900.0,
+      "system_price": 138000.0,
+      "system_tier": "Standard",
+      "discount_pct": 0.0,
+      "per_location": 46000,
+      "top_hospitals": [
+        {
+          "name": "Uc San Diego Health Hillcrest - Hillcrest Med Ctr",
+          "city": "San Diego",
+          "state": "CA",
+          "beds": 600,
+          "revenue_m": 900.0,
+          "package": "Enterprise Plus",
+          "price": 55100.0
+        },
+        {
+          "name": "Ronald Reagan UCLA Medical Center",
+          "city": "Los Angeles",
+          "state": "CA",
+          "beds": 445,
+          "revenue_m": 667.5,
+          "package": "Enterprise Plus",
+          "price": 47300.0
+        },
+        {
+          "name": "Lac/olive View-Ucla Medical Center",
+          "city": "Sylmar",
+          "state": "CA",
+          "beds": 324,
+          "revenue_m": 486.0,
+          "package": "Enterprise",
+          "price": 35500.0
+        }
+      ]
+    },
+    {
+      "system": "UnityPoint Health",
+      "hospital_count": 3,
+      "total_beds": 1171,
+      "state_count": 2,
+      "states": "IA, WI",
+      "individual_tam": 111200.0,
+      "system_price": 111000.0,
+      "system_tier": "Standard",
+      "discount_pct": 0.0,
+      "per_location": 37000,
+      "top_hospitals": [
+        {
+          "name": "Unitypoint Health - Des Moines Iowa Methodist Medi",
+          "city": "Des Moines",
+          "state": "IA",
+          "beds": 674,
+          "revenue_m": 1011.0,
+          "package": "Enterprise Plus",
+          "price": 58800.0
+        },
+        {
+          "name": "Unitypoint Health - Meriter",
+          "city": "Madison",
+          "state": "WI",
+          "beds": 448,
+          "revenue_m": 672.0,
+          "package": "Enterprise Plus",
+          "price": 47400.0
+        },
+        {
+          "name": "Unitypoint Health - Marshalltown",
+          "city": "Marshalltown",
+          "state": "IA",
+          "beds": 49,
+          "revenue_m": 73.5,
+          "package": "Standard",
+          "price": 5000.0
+        }
+      ]
+    },
+    {
+      "system": "Johns Hopkins Medicine",
+      "hospital_count": 3,
+      "total_beds": 1688,
+      "state_count": 1,
+      "states": "MD",
+      "individual_tam": 158400.0,
+      "system_price": 158000.0,
+      "system_tier": "Standard",
+      "discount_pct": 0.0,
+      "per_location": 52667,
+      "top_hospitals": [
+        {
+          "name": "Johns Hopkins Hospital, the",
+          "city": "Baltimore",
+          "state": "MD",
+          "beds": 1025,
+          "revenue_m": 1537.5,
+          "package": "Enterprise Premier",
+          "price": 81900.0
+        },
+        {
+          "name": "Johns Hopkins Bayview Medical Center",
+          "city": "Baltimore",
+          "state": "MD",
+          "beds": 430,
+          "revenue_m": 645.0,
+          "package": "Enterprise Plus",
+          "price": 46500.0
+        },
+        {
+          "name": "Johns Hopkins Howard County Medical Center",
+          "city": "Columbia",
+          "state": "MD",
+          "beds": 233,
+          "revenue_m": 349.5,
+          "package": "Enterprise",
+          "price": 30000.0
+        }
+      ]
+    },
+    {
+      "system": "Duke Health",
+      "hospital_count": 3,
+      "total_beds": 1628,
+      "state_count": 1,
+      "states": "NC",
+      "individual_tam": 150300.0,
+      "system_price": 150000.0,
+      "system_tier": "Standard",
+      "discount_pct": 0.0,
+      "per_location": 50000,
+      "top_hospitals": [
+        {
+          "name": "Duke University Hospital",
+          "city": "Durham",
+          "state": "NC",
+          "beds": 1019,
+          "revenue_m": 1528.5,
+          "package": "Enterprise Premier",
+          "price": 81700.0
+        },
+        {
+          "name": "Duke Regional Hospital",
+          "city": "Durham",
+          "state": "NC",
+          "beds": 391,
+          "revenue_m": 586.5,
+          "package": "Enterprise",
+          "price": 39500.0
+        },
+        {
+          "name": "Duke Health Raleigh Hospital",
+          "city": "Raleigh",
+          "state": "NC",
+          "beds": 218,
+          "revenue_m": 327.0,
+          "package": "Enterprise",
+          "price": 29100.0
+        }
+      ]
+    },
+    {
+      "system": "Tenet Healthcare",
+      "hospital_count": 2,
+      "total_beds": 300,
+      "state_count": 1,
+      "states": "CA",
+      "individual_tam": 50400.0,
+      "system_price": 50000.0,
+      "system_tier": "Standard",
+      "discount_pct": 0.0,
+      "per_location": 25000,
+      "top_hospitals": [
+        {
+          "name": "Tenet Health Central Coast Sierra Vista Rmc",
+          "city": "San Luis Obispo",
+          "state": "CA",
+          "beds": 186,
+          "revenue_m": 279.0,
+          "package": "Enterprise",
+          "price": 27200.0
+        },
+        {
+          "name": "Tenet Health Central Coast Twin Cities Comm Hosp",
+          "city": "Templeton",
+          "state": "CA",
+          "beds": 114,
+          "revenue_m": 171.0,
+          "package": "Enterprise",
+          "price": 23200.0
+        }
+      ]
+    },
+    {
+      "system": "Cedars-Sinai",
+      "hospital_count": 1,
+      "total_beds": 877,
+      "state_count": 1,
+      "states": "CA",
+      "individual_tam": 77400.0,
+      "system_price": 77000.0,
+      "system_tier": "Standard",
+      "discount_pct": 0.0,
+      "per_location": 77000,
+      "top_hospitals": [
+        {
+          "name": "Cedars-Sinai Medical Center",
+          "city": "Los Angeles",
+          "state": "CA",
+          "beds": 877,
+          "revenue_m": 1315.5,
+          "package": "Enterprise Premier",
+          "price": 77400.0
+        }
+      ]
+    },
+    {
+      "system": "Centura Health",
+      "hospital_count": 1,
+      "total_beds": 100,
+      "state_count": 1,
+      "states": "KS",
+      "individual_tam": 22500.0,
+      "system_price": 22000.0,
+      "system_tier": "Standard",
+      "discount_pct": 0.0,
+      "per_location": 22000,
+      "top_hospitals": [
+        {
+          "name": "Centura St. Catherine Hospital-Garden City",
+          "city": "Garden City",
+          "state": "KS",
+          "beds": 100,
+          "revenue_m": 150.0,
+          "package": "Enterprise",
+          "price": 22500.0
+        }
+      ]
+    },
+    {
+      "system": "Penn Medicine",
+      "hospital_count": 1,
+      "total_beds": 375,
+      "state_count": 1,
+      "states": "NJ",
+      "individual_tam": 38500.0,
+      "system_price": 38000.0,
+      "system_tier": "Standard",
+      "discount_pct": 0.0,
+      "per_location": 38000,
+      "top_hospitals": [
+        {
+          "name": "Penn Medicine Princeton Medical Center",
+          "city": "Plainsboro",
+          "state": "NJ",
+          "beds": 375,
+          "revenue_m": 562.5,
+          "package": "Enterprise",
+          "price": 38500.0
+        }
+      ]
+    },
+    {
+      "system": "NYU Langone",
+      "hospital_count": 1,
+      "total_beds": 1069,
+      "state_count": 1,
+      "states": "NY",
+      "individual_tam": 83200.0,
+      "system_price": 83000.0,
+      "system_tier": "Standard",
+      "discount_pct": 0.0,
+      "per_location": 83000,
+      "top_hospitals": [
+        {
+          "name": "NYU Langone Hospitals",
+          "city": "New York",
+          "state": "NY",
+          "beds": 1069,
+          "revenue_m": 1603.5,
+          "package": "Enterprise Premier",
+          "price": 83200.0
+        }
+      ]
+    }
+  ]
+}
