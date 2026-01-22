@@ -1,19 +1,9 @@
-# Health Systems Pattern Matching Configuration
-# Defines identification patterns for US health systems
-#
-# Pattern Matching Rules:
-# 1. Check exclude_patterns first (if match, skip this system)
-# 2. Check state_patterns for hospital's state (more precise)
-# 3. Check general patterns (broader match)
-#
-# Pattern Syntax: Python regex (case-insensitive)
-# - Use \b for word boundaries
-# - Use .* for wildcards
-# - Use (?!...) for negative lookahead
+# Health Systems Pattern Matching Configuration v1.3
+# 110+ US health systems for hospital classification
 #
 
 health_systems:
-  version: '1.0'
+  version: '1.3'
   last_updated: '2025-01-22'
   description: Top 50+ US Health Systems for pattern matching
   systems:
@@ -1177,3 +1167,941 @@ health_systems:
       - Adventist.*Tillamook
       HI:
       - Adventist Health Castle
+  - id: ssm_health
+    name: SSM Health
+    headquarters: St. Louis, MO
+    type: nonprofit
+    hospital_count_estimate: 23
+    patterns:
+    - SSM Health
+    - 'SSM '
+    state_patterns:
+      MO:
+      - SSM Health
+      - SSM DePaul
+      - SSM St. Mary
+      - SSM St. Clare
+      - SSM Cardinal
+      IL:
+      - SSM Health
+      - SSM St. Mary
+      - SSM Good Samaritan
+      WI:
+      - SSM Health
+      - SSM St. Mary
+      - SSM St. Clare
+      OK:
+      - SSM Health
+      - SSM St. Anthony
+  - id: essentia_health
+    name: Essentia Health
+    headquarters: Duluth, MN
+    type: nonprofit
+    hospital_count_estimate: 15
+    patterns:
+    - Essentia Health
+    state_patterns:
+      MN:
+      - Essentia Health
+      - St. Mary.*Duluth
+      WI:
+      - Essentia Health
+      ND:
+      - Essentia Health
+  - id: novant_health
+    name: Novant Health
+    headquarters: Winston-Salem, NC
+    type: nonprofit
+    hospital_count_estimate: 15
+    patterns:
+    - Novant Health
+    state_patterns:
+      NC:
+      - Novant Health
+      - Novant
+      VA:
+      - Novant Health
+      SC:
+      - Novant Health
+  - id: prisma_health
+    name: Prisma Health
+    headquarters: Greenville, SC
+    type: nonprofit
+    hospital_count_estimate: 18
+    patterns:
+    - Prisma Health
+    state_patterns:
+      SC:
+      - Prisma Health
+      - Prisma
+  - id: franciscan_health
+    name: Franciscan Health
+    headquarters: Mishawaka, IN
+    type: nonprofit
+    hospital_count_estimate: 13
+    patterns:
+    - Franciscan Health
+    state_patterns:
+      IN:
+      - Franciscan Health
+      - Franciscan
+  - id: marshfield_clinic
+    name: Marshfield Clinic Health System
+    headquarters: Marshfield, WI
+    type: nonprofit
+    hospital_count_estimate: 11
+    patterns:
+    - Marshfield
+    state_patterns:
+      WI:
+      - Marshfield Medical
+      - Marshfield Clinic
+  - id: merit_health
+    name: Merit Health
+    headquarters: Dallas, TX
+    type: for-profit
+    hospital_count_estimate: 10
+    patterns:
+    - Merit Health
+    state_patterns:
+      MS:
+      - Merit Health
+  - id: northern_light
+    name: Northern Light Health
+    headquarters: Brewer, ME
+    type: nonprofit
+    hospital_count_estimate: 10
+    patterns:
+    - Northern Light
+    state_patterns:
+      ME:
+      - Northern Light
+      - Eastern Maine
+  - id: mymichigan_health
+    name: MyMichigan Health
+    headquarters: Midland, MI
+    type: nonprofit
+    hospital_count_estimate: 8
+    patterns:
+    - MyMichigan
+    - MidMichigan
+    state_patterns:
+      MI:
+      - MyMichigan
+      - MidMichigan
+  - id: penn_highlands
+    name: Penn Highlands Healthcare
+    headquarters: DuBois, PA
+    type: nonprofit
+    hospital_count_estimate: 7
+    patterns:
+    - Penn Highlands
+    state_patterns:
+      PA:
+      - Penn Highlands
+  - id: ut_health
+    name: UT Health
+    headquarters: Tyler, TX
+    type: nonprofit
+    hospital_count_estimate: 10
+    patterns:
+    - UT Health
+    state_patterns:
+      TX:
+      - UT Health
+  - id: osf_healthcare
+    name: OSF HealthCare
+    headquarters: Peoria, IL
+    type: nonprofit
+    hospital_count_estimate: 15
+    patterns:
+    - OSF HealthCare
+    - OSF Saint
+    - OSF St\.
+    state_patterns:
+      IL:
+      - OSF HealthCare
+      - OSF Saint
+      - OSF St\.
+      - OSF
+      MI:
+      - OSF HealthCare
+      - OSF
+  - id: northwestern_medicine
+    name: Northwestern Medicine
+    headquarters: Chicago, IL
+    type: nonprofit
+    hospital_count_estimate: 11
+    patterns:
+    - Northwestern Medicine
+    - Northwestern Memorial
+    state_patterns:
+      IL:
+      - Northwestern Medicine
+      - Northwestern Memorial
+      - Northwestern Lake
+  - id: henry_ford
+    name: Henry Ford Health
+    headquarters: Detroit, MI
+    type: nonprofit
+    hospital_count_estimate: 6
+    patterns:
+    - Henry Ford
+    state_patterns:
+      MI:
+      - Henry Ford
+  - id: munson_healthcare
+    name: Munson Healthcare
+    headquarters: Traverse City, MI
+    type: nonprofit
+    hospital_count_estimate: 8
+    patterns:
+    - Munson Healthcare
+    - Munson Medical
+    state_patterns:
+      MI:
+      - Munson Healthcare
+      - Munson Medical
+      - Munson
+  - id: kettering_health
+    name: Kettering Health
+    headquarters: Dayton, OH
+    type: nonprofit
+    hospital_count_estimate: 14
+    patterns:
+    - Kettering Health
+    - Kettering Medical
+    state_patterns:
+      OH:
+      - Kettering Health
+      - Kettering Medical
+      - Kettering
+  - id: lehigh_valley
+    name: Lehigh Valley Health Network
+    headquarters: Allentown, PA
+    type: nonprofit
+    hospital_count_estimate: 13
+    patterns:
+    - Lehigh Valley
+    state_patterns:
+      PA:
+      - Lehigh Valley
+  - id: wellspan_health
+    name: WellSpan Health
+    headquarters: York, PA
+    type: nonprofit
+    hospital_count_estimate: 8
+    patterns:
+    - WellSpan
+    state_patterns:
+      PA:
+      - WellSpan
+  - id: mercy_health_midwest
+    name: Mercy (Midwest)
+    headquarters: Chesterfield, MO
+    type: nonprofit
+    hospital_count_estimate: 40
+    patterns: []
+    state_patterns:
+      MO:
+      - Mercy Hospital
+      - Mercy Medical
+      OK:
+      - Mercy Hospital
+      - Mercy Medical
+      AR:
+      - Mercy Hospital
+      - Mercy Medical
+      KS:
+      - Mercy Hospital
+      - Mercy Medical
+    exclude_patterns:
+    - Bon Secours
+    - Trinity
+  - id: baptist_health_system
+    name: Baptist Health (Multi-state)
+    headquarters: Various
+    type: nonprofit
+    hospital_count_estimate: 50
+    patterns: []
+    state_patterns:
+      AL:
+      - Baptist Health
+      - Baptist Medical
+      - Baptist Hospital
+      MS:
+      - Baptist Health
+      - Baptist Medical
+      - Baptist Memorial
+      AR:
+      - Baptist Health
+      - Baptist Medical
+      FL:
+      - Baptist Health
+      - Baptist Medical
+      - Baptist Hospital
+      KY:
+      - Baptist Health
+      - Baptist Medical
+      TN:
+      - Baptist Memorial
+    exclude_patterns:
+    - Baylor
+    - Scott & White
+  - id: methodist_healthcare
+    name: Methodist Healthcare (Multi-state)
+    headquarters: Various
+    type: nonprofit
+    hospital_count_estimate: 30
+    patterns: []
+    state_patterns:
+      TX:
+      - Methodist Hospital
+      - Methodist Healthcare
+      - Methodist Medical
+      TN:
+      - Methodist Hospital
+      - Methodist Healthcare
+      NE:
+      - Methodist Hospital
+      - Methodist Health
+      MS:
+      - Methodist Hospital
+    exclude_patterns:
+    - Houston Methodist
+  - id: indiana_university_health
+    name: Indiana University Health
+    headquarters: Indianapolis, IN
+    type: nonprofit
+    hospital_count_estimate: 16
+    patterns:
+    - Indiana University Health
+    - IU Health
+    state_patterns:
+      IN:
+      - Indiana University Health
+      - IU Health
+      - IU Bloomington
+      - IU Ball
+  - id: university_hospitals_oh
+    name: University Hospitals (Ohio)
+    headquarters: Cleveland, OH
+    type: nonprofit
+    hospital_count_estimate: 21
+    patterns: []
+    state_patterns:
+      OH:
+      - University Hospitals
+      - UH Regional
+      - UH Parma
+      - UH Geauga
+  - id: m_health_fairview
+    name: M Health Fairview
+    headquarters: Minneapolis, MN
+    type: nonprofit
+    hospital_count_estimate: 12
+    patterns:
+    - M Health Fairview
+    - M Health
+    state_patterns:
+      MN:
+      - M Health Fairview
+      - M Health
+      - Fairview
+  - id: norton_healthcare
+    name: Norton Healthcare
+    headquarters: Louisville, KY
+    type: nonprofit
+    hospital_count_estimate: 8
+    patterns:
+    - Norton Healthcare
+    - Norton Hospital
+    - Norton Children
+    state_patterns:
+      KY:
+      - Norton Healthcare
+      - Norton Hospital
+      - Norton Children
+      - Norton Audubon
+      - Norton Brownsboro
+  - id: bjc_healthcare
+    name: BJC HealthCare
+    headquarters: St. Louis, MO
+    type: nonprofit
+    hospital_count_estimate: 14
+    patterns:
+    - BJC HealthCare
+    - Barnes Jewish
+    - Barnes-Jewish
+    state_patterns:
+      MO:
+      - BJC
+      - Barnes Jewish
+      - Barnes-Jewish
+      - Christian Hospital
+      - Missouri Baptist
+      IL:
+      - BJC
+      - Memorial Hospital.*Belleville
+      - Alton Memorial
+  - id: christianacare
+    name: ChristianaCare
+    headquarters: Wilmington, DE
+    type: nonprofit
+    hospital_count_estimate: 3
+    patterns:
+    - ChristianaCare
+    - Christiana Care
+    - Christianacare
+    state_patterns:
+      DE:
+      - ChristianaCare
+      - Christiana Care
+      - Christianacare
+      - Christiana Hospital
+      - Wilmington Hospital
+  - id: cone_health
+    name: Cone Health
+    headquarters: Greensboro, NC
+    type: nonprofit
+    hospital_count_estimate: 5
+    patterns:
+    - Cone Health
+    state_patterns:
+      NC:
+      - Cone Health
+      - Moses Cone
+      - Wesley Long
+  - id: vanderbilt
+    name: Vanderbilt University Medical Center
+    headquarters: Nashville, TN
+    type: nonprofit
+    hospital_count_estimate: 8
+    patterns:
+    - Vanderbilt
+    state_patterns:
+      TN:
+      - Vanderbilt University
+      - Vanderbilt Medical
+      - VUMC
+  - id: uf_health
+    name: UF Health
+    headquarters: Gainesville, FL
+    type: nonprofit
+    hospital_count_estimate: 10
+    patterns:
+    - UF Health
+    state_patterns:
+      FL:
+      - UF Health
+      - Shands
+  - id: tampa_general
+    name: Tampa General Hospital
+    headquarters: Tampa, FL
+    type: nonprofit
+    hospital_count_estimate: 3
+    patterns:
+    - Tampa General
+    state_patterns:
+      FL:
+      - Tampa General
+      - TGH
+  - id: memorial_healthcare_fl
+    name: Memorial Healthcare System (FL)
+    headquarters: Hollywood, FL
+    type: nonprofit
+    hospital_count_estimate: 6
+    patterns: []
+    state_patterns:
+      FL:
+      - Memorial Regional
+      - Memorial Hospital.*Hollywood
+      - Memorial Hospital.*Pembroke
+      - Memorial Hospital.*Miramar
+      - Joe DiMaggio
+  - id: allina_health
+    name: Allina Health
+    headquarters: Minneapolis, MN
+    type: nonprofit
+    hospital_count_estimate: 11
+    patterns:
+    - Allina Health
+    - Abbott Northwestern
+    state_patterns:
+      MN:
+      - Allina Health
+      - Abbott Northwestern
+      - United Hospital
+      - Mercy Hospital.*MN
+      WI:
+      - Allina Health
+      - River Falls
+  - id: kaleida_health
+    name: Kaleida Health
+    headquarters: Buffalo, NY
+    type: nonprofit
+    hospital_count_estimate: 5
+    patterns:
+    - Kaleida Health
+    - Kaleida
+    state_patterns:
+      NY:
+      - Kaleida Health
+      - Buffalo General
+      - Millard Fillmore
+      - DeGraff Memorial
+      - Women.*Children.*Buffalo
+  - id: fmolhs
+    name: Franciscan Missionaries of Our Lady Health System
+    headquarters: Baton Rouge, LA
+    type: nonprofit
+    hospital_count_estimate: 8
+    patterns:
+    - Our Lady of the Lake
+    - FMOLHS
+    state_patterns:
+      LA:
+      - Our Lady of the Lake
+      - Our Lady of Lourdes.*LA
+      - St. Francis.*LA
+      - St. Elizabeth.*LA
+      MS:
+      - Our Lady of the Lake
+      - St. Dominic
+  - id: summa_health
+    name: Summa Health
+    headquarters: Akron, OH
+    type: nonprofit
+    hospital_count_estimate: 5
+    patterns:
+    - Summa Health
+    state_patterns:
+      OH:
+      - Summa Health
+      - Summa Akron
+      - Summa Barberton
+      - Summa Wadsworth
+  - id: musc_health
+    name: MUSC Health
+    headquarters: Charleston, SC
+    type: nonprofit
+    hospital_count_estimate: 10
+    patterns:
+    - MUSC Health
+    - 'MUSC '
+    state_patterns:
+      SC:
+      - MUSC Health
+      - 'MUSC '
+      - Medical University.*SC
+  - id: monument_health
+    name: Monument Health
+    headquarters: Rapid City, SD
+    type: nonprofit
+    hospital_count_estimate: 5
+    patterns:
+    - Monument Health
+    state_patterns:
+      SD:
+      - Monument Health
+      - Rapid City Regional
+  - id: thedacare
+    name: ThedaCare
+    headquarters: Neenah, WI
+    type: nonprofit
+    hospital_count_estimate: 7
+    patterns:
+    - ThedaCare
+    - Theda
+    state_patterns:
+      WI:
+      - ThedaCare
+      - Theda Care
+      - ThedaCare Medical
+      - ThedaCare Regional
+  - id: broward_health
+    name: Broward Health
+    headquarters: Fort Lauderdale, FL
+    type: nonprofit
+    hospital_count_estimate: 5
+    patterns:
+    - Broward Health
+    state_patterns:
+      FL:
+      - Broward Health
+      - Broward General
+  - id: west_tennessee
+    name: West Tennessee Healthcare
+    headquarters: Jackson, TN
+    type: nonprofit
+    hospital_count_estimate: 8
+    patterns:
+    - West Tennessee
+    state_patterns:
+      TN:
+      - West Tennessee
+  - id: uofl_health
+    name: UofL Health
+    headquarters: Louisville, KY
+    type: nonprofit
+    hospital_count_estimate: 8
+    patterns:
+    - UofL Health
+    - 'UofL '
+    state_patterns:
+      KY:
+      - UofL Health
+      - 'UofL '
+      - Jewish Hospital.*KY
+      - Frazier Rehab
+      - Mary.*Elizabeth
+  - id: uab_medicine
+    name: UAB Medicine
+    headquarters: Birmingham, AL
+    type: nonprofit
+    hospital_count_estimate: 5
+    patterns:
+    - UAB Medicine
+    - UAB Hospital
+    - University of Alabama
+    state_patterns:
+      AL:
+      - UAB Medicine
+      - UAB Hospital
+      - University of Alabama Hospital
+      - UAB Highlands
+  - id: uci_health
+    name: UCI Health
+    headquarters: Orange, CA
+    type: nonprofit
+    hospital_count_estimate: 3
+    patterns:
+    - UCI Health
+    - UCI Medical
+    state_patterns:
+      CA:
+      - UCI Health
+      - UCI Medical
+      - University of California.*Irvine
+  - id: ucsd_health
+    name: UC San Diego Health
+    headquarters: San Diego, CA
+    type: nonprofit
+    hospital_count_estimate: 3
+    patterns:
+    - UCSD Health
+    - UC San Diego
+    state_patterns:
+      CA:
+      - UCSD Health
+      - UC San Diego Health
+      - Hillcrest.*San Diego
+  - id: ucsf_health
+    name: UCSF Health
+    headquarters: San Francisco, CA
+    type: nonprofit
+    hospital_count_estimate: 4
+    patterns:
+    - UCSF
+    state_patterns:
+      CA:
+      - UCSF Medical
+      - UCSF Health
+      - UCSF Benioff
+  - id: ucla_health
+    name: UCLA Health
+    headquarters: Los Angeles, CA
+    type: nonprofit
+    hospital_count_estimate: 5
+    patterns:
+    - UCLA Health
+    - UCLA Medical
+    state_patterns:
+      CA:
+      - UCLA Health
+      - UCLA Medical
+      - Ronald Reagan UCLA
+  - id: stanford_health
+    name: Stanford Health Care
+    headquarters: Palo Alto, CA
+    type: nonprofit
+    hospital_count_estimate: 4
+    patterns:
+    - Stanford Health
+    - Stanford Medical
+    state_patterns:
+      CA:
+      - Stanford Health
+      - Stanford Medical
+      - Stanford Hospital
+      - ValleyCare.*Livermore
+  - id: duke_health
+    name: Duke Health
+    headquarters: Durham, NC
+    type: nonprofit
+    hospital_count_estimate: 5
+    patterns:
+    - Duke Health
+    - Duke University
+    state_patterns:
+      NC:
+      - Duke Health
+      - Duke University
+      - Duke Regional
+      - Duke Raleigh
+  - id: wake_forest_baptist
+    name: Atrium Health Wake Forest Baptist
+    headquarters: Winston-Salem, NC
+    type: nonprofit
+    hospital_count_estimate: 5
+    patterns:
+    - Wake Forest Baptist
+    - Atrium Health Wake
+    state_patterns:
+      NC:
+      - Wake Forest Baptist
+      - Atrium Health Wake
+      - Brenner Children
+  - id: university_of_iowa
+    name: University of Iowa Health Care
+    headquarters: Iowa City, IA
+    type: nonprofit
+    hospital_count_estimate: 3
+    patterns:
+    - University of Iowa Health
+    - UIHC
+    state_patterns:
+      IA:
+      - University of Iowa Health
+      - UIHC
+      - University of Iowa Hospital
+  - id: university_kansas
+    name: University of Kansas Health System
+    headquarters: Kansas City, KS
+    type: nonprofit
+    hospital_count_estimate: 5
+    patterns:
+    - University of Kansas Health
+    - KU Health
+    state_patterns:
+      KS:
+      - University of Kansas Health
+      - University of Kansas Hospital
+      - KU Health
+      - KU Medical
+  - id: jackson_health
+    name: Jackson Health System
+    headquarters: Miami, FL
+    type: nonprofit
+    hospital_count_estimate: 6
+    patterns:
+    - Jackson Health
+    - Jackson Memorial
+    - Jackson South
+    - Jackson North
+    state_patterns:
+      FL:
+      - Jackson Health
+      - Jackson Memorial
+      - Jackson South
+      - Jackson North
+      - Holtz Children
+  - id: baycare
+    name: BayCare Health System
+    headquarters: Clearwater, FL
+    type: nonprofit
+    hospital_count_estimate: 15
+    patterns:
+    - BayCare
+    state_patterns:
+      FL:
+      - BayCare
+      - St. Joseph.*Tampa
+      - St. Joseph.*FL
+      - Morton Plant
+      - Mease
+      - Winter Haven
+  - id: university_health_tx
+    name: University Health (San Antonio)
+    headquarters: San Antonio, TX
+    type: nonprofit
+    hospital_count_estimate: 3
+    patterns: []
+    state_patterns:
+      TX:
+      - University Health System.*San Antonio
+      - University Health.*San Antonio
+      - University Hospital.*San Antonio
+  - id: ohiohealth
+    name: OhioHealth
+    headquarters: Columbus, OH
+    type: nonprofit
+    hospital_count_estimate: 12
+    patterns:
+    - OhioHealth
+    state_patterns:
+      OH:
+      - OhioHealth
+      - Riverside Methodist
+      - Grant Medical Center
+      - Doctors Hospital.*OH
+      - Dublin Methodist
+      - Grady Memorial.*OH
+  - id: university_utah
+    name: University of Utah Health
+    headquarters: Salt Lake City, UT
+    type: nonprofit
+    hospital_count_estimate: 5
+    patterns:
+    - University of Utah
+    state_patterns:
+      UT:
+      - University of Utah
+      - U of U Health
+      - Huntsman Cancer
+  - id: harris_health
+    name: Harris Health System
+    headquarters: Houston, TX
+    type: nonprofit
+    hospital_count_estimate: 3
+    patterns:
+    - Harris Health
+    state_patterns:
+      TX:
+      - Harris Health
+      - Ben Taub
+      - Lyndon B. Johnson
+  - id: premier_health_oh
+    name: Premier Health (Ohio)
+    headquarters: Dayton, OH
+    type: nonprofit
+    hospital_count_estimate: 5
+    patterns: []
+    state_patterns:
+      OH:
+      - Miami Valley Hospital
+      - Good Samaritan.*Dayton
+      - Atrium Medical.*OH
+      - Upper Valley
+  - id: parkland
+    name: Parkland Health
+    headquarters: Dallas, TX
+    type: nonprofit
+    hospital_count_estimate: 2
+    patterns:
+    - Parkland Health
+    - Parkland Hospital
+    state_patterns:
+      TX:
+      - Parkland Health
+      - Parkland Hospital
+      - Parkland Memorial
+  - id: grady_health
+    name: Grady Health System
+    headquarters: Atlanta, GA
+    type: nonprofit
+    hospital_count_estimate: 2
+    patterns:
+    - Grady Health
+    - Grady Memorial.*GA
+    state_patterns:
+      GA:
+      - Grady Health
+      - Grady Memorial
+  - id: willis_knighton
+    name: Willis-Knighton Health System
+    headquarters: Shreveport, LA
+    type: nonprofit
+    hospital_count_estimate: 5
+    patterns:
+    - Willis-Knighton
+    - Willis Knighton
+    state_patterns:
+      LA:
+      - Willis-Knighton
+      - Willis Knighton
+  - id: jefferson_health
+    name: Jefferson Health
+    headquarters: Philadelphia, PA
+    type: nonprofit
+    hospital_count_estimate: 18
+    patterns:
+    - Jefferson Health
+    - Thomas Jefferson
+    state_patterns:
+      PA:
+      - Jefferson Health
+      - Thomas Jefferson
+      - Jefferson Hospital
+      - Abington.*Jefferson
+      - Einstein.*Jefferson
+      NJ:
+      - Jefferson Health
+      - Jefferson.*NJ
+  - id: cook_county
+    name: Cook County Health
+    headquarters: Chicago, IL
+    type: public
+    hospital_count_estimate: 3
+    patterns:
+    - Cook County Health
+    state_patterns:
+      IL:
+      - Cook County Health
+      - John H. Stroger
+      - Stroger Hospital
+      - Provident Hospital.*Cook
+  - id: utmb
+    name: UTMB Health
+    headquarters: Galveston, TX
+    type: nonprofit
+    hospital_count_estimate: 4
+    patterns:
+    - UTMB
+    state_patterns:
+      TX:
+      - UTMB
+      - University of Texas Medical Branch
+      - John Sealy
+  - id: saint_francis_ok
+    name: Saint Francis Health System
+    headquarters: Tulsa, OK
+    type: nonprofit
+    hospital_count_estimate: 5
+    patterns: []
+    state_patterns:
+      OK:
+      - Saint Francis Hospital.*Tulsa
+      - Saint Francis.*OK
+      - St. Francis.*Tulsa
+  - id: emory_healthcare
+    name: Emory Healthcare
+    headquarters: Atlanta, GA
+    type: nonprofit
+    hospital_count_estimate: 11
+    patterns:
+    - Emory Healthcare
+    - Emory University
+    state_patterns:
+      GA:
+      - Emory Healthcare
+      - Emory University Hospital
+      - Emory Saint Joseph
+      - Emory Decatur
+      - Emory Hillandale
+  - id: piedmont_healthcare
+    name: Piedmont Healthcare
+    headquarters: Atlanta, GA
+    type: nonprofit
+    hospital_count_estimate: 22
+    patterns:
+    - Piedmont Healthcare
+    - Piedmont Hospital
+    state_patterns:
+      GA:
+      - Piedmont Healthcare
+      - Piedmont Hospital
+      - Piedmont Atlanta
+      - Piedmont Fayette
+      - Piedmont Newnan
+      - Piedmont Columbus
