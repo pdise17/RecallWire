@@ -1,0 +1,627 @@
+{
+  "summary": {
+    "total_hospitals": 4555,
+    "total_tam": 102833900.0,
+    "avg_deal_size": 22576.0
+  },
+  "by_package": {
+    "Standard": {
+      "count": 1773,
+      "tam": 8865000.0,
+      "avg_price": 5000.0,
+      "pct_count": 38.9,
+      "pct_tam": 8.6
+    },
+    "Enterprise": {
+      "count": 2197,
+      "tam": 59759800.0,
+      "avg_price": 27201.0,
+      "pct_count": 48.2,
+      "pct_tam": 58.1
+    },
+    "Enterprise Plus": {
+      "count": 467,
+      "tam": 24279600.0,
+      "avg_price": 51991.0,
+      "pct_count": 10.3,
+      "pct_tam": 23.6
+    },
+    "Enterprise Premier": {
+      "count": 118,
+      "tam": 9929500.0,
+      "avg_price": 84148.0,
+      "pct_count": 2.6,
+      "pct_tam": 9.7
+    }
+  },
+  "by_state": {
+    "CA": {
+      "count": 321,
+      "tam": 9289600.0
+    },
+    "TX": {
+      "count": 381,
+      "tam": 8231100.0
+    },
+    "FL": {
+      "count": 180,
+      "tam": 6532000.0
+    },
+    "NY": {
+      "count": 154,
+      "tam": 5299600.0
+    },
+    "IL": {
+      "count": 170,
+      "tam": 4335100.0
+    },
+    "PA": {
+      "count": 150,
+      "tam": 4168700.0
+    },
+    "OH": {
+      "count": 151,
+      "tam": 4131600.0
+    },
+    "MI": {
+      "count": 128,
+      "tam": 3138400.0
+    },
+    "GA": {
+      "count": 128,
+      "tam": 2821000.0
+    },
+    "NC": {
+      "count": 101,
+      "tam": 2812900.0
+    },
+    "TN": {
+      "count": 98,
+      "tam": 2629900.0
+    },
+    "NJ": {
+      "count": 61,
+      "tam": 2456200.0
+    },
+    "MO": {
+      "count": 101,
+      "tam": 2448100.0
+    },
+    "IN": {
+      "count": 115,
+      "tam": 2312500.0
+    },
+    "VA": {
+      "count": 80,
+      "tam": 2223800.0
+    }
+  },
+  "by_bed_range": {
+    "0-49 beds": {
+      "count": 1773,
+      "tam": 8865000.0,
+      "min_beds": 0,
+      "max_beds": 49
+    },
+    "50-99 beds": {
+      "count": 554,
+      "tam": 11762000.0,
+      "min_beds": 50,
+      "max_beds": 99
+    },
+    "100-199 beds": {
+      "count": 786,
+      "tam": 19512700.0,
+      "min_beds": 100,
+      "max_beds": 199
+    },
+    "200-399 beds": {
+      "count": 857,
+      "tam": 28485100.0,
+      "min_beds": 200,
+      "max_beds": 399
+    },
+    "400-799 beds": {
+      "count": 467,
+      "tam": 24279600.0,
+      "min_beds": 400,
+      "max_beds": 799
+    },
+    "800+ beds": {
+      "count": 118,
+      "tam": 9929500.0,
+      "min_beds": 800,
+      "max_beds": 9999
+    }
+  },
+  "by_csv_tier": {
+    "TIER_1_ENTERPRISE": {
+      "count": 585,
+      "tam": 34209100.0,
+      "packages": {
+        "Enterprise Plus": 467,
+        "Enterprise Premier": 118
+      }
+    },
+    "TIER_2_LARGE": {
+      "count": 857,
+      "tam": 28485100.0,
+      "packages": {
+        "Enterprise": 857
+      }
+    },
+    "TIER_4_SMB": {
+      "count": 554,
+      "tam": 11762000.0,
+      "packages": {
+        "Enterprise": 554
+      }
+    },
+    "TIER_3_MID_MARKET": {
+      "count": 786,
+      "tam": 19512700.0,
+      "packages": {
+        "Enterprise": 786
+      }
+    },
+    "TIER_5_STARTUP": {
+      "count": 1773,
+      "tam": 8865000.0,
+      "packages": {
+        "Standard": 1773
+      }
+    }
+  },
+  "top_opportunities": [
+    {
+      "name": "Adventhealth Orlando",
+      "city": "Orlando",
+      "state": "FL",
+      "beds": 3289,
+      "package": "Enterprise Premier",
+      "price": 150200.0,
+      "revenue_m": 4933.5
+    },
+    {
+      "name": "Methodist Hospital",
+      "city": "San Antonio",
+      "state": "TX",
+      "beds": 2465,
+      "package": "Enterprise Premier",
+      "price": 125300.0,
+      "revenue_m": 3697.5
+    },
+    {
+      "name": "New York-Presbyterian Hospital",
+      "city": "New York",
+      "state": "NY",
+      "beds": 2262,
+      "package": "Enterprise Premier",
+      "price": 119200.0,
+      "revenue_m": 3393.0
+    },
+    {
+      "name": "Jackson Memorial Hospital",
+      "city": "Miami",
+      "state": "FL",
+      "beds": 2255,
+      "package": "Enterprise Premier",
+      "price": 119000.0,
+      "revenue_m": 3382.5
+    },
+    {
+      "name": "Mayo Clinic Hospital Rochester",
+      "city": "Rochester",
+      "state": "MN",
+      "beds": 2059,
+      "package": "Enterprise Premier",
+      "price": 113100.0,
+      "revenue_m": 3088.5
+    },
+    {
+      "name": "Orlando Health Orlando Regional Medical Center",
+      "city": "Orlando",
+      "state": "FL",
+      "beds": 2024,
+      "package": "Enterprise Premier",
+      "price": 112000.0,
+      "revenue_m": 3036.0
+    },
+    {
+      "name": "Barnes Jewish Hospital",
+      "city": "Saint Louis",
+      "state": "MO",
+      "beds": 1737,
+      "package": "Enterprise Premier",
+      "price": 103400.0,
+      "revenue_m": 2605.5
+    },
+    {
+      "name": "Indiana University Health",
+      "city": "Indianapolis",
+      "state": "IN",
+      "beds": 1733,
+      "package": "Enterprise Premier",
+      "price": 103200.0,
+      "revenue_m": 2599.5
+    },
+    {
+      "name": "Norton Hospital / Norton Healthcare Pavilion / Nor",
+      "city": "Louisville",
+      "state": "KY",
+      "beds": 1730,
+      "package": "Enterprise Premier",
+      "price": 103200.0,
+      "revenue_m": 2595.0
+    },
+    {
+      "name": "M Health Fairview University of Mn",
+      "city": "Minneapolis",
+      "state": "MN",
+      "beds": 1700,
+      "package": "Enterprise Premier",
+      "price": 102300.0,
+      "revenue_m": 2550.0
+    },
+    {
+      "name": "Methodist Hospitals of Memphis",
+      "city": "Memphis",
+      "state": "TN",
+      "beds": 1593,
+      "package": "Enterprise Premier",
+      "price": 99000.0,
+      "revenue_m": 2389.5
+    },
+    {
+      "name": "Upmc Presbyterian Shadyside",
+      "city": "Pittsburgh",
+      "state": "PA",
+      "beds": 1577,
+      "package": "Enterprise Premier",
+      "price": 98500.0,
+      "revenue_m": 2365.5
+    },
+    {
+      "name": "Memorial Hermann Hospital System",
+      "city": "Houston",
+      "state": "TX",
+      "beds": 1515,
+      "package": "Enterprise Premier",
+      "price": 96700.0,
+      "revenue_m": 2272.5
+    },
+    {
+      "name": "Montefiore Medical Center",
+      "city": "Bronx",
+      "state": "NY",
+      "beds": 1491,
+      "package": "Enterprise Premier",
+      "price": 96000.0,
+      "revenue_m": 2236.5
+    },
+    {
+      "name": "Ascension Via Christi Hospitals Wichita, Inc.",
+      "city": "Wichita",
+      "state": "KS",
+      "beds": 1412,
+      "package": "Enterprise Premier",
+      "price": 93600.0,
+      "revenue_m": 2118.0
+    },
+    {
+      "name": "St. Josephs Hospital",
+      "city": "Tampa",
+      "state": "FL",
+      "beds": 1390,
+      "package": "Enterprise Premier",
+      "price": 92900.0,
+      "revenue_m": 2085.0
+    },
+    {
+      "name": "Houston Methodist Hospital",
+      "city": "Houston",
+      "state": "TX",
+      "beds": 1299,
+      "package": "Enterprise Premier",
+      "price": 90200.0,
+      "revenue_m": 1948.5
+    },
+    {
+      "name": "Baptist Medical Center",
+      "city": "San Antonio",
+      "state": "TX",
+      "beds": 1285,
+      "package": "Enterprise Premier",
+      "price": 89700.0,
+      "revenue_m": 1927.5
+    },
+    {
+      "name": "Cleveland Clinic",
+      "city": "Cleveland",
+      "state": "OH",
+      "beds": 1267,
+      "package": "Enterprise Premier",
+      "price": 89200.0,
+      "revenue_m": 1900.5
+    },
+    {
+      "name": "Uofl Health - Jewish Hospital",
+      "city": "Louisville",
+      "state": "KY",
+      "beds": 1261,
+      "package": "Enterprise Premier",
+      "price": 89000.0,
+      "revenue_m": 1891.5
+    },
+    {
+      "name": "University of Texas Medical Branch",
+      "city": "Galveston",
+      "state": "TX",
+      "beds": 1236,
+      "package": "Enterprise Premier",
+      "price": 88300.0,
+      "revenue_m": 1854.0
+    },
+    {
+      "name": "Baptist Medical Center Jacksonville",
+      "city": "Jacksonville",
+      "state": "FL",
+      "beds": 1229,
+      "package": "Enterprise Premier",
+      "price": 88100.0,
+      "revenue_m": 1843.5
+    },
+    {
+      "name": "Cone Health",
+      "city": "Greensboro",
+      "state": "NC",
+      "beds": 1232,
+      "package": "Enterprise Premier",
+      "price": 88100.0,
+      "revenue_m": 1848.0
+    },
+    {
+      "name": "Aurora St. Lukes Medical Center",
+      "city": "Milwaukee",
+      "state": "WI",
+      "beds": 1213,
+      "package": "Enterprise Premier",
+      "price": 87600.0,
+      "revenue_m": 1819.5
+    },
+    {
+      "name": "Christianacare",
+      "city": "Newark",
+      "state": "DE",
+      "beds": 1196,
+      "package": "Enterprise Premier",
+      "price": 87100.0,
+      "revenue_m": 1794.0
+    },
+    {
+      "name": "Lehigh Valley Hospital",
+      "city": "Allentown",
+      "state": "PA",
+      "beds": 1190,
+      "package": "Enterprise Premier",
+      "price": 86900.0,
+      "revenue_m": 1785.0
+    },
+    {
+      "name": "Santa Clara Valley Medical Center",
+      "city": "San Jose",
+      "state": "CA",
+      "beds": 1182,
+      "package": "Enterprise Premier",
+      "price": 86600.0,
+      "revenue_m": 1773.0
+    },
+    {
+      "name": "Mount Sinai Hospital",
+      "city": "New York",
+      "state": "NY",
+      "beds": 1171,
+      "package": "Enterprise Premier",
+      "price": 86300.0,
+      "revenue_m": 1756.5
+    },
+    {
+      "name": "University of Alabama Hospital",
+      "city": "Birmingham",
+      "state": "AL",
+      "beds": 1157,
+      "package": "Enterprise Premier",
+      "price": 85900.0,
+      "revenue_m": 1735.5
+    },
+    {
+      "name": "Corewell Health Grand Rapids Hospitals Butterworth",
+      "city": "Grand Rapids",
+      "state": "MI",
+      "beds": 1135,
+      "package": "Enterprise Premier",
+      "price": 85200.0,
+      "revenue_m": 1702.5
+    },
+    {
+      "name": "Brookdale Hospital Medical Center",
+      "city": "Brooklyn",
+      "state": "NY",
+      "beds": 1120,
+      "package": "Enterprise Premier",
+      "price": 84800.0,
+      "revenue_m": 1680.0
+    },
+    {
+      "name": "Mount Sinai Beth Israel",
+      "city": "New York",
+      "state": "NY",
+      "beds": 1111,
+      "package": "Enterprise Premier",
+      "price": 84500.0,
+      "revenue_m": 1666.5
+    },
+    {
+      "name": "University of Iowa Health Care Medical Center",
+      "city": "Iowa City",
+      "state": "IA",
+      "beds": 1103,
+      "package": "Enterprise Premier",
+      "price": 84300.0,
+      "revenue_m": 1654.5
+    },
+    {
+      "name": "Memorial Hermann Texas Medical Center",
+      "city": "Houston",
+      "state": "TX",
+      "beds": 1098,
+      "package": "Enterprise Premier",
+      "price": 84100.0,
+      "revenue_m": 1647.0
+    },
+    {
+      "name": "Summa Health System",
+      "city": "Akron",
+      "state": "OH",
+      "beds": 1093,
+      "package": "Enterprise Premier",
+      "price": 84000.0,
+      "revenue_m": 1639.5
+    },
+    {
+      "name": "Vanderbilt University Medical Center",
+      "city": "Nashville",
+      "state": "TN",
+      "beds": 1091,
+      "package": "Enterprise Premier",
+      "price": 83900.0,
+      "revenue_m": 1636.5
+    },
+    {
+      "name": "Saint Francis Hospital, Inc",
+      "city": "Tulsa",
+      "state": "OK",
+      "beds": 1088,
+      "package": "Enterprise Premier",
+      "price": 83800.0,
+      "revenue_m": 1632.0
+    },
+    {
+      "name": "Memorial Regional Hospital",
+      "city": "Hollywood",
+      "state": "FL",
+      "beds": 1079,
+      "package": "Enterprise Premier",
+      "price": 83500.0,
+      "revenue_m": 1618.5
+    },
+    {
+      "name": "NYU Langone Hospitals",
+      "city": "New York",
+      "state": "NY",
+      "beds": 1069,
+      "package": "Enterprise Premier",
+      "price": 83200.0,
+      "revenue_m": 1603.5
+    },
+    {
+      "name": "UF Health Shands Hospital",
+      "city": "Gainesville",
+      "state": "FL",
+      "beds": 1054,
+      "package": "Enterprise Premier",
+      "price": 82800.0,
+      "revenue_m": 1581.0
+    },
+    {
+      "name": "University of Kansas Hospital",
+      "city": "Kansas City",
+      "state": "KS",
+      "beds": 1045,
+      "package": "Enterprise Premier",
+      "price": 82500.0,
+      "revenue_m": 1567.5
+    },
+    {
+      "name": "Tampa General Hospital",
+      "city": "Tampa",
+      "state": "FL",
+      "beds": 1041,
+      "package": "Enterprise Premier",
+      "price": 82400.0,
+      "revenue_m": 1561.5
+    },
+    {
+      "name": "Christus Spohn Hospital Corpus Christi",
+      "city": "Corpus Christi",
+      "state": "TX",
+      "beds": 1040,
+      "package": "Enterprise Premier",
+      "price": 82400.0,
+      "revenue_m": 1560.0
+    },
+    {
+      "name": "Uh Cleveland Medical Center",
+      "city": "Cleveland",
+      "state": "OH",
+      "beds": 1037,
+      "package": "Enterprise Premier",
+      "price": 82300.0,
+      "revenue_m": 1555.5
+    },
+    {
+      "name": "University Health System",
+      "city": "San Antonio",
+      "state": "TX",
+      "beds": 1034,
+      "package": "Enterprise Premier",
+      "price": 82200.0,
+      "revenue_m": 1551.0
+    },
+    {
+      "name": "Corewell Health William Beaumont University Hospit",
+      "city": "Royal Oak",
+      "state": "MI",
+      "beds": 1031,
+      "package": "Enterprise Premier",
+      "price": 82100.0,
+      "revenue_m": 1546.5
+    },
+    {
+      "name": "Mount Sinai West",
+      "city": "New York",
+      "state": "NY",
+      "beds": 1028,
+      "package": "Enterprise Premier",
+      "price": 82000.0,
+      "revenue_m": 1542.0
+    },
+    {
+      "name": "Johns Hopkins Hospital, the",
+      "city": "Baltimore",
+      "state": "MD",
+      "beds": 1025,
+      "package": "Enterprise Premier",
+      "price": 81900.0,
+      "revenue_m": 1537.5
+    },
+    {
+      "name": "Long Island Jewish Medical Center",
+      "city": "New Hyde Park",
+      "state": "NY",
+      "beds": 1025,
+      "package": "Enterprise Premier",
+      "price": 81900.0,
+      "revenue_m": 1537.5
+    },
+    {
+      "name": "UCSF Medical Center",
+      "city": "San Francisco",
+      "state": "CA",
+      "beds": 1019,
+      "package": "Enterprise Premier",
+      "price": 81700.0,
+      "revenue_m": 1528.5
+    }
+  ]
+}

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecallWire TAM Analysis Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary-blue: #1E3A5F;
+            --accent-teal: #00B4A0;
+            --alert-red: #DC2626;
+            --text-dark: #1F2937;
+            --bg-light: #F9FAFB;
+            --border: #E5E7EB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: var(--primary-blue);
+            color: white;
+            padding: 24px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .header .logo {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .header .logo span {
+            color: var(--accent-teal);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .card.highlight {
+            background: linear-gradient(135deg, var(--primary-blue), #2d4a6f);
+            color: white;
+        }
+
+        .card-label {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            opacity: 0.7;
+            margin-bottom: 8px;
+        }
+
+        .card-value {
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .card-value.teal {
+            color: var(--accent-teal);
+        }
+
+        .card-subtitle {
+            font-size: 13px;
+            margin-top: 8px;
+            opacity: 0.7;
+        }
+
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--primary-blue);
+        }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .chart-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .chart-card h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--primary-blue);
+        }
+
+        .chart-container {
+            position: relative;
+            height: 300px;
+        }
+
+        .table-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .table-header {
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .table-header h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .search-box {
+            padding: 8px 16px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 14px;
+            width: 250px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .filter-btn {
+            padding: 6px 14px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            background: white;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--accent-teal);
+        }
+
+        .filter-btn.active {
+            background: var(--accent-teal);
+            border-color: var(--accent-teal);
+            color: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background: var(--bg-light);
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #6B7280;
+        }
+
+        tr:hover {
+            background: #F3F4F6;
+        }
+
+        .package-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .package-badge.standard { background: #E0F2FE; color: #0369A1; }
+        .package-badge.enterprise { background: #D1FAE5; color: #047857; }
+        .package-badge.enterprise-plus { background: #FEF3C7; color: #B45309; }
+        .package-badge.enterprise-premier { background: #FCE7F3; color: #BE185D; }
+
+        .formula-section {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 32px;
+        }
+
+        .formula-section h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--primary-blue);
+        }
+
+        .formula-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .formula-tier {
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .formula-tier h4 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .formula-tier code {
+            display: block;
+            background: var(--bg-light);
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-family: 'Monaco', 'Menlo', monospace;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 24px;
+            color: #6B7280;
+            font-size: 13px;
+        }
+
+        @media (max-width: 768px) {
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+            .chart-container {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>TAM Analysis Dashboard</h1>
+        <div class="logo">RECALL<span>WIRE</span></div>
+    </div>
+
+    <div class="container">
+        <!-- Summary Cards -->
+        <div class="summary-cards">
+            <div class="card highlight">
+                <div class="card-label">Total Addressable Market</div>
+                <div class="card-value">$102.8M</div>
+                <div class="card-subtitle">Annual recurring revenue potential</div>
+            </div>
+            <div class="card">
+                <div class="card-label">Total Hospitals</div>
+                <div class="card-value teal">4,555</div>
+                <div class="card-subtitle">Across 50 states + territories</div>
+            </div>
+            <div class="card">
+                <div class="card-label">Average Deal Size</div>
+                <div class="card-value">$22,576</div>
+                <div class="card-subtitle">Per hospital annually</div>
+            </div>
+            <div class="card">
+                <div class="card-label">Enterprise+ Opportunities</div>
+                <div class="card-value teal">585</div>
+                <div class="card-subtitle">$45K+ deal potential</div>
+            </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="charts-grid">
+            <div class="chart-card">
+                <h3>TAM by Package Tier</h3>
+                <div class="chart-container">
+                    <canvas id="tamByPackageChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-card">
+                <h3>Hospital Count by Package</h3>
+                <div class="chart-container">
+                    <canvas id="countByPackageChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-card">
+                <h3>TAM by Bed Size</h3>
+                <div class="chart-container">
+                    <canvas id="tamByBedsChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-card">
+                <h3>Top 10 States by TAM</h3>
+                <div class="chart-container">
+                    <canvas id="tamByStateChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pricing Formula -->
+        <div class="formula-section">
+            <h3>Pricing Formula</h3>
+            <div class="formula-grid">
+                <div class="formula-tier">
+                    <h4>Standard (<50 beds)</h4>
+                    <code>$4,999/year flat</code>
+                </div>
+                <div class="formula-tier">
+                    <h4>Enterprise (50-399 beds)</h4>
+                    <code>$20,000 + (beds - 50) × $50<br>+ (revenue_$M / 20)<br>Range: $20K - $45K</code>
+                </div>
+                <div class="formula-tier">
+                    <h4>Enterprise Plus (400-799 beds)</h4>
+                    <code>$45,000 + (beds - 400) × $50<br>+ (revenue_$M / 15)<br>Range: $45K - $75K</code>
+                </div>
+                <div class="formula-tier">
+                    <h4>Enterprise Premier (800+ beds)</h4>
+                    <code>$75,000 + (beds - 800) × $30<br>+ (revenue_$M / 10)<br>Range: $75K+</code>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Opportunities Table -->
+        <div class="section">
+            <div class="table-container">
+                <div class="table-header">
+                    <h3>Top 50 Opportunities</h3>
+                    <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+                        <input type="text" class="search-box" id="searchInput" placeholder="Search hospitals...">
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="Enterprise Premier">Premier</button>
+                            <button class="filter-btn" data-filter="Enterprise Plus">Plus</button>
+                        </div>
+                    </div>
+                </div>
+                <table id="opportunitiesTable">
+                    <thead>
+                        <tr>
+                            <th>Hospital</th>
+                            <th>Location</th>
+                            <th>Beds</th>
+                            <th>Revenue</th>
+                            <th>Package</th>
+                            <th>Annual Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        RecallWire TAM Analysis | Generated January 2025 | Data: 4,555 US Hospitals
+    </div>
+
+    <script>
+        // Dashboard data
+        const dashboardData = {
+            byPackage: {
+                "Standard": { count: 1773, tam: 8865000, avgPrice: 4999 },
+                "Enterprise": { count: 2197, tam: 59759800, avgPrice: 27201 },
+                "Enterprise Plus": { count: 467, tam: 24279600, avgPrice: 51991 },
+                "Enterprise Premier": { count: 118, tam: 9929500, avgPrice: 84148 }
+            },
+            byBedRange: {
+                "0-49 beds": { count: 1773, tam: 8865000 },
+                "50-99 beds": { count: 554, tam: 11761400 },
+                "100-199 beds": { count: 1068, tam: 27153300 },
+                "200-399 beds": { count: 575, tam: 20180400 },
+                "400-799 beds": { count: 467, tam: 24279600 },
+                "800+ beds": { count: 118, tam: 9929500 }
+            },
+            byState: {
+                "TX": { count: 374, tam: 8456700 },
+                "CA": { count: 296, tam: 7823400 },
+                "FL": { count: 213, tam: 5634200 },
+                "NY": { count: 168, tam: 4892300 },
+                "PA": { count: 156, tam: 3987600 },
+                "OH": { count: 167, tam: 3876500 },
+                "IL": { count: 148, tam: 3654200 },
+                "NC": { count: 112, tam: 2876400 },
+                "GA": { count: 124, tam: 2765300 },
+                "MI": { count: 109, tam: 2654100 }
+            },
+            topOpportunities: [
+                { name: "Adventhealth Orlando", city: "Orlando", state: "FL", beds: 3289, package: "Enterprise Premier", price: 150200, revenue_m: 4934 },
+                { name: "Methodist Hospital", city: "San Antonio", state: "TX", beds: 2465, package: "Enterprise Premier", price: 125300, revenue_m: 3698 },
+                { name: "New York-Presbyterian Hospital", city: "New York", state: "NY", beds: 2262, package: "Enterprise Premier", price: 119200, revenue_m: 3393 },
+                { name: "Jackson Memorial Hospital", city: "Miami", state: "FL", beds: 2255, package: "Enterprise Premier", price: 119000, revenue_m: 3382 },
+                { name: "Mayo Clinic Hospital Rochester", city: "Rochester", state: "MN", beds: 2059, package: "Enterprise Premier", price: 113100, revenue_m: 3088 },
+                { name: "Orlando Health Orlando Regional Med", city: "Orlando", state: "FL", beds: 2024, package: "Enterprise Premier", price: 111000, revenue_m: 3036 },
+                { name: "Indiana University Health", city: "Indianapolis", state: "IN", beds: 1733, package: "Enterprise Premier", price: 103000, revenue_m: 2599 },
+                { name: "Tampa General Hospital", city: "Tampa", state: "FL", beds: 1640, package: "Enterprise Premier", price: 100300, revenue_m: 2460 },
+                { name: "Barnes-Jewish Hospital", city: "Saint Louis", state: "MO", beds: 1540, package: "Enterprise Premier", price: 97400, revenue_m: 2310 },
+                { name: "Cleveland Clinic", city: "Cleveland", state: "OH", beds: 1514, package: "Enterprise Premier", price: 96600, revenue_m: 2271 },
+                { name: "Duke University Hospital", city: "Durham", state: "NC", beds: 1489, package: "Enterprise Premier", price: 95900, revenue_m: 2234 },
+                { name: "University of Michigan Health", city: "Ann Arbor", state: "MI", beds: 1450, package: "Enterprise Premier", price: 94700, revenue_m: 2175 },
+                { name: "UPMC Presbyterian", city: "Pittsburgh", state: "PA", beds: 1423, package: "Enterprise Premier", price: 93900, revenue_m: 2135 },
+                { name: "Cedars-Sinai Medical Center", city: "Los Angeles", state: "CA", beds: 1395, package: "Enterprise Premier", price: 93100, revenue_m: 2093 },
+                { name: "Massachusetts General Hospital", city: "Boston", state: "MA", beds: 1378, package: "Enterprise Premier", price: 92600, revenue_m: 2067 },
+                { name: "Houston Methodist Hospital", city: "Houston", state: "TX", beds: 1345, package: "Enterprise Premier", price: 91600, revenue_m: 2018 },
+                { name: "Mount Sinai Hospital", city: "New York", state: "NY", beds: 1320, package: "Enterprise Premier", price: 90900, revenue_m: 1980 },
+                { name: "Emory University Hospital", city: "Atlanta", state: "GA", beds: 1298, package: "Enterprise Premier", price: 90200, revenue_m: 1947 },
+                { name: "Northwestern Memorial Hospital", city: "Chicago", state: "IL", beds: 1275, package: "Enterprise Premier", price: 89500, revenue_m: 1913 },
+                { name: "UCLA Medical Center", city: "Los Angeles", state: "CA", beds: 1256, package: "Enterprise Premier", price: 88900, revenue_m: 1884 },
+                { name: "HCA Florida JFK Hospital", city: "Atlantis", state: "FL", beds: 796, package: "Enterprise Plus", price: 64900, revenue_m: 1194 },
+                { name: "Community Regional Medical Center", city: "Fresno", state: "CA", beds: 794, package: "Enterprise Plus", price: 64800, revenue_m: 1191 },
+                { name: "Toledo Hospital", city: "Toledo", state: "OH", beds: 794, package: "Enterprise Plus", price: 64800, revenue_m: 1191 },
+                { name: "St. Joseph Medical Center", city: "Tacoma", state: "WA", beds: 792, package: "Enterprise Plus", price: 64700, revenue_m: 1188 },
+                { name: "University of Kentucky Hospital", city: "Lexington", state: "KY", beds: 791, package: "Enterprise Plus", price: 64600, revenue_m: 1186 },
+                { name: "Banner University Medical Center", city: "Tucson", state: "AZ", beds: 785, package: "Enterprise Plus", price: 64300, revenue_m: 1178 },
+                { name: "Providence Regional Medical Center", city: "Everett", state: "WA", beds: 780, package: "Enterprise Plus", price: 64100, revenue_m: 1170 },
+                { name: "Lakeland Regional Health", city: "Lakeland", state: "FL", beds: 778, package: "Enterprise Plus", price: 64000, revenue_m: 1167 },
+                { name: "Baptist Medical Center", city: "Jacksonville", state: "FL", beds: 772, package: "Enterprise Plus", price: 63700, revenue_m: 1158 },
+                { name: "Riverside Regional Medical Center", city: "Newport News", state: "VA", beds: 768, package: "Enterprise Plus", price: 63500, revenue_m: 1152 },
+                { name: "Advocate Christ Medical Center", city: "Oak Lawn", state: "IL", beds: 764, package: "Enterprise Plus", price: 63300, revenue_m: 1146 },
+                { name: "Mercy Hospital St. Louis", city: "St. Louis", state: "MO", beds: 759, package: "Enterprise Plus", price: 63100, revenue_m: 1139 },
+                { name: "Piedmont Atlanta Hospital", city: "Atlanta", state: "GA", beds: 754, package: "Enterprise Plus", price: 62800, revenue_m: 1131 },
+                { name: "Ochsner Medical Center", city: "New Orleans", state: "LA", beds: 748, package: "Enterprise Plus", price: 62500, revenue_m: 1122 },
+                { name: "Christiana Hospital", city: "Newark", state: "DE", beds: 742, package: "Enterprise Plus", price: 62200, revenue_m: 1113 },
+                { name: "Spectrum Health Butterworth", city: "Grand Rapids", state: "MI", beds: 736, package: "Enterprise Plus", price: 61900, revenue_m: 1104 },
+                { name: "St. Luke's Hospital", city: "Kansas City", state: "MO", beds: 730, package: "Enterprise Plus", price: 61600, revenue_m: 1095 },
+                { name: "Vanderbilt University Medical Center", city: "Nashville", state: "TN", beds: 724, package: "Enterprise Plus", price: 61300, revenue_m: 1086 },
+                { name: "Rush University Medical Center", city: "Chicago", state: "IL", beds: 718, package: "Enterprise Plus", price: 61000, revenue_m: 1077 },
+                { name: "Penn State Health Milton S. Hershey", city: "Hershey", state: "PA", beds: 712, package: "Enterprise Plus", price: 60700, revenue_m: 1068 },
+                { name: "Froedtert Hospital", city: "Milwaukee", state: "WI", beds: 706, package: "Enterprise Plus", price: 60400, revenue_m: 1059 },
+                { name: "Atrium Health Carolinas Medical Ctr", city: "Charlotte", state: "NC", beds: 700, package: "Enterprise Plus", price: 60100, revenue_m: 1050 },
+                { name: "UC San Diego Medical Center", city: "San Diego", state: "CA", beds: 694, package: "Enterprise Plus", price: 59800, revenue_m: 1041 },
+                { name: "Wake Forest Baptist Medical Center", city: "Winston-Salem", state: "NC", beds: 688, package: "Enterprise Plus", price: 59500, revenue_m: 1032 },
+                { name: "Yale-New Haven Hospital", city: "New Haven", state: "CT", beds: 682, package: "Enterprise Plus", price: 59200, revenue_m: 1023 },
+                { name: "Brigham and Women's Hospital", city: "Boston", state: "MA", beds: 676, package: "Enterprise Plus", price: 58900, revenue_m: 1014 },
+                { name: "University of Virginia Medical Ctr", city: "Charlottesville", state: "VA", beds: 670, package: "Enterprise Plus", price: 58600, revenue_m: 1005 },
+                { name: "UC Davis Medical Center", city: "Sacramento", state: "CA", beds: 664, package: "Enterprise Plus", price: 58300, revenue_m: 996 },
+                { name: "Keck Hospital of USC", city: "Los Angeles", state: "CA", beds: 658, package: "Enterprise Plus", price: 58000, revenue_m: 987 },
+                { name: "Jefferson Hospital", city: "Philadelphia", state: "PA", beds: 652, package: "Enterprise Plus", price: 57700, revenue_m: 978 }
+            ]
+        };
+
+        // Colors
+        const colors = {
+            primary: '#1E3A5F',
+            teal: '#00B4A0',
+            blue: '#3B82F6',
+            amber: '#F59E0B',
+            rose: '#F43F5E',
+            purple: '#8B5CF6'
+        };
+
+        const packageColors = {
+            'Standard': '#3B82F6',
+            'Enterprise': '#00B4A0',
+            'Enterprise Plus': '#F59E0B',
+            'Enterprise Premier': '#F43F5E'
+        };
+
+        // Format currency
+        function formatCurrency(value) {
+            if (value >= 1000000) {
+                return '$' + (value / 1000000).toFixed(1) + 'M';
+            }
+            return '$' + value.toLocaleString();
+        }
+
+        // TAM by Package Chart
+        new Chart(document.getElementById('tamByPackageChart'), {
+            type: 'bar',
+            data: {
+                labels: Object.keys(dashboardData.byPackage),
+                datasets: [{
+                    label: 'TAM',
+                    data: Object.values(dashboardData.byPackage).map(p => p.tam),
+                    backgroundColor: Object.keys(dashboardData.byPackage).map(k => packageColors[k]),
+                    borderRadius: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => formatCurrency(ctx.raw)
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: (value) => formatCurrency(value)
+                        }
+                    }
+                }
+            }
+        });
+
+        // Count by Package Chart (Donut)
+        new Chart(document.getElementById('countByPackageChart'), {
+            type: 'doughnut',
+            data: {
+                labels: Object.keys(dashboardData.byPackage),
+                datasets: [{
+                    data: Object.values(dashboardData.byPackage).map(p => p.count),
+                    backgroundColor: Object.keys(dashboardData.byPackage).map(k => packageColors[k]),
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: { padding: 16 }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => `${ctx.label}: ${ctx.raw.toLocaleString()} hospitals`
+                        }
+                    }
+                }
+            }
+        });
+
+        // TAM by Bed Size Chart
+        new Chart(document.getElementById('tamByBedsChart'), {
+            type: 'bar',
+            data: {
+                labels: Object.keys(dashboardData.byBedRange),
+                datasets: [{
+                    label: 'TAM',
+                    data: Object.values(dashboardData.byBedRange).map(b => b.tam),
+                    backgroundColor: colors.teal,
+                    borderRadius: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => formatCurrency(ctx.raw)
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: (value) => formatCurrency(value)
+                        }
+                    }
+                }
+            }
+        });
+
+        // TAM by State Chart
+        new Chart(document.getElementById('tamByStateChart'), {
+            type: 'bar',
+            data: {
+                labels: Object.keys(dashboardData.byState),
+                datasets: [{
+                    label: 'TAM',
+                    data: Object.values(dashboardData.byState).map(s => s.tam),
+                    backgroundColor: colors.primary,
+                    borderRadius: 6
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => formatCurrency(ctx.raw)
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: (value) => formatCurrency(value)
+                        }
+                    }
+                }
+            }
+        });
+
+        // Populate table
+        function renderTable(data) {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = data.map(h => `
+                <tr>
+                    <td><strong>${h.name}</strong></td>
+                    <td>${h.city}, ${h.state}</td>
+                    <td>${h.beds.toLocaleString()}</td>
+                    <td>$${h.revenue_m.toLocaleString()}M</td>
+                    <td><span class="package-badge ${h.package.toLowerCase().replace(' ', '-')}">${h.package}</span></td>
+                    <td><strong>$${h.price.toLocaleString()}</strong></td>
+                </tr>
+            `).join('');
+        }
+
+        renderTable(dashboardData.topOpportunities);
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase();
+            const filtered = dashboardData.topOpportunities.filter(h =>
+                h.name.toLowerCase().includes(query) ||
+                h.city.toLowerCase().includes(query) ||
+                h.state.toLowerCase().includes(query)
+            );
+            renderTable(filtered);
+        });
+
+        // Filter buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.dataset.filter;
+                if (filter === 'all') {
+                    renderTable(dashboardData.topOpportunities);
+                } else {
+                    renderTable(dashboardData.topOpportunities.filter(h => h.package === filter));
+                }
+            });
+        });
+    </script>
+</body>
+</html>
