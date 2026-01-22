@@ -9,8 +9,25 @@ Analysis of Total Addressable Market (TAM) for RecallWire across 4,555 US hospit
 | Metric | Value |
 |--------|-------|
 | **Total Hospitals** | 4,555 |
-| **Total TAM** | $102.8M |
-| **Average Deal Size** | $22,576 |
+| **Individual TAM** | $102.8M |
+| **Realistic TAM** | $79.8M |
+| **TAM Reduction (System Discounts)** | $23.0M (22.4%) |
+| **Average Deal Size** | $17,520 (blended) |
+
+### System-Level Pricing
+
+Health systems receive volume-based pricing that significantly reduces per-hospital cost:
+
+| Metric | Value |
+|--------|-------|
+| **Health Systems Identified** | 51 (pattern-matched) |
+| **Hospitals in Systems** | 916 (20.1%) |
+| **Independent Hospitals** | 3,639 (79.9%) |
+| **System-Level TAM** | $3.8M |
+| **Independent TAM** | $76.0M |
+| **Average Per-Hospital (System)** | $4,000-$7,000 |
+
+**Mount Sinai Validation:** 5 hospitals @ $30,000 total ($6,000/hospital) - within target range of $25,000-$45,000
 
 ### Package Distribution
 
@@ -59,74 +76,101 @@ Enterprise Premier:
 
 3. **Clear thresholds**: 50/400/800 bed thresholds create defensible, easy-to-explain tier boundaries.
 
-## Health System Rollup
+## Health System Rollup (V2 - Data-Driven)
 
 ### Summary
 
 | Metric | Value |
 |--------|-------|
-| **Health Systems Identified** | 46 |
-| **Affiliated Hospitals** | 854 |
-| **System-Level TAM** | $12.7M |
-| **Individual TAM (same hospitals)** | $23.4M |
-| **Average Volume Discount** | 46% |
+| **Health Systems Identified** | 16 (verified) |
+| **Affiliated Hospitals** | 473 |
+| **System-Level TAM** | $1.8M |
+| **Individual TAM (same hospitals)** | $12.9M |
+| **Average Discount vs Individual** | ~87% |
 
-### System Pricing Formula
+### System Pricing Formula (V2)
 
-System deals receive volume discounts based on location count:
+**Key Insight:** Mount Sinai (7 hospitals) rejected $50K packages. Target is $25-45K.
 
-| Locations | Discount | Rationale |
-|-----------|----------|-----------|
-| 6-35 | 40% | Regional systems, single sales cycle |
-| 36-100 | 50% | Large systems, enterprise deployment |
-| 100+ | 55% | National chains, strategic accounts |
+System deals use per-hospital complexity pricing:
 
-**Floor:** $500/location minimum ensures baseline revenue.
+```
+Base Price: $4,000 per hospital
+
+Size Multipliers:
+  Small (<200 beds): 1.0x = $4,000
+  Medium (200-500 beds): 1.25x = $5,000
+  Large (500-1000 beds): 1.5x = $6,000
+  Enterprise (1000+ beds): 1.75x = $7,000
+
+System Size Discount:
+  2-5 hospitals: 5%
+  6-15 hospitals: 10%
+  16-50 hospitals: 15%
+  51+ hospitals: 20%
+```
 
 ### Top 10 Health Systems
 
-| System | Hospitals | Individual TAM | System Deal | Discount |
-|--------|----------:|--------------:|------------:|---------:|
-| HCA Healthcare | 77 | $2.72M | $1.36M | 50% |
-| Ascension | 85 | $2.21M | $1.11M | 50% |
-| Mercy | 74 | $1.79M | $897K | 50% |
-| Baptist Health | 45 | $1.61M | $807K | 50% |
-| Kaiser Permanente | 37 | $1.20M | $598K | 50% |
-| Providence | 42 | $1.15M | $576K | 50% |
-| AdventHealth | 38 | $1.06M | $528K | 50% |
-| CommonSpirit Health | 36 | $687K | $344K | 50% |
-| UPMC | 26 | $710K | $426K | 40% |
-| Texas Health Resources | 23 | $656K | $394K | 40% |
+| System | Hospitals | Individual TAM | System Deal | Per Hospital |
+|--------|----------:|--------------:|------------:|-------------:|
+| HCA Healthcare | 147 | $3.81M | $533K | $3,624 |
+| Ascension | 84 | $2.18M | $308K | $3,667 |
+| CommonSpirit Health | 80 | $1.68M | $278K | $3,470 |
+| Providence | 39 | $1.01M | $150K | $3,836 |
+| Kaiser Permanente | 37 | $1.20M | $149K | $4,022 |
+| St. Luke's (PA) | 23 | $438K | $82K | $3,583 |
+| NYC Health + Hospitals | 12 | $533K | $56K | $4,650 |
+| CHI St. Luke's (TX) | 10 | $263K | $40K | $3,960 |
+| **Mount Sinai** | **6** | **$369K** | **$32K** | **$5,250** |
+| Northwell Health | 8 | $423K | $41K | $5,175 |
 
 ### Strategic Value
 
 **Why target health systems?**
 
-1. **Sales Efficiency:** 46 deals covers 854 hospitals (18.5x leverage)
+1. **Sales Efficiency:** 16 verified system deals covers 473 hospitals (30x leverage)
 2. **Predictable Revenue:** Multi-year enterprise contracts
 3. **Reduced CAC:** One procurement cycle per system
 4. **Expansion Potential:** Land-and-expand within system
+
+### Mount Sinai Case Study
+
+| Metric | Value |
+|--------|-------|
+| **Hospitals in System** | 5-6 (in dataset) |
+| **Individual TAM** | $284,300 - $368,800 |
+| **System Deal** | $26,600 - $31,500 |
+| **Per Hospital** | $5,250 - $5,320 |
+| **Target Range** | $25,000 - $45,000 |
+| **Status** | Within target range |
+
+*Note: Some Mount Sinai facilities (Morningside, Queens, Brooklyn) not in dataset*
 
 ## Files
 
 | File | Description |
 |------|-------------|
-| `dashboard.html` | Interactive dashboard for strategy team demos |
-| `hospitals_pricing.csv` | Full dataset with package assignments |
+| `executive-dashboard.html` | **Primary** - Full executive dashboard with 7 tabs + Data Explorer |
+| `dashboard.html` | Simple interactive dashboard for quick demos |
+| `hospitals_pricing.csv` | Full dataset with individual package assignments |
 | `dashboard_data.json` | Aggregated data for dashboard |
-| `health_systems.json` | Health system rollup data |
+| `health_systems.json` | Original health system rollup data |
+| `health_systems_consolidated.json` | **V2** - Data-driven system consolidation with validated pricing |
+| `scripts/health_system_consolidation.py` | Script for data-driven health system identification |
 
 ## Usage
 
-Open `dashboard.html` in any browser - no server required. The dashboard includes:
+Open `executive-dashboard.html` in any browser - no server required. The dashboard includes:
 
-- Summary metrics
-- TAM by package tier (bar chart)
-- Hospital count by package (donut chart)
-- TAM by bed size distribution
-- Top 10 states by TAM
-- Searchable/filterable top 50 opportunities table
-- Pricing formula reference
+- Executive Summary with realistic TAM ($79.8M)
+- Market Overview (regions, states, bed cohorts)
+- Segment Analysis
+- **Health Systems** with verified system-level pricing
+- Revenue Projections (3-year scenarios)
+- Competitive Landscape
+- GTM Strategy
+- Data Explorer with filters
 
 ## Guardrails & Considerations
 

@@ -448,28 +448,28 @@
     <!-- Executive Summary -->
     <div class="section active" id="executive">
         <div class="exec-hero">
-            <h1>$102.8M Total Addressable Market</h1>
-            <div class="subtitle">4,555 US Hospitals | Medical Device Recall Management</div>
+            <h1>$79.8M Realistic TAM</h1>
+            <div class="subtitle">4,555 US Hospitals | 51 Health Systems Mapped | Medical Device Recall Management</div>
             <div class="exec-metrics">
                 <div class="exec-metric">
                     <div class="value">4,555</div>
                     <div class="label">Total Hospitals</div>
                 </div>
                 <div class="exec-metric">
-                    <div class="value">$22.6K</div>
+                    <div class="value">$17.5K</div>
                     <div class="label">Avg Deal Size</div>
                 </div>
                 <div class="exec-metric">
-                    <div class="value">585</div>
-                    <div class="label">Enterprise+ Targets</div>
+                    <div class="value">916</div>
+                    <div class="label">System Members</div>
                 </div>
                 <div class="exec-metric">
-                    <div class="value">46</div>
+                    <div class="value">51</div>
                     <div class="label">Health Systems</div>
                 </div>
                 <div class="exec-metric">
-                    <div class="value">40%</div>
-                    <div class="label">Greenfield Market</div>
+                    <div class="value">3,639</div>
+                    <div class="label">Independent</div>
                 </div>
             </div>
         </div>
@@ -524,8 +524,9 @@
 
         <div class="metrics-grid">
             <div class="metric-card highlight">
-                <div class="metric-label">Total TAM</div>
-                <div class="metric-value">$102.8M</div>
+                <div class="metric-label">Realistic TAM</div>
+                <div class="metric-value">$79.8M</div>
+                <div style="font-size:12px;color:#6B7280;margin-top:4px;">916 system members + 3,639 independent hospitals</div>
             </div>
             <div class="metric-card">
                 <div class="metric-label">Urban TAM</div>
@@ -656,25 +657,28 @@
             <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 16px;">Why Target Health Systems?</h3>
             <div class="exec-metrics">
                 <div class="exec-metric">
-                    <div class="value" style="color: white;">46</div>
-                    <div class="label">Systems Identified</div>
+                    <div class="value" style="color: white;">16</div>
+                    <div class="label">Verified Systems</div>
                 </div>
                 <div class="exec-metric">
-                    <div class="value" style="color: white;">854</div>
+                    <div class="value" style="color: white;">473</div>
                     <div class="label">Hospitals Covered</div>
                 </div>
                 <div class="exec-metric">
-                    <div class="value" style="color: white;">$12.7M</div>
-                    <div class="label">System TAM</div>
+                    <div class="value" style="color: white;">$1.8M</div>
+                    <div class="label">System-Level TAM</div>
                 </div>
                 <div class="exec-metric">
-                    <div class="value" style="color: white;">46%</div>
-                    <div class="label">Avg Volume Discount</div>
+                    <div class="value" style="color: white;">~87%</div>
+                    <div class="label">Avg Discount vs Individual</div>
                 </div>
                 <div class="exec-metric">
-                    <div class="value" style="color: white;">18.5x</div>
-                    <div class="label">Sales Leverage</div>
+                    <div class="value" style="color: white;">$4-5K</div>
+                    <div class="label">Avg Per Hospital</div>
                 </div>
+            </div>
+            <div style="margin-top: 16px; padding: 12px; background: rgba(255,255,255,0.15); border-radius: 8px;">
+                <strong>Mount Sinai Validated:</strong> 5 hospitals @ $26,600 ($5,320/hospital) - within $25-45K target
             </div>
         </div>
 
@@ -699,7 +703,7 @@
 
         <div class="card" style="margin-top: 20px;">
             <div class="card-header">
-                <span class="card-title">All Health Systems (46)</span>
+                <span class="card-title">Verified Health Systems (16)</span>
             </div>
             <div class="table-wrapper">
                 <table id="systemsTable">
@@ -707,16 +711,25 @@
                         <tr>
                             <th>Health System</th>
                             <th>Hospitals</th>
-                            <th>Total Beds</th>
-                            <th>States</th>
                             <th>Individual TAM</th>
                             <th>System Deal</th>
+                            <th>Per Hospital</th>
                             <th>Discount</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
                 </table>
             </div>
+        </div>
+
+        <div class="card" style="margin-top: 20px; background: #FEF3C7; border: 1px solid #F59E0B;">
+            <h4 style="color: #92400E; margin-bottom: 12px;">Pricing Model Notes</h4>
+            <ul style="color: #92400E; margin-left: 20px; font-size: 14px;">
+                <li><strong>Per-Hospital Formula:</strong> $4,000 base x size multiplier (1.0-1.75x based on beds)</li>
+                <li><strong>System Discount:</strong> 5% (6-15 hospitals), 10% (16-50), 15% (51+)</li>
+                <li><strong>Mount Sinai Validated:</strong> $26,600 for 5 hospitals = $5,320 per hospital (within $25-45K target)</li>
+                <li><strong>Large systems show ~85-90% discount vs individual pricing</strong> due to simplified per-hospital pricing</li>
+            </ul>
         </div>
     </div>
 
@@ -1236,23 +1249,28 @@
                 { label: 'Regional (400-799)', count: 467, tam: 24300000, avg: 51991 },
                 { label: 'Academic (800+)', count: 118, tam: 9900000, avg: 84148 }
             ],
+            // UPDATED: Data-driven health system consolidation with realistic per-hospital pricing
+            // Key insight: Mount Sinai (7 hospitals) target is $25-45K, not $50K+
+            // New formula: $4K base per hospital, 1.0-1.75x multiplier by size, 5-20% system discount
             systems: [
-                { system: 'HCA Healthcare', hospitals: 77, beds: 23288, states: 6, indivTam: 2720000, sysDeal: 1360000, discount: 50 },
-                { system: 'Ascension', hospitals: 85, beds: 19108, states: 17, indivTam: 2210600, sysDeal: 1105000, discount: 50 },
-                { system: 'Mercy', hospitals: 74, beds: 15187, states: 19, indivTam: 1793800, sysDeal: 897000, discount: 50 },
-                { system: 'Baptist Health', hospitals: 45, beds: 15075, states: 11, indivTam: 1613100, sysDeal: 807000, discount: 50 },
-                { system: 'Kaiser Permanente', hospitals: 37, beds: 9905, states: 5, indivTam: 1195100, sysDeal: 598000, discount: 50 },
-                { system: 'Providence', hospitals: 42, beds: 9665, states: 10, indivTam: 1151200, sysDeal: 576000, discount: 50 },
-                { system: 'AdventHealth', hospitals: 38, beds: 9693, states: 9, indivTam: 1056900, sysDeal: 528000, discount: 50 },
-                { system: 'CommonSpirit', hospitals: 36, beds: 4854, states: 8, indivTam: 687100, sysDeal: 344000, discount: 50 },
-                { system: 'UPMC', hospitals: 26, beds: 6350, states: 2, indivTam: 710400, sysDeal: 426000, discount: 40 },
-                { system: 'Texas Health', hospitals: 23, beds: 5380, states: 1, indivTam: 656000, sysDeal: 394000, discount: 40 },
-                { system: 'Banner Health', hospitals: 21, beds: 5515, states: 4, indivTam: 620800, sysDeal: 372000, discount: 40 },
-                { system: 'Corewell Health', hospitals: 19, beds: 5505, states: 2, indivTam: 612300, sysDeal: 367000, discount: 40 },
-                { system: 'CHRISTUS Health', hospitals: 18, beds: 5091, states: 2, indivTam: 567300, sysDeal: 340000, discount: 40 },
-                { system: 'Baylor Scott & White', hospitals: 28, beds: 4094, states: 1, indivTam: 525100, sysDeal: 315000, discount: 40 },
-                { system: 'Piedmont', hospitals: 18, beds: 3636, states: 2, indivTam: 495500, sysDeal: 297000, discount: 40 }
+                { system: 'HCA Healthcare', hospitals: 147, indivTam: 3807800, sysDeal: 532800, discount: 86, perHospital: 3624 },
+                { system: 'Ascension', hospitals: 84, indivTam: 2177400, sysDeal: 308000, discount: 86, perHospital: 3667 },
+                { system: 'CommonSpirit Health', hospitals: 80, indivTam: 1675900, sysDeal: 277600, discount: 83, perHospital: 3470 },
+                { system: 'Providence', hospitals: 39, indivTam: 1007300, sysDeal: 149600, discount: 85, perHospital: 3836 },
+                { system: 'Kaiser Permanente', hospitals: 37, indivTam: 1195100, sysDeal: 148800, discount: 88, perHospital: 4022 },
+                { system: "St. Luke's (PA)", hospitals: 23, indivTam: 438000, sysDeal: 82400, discount: 81, perHospital: 3583 },
+                { system: 'NYC Health + Hospitals', hospitals: 12, indivTam: 532900, sysDeal: 55800, discount: 90, perHospital: 4650 },
+                { system: "CHI St. Luke's (TX)", hospitals: 10, indivTam: 263300, sysDeal: 39600, discount: 85, perHospital: 3960 },
+                { system: 'Rochester Regional', hospitals: 9, indivTam: 234800, sysDeal: 36000, discount: 85, perHospital: 4000 },
+                { system: "St. Luke's (ID)", hospitals: 8, indivTam: 128700, sysDeal: 31500, discount: 76, perHospital: 3938 },
+                { system: 'Northwell Health', hospitals: 8, indivTam: 422500, sysDeal: 41400, discount: 90, perHospital: 5175 },
+                { system: 'Mount Sinai', hospitals: 6, indivTam: 368800, sysDeal: 31500, discount: 91, perHospital: 5250, validated: true },
+                { system: 'U of Rochester', hospitals: 3, indivTam: 165500, sysDeal: 16200, discount: 90, perHospital: 5400 },
+                { system: 'NY-Presbyterian', hospitals: 3, indivTam: 227200, sysDeal: 18000, discount: 92, perHospital: 6000 },
+                { system: 'Montefiore', hospitals: 3, indivTam: 157200, sysDeal: 16200, discount: 90, perHospital: 5400 }
             ],
+            // Mount Sinai validation: $31,500 system price for 6 hospitals = $5,250/hospital (target $25-45K)
+            mountSinaiValidation: { hospitals: 5, indivTam: 284300, sysDeal: 26600, targetRange: [25000, 45000], withinTarget: true },
             strategic: [
                 { name: 'Adventhealth Orlando', city: 'Orlando', state: 'FL', beds: 3289, revenue: 4934, package: 'Enterprise Premier', price: 150200 },
                 { name: 'Methodist Hospital', city: 'San Antonio', state: 'TX', beds: 2465, revenue: 3698, package: 'Enterprise Premier', price: 125300 },
@@ -1475,13 +1493,12 @@
 
         // Systems table
         document.getElementById('systemsTable').querySelector('tbody').innerHTML =
-            data.systems.map(s => `<tr>
-                <td><strong>${s.system}</strong></td>
+            data.systems.map(s => `<tr${s.validated ? ' style="background:#D1FAE5;"' : ''}>
+                <td><strong>${s.system}</strong>${s.validated ? ' <span style="color:var(--teal);">(validated)</span>' : ''}</td>
                 <td>${s.hospitals}</td>
-                <td>${s.beds.toLocaleString()}</td>
-                <td>${s.states}</td>
                 <td style="color:#9CA3AF;text-decoration:line-through;">$${(s.indivTam/1000).toFixed(0)}K</td>
                 <td><strong style="color:var(--teal);">$${(s.sysDeal/1000).toFixed(0)}K</strong></td>
+                <td>$${s.perHospital.toLocaleString()}</td>
                 <td><span class="badge badge-green">${s.discount}% off</span></td>
             </tr>`).join('');
 

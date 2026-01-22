@@ -1,5 +1,14 @@
 {
-  "total_tam": 102833900,
+  "individual_tam": 102833900,
+  "realistic_tam": 79803900,
+  "total_tam": 79803900,
+  "tam_note": "Realistic TAM reflects system-level pricing (916 hospitals in 51 systems at discounted rates) + independent hospital pricing",
+  "system_breakdown": {
+    "system_members": 916,
+    "system_level_tam": 3840300,
+    "independent_hospitals": 3639,
+    "independent_tam": 75963600
+  },
   "total_hospitals": 4555,
   "projections": {
     "year_1": {
@@ -130,6 +139,6 @@
   "greenfield_opportunity": {
     "percentage": 0.4,
     "hospitals": 1822,
-    "tam": 41133560.0
+    "tam": 31921560.0
   }
 }

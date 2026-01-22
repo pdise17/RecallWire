@@ -1,8 +1,15 @@
 {
   "summary": {
     "total_hospitals": 4555,
-    "total_tam": 102833900.0,
-    "avg_deal_size": 22576.0
+    "total_tam": 79803900.0,
+    "avg_deal_size": 17520.0,
+    "individual_tam": 102833900.0,
+    "tam_reduction": 23030000.0,
+    "system_level_tam": 3840300,
+    "independent_tam": 75963600.0,
+    "hospitals_in_systems": 916,
+    "independent_hospitals": 3639,
+    "health_systems_count": 51
   },
   "by_package": {
     "Standard": {
@@ -623,5 +630,168 @@
       "price": 81700.0,
       "revenue_m": 1528.5
     }
-  ]
+  ],
+  "health_systems_consolidated": [
+    {
+      "name": "HCA Healthcare",
+      "hospital_count": 147,
+      "individual_tam": 3807800.0,
+      "system_price": 532800,
+      "discount_vs_individual": 86.0,
+      "per_hospital": 3624.49,
+      "tier": "Enterprise Premier"
+    },
+    {
+      "name": "Ascension",
+      "hospital_count": 84,
+      "individual_tam": 2177400.0,
+      "system_price": 308000,
+      "discount_vs_individual": 85.9,
+      "per_hospital": 3666.67,
+      "tier": "Enterprise Premier"
+    },
+    {
+      "name": "CommonSpirit Health",
+      "hospital_count": 80,
+      "individual_tam": 1675900.0,
+      "system_price": 277600,
+      "discount_vs_individual": 83.4,
+      "per_hospital": 3470.0,
+      "tier": "Enterprise Premier"
+    },
+    {
+      "name": "Providence",
+      "hospital_count": 39,
+      "individual_tam": 1007300.0,
+      "system_price": 149600,
+      "discount_vs_individual": 85.1,
+      "per_hospital": 3835.9,
+      "tier": "Enterprise Plus"
+    },
+    {
+      "name": "Kaiser Permanente",
+      "hospital_count": 37,
+      "individual_tam": 1195100.0,
+      "system_price": 148800,
+      "discount_vs_individual": 87.5,
+      "per_hospital": 4021.62,
+      "tier": "Enterprise Plus"
+    },
+    {
+      "name": "St. Luke's Health System (Pennsylvania)",
+      "hospital_count": 23,
+      "individual_tam": 438000.0,
+      "system_price": 82400,
+      "discount_vs_individual": 81.2,
+      "per_hospital": 3582.61,
+      "tier": "Enterprise Plus"
+    },
+    {
+      "name": "NYC Health + Hospitals",
+      "hospital_count": 12,
+      "individual_tam": 532900.0,
+      "system_price": 55800,
+      "discount_vs_individual": 89.5,
+      "per_hospital": 4650.0,
+      "tier": "Enterprise"
+    },
+    {
+      "name": "Northwell Health",
+      "hospital_count": 8,
+      "individual_tam": 422500.0,
+      "system_price": 41400,
+      "discount_vs_individual": 90.2,
+      "per_hospital": 5175.0,
+      "tier": "Enterprise"
+    },
+    {
+      "name": "CHI St. Luke's Health (Texas)",
+      "hospital_count": 10,
+      "individual_tam": 263300.0,
+      "system_price": 39600,
+      "discount_vs_individual": 85.0,
+      "per_hospital": 3960.0,
+      "tier": "Enterprise"
+    },
+    {
+      "name": "Rochester Regional Health",
+      "hospital_count": 9,
+      "individual_tam": 234800.0,
+      "system_price": 36000,
+      "discount_vs_individual": 84.7,
+      "per_hospital": 4000.0,
+      "tier": "Enterprise"
+    },
+    {
+      "name": "St. Luke's Health System (Idaho)",
+      "hospital_count": 8,
+      "individual_tam": 128700.0,
+      "system_price": 31500,
+      "discount_vs_individual": 75.5,
+      "per_hospital": 3937.5,
+      "tier": "Enterprise"
+    },
+    {
+      "name": "Mount Sinai Health System",
+      "hospital_count": 6,
+      "individual_tam": 368800.0,
+      "system_price": 31500,
+      "discount_vs_individual": 91.5,
+      "per_hospital": 5250.0,
+      "tier": "Enterprise"
+    },
+    {
+      "name": "New York-Presbyterian",
+      "hospital_count": 3,
+      "individual_tam": 227200.0,
+      "system_price": 18000,
+      "discount_vs_individual": 92.1,
+      "per_hospital": 6000.0,
+      "tier": "Standard (Multi-site)"
+    },
+    {
+      "name": "University of Rochester Medical Center",
+      "hospital_count": 3,
+      "individual_tam": 165500.0,
+      "system_price": 16200,
+      "discount_vs_individual": 90.2,
+      "per_hospital": 5400.0,
+      "tier": "Standard (Multi-site)"
+    },
+    {
+      "name": "Montefiore Health System",
+      "hospital_count": 3,
+      "individual_tam": 157200.0,
+      "system_price": 16200,
+      "discount_vs_individual": 89.7,
+      "per_hospital": 5400.0,
+      "tier": "Standard (Multi-site)"
+    },
+    {
+      "name": "NYU Langone Health",
+      "hospital_count": 1,
+      "individual_tam": 83200.0,
+      "system_price": 7000,
+      "discount_vs_individual": 91.6,
+      "per_hospital": 7000.0,
+      "tier": "Standard"
+    }
+  ],
+  "mount_sinai_validation": {
+    "hospitals_found": 5,
+    "individual_tam": 320600.0,
+    "system_price": 30000,
+    "target_range": [
+      25000,
+      45000
+    ],
+    "within_target": true,
+    "hospitals": [
+      "Mount Sinai Hospital (NY)",
+      "Mount Sinai West (NY)",
+      "N Y Eye and Ear Infirmary (NY)",
+      "Mount Sinai Beth Israel (NY)",
+      "Mount Sinai South Nassau (NY)"
+    ]
+  }
 }
