@@ -1,0 +1,90 @@
+{
+  "summary": {
+    "total_hospitals": 4555,
+    "individual_tam": 108334140.0,
+    "realistic_tam": 46867270.0,
+    "system_level_tam": 9075100.0,
+    "independent_tam": 37792170.0,
+    "hospitals_in_systems": 2042,
+    "independent_hospitals": 2513,
+    "health_systems_count": 408,
+    "system_coverage_pct": 44.8
+  },
+  "by_package": {
+    "Standard": {
+      "count": 1773,
+      "pct_count": 38.9,
+      "description": "<50 beds"
+    },
+    "Enterprise": {
+      "count": 2197,
+      "pct_count": 48.2,
+      "description": "50-399 beds"
+    },
+    "Enterprise Plus": {
+      "count": 467,
+      "pct_count": 10.3,
+      "description": "400-799 beds"
+    },
+    "Enterprise Premier": {
+      "count": 118,
+      "pct_count": 2.6,
+      "description": "800+ beds"
+    }
+  },
+  "by_segment": {
+    "community": {
+      "count": 3924,
+      "description": "Standard community hospitals"
+    },
+    "regional": {
+      "count": 497,
+      "description": "Regional medical centers"
+    },
+    "academic": {
+      "count": 72,
+      "description": "Academic medical centers"
+    },
+    "critical_access": {
+      "count": 35,
+      "description": "Rural critical access hospitals"
+    },
+    "specialty": {
+      "count": 27,
+      "description": "Specialty hospitals"
+    }
+  },
+  "top_health_systems": [
+    {"name": "HCA Healthcare", "hospitals": 95},
+    {"name": "Ascension", "hospitals": 69},
+    {"name": "CommonSpirit Health", "hospitals": 60},
+    {"name": "Providence", "hospitals": 46},
+    {"name": "AdventHealth", "hospitals": 38},
+    {"name": "Kaiser Permanente", "hospitals": 37},
+    {"name": "Baylor Scott & White Health", "hospitals": 33},
+    {"name": "Mercy (Midwest)", "hospitals": 32},
+    {"name": "Trinity Health", "hospitals": 28},
+    {"name": "Baptist Health (Multi-state)", "hospitals": 27},
+    {"name": "Bon Secours Mercy Health", "hospitals": 27},
+    {"name": "UPMC", "hospitals": 27},
+    {"name": "Advocate Health", "hospitals": 26},
+    {"name": "Adventist Health (West)", "hospitals": 24},
+    {"name": "Avera Health", "hospitals": 23},
+    {"name": "Texas Health Resources", "hospitals": 23},
+    {"name": "Mayo Clinic", "hospitals": 22},
+    {"name": "Sanford Health", "hospitals": 22},
+    {"name": "Ochsner Health", "hospitals": 21},
+    {"name": "Banner Health", "hospitals": 21}
+  ],
+  "methodology": {
+    "version": "2.4",
+    "config_file": "configs/health_systems.yaml",
+    "matching_types": [
+      "City Patterns - Match hospital name + city",
+      "State Patterns - Match hospital name within specific states",
+      "General Patterns - Match hospital name across all states",
+      "Exclude Patterns - Prevent false positives"
+    ]
+  },
+  "generated": "2026-01-22"
+}
