@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RecallWire TAM Analysis Dashboard (Legacy)</title>
+    <title>RecallWire TAM Analysis Dashboard</title>
     <!--
     ============================================================
-    DEPRECATED: This is the original dashboard with V1 pricing.
-
-    Please use executive-dashboard.html instead, which includes:
-    - V2 system-level pricing (validated with Mount Sinai)
-    - Realistic TAM ($91.7M vs $102.8M individual)
-    - 7-tab executive view with Data Explorer
+    TAM Analysis Dashboard - January 2025
+    Updated: v2.4 classification (408 health systems, 44.8% coverage)
     ============================================================
     -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -446,9 +442,9 @@
         <!-- Summary Cards -->
         <div class="summary-cards">
             <div class="card highlight">
-                <div class="card-label">Total Addressable Market</div>
-                <div class="card-value">$102.8M</div>
-                <div class="card-subtitle">Annual recurring revenue potential</div>
+                <div class="card-label">Realistic TAM</div>
+                <div class="card-value">$46.9M</div>
+                <div class="card-subtitle">System + Independent pricing</div>
             </div>
             <div class="card">
                 <div class="card-label">Total Hospitals</div>
@@ -457,13 +453,13 @@
             </div>
             <div class="card">
                 <div class="card-label">Health Systems Identified</div>
-                <div class="card-value">46</div>
-                <div class="card-subtitle">854 affiliated hospitals</div>
+                <div class="card-value">408</div>
+                <div class="card-subtitle">2,042 affiliated hospitals (44.8%)</div>
             </div>
             <div class="card">
                 <div class="card-label">System-Level TAM</div>
-                <div class="card-value teal">$12.7M</div>
-                <div class="card-subtitle">46 deals vs 854 individual</div>
+                <div class="card-value teal">$9.1M</div>
+                <div class="card-subtitle">408 system deals</div>
             </div>
         </div>
 
@@ -566,20 +562,20 @@
                     <h3>Health System Strategy: Why Target Systems?</h3>
                     <div class="value-prop-grid">
                         <div class="value-prop-item">
-                            <div class="number">46</div>
+                            <div class="number">408</div>
                             <div class="label">System deals</div>
                         </div>
                         <div class="value-prop-item">
-                            <div class="number">854</div>
+                            <div class="number">2,042</div>
                             <div class="label">Hospitals covered</div>
                         </div>
                         <div class="value-prop-item">
-                            <div class="number">$12.7M</div>
+                            <div class="number">$9.1M</div>
                             <div class="label">System TAM</div>
                         </div>
                         <div class="value-prop-item">
-                            <div class="number">46%</div>
-                            <div class="label">Avg volume discount</div>
+                            <div class="number">44.8%</div>
+                            <div class="label">Coverage rate</div>
                         </div>
                     </div>
                 </div>
@@ -627,7 +623,7 @@
                 <div class="section">
                     <div class="table-container">
                         <div class="table-header">
-                            <h3>All Health Systems (46)</h3>
+                            <h3>Top Health Systems (showing top 20 of 408)</h3>
                             <input type="text" class="search-box" id="systemSearchInput" placeholder="Search systems...">
                         </div>
                         <table>
@@ -652,7 +648,7 @@
     </div>
 
     <div class="footer">
-        RecallWire TAM Analysis | Generated January 2025 | Data: 4,555 US Hospitals
+        RecallWire TAM Analysis | January 2025 v2.4 | 4,555 Hospitals | 408 Health Systems | 44.8% Coverage
     </div>
 
     <script>
@@ -938,39 +934,30 @@
         });
 
         // =====================
-        // HEALTH SYSTEMS DATA
+        // HEALTH SYSTEMS DATA (Top 20 of 408 systems)
+        // Updated: v2.4 classification - 2,042 system members (44.8%)
         // =====================
         const healthSystemsData = [
-            { system: "HCA Healthcare", hospitals: 77, beds: 23288, states: 6, individualTam: 2720000, systemPrice: 1360000, discount: 50 },
-            { system: "Ascension", hospitals: 85, beds: 19108, states: 17, individualTam: 2210600, systemPrice: 1105000, discount: 50 },
-            { system: "Mercy", hospitals: 74, beds: 15187, states: 19, individualTam: 1793800, systemPrice: 897000, discount: 50 },
-            { system: "Baptist Health", hospitals: 45, beds: 15075, states: 11, individualTam: 1613100, systemPrice: 807000, discount: 50 },
-            { system: "Kaiser Permanente", hospitals: 37, beds: 9905, states: 5, individualTam: 1195100, systemPrice: 598000, discount: 50 },
-            { system: "Providence", hospitals: 42, beds: 9665, states: 10, individualTam: 1151200, systemPrice: 576000, discount: 50 },
-            { system: "AdventHealth", hospitals: 38, beds: 9693, states: 9, individualTam: 1056900, systemPrice: 528000, discount: 50 },
-            { system: "CommonSpirit Health", hospitals: 36, beds: 4854, states: 8, individualTam: 687100, systemPrice: 344000, discount: 50 },
-            { system: "UPMC", hospitals: 26, beds: 6350, states: 2, individualTam: 710400, systemPrice: 426000, discount: 40 },
-            { system: "Texas Health Resources", hospitals: 23, beds: 5380, states: 1, individualTam: 656000, systemPrice: 394000, discount: 40 },
-            { system: "Banner Health", hospitals: 21, beds: 5515, states: 4, individualTam: 620800, systemPrice: 372000, discount: 40 },
-            { system: "Corewell Health", hospitals: 19, beds: 5505, states: 2, individualTam: 612300, systemPrice: 367000, discount: 40 },
-            { system: "CHRISTUS Health", hospitals: 18, beds: 5091, states: 2, individualTam: 567300, systemPrice: 340000, discount: 40 },
-            { system: "SSM Health", hospitals: 18, beds: 4416, states: 4, individualTam: 545200, systemPrice: 327000, discount: 40 },
-            { system: "Baylor Scott & White", hospitals: 28, beds: 4094, states: 1, individualTam: 525100, systemPrice: 315000, discount: 40 },
-            { system: "Piedmont Healthcare", hospitals: 18, beds: 3636, states: 2, individualTam: 495500, systemPrice: 297000, discount: 40 },
-            { system: "Ochsner Health", hospitals: 23, beds: 3801, states: 3, individualTam: 493000, systemPrice: 296000, discount: 40 },
-            { system: "Mayo Clinic", hospitals: 19, beds: 4075, states: 4, individualTam: 400900, systemPrice: 241000, discount: 40 },
-            { system: "Atrium Health", hospitals: 14, beds: 3066, states: 3, individualTam: 379500, systemPrice: 228000, discount: 40 },
-            { system: "Novant Health", hospitals: 11, beds: 3460, states: 1, individualTam: 377500, systemPrice: 226000, discount: 40 },
-            { system: "Advocate Aurora", hospitals: 8, beds: 3652, states: 1, individualTam: 357400, systemPrice: 214000, discount: 40 },
-            { system: "Intermountain Health", hospitals: 13, beds: 2298, states: 4, individualTam: 293500, systemPrice: 176000, discount: 40 },
-            { system: "Bon Secours Mercy Health", hospitals: 10, beds: 2172, states: 3, individualTam: 291700, systemPrice: 175000, discount: 40 },
-            { system: "WellStar Health", hospitals: 9, beds: 2466, states: 1, individualTam: 286000, systemPrice: 172000, discount: 40 },
-            { system: "Indiana University Health", hospitals: 12, beds: 3036, states: 1, individualTam: 282100, systemPrice: 169000, discount: 40 },
-            { system: "Sutter Health", hospitals: 13, beds: 1645, states: 1, individualTam: 248200, systemPrice: 149000, discount: 40 },
-            { system: "Trinity Health", hospitals: 8, beds: 2026, states: 1, individualTam: 242000, systemPrice: 145000, discount: 40 },
-            { system: "Sanford Health", hospitals: 21, beds: 1562, states: 4, individualTam: 221300, systemPrice: 133000, discount: 40 },
-            { system: "Geisinger", hospitals: 8, beds: 1478, states: 1, individualTam: 197400, systemPrice: 118000, discount: 40 },
-            { system: "OSF HealthCare", hospitals: 10, beds: 1245, states: 2, individualTam: 173400, systemPrice: 104000, discount: 40 }
+            { system: "HCA Healthcare", hospitals: 95, beds: 28000, states: 15, individualTam: 2850000, systemPrice: 380000, discount: 87 },
+            { system: "Ascension", hospitals: 69, beds: 18500, states: 19, individualTam: 1870000, systemPrice: 276000, discount: 85 },
+            { system: "CommonSpirit Health", hospitals: 60, beds: 15200, states: 21, individualTam: 1620000, systemPrice: 240000, discount: 85 },
+            { system: "Providence", hospitals: 46, beds: 11500, states: 7, individualTam: 1240000, systemPrice: 184000, discount: 85 },
+            { system: "AdventHealth", hospitals: 38, beds: 9800, states: 9, individualTam: 1026000, systemPrice: 152000, discount: 85 },
+            { system: "Kaiser Permanente", hospitals: 37, beds: 9500, states: 8, individualTam: 999000, systemPrice: 148000, discount: 85 },
+            { system: "Baylor Scott & White Health", hospitals: 33, beds: 8200, states: 1, individualTam: 891000, systemPrice: 132000, discount: 85 },
+            { system: "Mercy (Midwest)", hospitals: 32, beds: 7800, states: 4, individualTam: 864000, systemPrice: 128000, discount: 85 },
+            { system: "Trinity Health", hospitals: 28, beds: 7000, states: 10, individualTam: 756000, systemPrice: 112000, discount: 85 },
+            { system: "Baptist Health (Multi-state)", hospitals: 27, beds: 6800, states: 5, individualTam: 729000, systemPrice: 108000, discount: 85 },
+            { system: "Bon Secours Mercy Health", hospitals: 27, beds: 6700, states: 7, individualTam: 729000, systemPrice: 108000, discount: 85 },
+            { system: "UPMC", hospitals: 27, beds: 6600, states: 4, individualTam: 729000, systemPrice: 108000, discount: 85 },
+            { system: "Advocate Health", hospitals: 26, beds: 6400, states: 2, individualTam: 702000, systemPrice: 104000, discount: 85 },
+            { system: "Adventist Health (West)", hospitals: 24, beds: 5800, states: 4, individualTam: 648000, systemPrice: 96000, discount: 85 },
+            { system: "Avera Health", hospitals: 23, beds: 3200, states: 5, individualTam: 621000, systemPrice: 92000, discount: 85 },
+            { system: "Texas Health Resources", hospitals: 23, beds: 5600, states: 1, individualTam: 621000, systemPrice: 92000, discount: 85 },
+            { system: "Mayo Clinic", hospitals: 22, beds: 5500, states: 5, individualTam: 594000, systemPrice: 88000, discount: 85 },
+            { system: "Sanford Health", hospitals: 22, beds: 3000, states: 9, individualTam: 594000, systemPrice: 88000, discount: 85 },
+            { system: "Ochsner Health", hospitals: 21, beds: 5200, states: 4, individualTam: 567000, systemPrice: 84000, discount: 85 },
+            { system: "Banner Health", hospitals: 21, beds: 5100, states: 6, individualTam: 567000, systemPrice: 84000, discount: 85 }
         ];
 
         // Tab switching

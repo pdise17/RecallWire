@@ -168,6 +168,13 @@ class HospitalClassifier:
             if excluded:
                 continue
 
+            # Check city-specific patterns (most precise)
+            city_patterns = system.get('city_patterns', {})
+            if city in city_patterns:
+                for pattern in city_patterns[city]:
+                    if re.search(pattern, hospital_name, re.IGNORECASE):
+                        return system_id, system_name
+
             # Check state-specific patterns (more precise)
             state_patterns = system.get('state_patterns', {})
             if state in state_patterns:
