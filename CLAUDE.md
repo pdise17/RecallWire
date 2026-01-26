@@ -24,6 +24,9 @@
 **Solution Statement:**
 > RecallWire automatically matches FDA recalls to your specific inventory, guides your team through resolution, and generates audit-ready documentation—reducing recall response time by 10x.
 
+**Website:** https://www.recallwire.com
+**LinkedIn:** https://www.linkedin.com/company/recall-wire/
+
 ---
 
 ## Target Market
