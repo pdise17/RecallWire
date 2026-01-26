@@ -1,0 +1,126 @@
+# ============================================
+# RecallWire BizDev - .gitignore
+# ============================================
+
+# --------------------------------------------
+# Environment & Secrets (NEVER commit these)
+# --------------------------------------------
+.env
+.env.local
+.env.*.local
+*.pem
+*.crt
+*.key
+secrets/
+credentials.json
+service-account.json
+
+# --------------------------------------------
+# Python
+# --------------------------------------------
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+*.whl
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+coverage/
+htmlcov/
+
+# Type checking
+.mypy_cache/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# --------------------------------------------
+# Node.js
+# --------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.local
+
+# --------------------------------------------
+# IDE & Editors
+# --------------------------------------------
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json.example
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# --------------------------------------------
+# OS Generated
+# --------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.AppleDouble
+.LSOverride
+Icon
+
+# --------------------------------------------
+# Logs & Debug
+# --------------------------------------------
+*.log
+logs/
+debug/
+*.debug
+
+# --------------------------------------------
+# Local Development
+# --------------------------------------------
+# Local output directories
+_local_out/
+local_data/
+tmp/
+temp/
+
+# Local database files
+*.db
+*.sqlite
+*.sqlite3
+
+# --------------------------------------------
+# Misc
+# --------------------------------------------
+*.bak
+*.backup
+*.orig
+*.tmp
+.cache/
+
+# Keep important empty directories
+!**/.gitkeep
+
+# --------------------------------------------
+# Claude Code
+# --------------------------------------------
+.claude/*
+!.claude/settings.json
+!.claude/skills/

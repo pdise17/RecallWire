@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecallWire Pricing - Complete Guide</title>
+    <style>
+        :root {
+            --primary-blue: #1E3A5F;
+            --accent-teal: #00B4A0;
+            --alert-red: #DC2626;
+            --text-dark: #1F2937;
+            --background-light: #F9FAFB;
+            --border-gray: #E5E7EB;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--background-light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            background: var(--primary-blue);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        header h1 span {
+            color: var(--accent-teal);
+        }
+
+        header p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Section styling */
+        section {
+            padding: 60px 0;
+        }
+
+        section:nth-child(even) {
+            background: var(--white);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 16px;
+        }
+
+        h4 {
+            font-size: 1.125rem;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        /* Pricing Cards */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 2px solid var(--border-gray);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--accent-teal);
+            position: relative;
+        }
+
+        .pricing-card.featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-teal);
+            color: white;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .pricing-card h3 {
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .pricing-card .subtitle {
+            text-align: center;
+            color: #6B7280;
+            margin-bottom: 24px;
+        }
+
+        .price {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .price .amount {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .price .period {
+            color: #6B7280;
+            font-size: 1rem;
+        }
+
+        .price .monthly {
+            font-size: 0.875rem;
+            color: #6B7280;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        .features-list li {
+            padding: 8px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .features-list li::before {
+            content: '✓';
+            color: var(--accent-teal);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .features-list li.missing::before {
+            content: '—';
+            color: #9CA3AF;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 14px 24px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .cta-button.primary {
+            background: var(--accent-teal);
+            color: white;
+        }
+
+        .cta-button.primary:hover {
+            background: #009688;
+        }
+
+        .cta-button.secondary {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .cta-button.secondary:hover {
+            background: #152d4a;
+        }
+
+        /* Feature Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .comparison-table thead th {
+            background: var(--primary-blue);
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-table thead th:first-child {
+            text-align: left;
+        }
+
+        .comparison-table thead th:not(:first-child) {
+            text-align: center;
+        }
+
+        .comparison-table tbody td:not(:first-child) {
+            text-align: center;
+        }
+
+        .comparison-table tbody tr:hover {
+            background: var(--background-light);
+        }
+
+        .comparison-table .category-row {
+            background: #F3F4F6;
+            font-weight: 600;
+        }
+
+        .check {
+            color: var(--accent-teal);
+            font-weight: 700;
+        }
+
+        .cross {
+            color: #9CA3AF;
+        }
+
+        /* Examples Section */
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .example-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 28px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .example-card.showcase {
+            border: 3px solid var(--accent-teal);
+            position: relative;
+            grid-column: 1 / -1;
+        }
+
+        .example-card.showcase::before {
+            content: 'SHOWCASE';
+            position: absolute;
+            top: -14px;
+            left: 24px;
+            background: var(--accent-teal);
+            color: white;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .example-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .example-header h4 {
+            margin: 0;
+        }
+
+        .example-tag {
+            background: var(--background-light);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--primary-blue);
+        }
+
+        .example-breakdown {
+            background: var(--background-light);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 16px 0;
+        }
+
+        .example-breakdown table {
+            width: 100%;
+        }
+
+        .example-breakdown td {
+            padding: 8px 0;
+        }
+
+        .example-breakdown td:last-child {
+            text-align: right;
+            font-weight: 500;
+        }
+
+        .example-breakdown .total-row {
+            border-top: 2px solid var(--primary-blue);
+            font-weight: 700;
+        }
+
+        .example-breakdown .total-row td {
+            padding-top: 12px;
+            font-size: 1.125rem;
+            color: var(--primary-blue);
+        }
+
+        .savings-banner {
+            background: linear-gradient(135deg, var(--accent-teal), #00897B);
+            color: white;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin-top: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .savings-banner .amount {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        /* RMaaS Section */
+        .rmaas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .rmaas-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 28px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .rmaas-card h4 {
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+        }
+
+        .rmaas-card .price {
+            margin: 16px 0;
+        }
+
+        .rmaas-card .price .amount {
+            font-size: 2.25rem;
+        }
+
+        /* Add-ons Section */
+        .addons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 32px;
+        }
+
+        .addon-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 24px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border-left: 4px solid var(--accent-teal);
+        }
+
+        .addon-card h4 {
+            margin-bottom: 8px;
+        }
+
+        .addon-card .price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+        }
+
+        .addon-card .description {
+            color: #6B7280;
+            font-size: 0.9rem;
+        }
+
+        /* Bundles */
+        .bundles-section {
+            background: linear-gradient(135deg, var(--primary-blue), #2d4a6f);
+            color: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-top: 40px;
+        }
+
+        .bundles-section h3 {
+            color: white;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .bundles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .bundle-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .bundle-card h4 {
+            color: var(--accent-teal);
+            margin-bottom: 8px;
+        }
+
+        .bundle-card .includes {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 12px;
+        }
+
+        .bundle-card .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .bundle-card .savings {
+            font-size: 0.875rem;
+            color: var(--accent-teal);
+            margin-top: 8px;
+        }
+
+        /* ROI Section */
+        .roi-section {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px;
+            margin-top: 32px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .roi-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        .roi-metric {
+            text-align: center;
+            padding: 24px;
+            background: var(--background-light);
+            border-radius: 12px;
+        }
+
+        .roi-metric .number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-teal);
+        }
+
+        .roi-metric .label {
+            color: #6B7280;
+            margin-top: 4px;
+        }
+
+        /* FAQ Section */
+        .faq-list {
+            max-width: 800px;
+            margin: 32px auto 0;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 8px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px 24px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent-teal);
+        }
+
+        .faq-answer {
+            padding: 0 24px 20px;
+            color: #6B7280;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-blue);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.8;
+            margin-bottom: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .examples-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .example-card.showcase {
+                grid-column: 1;
+            }
+
+            .comparison-table {
+                font-size: 0.875rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 12px 8px;
+            }
+        }
+
+        /* Utility classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-4 {
+            margin-top: 32px;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, rgba(0, 180, 160, 0.15), rgba(0, 180, 160, 0.05));
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .alert-box {
+            background: #FEF2F2;
+            border-left: 4px solid var(--alert-red);
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 24px 0;
+        }
+
+        .info-box {
+            background: #F0FDFA;
+            border-left: 4px solid var(--accent-teal);
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 24px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>RECALL<span>WIRE</span> Pricing</h1>
+            <p>Simple, transparent pricing that grows with you. No hidden fees. No per-user charges.</p>
+        </div>
+    </header>
+
+    <!-- Main Pricing Tiers -->
+    <section>
+        <div class="container">
+            <h2>Two Simple Plans</h2>
+            <p class="text-center">Choose the plan that matches your organization's size and needs.</p>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Standard</h3>
+                    <p class="subtitle">For clinics, ASCs, and small practices</p>
+                    <div class="price">
+                        <span class="amount">$4,999</span>
+                        <span class="period">/year</span>
+                        <p class="monthly">or $449/month</p>
+                    </div>
+                    <ul class="features-list">
+                        <li>1-5 locations included</li>
+                        <li>Real-time FDA alerts</li>
+                        <li>Advanced inventory matching</li>
+                        <li>Guided resolution workflow</li>
+                        <li>Complete audit trail</li>
+                        <li>500 AI Assistant queries/month</li>
+                        <li>Multi-facility hierarchy</li>
+                        <li>Basic department routing</li>
+                        <li>24hr email support response</li>
+                        <li>Self-serve implementation + onboarding call</li>
+                    </ul>
+                    <a href="#" class="cta-button primary">Start Free Trial</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <h3>Enterprise</h3>
+                    <p class="subtitle">For health systems and hospital networks</p>
+                    <div class="price">
+                        <span class="amount">$25,000+</span>
+                        <span class="period">/year</span>
+                        <p class="monthly">Custom pricing based on needs</p>
+                    </div>
+                    <ul class="features-list">
+                        <li>6+ locations (unlimited at higher tiers)</li>
+                        <li>AI-powered smart matching</li>
+                        <li>Custom workflows</li>
+                        <li>Priority AI Assistant (2,000-unlimited/mo)</li>
+                        <li>Smart prioritization</li>
+                        <li>Full API access (read/write)</li>
+                        <li>SSO & custom integrations</li>
+                        <li>4-8hr support response</li>
+                        <li>Dedicated/shared CSM</li>
+                        <li>White-glove implementation</li>
+                    </ul>
+                    <a href="#" class="cta-button secondary">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Feature Comparison -->
+    <section>
+        <div class="container">
+            <h2>Complete Feature Comparison</h2>
+            <p class="text-center">Every feature, side by side.</p>
+
+            <div style="overflow-x: auto; margin-top: 32px;">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Standard<br><small>$4,999/yr</small></th>
+                            <th>Enterprise<br><small>$25,000+/yr</small></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="category-row">
+                            <td colspan="3">Locations & Access</td>
+                        </tr>
+                        <tr>
+                            <td>Number of locations</td>
+                            <td>1-5</td>
+                            <td>6+ (unlimited at Premier)</td>
+                        </tr>
+                        <tr>
+                            <td>User accounts</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                        </tr>
+
+                        <tr class="category-row">
+                            <td colspan="3">Core Features</td>
+                        </tr>
+                        <tr>
+                            <td>Real-time FDA alerts</td>
+                            <td class="check">Yes</td>
+                            <td class="check">Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Inventory matching</td>
+                            <td>Advanced</td>
+                            <td>AI-powered</td>
+                        </tr>
+                        <tr>
+                            <td>Guided resolution workflow</td>
+                            <td class="check">Yes</td>
+                            <td>Custom workflows</td>
+                        </tr>
+                        <tr>
+                            <td>Audit trail & compliance docs</td>
+                            <td class="check">Yes</td>
+                            <td>Enhanced</td>
+                        </tr>
+                        <tr>
+                            <td>Dashboard & reporting</td>
+                            <td>Advanced</td>
+                            <td>Custom</td>
+                        </tr>
+
+                        <tr class="category-row">
+                            <td colspan="3">AI Features</td>
+                        </tr>
+                        <tr>
+                            <td>RecallWire Assistant queries</td>
+                            <td>500/month</td>
+                            <td>2,000-Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>AI-powered matching</td>
+                            <td>Limited</td>
+                            <td>Full</td>
+                        </tr>
+                        <tr>
+                            <td>Smart prioritization</td>
+                            <td class="cross">—</td>
+                            <td class="check">Yes</td>
+                        </tr>
+
+                        <tr class="category-row">
+                            <td colspan="3">Multi-Facility</td>
+                        </tr>
+                        <tr>
+                            <td>Multi-facility hierarchy</td>
+                            <td>Yes (up to 5)</td>
+                            <td class="check">Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Department routing</td>
+                            <td>Basic</td>
+                            <td>Advanced/Custom</td>
+                        </tr>
+                        <tr>
+                            <td>Cross-location reporting</td>
+                            <td class="check">Yes</td>
+                            <td class="check">Yes</td>
+                        </tr>
+                        <tr>
+                            <td>SLA management</td>
+                            <td>Basic</td>
+                            <td>Advanced/Custom</td>
+                        </tr>
+
+                        <tr class="category-row">
+                            <td colspan="3">Integrations</td>
+                        </tr>
+                        <tr>
+                            <td>CSV import</td>
+                            <td class="check">Yes</td>
+                            <td class="check">Yes</td>
+                        </tr>
+                        <tr>
+                            <td>API access (read)</td>
+                            <td class="check">Yes</td>
+                            <td class="check">Yes</td>
+                        </tr>
+                        <tr>
+                            <td>API access (write)</td>
+                            <td class="cross">—</td>
+                            <td class="check">Yes</td>
+                        </tr>
+                        <tr>
+                            <td>SSO (SAML/OIDC)</td>
+                            <td class="cross">—</td>
+                            <td class="check">Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Custom integrations</td>
+                            <td class="cross">—</td>
+                            <td class="check">Yes</td>
+                        </tr>
+
+                        <tr class="category-row">
+                            <td colspan="3">Support</td>
+                        </tr>
+                        <tr>
+                            <td>Help center & AI Assistant</td>
+                            <td class="check">Yes</td>
+                            <td class="check">Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Email support response</td>
+                            <td>24hr</td>
+                            <td>4-8hr</td>
+                        </tr>
+                        <tr>
+                            <td>Phone support</td>
+                            <td class="cross">—</td>
+                            <td class="check">Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Customer Success Manager</td>
+                            <td class="cross">—</td>
+                            <td>Shared/Dedicated</td>
+                        </tr>
+                        <tr>
+                            <td>Implementation</td>
+                            <td>Self-serve + call</td>
+                            <td>White-glove</td>
+                        </tr>
+
+                        <tr class="category-row">
+                            <td colspan="3">Usage Limits</td>
+                        </tr>
+                        <tr>
+                            <td>Alerts processed/month</td>
+                            <td>2,500</td>
+                            <td>10,000-50,000+</td>
+                        </tr>
+                        <tr>
+                            <td>Document scans/month</td>
+                            <td>500</td>
+                            <td>2,000-10,000+</td>
+                        </tr>
+                        <tr>
+                            <td>API calls/month</td>
+                            <td>10,000</td>
+                            <td>50,000-Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>Data retention</td>
+                            <td>3 years</td>
+                            <td>5-7+ years</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enterprise Sub-Tiers -->
+    <section>
+        <div class="container">
+            <h2>Enterprise Tier Breakdown</h2>
+            <p class="text-center">Pricing scales with your organization's size and needs.</p>
+
+            <div style="overflow-x: auto; margin-top: 32px;">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Sub-Tier</th>
+                            <th>Enterprise</th>
+                            <th>Enterprise Plus</th>
+                            <th>Enterprise Premier</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Locations</strong></td>
+                            <td>6-35</td>
+                            <td>36-100</td>
+                            <td>100+</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Annual Range</strong></td>
+                            <td>$25,000-$45,000</td>
+                            <td>$45,000-$75,000</td>
+                            <td>$75,000+</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Per-Location Effective</strong></td>
+                            <td>$714-$1,286</td>
+                            <td>$750-$1,250</td>
+                            <td>Negotiated</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AI Assistant</strong></td>
+                            <td>2,000/month</td>
+                            <td>5,000/month</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Custom workflows</strong></td>
+                            <td>Limited</td>
+                            <td class="check">Yes</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Custom integrations</strong></td>
+                            <td>Limited</td>
+                            <td class="check">Yes</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Support</strong></td>
+                            <td>Phone + Email (8hr)</td>
+                            <td>Dedicated CSM</td>
+                            <td>Dedicated team</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SLA</strong></td>
+                            <td>99.5%</td>
+                            <td>99.9%</td>
+                            <td>Custom</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sandbox environment</strong></td>
+                            <td class="cross">—</td>
+                            <td class="check">Yes</td>
+                            <td class="check">Yes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Best for</strong></td>
+                            <td>Regional health systems</td>
+                            <td>Large health systems, AMCs</td>
+                            <td>National hospital chains</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Examples -->
+    <section>
+        <div class="container">
+            <h2>Real-World Pricing Examples</h2>
+            <p class="text-center">See exactly what organizations like yours would pay.</p>
+
+            <div class="examples-grid">
+                <!-- Mt Sinai Showcase -->
+                <div class="example-card showcase">
+                    <div class="example-header">
+                        <div>
+                            <h4>Mount Sinai Health System</h4>
+                            <p style="color: #6B7280;">Leading academic medical center in New York City</p>
+                        </div>
+                        <span class="example-tag">75+ Locations</span>
+                    </div>
+
+                    <p>Mount Sinai is one of the nation's leading academic medical centers, encompassing 8 hospitals and an extensive ambulatory network across the New York metropolitan area. With complex research operations and high patient volumes, they require enterprise-grade recall management with complete audit trails.</p>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 24px;">
+                        <div>
+                            <h4 style="color: var(--alert-red);">Current Market Options</h4>
+                            <div class="example-breakdown">
+                                <table>
+                                    <tr>
+                                        <td>ECRI Alerts Workflow</td>
+                                        <td><strong>$75,878</strong>/yr</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-size: 0.875rem; color: #6B7280;">Includes: Alerts + Automatch + Data Standardization</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr style="margin-top: 8px;">
+                                        <td>ECRI Full Suite (optional)</td>
+                                        <td>$263,841/yr</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-size: 0.875rem; color: #6B7280;">Includes: Capital Guide + Supply Guide</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <p style="font-size: 0.875rem; color: #6B7280; font-style: italic;">Source: ECRI Mount Sinai Proposal, August 2025</p>
+                        </div>
+
+                        <div>
+                            <h4 style="color: var(--accent-teal);">With RecallWire Enterprise Plus</h4>
+                            <div class="example-breakdown">
+                                <table>
+                                    <tr>
+                                        <td>Enterprise Plus (36-100 locations)</td>
+                                        <td>$55,000/yr</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Healthcare Complete bundle (all categories)</td>
+                                        <td>Included</td>
+                                    </tr>
+                                    <tr>
+                                        <td>White-glove implementation</td>
+                                        <td>$8,000 (one-time)</td>
+                                    </tr>
+                                    <tr class="total-row">
+                                        <td>Year 1 Total</td>
+                                        <td>$63,000</td>
+                                    </tr>
+                                    <tr class="total-row">
+                                        <td>Ongoing Annual</td>
+                                        <td>$55,000/yr</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="savings-banner">
+                        <div>
+                            <div style="opacity: 0.9; font-size: 0.875rem;">Annual Savings vs. ECRI Alerts</div>
+                            <div class="amount">$20,878/year (28%)</div>
+                        </div>
+                        <div style="text-align: right;">
+                            <div style="opacity: 0.9; font-size: 0.875rem;">Plus: AI-powered Assistant</div>
+                            <div style="font-weight: 600;">5,000 queries/month included</div>
+                        </div>
+                    </div>
+
+                    <div class="info-box" style="margin-top: 24px;">
+                        <strong>Why RecallWire for Mount Sinai?</strong>
+                        <ul style="margin-top: 8px; margin-left: 20px;">
+                            <li><strong>Comparable Coverage:</strong> Same real-time FDA alerts and inventory matching</li>
+                            <li><strong>AI Advantage:</strong> 24/7 RecallWire Assistant vs. ECRI's human-only advisors</li>
+                            <li><strong>Faster Implementation:</strong> 4-8 weeks vs. variable timeline</li>
+                            <li><strong>Dedicated CSM:</strong> Named account manager for an 8-hospital system</li>
+                            <li><strong>Complete Audit Trail:</strong> Joint Commission-ready documentation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Example 1: Single ASC -->
+                <div class="example-card">
+                    <div class="example-header">
+                        <h4>Single Ambulatory Surgery Center</h4>
+                        <span class="example-tag">1 Location</span>
+                    </div>
+                    <p>Outpatient surgery center performing 3,000+ procedures annually. Needs to track surgical instruments, implants, and equipment recalls.</p>
+
+                    <div class="example-breakdown">
+                        <table>
+                            <tr>
+                                <td>Standard tier</td>
+                                <td>$4,999/yr</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td>Annual Total</td>
+                                <td>$4,999/yr</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="roi-metrics" style="margin-top: 16px;">
+                        <div class="roi-metric" style="padding: 16px;">
+                            <div class="number" style="font-size: 1.5rem;">622%</div>
+                            <div class="label" style="font-size: 0.75rem;">ROI</div>
+                        </div>
+                        <div class="roi-metric" style="padding: 16px;">
+                            <div class="number" style="font-size: 1.5rem;">51</div>
+                            <div class="label" style="font-size: 0.75rem;">Day Payback</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example 2: Multi-location Practice -->
+                <div class="example-card">
+                    <div class="example-header">
+                        <h4>4-Location Surgical Center Group</h4>
+                        <span class="example-tag">4 Locations</span>
+                    </div>
+                    <p>Growing surgical center network with locations across a metropolitan area. Specializes in orthopedic and spine procedures.</p>
+
+                    <div class="example-breakdown">
+                        <table>
+                            <tr>
+                                <td>Standard tier (up to 5 locations)</td>
+                                <td>$4,999/yr</td>
+                            </tr>
+                            <tr>
+                                <td>Surgical/OR category add-on</td>
+                                <td>$999/yr</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td>Annual Total</td>
+                                <td>$5,998/yr</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="roi-metrics" style="margin-top: 16px;">
+                        <div class="roi-metric" style="padding: 16px;">
+                            <div class="number" style="font-size: 1.5rem;">1,711%</div>
+                            <div class="label" style="font-size: 0.75rem;">ROI</div>
+                        </div>
+                        <div class="roi-metric" style="padding: 16px;">
+                            <div class="number" style="font-size: 1.5rem;">20</div>
+                            <div class="label" style="font-size: 0.75rem;">Day Payback</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example 3: Regional Health System -->
+                <div class="example-card">
+                    <div class="example-header">
+                        <h4>Regional Health System</h4>
+                        <span class="example-tag">15 Locations</span>
+                    </div>
+                    <p>Mid-sized regional system with 3 hospitals and 12 outpatient facilities. Serves a 5-county area with 800,000+ patients annually.</p>
+
+                    <div class="example-breakdown">
+                        <table>
+                            <tr>
+                                <td>Enterprise tier (6-35 locations)</td>
+                                <td>$30,000/yr</td>
+                            </tr>
+                            <tr>
+                                <td>Food & Dietary add-on</td>
+                                <td>$999/yr</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td>Annual Total</td>
+                                <td>~$31,000/yr</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="roi-metrics" style="margin-top: 16px;">
+                        <div class="roi-metric" style="padding: 16px;">
+                            <div class="number" style="font-size: 1.5rem;">509%</div>
+                            <div class="label" style="font-size: 0.75rem;">ROI</div>
+                        </div>
+                        <div class="roi-metric" style="padding: 16px;">
+                            <div class="number" style="font-size: 1.5rem;">60</div>
+                            <div class="label" style="font-size: 0.75rem;">Day Payback</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example 4: Large Academic Medical Center -->
+                <div class="example-card">
+                    <div class="example-header">
+                        <h4>Academic Medical Center</h4>
+                        <span class="example-tag">50 Locations</span>
+                    </div>
+                    <p>Major teaching hospital with affiliated clinics, research facilities, and specialty centers. Requires complete category coverage.</p>
+
+                    <div class="example-breakdown">
+                        <table>
+                            <tr>
+                                <td>Enterprise Plus (36-100 locations)</td>
+                                <td>$55,000/yr</td>
+                            </tr>
+                            <tr>
+                                <td>All categories included</td>
+                                <td>Included</td>
+                            </tr>
+                            <tr>
+                                <td>White-glove implementation</td>
+                                <td>$8,000 (one-time)</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td>Year 1 Total</td>
+                                <td>$63,000</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="roi-metrics" style="margin-top: 16px;">
+                        <div class="roi-metric" style="padding: 16px;">
+                            <div class="number" style="font-size: 1.5rem;">317%</div>
+                            <div class="label" style="font-size: 0.75rem;">ROI</div>
+                        </div>
+                        <div class="roi-metric" style="padding: 16px;">
+                            <div class="number" style="font-size: 1.5rem;">88</div>
+                            <div class="label" style="font-size: 0.75rem;">Day Payback</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example 5: National Health System -->
+                <div class="example-card">
+                    <div class="example-header">
+                        <h4>National Health System</h4>
+                        <span class="example-tag">150+ Locations</span>
+                    </div>
+                    <p>Multi-state hospital network with complex organizational hierarchy. Requires enterprise-grade security, custom integrations, and dedicated support.</p>
+
+                    <div class="example-breakdown">
+                        <table>
+                            <tr>
+                                <td>Enterprise Premier (100+)</td>
+                                <td>$85,000/yr</td>
+                            </tr>
+                            <tr>
+                                <td>All categories included</td>
+                                <td>Included</td>
+                            </tr>
+                            <tr>
+                                <td>Dedicated implementation team</td>
+                                <td>$15,000 (one-time)</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td>Year 1 Total</td>
+                                <td>$100,000</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="roi-metrics" style="margin-top: 16px;">
+                        <div class="roi-metric" style="padding: 16px;">
+                            <div class="number" style="font-size: 1.5rem;">400%+</div>
+                            <div class="label" style="font-size: 0.75rem;">ROI</div>
+                        </div>
+                        <div class="roi-metric" style="padding: 16px;">
+                            <div class="number" style="font-size: 1.5rem;">$400K+</div>
+                            <div class="label" style="font-size: 0.75rem;">Annual Savings</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Add-Ons -->
+    <section>
+        <div class="container">
+            <h2>Category Add-Ons</h2>
+            <p class="text-center">Extend your coverage beyond medical devices and basic drug recalls.</p>
+
+            <div class="addons-grid">
+                <div class="addon-card">
+                    <h4>Food & Dietary</h4>
+                    <div class="price">$999/year</div>
+                    <p class="description">FDA food recalls, USDA alerts, state health department notices</p>
+                </div>
+
+                <div class="addon-card">
+                    <h4>Pharmaceutical+</h4>
+                    <div class="price">$1,499/year</div>
+                    <p class="description">Enhanced drug coverage, DEA alerts, state pharmacy board notices</p>
+                </div>
+
+                <div class="addon-card">
+                    <h4>Laboratory</h4>
+                    <div class="price">$799/year</div>
+                    <p class="description">Lab equipment, reagents, diagnostics, testing supplies</p>
+                </div>
+
+                <div class="addon-card">
+                    <h4>Radiology/Imaging</h4>
+                    <div class="price">$799/year</div>
+                    <p class="description">Imaging equipment, contrast agents, radiopharmaceuticals</p>
+                </div>
+
+                <div class="addon-card">
+                    <h4>Surgical/OR</h4>
+                    <div class="price">$999/year</div>
+                    <p class="description">Surgical instruments, implants, OR equipment, sterilization</p>
+                </div>
+            </div>
+
+            <div class="bundles-section">
+                <h3>Save Up to 31% with Bundles</h3>
+                <div class="bundles-grid">
+                    <div class="bundle-card">
+                        <h4>Healthcare Complete</h4>
+                        <p class="includes">All 5 categories</p>
+                        <p class="price">$3,499/year</p>
+                        <p class="savings">Save 31% ($1,596)</p>
+                    </div>
+
+                    <div class="bundle-card">
+                        <h4>Medical Devices</h4>
+                        <p class="includes">Radiology + Surgical</p>
+                        <p class="price">$1,499/year</p>
+                        <p class="savings">Save 16% ($299)</p>
+                    </div>
+
+                    <div class="bundle-card">
+                        <h4>Clinical Bundle</h4>
+                        <p class="includes">Lab + Radiology + Surgical</p>
+                        <p class="price">$1,999/year</p>
+                        <p class="savings">Save 23% ($598)</p>
+                    </div>
+
+                    <div class="bundle-card">
+                        <h4>Compliance Bundle</h4>
+                        <p class="includes">Food + Pharmaceutical+</p>
+                        <p class="price">$1,999/year</p>
+                        <p class="savings">Save 20% ($499)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RMaaS Section -->
+    <section>
+        <div class="container">
+            <h2>Recall Management as a Service (RMaaS)</h2>
+            <p class="text-center">Your recall compliance team—without the headcount.</p>
+            <p class="text-center" style="color: #6B7280; margin-top: 8px;">Let our experts manage your recall operations end-to-end.</p>
+
+            <div class="rmaas-grid">
+                <div class="rmaas-card">
+                    <h4>RMaaS Essentials</h4>
+                    <div class="price">
+                        <span class="amount">$499</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="features-list" style="text-align: left;">
+                        <li>Daily alert triage</li>
+                        <li>Weekly summary reports</li>
+                        <li>Quarterly compliance reviews</li>
+                        <li class="missing">Active response management</li>
+                        <li class="missing">Stakeholder notifications</li>
+                        <li class="missing">Dedicated recall specialist</li>
+                    </ul>
+                </div>
+
+                <div class="rmaas-card" style="border: 2px solid var(--accent-teal);">
+                    <h4>RMaaS Core</h4>
+                    <div class="price">
+                        <span class="amount">$999</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="features-list" style="text-align: left;">
+                        <li>Daily alert triage</li>
+                        <li>Weekly summary reports</li>
+                        <li>Quarterly compliance reviews</li>
+                        <li>Active response management</li>
+                        <li>Stakeholder notifications</li>
+                        <li>Monthly compliance calls</li>
+                        <li class="missing">Dedicated recall specialist</li>
+                    </ul>
+                </div>
+
+                <div class="rmaas-card">
+                    <h4>RMaaS Complete</h4>
+                    <div class="price">
+                        <span class="amount">$2,499</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="features-list" style="text-align: left;">
+                        <li>Daily alert triage</li>
+                        <li>Weekly summary reports</li>
+                        <li>Quarterly compliance reviews</li>
+                        <li>Active response management</li>
+                        <li>Stakeholder notifications</li>
+                        <li>Monthly compliance calls</li>
+                        <li>Dedicated recall specialist</li>
+                        <li>Vendor/manufacturer communication</li>
+                        <li>On-site audit support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-box" style="max-width: 800px; margin: 32px auto 0;">
+                <strong>RMaaS Add-On Services</strong>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 16px;">
+                    <div>
+                        <strong>Audit Preparation</strong><br>
+                        <span style="color: var(--accent-teal); font-weight: 600;">$1,500</span><br>
+                        <small>Pre-inspection review, gap analysis, mock audit</small>
+                    </div>
+                    <div>
+                        <strong>Audit Support</strong><br>
+                        <span style="color: var(--accent-teal); font-weight: 600;">$2,500</span><br>
+                        <small>On-call support during actual inspection</small>
+                    </div>
+                    <div>
+                        <strong>Emergency Response</strong><br>
+                        <span style="color: var(--accent-teal); font-weight: 600;">$500/incident</span><br>
+                        <small>Rapid response for Class I recalls</small>
+                    </div>
+                    <div>
+                        <strong>Training Session</strong><br>
+                        <span style="color: var(--accent-teal); font-weight: 600;">$750/session</span><br>
+                        <small>Staff training on recall procedures</small>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center" style="margin-top: 24px; color: #6B7280; font-style: italic;">
+                RMaaS requires an active RecallWire software subscription. Bundle discounts available.
+            </p>
+        </div>
+    </section>
+
+    <!-- Competitive Comparison -->
+    <section>
+        <div class="container">
+            <h2>How RecallWire Compares</h2>
+            <p class="text-center">See how our pricing and features stack up against the competition.</p>
+
+            <div style="overflow-x: auto; margin-top: 32px;">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Dimension</th>
+                            <th>RecallWire</th>
+                            <th>PAR Excellence</th>
+                            <th>Inmar OneRecall</th>
+                            <th>ECRI Alerts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Starting Price</strong></td>
+                            <td style="color: var(--accent-teal); font-weight: 600;">$4,999/yr</td>
+                            <td>~$2,400/yr</td>
+                            <td>$25,000+/yr</td>
+                            <td>$75,878/yr</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Enterprise Price</strong></td>
+                            <td style="color: var(--accent-teal); font-weight: 600;">$25,000-$85,000/yr</td>
+                            <td>N/A</td>
+                            <td>$25,000-$75,000+</td>
+                            <td>$75,878-$263,841/yr</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pricing Transparency</strong></td>
+                            <td class="check">Published</td>
+                            <td class="check">Published</td>
+                            <td class="cross">Contact sales</td>
+                            <td class="cross">Contact sales</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AI Assistant</strong></td>
+                            <td class="check">Yes (24/7)</td>
+                            <td class="cross">No</td>
+                            <td>rapidID (limited)</td>
+                            <td class="cross">Human advisor only</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Recall Action Tracking</strong></td>
+                            <td class="check">Complete</td>
+                            <td class="cross">Task-level only</td>
+                            <td class="check">Yes</td>
+                            <td class="check">Yes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Guided Workflows</strong></td>
+                            <td class="check">Yes</td>
+                            <td class="cross">No</td>
+                            <td class="check">Yes</td>
+                            <td class="check">Yes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Role-Based Sign-offs</strong></td>
+                            <td class="check">Yes</td>
+                            <td class="cross">No</td>
+                            <td class="check">Yes</td>
+                            <td class="check">Yes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Implementation Time</strong></td>
+                            <td>4-8 weeks</td>
+                            <td>1 hour training</td>
+                            <td>6+ months</td>
+                            <td>Variable</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SMB Accessibility</strong></td>
+                            <td class="check">Yes</td>
+                            <td class="check">Yes</td>
+                            <td class="cross">Enterprise only</td>
+                            <td class="cross">Enterprise only</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Platform Age</strong></td>
+                            <td>Modern</td>
+                            <td>Modern</td>
+                            <td>2004 legacy</td>
+                            <td>50+ years</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="alert-box" style="max-width: 800px; margin: 32px auto 0;">
+                <strong>The PAR Excellence Gap:</strong> PAR tracks that you <em>received</em> a recall (task-level). RecallWire tracks what you <em>did about it</em> (quarantine, return, destroy, correct) with complete documentation. When Joint Commission asks "What was the disposition of these recalled items?", that difference matters. For an extra $200/month, you get completely different protection.
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Section -->
+    <section>
+        <div class="container">
+            <h2>Return on Investment</h2>
+            <p class="text-center">RecallWire pays for itself—and then some.</p>
+
+            <div class="roi-section">
+                <div class="roi-metrics">
+                    <div class="roi-metric">
+                        <div class="number">10x</div>
+                        <div class="label">Faster Recall Response</div>
+                    </div>
+                    <div class="roi-metric">
+                        <div class="number">98%</div>
+                        <div class="label">Noise Eliminated</div>
+                    </div>
+                    <div class="roi-metric">
+                        <div class="number">60%</div>
+                        <div class="label">Manual Steps Reduced</div>
+                    </div>
+                    <div class="roi-metric">
+                        <div class="number">747%</div>
+                        <div class="label">Average ROI</div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 40px;">
+                    <h3 style="text-align: center;">The True Cost of Manual Recall Management</h3>
+                    <div style="overflow-x: auto; margin-top: 24px;">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Organization Size</th>
+                                    <th>Manual FTEs Required</th>
+                                    <th>With RecallWire</th>
+                                    <th>Annual Labor Savings</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Single facility</td>
+                                    <td>0.25-0.5 FTE</td>
+                                    <td>0.05 FTE</td>
+                                    <td style="color: var(--accent-teal); font-weight: 600;">$15,000-$35,000</td>
+                                </tr>
+                                <tr>
+                                    <td>5-20 locations</td>
+                                    <td>1-2 FTEs</td>
+                                    <td>0.25 FTE</td>
+                                    <td style="color: var(--accent-teal); font-weight: 600;">$60,000-$150,000</td>
+                                </tr>
+                                <tr>
+                                    <td>20-50 locations</td>
+                                    <td>2-3 FTEs</td>
+                                    <td>0.5 FTE</td>
+                                    <td style="color: var(--accent-teal); font-weight: 600;">$120,000-$225,000</td>
+                                </tr>
+                                <tr>
+                                    <td>50+ locations</td>
+                                    <td>3-5 FTEs</td>
+                                    <td>1 FTE</td>
+                                    <td style="color: var(--accent-teal); font-weight: 600;">$200,000-$400,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="text-align: center; color: #6B7280; margin-top: 16px; font-size: 0.875rem;">
+                        *Assumes fully loaded cost of $75,000-$100,000 per FTE
+                    </p>
+                </div>
+
+                <div class="info-box" style="margin-top: 32px;">
+                    <strong>Risk Avoidance Value:</strong> Beyond labor savings, RecallWire protects against costly compliance failures:
+                    <ul style="margin-top: 8px; margin-left: 20px;">
+                        <li>Joint Commission citation: $50,000-$250,000+</li>
+                        <li>CMS civil monetary penalty: $100,000-$900,000+</li>
+                        <li>Medical device lawsuit: $1M-$26M+</li>
+                        <li>Loss of accreditation (Medicare loss): $1M-$10M+</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section>
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">What counts as a "location"?</div>
+                    <div class="faq-answer">
+                        A location is any distinct facility where you manage inventory and respond to recalls—hospitals, clinics, surgery centers, imaging centers, etc. Multiple departments within one facility count as one location.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I upgrade my plan anytime?</div>
+                    <div class="faq-answer">
+                        Yes. Upgrades take effect immediately, and we'll prorate the difference. Moving from Standard to Enterprise triggers a sales conversation to ensure the right fit for your organization.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What happens if I exceed my RecallWire Assistant queries?</div>
+                    <div class="faq-answer">
+                        We'll notify you when you reach 80% of your limit. If you exceed your limit, you can purchase additional query packs ($49 for 100 queries) or upgrade to Enterprise for higher limits or unlimited access.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Do you offer discounts for nonprofits or government?</div>
+                    <div class="faq-answer">
+                        Yes. Contact us for special pricing for qualifying organizations including nonprofits, government facilities, and academic institutions.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What's included in implementation?</div>
+                    <div class="faq-answer">
+                        <strong>Standard:</strong> Self-serve onboarding with help center, video guides, and an onboarding call.<br><br>
+                        <strong>Enterprise:</strong> White-glove implementation with dedicated team, training sessions, custom configuration, and ongoing support.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Is there a free trial?</div>
+                    <div class="faq-answer">
+                        Yes. Start a 14-day free trial of the Standard plan. No credit card required.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How does RecallWire compare to ECRI?</div>
+                    <div class="faq-answer">
+                        ECRI has unmatched expertise—50 years in patient safety. But their Alerts Workflow alone costs $75,878/year (verified). RecallWire delivers AI-powered recall management at $45,000-$60,000 for comparable deployments, saving you $16,000-$31,000 annually (21-41% less). Same audit trail, same compliance, plus AI guidance ECRI doesn't offer.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How is RecallWire different from PAR Excellence?</div>
+                    <div class="faq-answer">
+                        PAR Excellence (~$2,400/year) tracks at the task level—that you received and acknowledged a recall. RecallWire Standard ($4,999/year) tracks at the Recall Action level—what you did with the affected inventory (quarantine, return, destroy, correct) with guided workflows, role-based sign-offs, and complete documentation. For an extra $200/month, you get completely different audit protection.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What payment options are available?</div>
+                    <div class="faq-answer">
+                        <strong>Standard:</strong> Annual ($4,999/year) or monthly ($449/month). Annual plans billed annually; monthly plans billed monthly with no long-term commitment.<br><br>
+                        <strong>Enterprise:</strong> Annual billing with flexible payment terms. Multi-year discounts available.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="background: linear-gradient(135deg, var(--primary-blue), #2d4a6f); color: white; padding: 80px 0;">
+        <div class="container" style="text-align: center;">
+            <h2 style="color: white; margin-bottom: 16px;">Ready to Get Started?</h2>
+            <p style="opacity: 0.9; max-width: 600px; margin: 0 auto 32px;">
+                Join the healthcare facilities that trust RecallWire to protect their patients and streamline their compliance.
+            </p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="#" class="cta-button primary" style="min-width: 200px;">Start Free Trial</a>
+                <a href="#" class="cta-button" style="min-width: 200px; background: transparent; border: 2px solid white; color: white;">Schedule Demo</a>
+                <a href="#" class="cta-button" style="min-width: 200px; background: transparent; border: 2px solid white; color: white;">Contact Sales</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p><strong>RECALLWIRE</strong></p>
+            <p>AI-powered medical device recall management software for healthcare facilities.</p>
+            <p style="margin-top: 16px; font-size: 0.875rem;">
+                All prices in USD. Annual plans billed annually. Monthly plans billed monthly with no long-term commitment.
+            </p>
+            <p style="font-size: 0.875rem; margin-top: 8px;">
+                Document updated: January 2026
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
