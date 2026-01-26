@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<!--
+  RecallWire Executive One-Pager
+  Brand colors: Navy #1E3A5F, Teal #00B4A0, Alert Red #DC2626
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RecallWire - Executive Overview</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    @page { size: 8.5in 11in; margin: 0; }
+
+    html, body {
+      height: 100%;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .page {
+      width: 8.5in;
+      height: 11in;
+      margin: 0 auto;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ==================== HEADER ==================== */
+    .header {
+      background: linear-gradient(135deg, #1E3A5F 0%, #2A4A73 50%, #1E3A5F 100%);
+      padding: 14px 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .logo-area {
+      z-index: 2;
+    }
+
+    .logo-text {
+      font-size: 16px;
+      font-weight: 300;
+      color: white;
+      line-height: 1.0;
+      letter-spacing: 3px;
+      text-align: center;
+    }
+
+    .logo-text .line1,
+    .logo-text .line2 {
+      display: block;
+    }
+
+    .logo-text .line2 {
+      margin-left: 1.5em; /* Align W under A */
+    }
+
+    .logo-text .highlight {
+      color: #00B4A0;
+    }
+
+    /* Alternative: Use actual logo image */
+    .logo-img {
+      height: 36px;
+      width: auto;
+      filter: brightness(0) invert(1); /* Makes black logo white */
+    }
+
+    .logo-img .highlight-filter {
+      /* For logos with teal accents, this preserves the teal */
+    }
+
+    .header-text {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 1;
+    }
+
+    .header-tagline {
+      font-size: 18px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .header-subtitle {
+      font-size: 9px;
+      color: rgba(255, 255, 255, 0.85);
+      margin-top: 3px;
+      letter-spacing: 1px;
+    }
+
+    .header-badge {
+      background: #00B4A0;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 9px;
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.3;
+      z-index: 2;
+      text-decoration: none;
+    }
+
+    /* ==================== INTRO ==================== */
+    .intro-section {
+      padding: 12px 35px;
+      background: #F9FAFB;
+    }
+
+    .intro-text {
+      font-size: 10px;
+      color: #1F2937;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    /* ==================== STATS BAR ==================== */
+    .stats-bar {
+      background: linear-gradient(135deg, #00B4A0 0%, #00C9B2 100%);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 14px 35px;
+    }
+
+    .stat-item {
+      text-align: center;
+      color: white;
+      flex: 1;
+    }
+
+    .stat-number {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .stat-label {
+      font-size: 7px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 1px;
+      opacity: 0.9;
+    }
+
+    /* ==================== KEY CAPABILITIES ==================== */
+    .capabilities-section {
+      padding: 14px 35px 16px 35px;
+      background: white;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: #1E3A5F;
+      margin-bottom: 8px;
+    }
+
+    .capabilities-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    .capability-card {
+      background: #F9FAFB;
+      border-radius: 6px;
+      padding: 10px 12px;
+      border: 1px solid rgba(30, 58, 95, 0.08);
+    }
+
+    .capability-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+      padding-bottom: 4px;
+      border-bottom: 2px solid #00B4A0;
+    }
+
+    .capability-icon {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
+    .capability-title {
+      font-size: 10px;
+      font-weight: 700;
+      color: #1E3A5F;
+    }
+
+    .capability-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      margin-bottom: 4px;
+    }
+
+    .capability-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      font-size: 8px;
+      color: #1F2937;
+      line-height: 1.3;
+    }
+
+    .capability-list li::before {
+      content: "";
+      width: 4px;
+      height: 4px;
+      background: #00B4A0;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .capability-desc {
+      font-size: 7px;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    /* ==================== RECALL WORKFLOW ==================== */
+    .workflow-section {
+      padding: 16px 35px;
+      background: white;
+      border-top: 1px solid #eee;
+    }
+
+    .workflow-flow {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 4px;
+    }
+
+    .workflow-step {
+      flex: 1;
+      text-align: center;
+      position: relative;
+    }
+
+    .step-number {
+      width: 22px;
+      height: 22px;
+      background: linear-gradient(135deg, #1E3A5F 0%, #2A4A73 100%);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 700;
+      margin: 0 auto 4px;
+    }
+
+    .step-title {
+      font-size: 8px;
+      font-weight: 700;
+      color: #1E3A5F;
+      margin-bottom: 2px;
+    }
+
+    .step-desc {
+      font-size: 8px;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    .workflow-step:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 11px;
+      left: calc(50% + 16px);
+      width: calc(100% - 32px);
+      height: 2px;
+      background: #00B4A0;
+      border-radius: 2px;
+    }
+
+    /* ==================== COMPLIANCE IMPACT ==================== */
+    .impact-section {
+      padding: 14px 35px;
+      background: linear-gradient(135deg, #1E3A5F 0%, #2A4A73 100%);
+    }
+
+    .impact-title {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 6px;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .impact-card {
+      background: white;
+      border-radius: 6px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .impact-icon {
+      width: 22px;
+      height: 22px;
+      margin: 0 auto 4px;
+    }
+
+    .impact-stat {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1E3A5F;
+      margin-bottom: 2px;
+    }
+
+    .impact-label {
+      font-size: 8px;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    /* ==================== WHY RECALLWIRE ==================== */
+    .why-section {
+      padding: 12px 35px;
+      background: #F9FAFB;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+
+    .why-item {
+      text-align: center;
+      padding: 8px;
+      background: white;
+      border-radius: 6px;
+      border: 1px solid rgba(30, 58, 95, 0.08);
+    }
+
+    .why-icon {
+      width: 20px;
+      height: 20px;
+      margin: 0 auto 4px;
+    }
+
+    .why-text {
+      font-size: 8px;
+      color: #1F2937;
+      line-height: 1.4;
+    }
+
+    .why-text strong {
+      color: #1E3A5F;
+      display: block;
+      font-size: 9px;
+      margin-bottom: 2px;
+    }
+
+    /* ==================== RMAAS SECTION ==================== */
+    .rmaas-section {
+      padding: 14px 35px;
+      background: white;
+      border-top: 1px solid #eee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 6px;
+    }
+
+    .rmaas-logo {
+      height: 36px;
+      width: auto;
+    }
+
+    .rmaas-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .rmaas-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .rmaas-title {
+      font-size: 10px;
+      font-weight: 700;
+      color: #1E3A5F;
+    }
+
+    .rmaas-badge {
+      background: #00B4A0;
+      color: white;
+      font-size: 6px;
+      font-weight: 700;
+      padding: 2px 5px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .rmaas-desc {
+      font-size: 8px;
+      color: #1F2937;
+      line-height: 1.4;
+      margin-bottom: 4px;
+    }
+
+    .rmaas-tiers {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .rmaas-tier {
+      font-size: 7px;
+      color: #666;
+    }
+
+    .rmaas-tier strong {
+      color: #1E3A5F;
+      font-size: 8px;
+    }
+
+    /* ==================== CTA ==================== */
+    .cta-section {
+      padding: 10px 35px;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      border-top: 1px solid #eee;
+    }
+
+    .cta-button {
+      background: #00B4A0;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 5px;
+      font-size: 10px;
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .cta-text {
+      font-size: 9px;
+      color: #1F2937;
+    }
+
+    .cta-text strong {
+      color: #1E3A5F;
+    }
+
+    /* ==================== FOOTER ==================== */
+    .footer {
+      background: #1E3A5F;
+      color: white;
+      padding: 10px 35px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 8px;
+      margin-top: auto;
+    }
+
+    .footer-tagline {
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-contact {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-link {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      opacity: 0.9;
+    }
+
+    .footer-icon {
+      width: 14px;
+      height: 14px;
+    }
+
+    .footer-logo {
+      height: 18px;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+
+    @media print {
+      .page { height: 11in; page-break-after: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header -->
+    <div class="header">
+      <div class="logo-area">
+        <!-- Option A: CSS text treatment (works on dark backgrounds) -->
+        <div class="logo-text">
+          <span class="line1">REC<span class="highlight">A</span>LL</span>
+          <span class="line2">W<span class="highlight">I</span>RE</span>
+        </div>
+        <!-- Option B: Use actual logo (uncomment and comment out text above)
+        <img src="assets/logos/recallwire.png" alt="RecallWire" class="logo-img">
+        -->
+      </div>
+      <div class="header-text">
+        <div class="header-tagline">Medical Device Recall Compliance</div>
+        <div class="header-subtitle">AI-Powered Recall Management for Healthcare Facilities</div>
+      </div>
+      <a href="https://www.recallwire.com/resources-contact/" class="header-badge">RESPOND<br>10X FASTER</a>
+    </div>
+
+    <!-- Intro -->
+    <div class="intro-section">
+      <p class="intro-text">
+        Healthcare facilities receive 150,000+ FDA alerts annually—yet only 2-5% apply to their inventory.
+        RecallWire automatically filters noise, matches recalls to your specific devices, and guides your team through
+        resolution with complete audit documentation. Go from 40 hours per recall to 4.
+      </p>
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-number">75+</div>
+        <div class="stat-label">Class I Recalls in 2024</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">40 hrs</div>
+        <div class="stat-label">Manual Response Time</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">98%</div>
+        <div class="stat-label">Alert Noise Eliminated</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Audit Traceability</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">747%</div>
+        <div class="stat-label">ROI (50 locations)</div>
+      </div>
+    </div>
+
+    <!-- Key Capabilities -->
+    <div class="capabilities-section">
+      <h2 class="section-title">Platform Capabilities</h2>
+      <div class="capabilities-grid">
+
+        <div class="capability-card">
+          <div class="capability-header">
+            <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="#1E3A5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="m21 21-4.3-4.3"/>
+            </svg>
+            <span class="capability-title">Real-Time Detection</span>
+          </div>
+          <ul class="capability-list">
+            <li>24/7 FDA signal monitoring</li>
+            <li>Instant alert on relevant recalls</li>
+            <li>Class I priority escalation</li>
+            <li>Multi-category coverage</li>
+          </ul>
+          <p class="capability-desc">Continuous monitoring across all FDA categories with intelligent filtering.</p>
+        </div>
+
+        <div class="capability-card">
+          <div class="capability-header">
+            <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="#1E3A5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+            <span class="capability-title">AI-Powered Matching</span>
+          </div>
+          <ul class="capability-list">
+            <li>Automatic inventory cross-reference</li>
+            <li>UDI and lot number matching</li>
+            <li>98% noise reduction</li>
+            <li>Confidence scoring</li>
+          </ul>
+          <p class="capability-desc">Eliminates hours of manual research by auto-matching recalls to your inventory.</p>
+        </div>
+
+        <div class="capability-card">
+          <div class="capability-header">
+            <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="#1E3A5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 3 21 3 21 8"/>
+              <line x1="4" y1="20" x2="21" y2="3"/>
+              <polyline points="21 16 21 21 16 21"/>
+              <line x1="15" y1="15" x2="21" y2="21"/>
+              <line x1="4" y1="4" x2="9" y2="9"/>
+            </svg>
+            <span class="capability-title">Guided Resolution</span>
+          </div>
+          <ul class="capability-list">
+            <li>Step-by-step workflow management</li>
+            <li>Role-based task assignment</li>
+            <li>Deadline tracking</li>
+            <li>Status visibility across teams</li>
+          </ul>
+          <p class="capability-desc">Clear ownership and accountability ensure nothing falls through the cracks.</p>
+        </div>
+
+        <div class="capability-card">
+          <div class="capability-header">
+            <svg class="capability-icon" viewBox="0 0 24 24" fill="none" stroke="#1E3A5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+            </svg>
+            <span class="capability-title">Audit Documentation</span>
+          </div>
+          <ul class="capability-list">
+            <li>Automatic action logging</li>
+            <li>One-click compliance reports</li>
+            <li>Complete audit trail</li>
+            <li>Joint Commission ready</li>
+          </ul>
+          <p class="capability-desc">Every action tracked, timestamped, and attributable for instant compliance.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Recall Workflow -->
+    <div class="workflow-section">
+      <h2 class="section-title">How RecallWire Works</h2>
+      <div class="workflow-flow">
+        <div class="workflow-step">
+          <div class="step-number">1</div>
+          <div class="step-title">Detect</div>
+          <div class="step-desc">24/7 FDA monitoring<br>filters 150K+ alerts</div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-number">2</div>
+          <div class="step-title">Match</div>
+          <div class="step-desc">AI cross-references<br>your inventory</div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-number">3</div>
+          <div class="step-title">Alert</div>
+          <div class="step-desc">Instant notification<br>to stakeholders</div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-number">4</div>
+          <div class="step-title">Assign</div>
+          <div class="step-desc">Route tasks to<br>the right teams</div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-number">5</div>
+          <div class="step-title">Track</div>
+          <div class="step-desc">Monitor progress<br>in real-time</div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-number">6</div>
+          <div class="step-title">Document</div>
+          <div class="step-desc">Auto-generate<br>audit reports</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compliance Impact -->
+    <div class="impact-section">
+      <h2 class="impact-title">Compliance & Risk Impact</h2>
+      <div class="impact-grid">
+        <div class="impact-card">
+          <svg class="impact-icon" viewBox="0 0 24 24" fill="none" stroke="#00B4A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <div class="impact-stat">10x</div>
+          <div class="impact-label">Faster recall response<br>(40 hours → 4 hours)</div>
+        </div>
+        <div class="impact-card">
+          <svg class="impact-icon" viewBox="0 0 24 24" fill="none" stroke="#00B4A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+          </svg>
+          <div class="impact-stat">100%</div>
+          <div class="impact-label">Audit traceability for<br>Joint Commission</div>
+        </div>
+        <div class="impact-card">
+          <svg class="impact-icon" viewBox="0 0 24 24" fill="none" stroke="#00B4A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+            <line x1="12" y1="9" x2="12" y2="13"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+          <div class="impact-stat">Zero</div>
+          <div class="impact-label">Missed recalls with<br>24/7 monitoring</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why RecallWire -->
+    <div class="why-section">
+      <h2 class="section-title">Why Healthcare Leaders Choose RecallWire</h2>
+      <div class="why-grid">
+        <div class="why-item">
+          <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="#00B4A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+          <div class="why-text"><strong>Fast Deploy</strong>Go live in 4-8 weeks<br>with minimal IT lift</div>
+        </div>
+        <div class="why-item">
+          <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="#00B4A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="18" height="11" x="3" y="11" rx="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+          <div class="why-text"><strong>SOC 2 Ready</strong>Enterprise security<br>with SSO and RBAC</div>
+        </div>
+        <div class="why-item">
+          <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="#00B4A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="1" x2="12" y2="23"/>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+          <div class="why-text"><strong>Clear ROI</strong>747% return for<br>mid-size health systems</div>
+        </div>
+        <div class="why-item">
+          <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="#00B4A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          <div class="why-text"><strong>RMaaS Option</strong>Managed services<br>from $499/month</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RMaaS Section -->
+    <div class="rmaas-section">
+      <img src="assets/logos/rmaas.png" alt="RMaaS" class="rmaas-logo">
+      <div class="rmaas-content">
+        <div class="rmaas-header">
+          <span class="rmaas-title">RMaaS — Recall Management as a Service</span>
+          <span class="rmaas-badge">Managed Services</span>
+        </div>
+        <p class="rmaas-desc">
+          Our dedicated specialists handle triage, tracking, vendor communication, and audit documentation on your behalf.
+        </p>
+        <div class="rmaas-tiers">
+          <div class="rmaas-tier"><strong>Essentials</strong> $499/mo</div>
+          <div class="rmaas-tier"><strong>Core</strong> $999/mo</div>
+          <div class="rmaas-tier"><strong>Complete</strong> $2,499/mo</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-section">
+      <a href="https://www.recallwire.com/resources-contact/" class="cta-button">Schedule Executive Briefing</a>
+      <div class="cta-text"><strong>Standard:</strong> $4,999/year (1-5 locations) | <strong>Enterprise:</strong> Custom pricing</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-contact">
+        <a href="https://www.recallwire.com" class="footer-link" title="Website">
+          <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+            <path d="M2 12h20"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/recall-wire/" class="footer-link" title="LinkedIn">
+          <svg class="footer-icon" viewBox="0 0 24 24" fill="white">
+            <rect x="2" y="2" width="20" height="20" rx="3" fill="white"/>
+            <path d="M7 10v7M7 7v.01" stroke="#1E3A5F" stroke-width="2" stroke-linecap="round"/>
+            <path d="M11 17v-4c0-1.5 1-2.5 2.5-2.5S16 11.5 16 13v4" stroke="#1E3A5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+      <div class="footer-tagline">Respond to recalls 10x faster with complete compliance documentation</div>
+      <img src="assets/logos/recallwire.png" alt="RecallWire" class="footer-logo">
+    </div>
+
+  </div>
+</body>
+</html>
