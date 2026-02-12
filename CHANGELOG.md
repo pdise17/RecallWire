@@ -4,6 +4,36 @@ Track major decisions, pricing changes, and document evolution.
 
 ---
 
+## February 2026
+
+### Feature-Driven Pricing Model (February 11)
+**Decision:** Created feature-progression pricing framework based on competitive feature matrix
+
+| Tier | Annual Price | Lifecycle Stage | Features |
+|------|-------------|----------------|----------|
+| Essentials | $1,999/yr | Detect & Alert | 6 core features |
+| Standard | $4,999/yr | Match & Analyze | 12 features |
+| Professional | $12,999/yr | Act & Resolve | 19 features |
+| Enterprise | $25,000+/yr | Close Every Loop | 28 features |
+
+**Key additions:**
+- Essentials tier ($1,999) — undercuts PAR Excellence, captures budget market
+- Professional tier ($12,999) — bridges Standard-Enterprise gap with compliance features
+- Feature-gating by recall lifecycle stage (not just location count)
+- MVP feature list mapped to 28 features across 4 stages
+- 71% of features have zero competition (justifies premium at higher tiers)
+- Phased rollout plan aligned to feature shipping schedule
+- "Close Every Loop" narrative for Enterprise sales
+
+**New documents:**
+- `deliverables/14-feature-driven-pricing-model.md` — Feature-driven pricing with competitive matrix
+
+**Relationship to existing pricing:**
+- Enhances but does not replace Document 10 (2-tier published model)
+- Phased approach: launch 3-tier → evolve to 4-tier as features ship
+
+---
+
 ## December 2025
 
 ### Pricing Simplification (December 31)
