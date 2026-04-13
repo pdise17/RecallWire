@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Channel Sales IC Program — SOP | RecallWire</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+  /* ─────────────────────────────────────────
+     TOKENS
+  ───────────────────────────────────────── */
+  :root {
+    --blue:         #1E3A5F;
+    --teal:         #00B4A0;
+    --red:          #DC2626;
+    --dark:         #1F2937;
+    --mid:          #4B5563;
+    --light-border: #D1D5DB;
+    --bg:           #F9FAFB;
+    --white:        #ffffff;
+  }
+
+  /* ─────────────────────────────────────────
+     RESET
+  ───────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  /* ─────────────────────────────────────────
+     PAGE SETUP
+  ───────────────────────────────────────── */
+  @page {
+    size: Letter;
+    margin: 0.55in 0.6in 0.5in;
+  }
+
+  /* ─────────────────────────────────────────
+     BASE
+  ───────────────────────────────────────── */
+  body {
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 10pt;
+    color: var(--dark);
+    background: var(--white);
+    line-height: 1.6;
+  }
+
+  /* ─────────────────────────────────────────
+     RUNNING HEADER / FOOTER (print-only)
+  ───────────────────────────────────────── */
+  .rw-running-header { display: none; }
+  .rw-running-footer { display: none; }
+
+  /* ─────────────────────────────────────────
+     PAGE-1 BRANDED HEADER
+  ───────────────────────────────────────── */
+  .page-header {
+    background: var(--blue);
+    color: var(--white);
+    padding: 26px 48px 22px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .logo {
+    font-weight: 800;
+    font-size: 26pt;
+    letter-spacing: 0.07em;
+    line-height: 1;
+    color: var(--white);
+    white-space: nowrap;
+  }
+  .logo .teal { color: var(--teal); }
+  .doc-meta {
+    text-align: right;
+    font-size: 9pt;
+    opacity: 0.85;
+    line-height: 1.9;
+  }
+  .doc-meta strong {
+    color: var(--teal);
+    font-size: 10pt;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* ─────────────────────────────────────────
+     INTRO STRIP (teal band under header)
+  ───────────────────────────────────────── */
+  .intro-strip {
+    background: var(--teal);
+    color: var(--white);
+    padding: 11px 48px;
+    font-size: 9pt;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+
+  /* ─────────────────────────────────────────
+     MAIN
+  ───────────────────────────────────────── */
+  main { padding: 20px 48px 40px; }
+
+  /* ─────────────────────────────────────────
+     CONTINUATION PAGE HEADER (print-only)
+     Hidden on screen; bleeds to full width by
+     cancelling main's 48px horizontal padding
+  ───────────────────────────────────────── */
+  .cont-header { display: none; }
+
+  /* ─────────────────────────────────────────
+     DEAL CARDS GRID
+  ───────────────────────────────────────── */
+  .deal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 16px 0 20px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .deal-card {
+    border: 1.5px solid var(--light-border);
+    border-top: 3px solid var(--teal);
+    border-radius: 6px;
+    padding: 12px 14px;
+    background: var(--bg);
+  }
+  .card-label {
+    font-size: 7pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--mid);
+    margin-bottom: 3px;
+  }
+  .card-value {
+    font-size: 12pt;
+    font-weight: 700;
+    color: var(--blue);
+    line-height: 1.2;
+  }
+  .card-sub {
+    font-size: 7.5pt;
+    color: var(--mid);
+    margin-top: 2px;
+  }
+  .deal-card.highlight {
+    border-top-color: var(--blue);
+    background: var(--blue);
+  }
+  .deal-card.highlight .card-label { color: #93C5FD; }
+  .deal-card.highlight .card-value { color: var(--white); font-size: 20pt; }
+  .deal-card.highlight .card-sub   { color: #93C5FD; }
+
+  /* ─────────────────────────────────────────
+     SECTION HEADERS
+  ───────────────────────────────────────── */
+  .section-header {
+    background: var(--blue);
+    color: var(--white);
+    padding: 7px 14px;
+    font-weight: 700;
+    font-size: 9.5pt;
+    letter-spacing: 0.04em;
+    margin: 24px 0 12px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  .section-header .dot {
+    width: 7px; height: 7px;
+    background: var(--teal);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ─────────────────────────────────────────
+     SUBHEADINGS
+  ───────────────────────────────────────── */
+  h3 {
+    color: var(--blue);
+    font-size: 9pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 14px 0 5px;
+    padding-bottom: 3px;
+    border-bottom: 1.5px solid var(--teal);
+    display: inline-block;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* ─────────────────────────────────────────
+     PROSE
+  ───────────────────────────────────────── */
+  p { margin-bottom: 9px; orphans: 3; widows: 3; }
+  ul, ol { padding-left: 20px; margin-bottom: 9px; }
+  li { margin-bottom: 4px; orphans: 3; widows: 3; }
+
+  /* ─────────────────────────────────────────
+     TWO-COLUMN LAYOUT
+  ───────────────────────────────────────── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin: 10px 0 14px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .col-box {
+    border: 1.5px solid var(--light-border);
+    border-radius: 6px;
+    padding: 13px 14px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .col-title {
+    font-weight: 700;
+    color: var(--blue);
+    font-size: 8.5pt;
+    border-bottom: 2px solid var(--teal);
+    padding-bottom: 5px;
+    margin-bottom: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* ─────────────────────────────────────────
+     PROFILE GRID
+  ───────────────────────────────────────── */
+  .profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px;
+    margin: 10px 0 14px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .profile-item {
+    background: var(--bg);
+    border: 1.5px solid var(--light-border);
+    border-left: 3px solid var(--teal);
+    border-radius: 5px;
+    padding: 9px 12px;
+    font-size: 9pt;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .profile-item strong {
+    color: var(--blue);
+    display: block;
+    font-size: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+
+  /* ─────────────────────────────────────────
+     TABLES
+  ───────────────────────────────────────── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9pt;
+    margin: 10px 0 14px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  thead { background: var(--blue); color: var(--white); }
+  thead th { padding: 7px 11px; text-align: left; font-weight: 600; font-size: 8pt; }
+  tbody tr:nth-child(even) { background: var(--bg); }
+  tbody td { padding: 6px 11px; border-bottom: 1px solid var(--light-border); vertical-align: top; }
+  tbody tr:last-child td { border-bottom: none; }
+  .money { color: var(--teal); font-weight: 700; }
+
+  /* ─────────────────────────────────────────
+     CALLOUTS
+  ───────────────────────────────────────── */
+  .callout {
+    background: #FEF2F2;
+    border: 1.5px solid var(--red);
+    border-left: 4px solid var(--red);
+    border-radius: 6px;
+    padding: 13px 15px;
+    margin: 12px 0;
+    font-size: 9.5pt;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .callout-title {
+    font-weight: 700;
+    color: var(--red);
+    font-size: 8.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 5px;
+  }
+  .callout-teal { background: #F0FDFA; border-color: var(--teal); border-left-color: var(--teal); }
+  .callout-teal .callout-title { color: var(--teal); }
+  .callout-blue { background: #EFF6FF; border-color: var(--blue); border-left-color: var(--blue); }
+  .callout-blue .callout-title { color: var(--blue); }
+
+  /* ─────────────────────────────────────────
+     CHECKLIST
+  ───────────────────────────────────────── */
+  .checklist { list-style: none; padding-left: 0; }
+  .checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--bg);
+    font-size: 9pt;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checkbox {
+    width: 13px; height: 13px;
+    border: 2px solid var(--teal);
+    border-radius: 3px;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+  .checkbox.blue { border-color: var(--blue); }
+
+  /* ─────────────────────────────────────────
+     BADGE
+  ───────────────────────────────────────── */
+  .badge {
+    display: inline-block;
+    background: var(--teal);
+    color: var(--white);
+    font-size: 7pt;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 12px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .badge-blue { background: var(--blue); }
+
+  /* ─────────────────────────────────────────
+     SCREEN FOOTER
+  ───────────────────────────────────────── */
+  .page-footer {
+    border-top: 2px solid var(--blue);
+    padding: 12px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 8pt;
+    color: var(--mid);
+    margin-top: 24px;
+  }
+  .page-footer .footer-logo {
+    font-weight: 800;
+    font-size: 10pt;
+    color: var(--blue);
+    letter-spacing: 0.06em;
+  }
+  .page-footer .footer-logo .teal { color: var(--teal); }
+  .page-footer a { color: var(--teal); text-decoration: none; }
+
+  /* ─────────────────────────────────────────
+     TRACK LABELS
+  ───────────────────────────────────────── */
+  .track-label {
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 8px;
+    margin-top: 4px;
+  }
+  .track-label-1 { background: var(--teal); color: var(--white); }
+  .track-label-2 { background: var(--blue); color: var(--white); }
+
+  /* ─────────────────────────────────────────
+     TRACK 2 HIGHLIGHT CARD
+  ───────────────────────────────────────── */
+  .deal-card.highlight-teal {
+    border-top-color: var(--teal);
+    background: #0D3349;
+  }
+  .deal-card.highlight-teal .card-label { color: #99E6DE; }
+  .deal-card.highlight-teal .card-value { color: var(--white); }
+  .deal-card.highlight-teal .card-sub   { color: #99E6DE; }
+
+  /* ─────────────────────────────────────────
+     PARTNER CATEGORY GRID (3-col)
+  ───────────────────────────────────────── */
+  .partner-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 10px 0 14px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .partner-card {
+    border: 1.5px solid var(--light-border);
+    border-top: 3px solid var(--blue);
+    border-radius: 6px;
+    padding: 11px 13px;
+    background: var(--bg);
+    break-inside: avoid;
+  }
+  .partner-card .p-category {
+    font-size: 7pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--teal);
+    margin-bottom: 2px;
+  }
+  .partner-card .p-title {
+    font-size: 10pt;
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 4px;
+  }
+  .partner-card .p-desc { font-size: 8pt; color: var(--mid); }
+
+  /* ─────────────────────────────────────────
+     COMPENSATION FACTORS TABLE (Track 2)
+  ───────────────────────────────────────── */
+  .factor-table thead { background: var(--blue); }
+
+  /* ─────────────────────────────────────────
+     UTILITY
+  ───────────────────────────────────────── */
+  .no-break { break-inside: avoid; page-break-inside: avoid; }
+
+  /* ─────────────────────────────────────────────
+     PRINT OVERRIDES — continuous flow, no forced breaks
+  ───────────────────────────────────────────── */
+  @media print {
+
+    /* — Colors — */
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    /* — Base — */
+    body { font-size: 9pt; line-height: 1.45; }
+
+    /* — Fixed running elements off — */
+    .rw-running-header { display: none; }
+    .rw-running-footer { display: none; }
+    .cont-header       { display: none; }
+
+    /* — Page header: tighter — */
+    .page-header { padding: 18px 40px 16px; }
+
+    /* — Intro strip — */
+    .intro-strip {
+      padding: 8px 40px;
+      font-size: 8.5pt;
+      break-before: avoid;
+    }
+
+    /* — Main: less padding so content fills pages — */
+    main { padding: 14px 40px 24px; }
+
+    /* — Section headers: tighter spacing — */
+    .section-header {
+      margin: 14px 0 8px;
+      padding: 6px 12px;
+      font-size: 9pt;
+    }
+
+    /* — Deal cards: tighter — */
+    .deal-grid {
+      gap: 7px;
+      margin: 10px 0 12px;
+      break-inside: avoid;
+    }
+    .deal-card { padding: 9px 11px; }
+    .deal-card.highlight .card-value { font-size: 18pt; }
+
+    /* — Profile grid: allow natural page flow — */
+    .profile-grid {
+      gap: 7px;
+      margin: 8px 0 10px;
+      break-inside: auto;      /* let rows break across pages naturally */
+    }
+    .profile-item {
+      padding: 7px 10px;
+      break-inside: avoid;     /* keep each card intact */
+    }
+
+    /* — Two-col boxes — */
+    .two-col {
+      gap: 12px;
+      margin: 8px 0 10px;
+      break-inside: avoid;
+    }
+    .col-box { padding: 10px 12px; }
+    .col-title { margin-bottom: 7px; padding-bottom: 4px; }
+
+    /* — Tables — */
+    table  { margin: 8px 0 10px; }
+    thead  { display: table-header-group; }
+    tr     { break-inside: avoid; }
+    thead th { padding: 6px 10px; }
+    tbody td { padding: 5px 10px; }
+
+    /* — Callouts: tighter — */
+    .callout {
+      padding: 10px 13px;
+      margin: 8px 0;
+      break-inside: avoid;
+    }
+    .callout-title { margin-bottom: 4px; }
+
+    /* — Checklist — */
+    .checklist li { padding: 4px 0; }
+
+    /* — Prose — */
+    p          { margin-bottom: 6px; orphans: 3; widows: 3; }
+    ul, ol     { margin-bottom: 6px; }
+    li         { margin-bottom: 3px; orphans: 3; widows: 3; }
+    h3         { margin: 10px 0 4px; }
+
+    /* — Footer: show at end — */
+    .page-footer {
+      display: flex;
+      margin-top: 14px;
+      padding: 10px 40px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── FIXED RUNNING HEADER ── -->
+<div class="rw-running-header">
+  <div class="rh-logo">REC<span class="teal">A</span>LL&nbsp;W<span class="teal">I</span>RE</div>
+  <div class="rh-title">Standard Operating Procedure — Channel Sales IC Program &nbsp;|&nbsp; Florida</div>
+</div>
+
+<!-- ── FIXED RUNNING FOOTER ── -->
+<div class="rw-running-footer">
+  <div class="rf-brand">REC<span class="teal">A</span>LL&nbsp;W<span class="teal">I</span>RE</div>
+  <div>Channel Sales IC Program — SOP &nbsp;|&nbsp; v1.0 April 2026 &nbsp;|&nbsp; Governing State: Florida</div>
+  <div class="rf-url">www.recallwire.com</div>
+</div>
+
+<!-- ── PAGE-1 BRANDED HEADER ── -->
+<div class="page-header">
+  <div>
+    <div class="logo">REC<span class="teal">A</span>LL&nbsp;W<span class="teal">I</span>RE</div>
+    <div style="margin-top:10px; font-size:8pt; color:#93C5FD; letter-spacing:0.04em;">www.recallwire.com</div>
+  </div>
+  <div class="doc-meta">
+    <strong>STANDARD OPERATING PROCEDURE</strong>
+    Channel Sales — IC Engagement Program<br>
+    Healthcare &amp; Medical Device Vertical<br>
+    Governing State: Florida &nbsp;|&nbsp; Version 1.0 — April 2026
+  </div>
+</div>
+
+<!-- Teal intro strip -->
+<div class="intro-strip">
+  This SOP summarizes RecallWire's independent contractor channel sales program — deal structure, role, responsibilities, and onboarding requirements for all IC engagements.
+</div>
+
+<!-- ── MAIN CONTENT ── -->
+<main>
+
+  <!-- ▸ DEAL AT A GLANCE ◂ -->
+  <div class="section-header"><span class="dot"></span> The Deal at a Glance</div>
+  <p style="font-size:9pt;margin-bottom:10px;">This program covers two distinct engagement tracks. Compensation structure differs by track.</p>
+
+  <!-- TRACK 1 -->
+  <div class="track-label track-label-1">TRACK 1 — DIRECT HEALTH SYSTEM</div>
+  <div class="deal-grid">
+    <div class="deal-card highlight">
+      <div class="card-label">Commission Rate</div>
+      <div class="card-value">30%</div>
+      <div class="card-sub">commission on individual deals</div>
+    </div>
+    <div class="deal-card">
+      <div class="card-label">Commission Term</div>
+      <div class="card-value">First Contract</div>
+      <div class="card-sub">Single lump-sum paid on client subscription collection</div>
+    </div>
+    <div class="deal-card">
+      <div class="card-label">Base Salary</div>
+      <div class="card-value">None</div>
+      <div class="card-sub">Commission-only engagement</div>
+    </div>
+    <div class="deal-card">
+      <div class="card-label">Meeting Cadence</div>
+      <div class="card-value">2x / Week</div>
+      <div class="card-sub">Tuesday &amp; Friday, 1 hour each (virtual)</div>
+    </div>
+    <div class="deal-card">
+      <div class="card-label">Target Market</div>
+      <div class="card-value">USA</div>
+      <div class="card-sub">Regions &amp; verticals TBD collaboratively</div>
+    </div>
+    <div class="deal-card">
+      <div class="card-label">Performance Metrics</div>
+      <div class="card-value">Quality First</div>
+      <div class="card-sub">No hard quotas at this stage</div>
+    </div>
+  </div>
+
+  <!-- TRACK 2 -->
+  <div class="track-label track-label-2">TRACK 2 — VENDOR &amp; DISTRIBUTOR (WHITE LABEL)</div>
+  <div class="deal-grid deal-grid-3">
+    <div class="deal-card highlight-teal">
+      <div class="card-label">Commission Structure</div>
+      <div class="card-value" style="font-size:13pt;">Deal-by-Deal</div>
+      <div class="card-sub">Negotiated per partnership; no fixed rate</div>
+    </div>
+    <div class="deal-card">
+      <div class="card-label">Deal Type</div>
+      <div class="card-value" style="font-size:13pt;">White Label</div>
+      <div class="card-sub">Vendor distributes RecallWire under their brand</div>
+    </div>
+    <div class="deal-card">
+      <div class="card-label">Opportunity Scale</div>
+      <div class="card-value" style="font-size:13pt;">Large</div>
+      <div class="card-sub">Single deal can reach hundreds of facilities</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="callout-title">⚠ Commission Contingency — No Client Payment, No Commission</div>
+    No commission is owed if RecallWire does not collect cleared payment from the client. Commission obligations arise only upon actual receipt of client funds. This applies to disputed charges, chargebacks, and any other non-payment event.
+  </div>
+
+  <!-- ▸ WHO WE'RE LOOKING FOR ◂ -->
+  <div class="section-header"><span class="dot"></span> Who We Are Looking For</div>
+  <p>RecallWire is building a channel of <strong>VP-level business development professionals</strong> with established books of business in healthcare. We are not hiring generalists. We are seeking operators who already have trusted relationships inside health systems, IDNs, and large care facilities — and who can open doors based on their existing credibility.</p>
+
+  <div class="profile-grid">
+    <div class="profile-item">
+      <strong>Experience Range</strong>
+      5–30 years of B2B healthcare sales with a verifiable record of exceeding multi-million dollar quotas
+    </div>
+    <div class="profile-item">
+      <strong>Industry Background</strong>
+      Medical Device sales preferred; Pharma, Supply Chain software, or Health-SaaS highly valued
+    </div>
+    <div class="profile-item">
+      <strong>Existing Network</strong>
+      Established relationships within regional or national health systems; existing book of business
+    </div>
+    <div class="profile-item">
+      <strong>Communication</strong>
+      Exceptional verbal and written skills; able to lead C-suite discovery independently
+    </div>
+    <div class="profile-item">
+      <strong>Tools</strong>
+      Own professional toolset; active LinkedIn presence required minimum
+    </div>
+    <div class="profile-item">
+      <strong>Operating Style</strong>
+      True independent operator — minimal hand-holding, high credibility, self-directed
+    </div>
+  </div>
+
+  <!-- ▸ ROLE & RESPONSIBILITIES ◂ -->
+  <div class="section-header"><span class="dot"></span> Role &amp; Responsibilities</div>
+
+  <div class="two-col">
+    <div class="col-box">
+      <div class="col-title">What the IC Does <span class="badge">Contractor</span></div>
+      <ol style="font-size:9pt;">
+        <li style="margin-bottom:7px;"><strong>Prospect</strong> — Identify and research target accounts within agreed territory or vertical.</li>
+        <li style="margin-bottom:7px;"><strong>Outreach</strong> — Conduct outbound BD using professional network, LinkedIn, phone, and email.</li>
+        <li style="margin-bottom:7px;"><strong>Qualify</strong> — Run initial discovery to assess fit and understand recall management pain points.</li>
+        <li style="margin-bottom:7px;"><strong>Set Appointments</strong> — Book qualified demo appointments for RecallWire Co-Founders. <em>This is the primary deliverable.</em></li>
+        <li style="margin-bottom:7px;"><strong>Report</strong> — Maintain pipeline visibility and share market feedback at weekly meetings.</li>
+        <li style="margin-bottom:7px;"><strong>Attend Meetings</strong> — Two 1-hour virtual meetings per week (Tue &amp; Fri).</li>
+        <li><strong>Manage Relationships</strong> — Maintain ongoing client relationships at a high-touch level through periodic check-ins focused on relationship continuity; day-to-day account management is not expected.</li>
+      </ol>
+    </div>
+    <div class="col-box">
+      <div class="col-title">What RecallWire Does <span class="badge badge-blue">Company</span></div>
+      <ol style="font-size:9pt;">
+        <li style="margin-bottom:7px;"><strong>Demos &amp; Closing</strong> — Co-Founders lead all product demos, discovery calls, procurement discussions, and contract negotiations. The IC attends initial client cycles in a supporting capacity; these are critical learning cycles for the founding team. As the program matures, expanded IC involvement will be evaluated.</li>
+        <li style="margin-bottom:7px;"><strong>Collateral</strong> — Provide sales materials, one-pagers, pitch decks, battlecards, and competitive positioning.</li>
+        <li style="margin-bottom:7px;"><strong>Deal Support</strong> — Available for warm handoffs and executive-level calls as needed.</li>
+        <li><strong>Commission Payout</strong> — Paid within 3–5 business days of cleared client payment received. ACH preferred; international and other payment types accommodated. No upfront commissions — cleared client payment is required before any commission is released.</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ▸ COMMISSION EXAMPLES (TRACK 1) ◂ -->
+  <div class="section-header"><span class="dot"></span> Commission Structure — Examples (Track 1)</div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Contract Value</th>
+        <th>Annual Commission @ 30%</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>$4,999 <span style="font-size:7.5pt;color:var(--mid);">(Standard tier)</span></td><td class="money">$1,500</td><td>Minimum viable deal; single facility</td></tr>
+      <tr><td>$10,000</td><td class="money">$3,000</td><td>Small IDN or multi-site entry</td></tr>
+      <tr><td>$25,000 <span style="font-size:7.5pt;color:var(--mid);">(Enterprise tier)</span></td><td class="money">$7,500</td><td>6+ location enterprise contract</td></tr>
+      <tr><td>$50,000</td><td class="money">$15,000</td><td>Mid-size health system</td></tr>
+      <tr><td>$100,000</td><td class="money">$30,000</td><td>Large IDN / multi-state system</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:8pt;color:var(--mid);">Standard tier starts at $4,999/year; Enterprise starts at $25,000/year. Multi-site deals are the highest-value opportunities.</p>
+
+  <h3>Payment Mechanics</h3>
+  <ul style="font-size:9pt;margin-bottom:12px;">
+    <li style="margin-bottom:5px;"><strong>One-time payment</strong> — Commission is a single lump-sum; it is not distributed monthly over the contract term.</li>
+    <li style="margin-bottom:5px;"><strong>Net collection basis</strong> — Paid 3–5 business days after cleared client payment is received. No upfront commissions under any circumstances.</li>
+    <li style="margin-bottom:5px;"><strong>Payment method</strong> — ACH preferred; wire, check, and international payments accommodated.</li>
+    <li><strong>High-volume cadence</strong> — If deal volume warrants, payout schedule can shift to monthly batch payments by mutual agreement.</li>
+  </ul>
+
+  <!-- ▸ VENDOR & DISTRIBUTOR — TRACK 2 ◂ -->
+  <div class="section-header"><span class="dot"></span> Vendor &amp; Distributor Partnerships — Track 2</div>
+
+  <p>In addition to direct health system sales, RecallWire is actively pursuing <strong>white label and distribution partnerships</strong> with medical device manufacturers, supply chain companies, GPOs, and distributors. These are high-leverage opportunities — a single partnership can push RecallWire's solution to hundreds of facilities through an existing trusted commercial relationship.</p>
+
+  <div class="callout callout-blue">
+    <div class="callout-title">What a Vendor / Distributor Partnership Looks Like</div>
+    A device maker or distributor packages RecallWire as part of their existing offering — either co-branded or white labeled under their name. They sell or bundle it to their existing customer base. RecallWire handles fulfillment, onboarding, and platform support. The IC who originates the relationship is compensated on the resulting deal.
+  </div>
+
+  <h3>Target Partner Categories</h3>
+  <div class="partner-grid">
+    <div class="partner-card">
+      <div class="p-category">Medical Device Makers</div>
+      <div class="p-title">OEMs &amp; Manufacturers</div>
+      <div class="p-desc">Companies already selling into health systems who need a recall compliance layer</div>
+    </div>
+    <div class="partner-card">
+      <div class="p-category">Supply Chain &amp; Distribution</div>
+      <div class="p-title">Distributors &amp; GPOs</div>
+      <div class="p-desc">Distributors with large hospital and IDN customer bases; GPOs seeking value-add services</div>
+    </div>
+    <div class="partner-card">
+      <div class="p-category">Health-SaaS Platforms</div>
+      <div class="p-title">Adjacent Software</div>
+      <div class="p-desc">EHR, CMMS, inventory, or supply chain platforms looking to embed recall management</div>
+    </div>
+  </div>
+
+  <h3>IC Role in Vendor / Distributor Deals</h3>
+  <div class="two-col">
+    <div class="col-box">
+      <div class="col-title">IC Responsibilities <span class="badge">Contractor</span></div>
+      <ol style="font-size:9pt;">
+        <li style="margin-bottom:7px;"><strong>Identify</strong> — Leverage existing relationships with vendors, distributors, or GPOs to surface partnership opportunities.</li>
+        <li style="margin-bottom:7px;"><strong>Qualify</strong> — Assess whether the partner has the distribution reach and customer alignment to make a white label deal viable.</li>
+        <li style="margin-bottom:7px;"><strong>Introduce</strong> — Make the warm introduction to RecallWire Co-Founders. <em>This is the IC's primary deliverable on this track.</em></li>
+        <li><strong>Support</strong> — Remain available as a relationship bridge during Co-Founder-led negotiations. White label deals evolve on a case-by-case basis; the IC will have visibility into how each deal progresses.</li>
+      </ol>
+    </div>
+    <div class="col-box">
+      <div class="col-title">RecallWire Handles <span class="badge badge-blue">Company</span></div>
+      <ol style="font-size:9pt;">
+        <li style="margin-bottom:7px;"><strong>Negotiation</strong> — Co-Founders lead all partnership structure, pricing, and white label agreement terms.</li>
+        <li style="margin-bottom:7px;"><strong>Legal &amp; Contracting</strong> — RecallWire drafts and executes all partner agreements.</li>
+        <li style="margin-bottom:7px;"><strong>Platform &amp; Fulfillment</strong> — RecallWire manages white label delivery, onboarding, and support for the partner's customers.</li>
+        <li><strong>Commission Payout</strong> — IC compensation is determined and documented prior to deal close; paid within 3–5 business days of cleared funds. No commission is released before cleared client payment is received.</li>
+      </ol>
+    </div>
+  </div>
+
+  <h3>Compensation — Vendor / Distributor Track</h3>
+  <p>Compensation on vendor and distributor partnerships is negotiated on a <strong>deal-by-deal basis</strong> and is not subject to the standard 30% direct commission rate. The following factors inform IC compensation on these deals:</p>
+
+  <table class="factor-table">
+    <thead>
+      <tr><th>Factor</th><th>Consideration</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Deal Size</strong></td><td>Total contract value of the white label agreement (can range from $50K to $1M+ depending on partner reach)</td></tr>
+      <tr><td><strong>IC's Role in Origination</strong></td><td>Whether the IC sourced, introduced, and/or actively facilitated the deal through close</td></tr>
+      <tr><td><strong>Partner Reach</strong></td><td>Number of downstream facilities the partner distributes to — higher reach = higher deal value</td></tr>
+      <tr><td><strong>Exclusivity</strong></td><td>Whether the arrangement includes territorial or vertical exclusivity for the partner</td></tr>
+      <tr><td><strong>Agreed Rate</strong></td><td>Flat fee or percentage of deal value — confirmed in writing by Co-Founders prior to introduction</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-teal">
+    <div class="callout-title">Important — Agree on Compensation Before Making the Introduction</div>
+    For all vendor and distributor opportunities, the IC must confirm their compensation arrangement with a RecallWire Co-Founder <strong>in writing before making the introduction</strong>. No compensation obligation exists for unconfirmed introductions. This protects both parties and ensures alignment going into every partnership conversation.
+  </div>
+
+  <!-- ▸ PIPELINE, LEAD FLOW & TERRITORY ◂ -->
+  <div class="section-header"><span class="dot"></span> Pipeline, Lead Flow &amp; Territory</div>
+
+  <h3>Lead Flow</h3>
+  <ul style="font-size:9pt;margin-bottom:12px;">
+    <li style="margin-bottom:5px;"><strong>Self-sourced first</strong> — The immediate expectation is that the IC taps their existing book of business and professional network to generate pipeline. Warm leads from RecallWire are limited at launch.</li>
+    <li style="margin-bottom:5px;"><strong>Warm leads</strong> — Currently one Co-Founder manages the primary internal warm lead source. As LinkedIn and social campaigns scale, warm leads will be routed to the IC. Generating warm leads for the IC is a stated goal as the program grows.</li>
+    <li><strong>Internal BD engine</strong> — RecallWire has health systems across NY, NJ, CT, SC, GA, and FL fully mapped with structured contact data. Once the IC's own network is tapped, this pipeline will be made available. Additional mass-market and social strategies in development will feed the IC's pipeline over time.</li>
+  </ul>
+
+  <h3>Territory</h3>
+  <p>No formal territories are defined at this stage — RecallWire is an early-stage, greenfield market. Co-Founders are not competing with the IC for any accounts. The near-term priority is leveraging the IC's existing relationships to gain initial traction. As the program matures, defined territories and structured lead routing will be formalized in the full Channel Sales Agreement.</p>
+
+  <!-- ▸ OPERATING CADENCE ◂ -->
+  <div class="section-header"><span class="dot"></span> Operating Cadence</div>
+
+  <table>
+    <thead><tr><th>Day</th><th>Activity</th><th>Duration</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Tuesday</strong></td><td>Virtual sync with RecallWire Co-Founders</td><td>1 hour</td></tr>
+      <tr><td><strong>Friday</strong></td><td>Virtual sync with RecallWire Co-Founders</td><td>1 hour</td></tr>
+      <tr><td>Ongoing</td><td>Outreach, prospecting, pipeline management, appointment setting</td><td>Contractor-directed</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Typical Meeting Agenda</h3>
+  <ol>
+    <li>Pipeline review — new contacts, meetings set, deals in progress</li>
+    <li>Market feedback — objections heard, competitive intel, messaging notes</li>
+    <li>Strategy alignment — target accounts and outreach approach</li>
+    <li>Deal support — Co-Founder involvement needed?</li>
+  </ol>
+
+  <!-- ▸ ONBOARDING ◂ -->
+  <div class="section-header"><span class="dot"></span> Onboarding Checklist</div>
+
+  <div class="two-col">
+    <div class="col-box">
+      <div class="col-title">IC Must Provide</div>
+      <ul class="checklist">
+        <li><span class="checkbox"></span><span><strong>Entity decision:</strong> Individual or Corporate entity</span></li>
+        <li><span class="checkbox"></span><span><strong>If corporation:</strong> Articles of Incorporation or state formation docs</span></li>
+        <li><span class="checkbox"></span><span><strong>If individual:</strong> Current mailing address</span></li>
+        <li><span class="checkbox"></span><span><strong>Driver's license:</strong> Front and back copy</span></li>
+        <li><span class="checkbox"></span><span><strong>Payment details:</strong> Wise / Airwallex / ACH preferred</span></li>
+        <li><span class="checkbox"></span><span><strong>Tax ID:</strong> SSN / EIN / BSN or equivalent</span></li>
+        <li><span class="checkbox"></span><span><strong>W-9 or W-8BEN</strong> as applicable</span></li>
+        <li><span class="checkbox"></span><span><strong>Signed IC Agreement</strong></span></li>
+      </ul>
+    </div>
+    <div class="col-box">
+      <div class="col-title">RecallWire Provides at Signing</div>
+      <ul class="checklist">
+        <li><span class="checkbox blue"></span><span>Sales collateral kit (one-pagers, pitch decks, battlecards)</span></li>
+        <li><span class="checkbox blue"></span><span>Meeting calendar invites (Tuesday &amp; Friday)</span></li>
+        <li><span class="checkbox blue"></span><span>Co-Founder contact information and preferred communication channels</span></li>
+        <li><span class="checkbox blue"></span><span>Brief internal product walkthrough / demo</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ▸ PERFORMANCE PHILOSOPHY ◂ -->
+  <div class="section-header"><span class="dot"></span> Performance Philosophy</div>
+
+  <div class="callout callout-blue">
+    <div class="callout-title">Our Approach at This Stage</div>
+    RecallWire does not focus heavily on hard metrics, especially as we start out. We are building something deliberate, not manufacturing activity for its own sake. <strong>Quality of conversations matters most.</strong>
+  </div>
+
+  <h3>What Matters Most</h3>
+  <ul>
+    <li>Quality of conversations initiated and caliber of decision-makers engaged</li>
+    <li>Pipeline transparency and honest, timely reporting</li>
+    <li>Consistent meeting attendance and follow-through</li>
+    <li>Real market feedback that sharpens our positioning</li>
+  </ul>
+
+  <!-- ▸ PUBLIC REPRESENTATION ◂ -->
+  <div class="section-header"><span class="dot"></span> Public Representation Guidelines</div>
+  <p>The IC is a <strong>true independent contractor</strong>. Public representation is at the IC's discretion — the IC may choose to publicly identify as a RecallWire channel representative or staff member, or may prefer to keep their affiliation private. Either approach is acceptable and is the IC's choice.</p>
+  <p>All product and pricing representations must align with RecallWire-provided materials regardless of how the IC chooses to represent their affiliation publicly.</p>
+
+  <!-- ▸ PATH FORWARD ◂ -->
+  <div class="section-header"><span class="dot"></span> Path to Formal Agreement</div>
+  <p>These terms represent the <strong>starting point</strong>. If both parties find the arrangement productive, RecallWire will formalize the relationship with a full <strong>Channel Sales Agreement</strong> that may include:</p>
+  <ul>
+    <li>Defined territory or vertical</li>
+    <li>Agreed performance benchmarks</li>
+    <li>Expanded commission structure (if applicable)</li>
+    <li>Co-branding or public representation rights (if applicable)</li>
+  </ul>
+
+  <div class="callout callout-teal" style="margin-top:18px;">
+    <div class="callout-title">Next Steps</div>
+    If these base terms and responsibilities make sense, we can move forward to a formalized Channel Sales Agreement with base performance metrics. To proceed, provide the required documentation listed in the Onboarding Checklist above.
+  </div>
+
+</main>
+
+<!-- ── SCREEN FOOTER ── -->
+<div class="page-footer">
+  <div class="footer-logo">REC<span class="teal">A</span>LL&nbsp;W<span class="teal">I</span>RE</div>
+  <div>Channel Sales IC Program — SOP &nbsp;|&nbsp; Governing State: Florida &nbsp;|&nbsp; v1.0 April 2026</div>
+  <div><a href="https://www.recallwire.com/">www.recallwire.com</a></div>
+</div>
+
+</body>
+</html>
