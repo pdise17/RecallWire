@@ -21,8 +21,7 @@
 
   @page {
     size: Letter;
-    /* Real margins — content area = 11in - 0.75in - 0.65in = 9.6in tall */
-    margin: 0.75in 0.8in 0.65in;
+    margin: 1in 0.8in 1in;
   }
 
   /* ── Base ── */
@@ -376,86 +375,23 @@
     }
     .page::before { display: none; }
 
-    /* ────────────────────────────────
-       RUNNING HEADER  (every page)
-       position: fixed in print = repeats on every page.
-       top: 0 = top of @page content area (0.75in from paper edge).
-    ──────────────────────────────── */
-    .rw-running-header {
+    /* Running header/footer hidden in print — @page margins provide clean whitespace */
+    .rw-running-header { display: none; }
+    .rw-running-footer { display: none; }
+
+    /* Show the letterhead and footer in print */
+    .letterhead {
       display: flex;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 0.42in;
-      background: var(--white);
-      border-top: 3px solid var(--blue);
-      border-bottom: 1px solid var(--rule);
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 0;          /* sides handled by @page margin */
-      z-index: 1000;
+      padding: 0 0 0.15in;
     }
-    .rw-running-header .rh-logo {
-      font-family: 'Inter', sans-serif;
-      font-weight: 800;
-      font-size: 10.5pt;
-      letter-spacing: 0.08em;
-      color: var(--blue);
-    }
-    .rw-running-header .rh-logo .teal { color: var(--teal); }
-    .rw-running-header .rh-center {
-      font-family: 'Inter', sans-serif;
-      font-size: 7pt;
-      color: var(--mid);
-      letter-spacing: 0.04em;
-    }
-    .rw-running-header .rh-rule-teal {
-      width: 2px;
-      height: 18px;
-      background: var(--teal);
-    }
-
-    /* ────────────────────────────────
-       RUNNING FOOTER  (every page)
-       bottom: 0 = bottom of @page content area.
-    ──────────────────────────────── */
-    .rw-running-footer {
+    .accent-bar { display: block; }
+    .letterfoot {
       display: flex;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 0.34in;
-      background: var(--white);
-      border-top: 1px solid var(--rule);
-      border-bottom: 3px solid var(--blue);
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 0;
-      font-family: 'Inter', sans-serif;
-      font-size: 7pt;
-      color: var(--mid);
-      z-index: 1000;
+      margin-top: 0.2in;
     }
-    .rw-running-footer .rf-left  { color: var(--mid); }
-    .rw-running-footer .rf-right { color: var(--teal); }
 
-    /* ────────────────────────────────
-       SCREEN-ONLY ELEMENTS → hidden in print
-    ──────────────────────────────── */
-    .letterhead  { display: none; }
-    .accent-bar  { display: none; }
-    .letterfoot  { display: none; }
-
-    /* ────────────────────────────────
-       BODY
-       padding-top  = header height (0.42in) + breathing room (0.14in) = 0.56in
-       padding-bottom = footer height (0.34in) + breathing room (0.14in) = 0.48in
-       sides = 0 (the @page margins handle side spacing)
-    ──────────────────────────────── */
     .body {
-      padding: 0.56in 0 0.48in;
+      padding: 0.15in 0 0.1in;
     }
 
     /* ────────────────────────────────
