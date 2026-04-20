@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Independent Contractor Agreement — RecallWire</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap');
+
+  :root {
+    --blue:   #1E3A5F;
+    --teal:   #00B4A0;
+    --dark:   #111827;
+    --mid:    #4B5563;
+    --rule:   #CBD5E1;
+    --bg:     #F8F9FA;
+    --white:  #ffffff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  @page {
+    size: Letter;
+    /* Real margins — content area = 11in - 0.75in - 0.65in = 9.6in tall */
+    margin: 0.75in 0.8in 0.65in;
+  }
+
+  /* ── Base ── */
+  html, body {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 10.5pt;
+    color: var(--dark);
+    background: #e8e8e8;
+    line-height: 1.45;
+  }
+
+  /* ── Page shell: gives the "stationery" look on screen ── */
+  .page {
+    width: 8.5in;
+    min-height: 11in;
+    margin: 0.4in auto;
+    background: var(--white);
+    box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+    position: relative;
+    /* Outer border — the heavy frame */
+    border: 1.5px solid var(--blue);
+  }
+
+  /* Inner rule — double-border stationery effect */
+  .page::before {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border: 0.5px solid var(--rule);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ── Running header (every print page) ── */
+  .rw-running-header { display: none; }
+  .rw-running-footer { display: none; }
+
+  /* ── LETTERHEAD ── */
+  .letterhead {
+    padding: 0.25in 0.55in 0.18in;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 3px solid var(--blue);
+    position: relative;
+    z-index: 1;
+  }
+
+  .lh-left {}
+
+  .lh-logo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 14pt;
+    letter-spacing: 0.08em;
+    color: var(--blue);
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .lh-logo .teal { color: var(--teal); }
+
+  .lh-tagline {
+    font-family: 'Inter', sans-serif;
+    font-size: 7pt;
+    color: var(--mid);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  /* Thin teal rule under tagline */
+  .lh-rule {
+    width: 30px;
+    height: 2px;
+    background: var(--teal);
+    margin-top: 5px;
+  }
+
+  .lh-right {
+    text-align: right;
+    font-family: 'Inter', sans-serif;
+    font-size: 7.5pt;
+    color: var(--mid);
+    line-height: 1.7;
+  }
+  .lh-right .doc-title {
+    font-size: 8pt;
+    font-weight: 700;
+    color: var(--blue);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom: 2px;
+    display: block;
+  }
+
+  /* ── TEAL ACCENT BAR (thin strip under letterhead) ── */
+  .accent-bar {
+    height: 3px;
+    background: var(--teal);
+  }
+
+  /* ── MAIN BODY ── */
+  .body {
+    padding: 0.22in 0.55in 0.3in;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── DOCUMENT TITLE ── */
+  .doc-title-block {
+    text-align: center;
+    margin-bottom: 0.14in;
+    padding-bottom: 0.1in;
+    border-bottom: 1px solid var(--rule);
+  }
+  .doc-title-block h1 {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 13.5pt;
+    font-weight: 600;
+    color: var(--blue);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .doc-title-block .doc-subtitle {
+    font-size: 9.5pt;
+    color: var(--mid);
+    font-style: italic;
+  }
+
+  /* ── PARTIES BLOCK ── */
+  .parties-block {
+    margin-bottom: 0.1in;
+    font-size: 10.5pt;
+  }
+  .parties-block .preamble {
+    margin-bottom: 7px;
+    line-height: 1.5;
+  }
+  .parties-block .party-line {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 5px;
+    font-size: 10.5pt;
+  }
+  .parties-block .party-line .label {
+    font-family: 'Inter', sans-serif;
+    font-size: 7pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--mid);
+    white-space: nowrap;
+    min-width: 90px;
+  }
+  .parties-block .party-line .fill {
+    flex: 1;
+    border-bottom: 1px solid var(--dark);
+    min-height: 16px;
+  }
+  .parties-block .party-line .fixed-val {
+    font-weight: 600;
+    color: var(--dark);
+  }
+
+  .between { text-align: center; margin: 6px 0; color: var(--mid); font-style: italic; font-size: 10pt; }
+
+  /* ── DATE LINE ── */
+  .date-block {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 0.1in;
+    font-size: 10.5pt;
+  }
+  .date-block .label {
+    font-family: 'Inter', sans-serif;
+    font-size: 7pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--mid);
+    white-space: nowrap;
+  }
+  .date-block .fill { flex: 1; border-bottom: 1px solid var(--dark); }
+
+  /* ── SECTION HEADERS ── */
+  .section {
+    margin-bottom: 0.1in;
+  }
+  .section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--blue);
+    margin-bottom: 4px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid var(--rule);
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--mid);
+    margin: 8px 0 3px;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* ── PROSE ── */
+  p { margin-bottom: 6px; text-align: justify; orphans: 3; widows: 3; }
+  ul, ol { padding-left: 20px; margin-bottom: 6px; }
+  li { margin-bottom: 3px; text-align: justify; }
+
+  /* ── IMPORTANT CLAUSE (no background, just left-border) ── */
+  .important-clause {
+    border-left: 3px solid var(--blue);
+    padding: 5px 12px;
+    margin: 7px 0;
+    font-style: italic;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 0.1in 0;
+  }
+
+  /* ── CHECKLIST ── */
+  .checklist { list-style: none; padding-left: 0; }
+  .checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 2px 0;
+    border-bottom: none;
+    margin-bottom: 2px;
+  }
+  .checkbox {
+    width: 11px; height: 11px;
+    border: 1.5px solid var(--blue);
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+
+  /* ── SIGNATURE BLOCK ── */
+  .sig-section {
+    margin-top: 0.14in;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .sig-intro {
+    font-size: 10pt;
+    font-style: italic;
+    color: var(--mid);
+    margin-bottom: 0.12in;
+    text-align: justify;
+  }
+  .sig-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.35in;
+  }
+  .sig-block {}
+  .sig-party {
+    font-family: 'Inter', sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--blue);
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--blue);
+    margin-bottom: 0.1in;
+  }
+  .sig-row {
+    margin-bottom: 0.09in;
+  }
+  .sig-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 7pt;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--mid);
+    margin-bottom: 2px;
+  }
+  .sig-line {
+    border-bottom: 1px solid var(--dark);
+    min-height: 18px;
+    font-size: 10.5pt;
+    padding-bottom: 1px;
+  }
+
+  /* ── FOOTER ── */
+  .letterfoot {
+    border-top: 3px solid var(--blue);
+    padding: 0.09in 0.55in;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Inter', sans-serif;
+    font-size: 7pt;
+    color: var(--mid);
+    position: relative;
+    z-index: 1;
+  }
+  .letterfoot .lf-brand { font-weight: 700; color: var(--blue); letter-spacing: 0.07em; }
+  .letterfoot .lf-brand .teal { color: var(--teal); }
+  .letterfoot a { color: var(--teal); text-decoration: none; }
+
+  /* ══════════════════════════════════
+     PRINT
+     ── Geometry ──────────────────────
+     @page top margin:    0.75in  (paper edge → content area top)
+     running header:      pos fixed, top 0, height 0.42in
+                          → sits at top of content area (inside the margin)
+     body padding-top:    0.56in  → text starts 0.56in below content area top
+                                    (0.14in clear below header bottom)
+     @page bottom margin: 0.65in
+     running footer:      pos fixed, bottom 0, height 0.34in
+     body padding-bottom: 0.48in  → text ends 0.14in above footer top
+  ══════════════════════════════════ */
+  @media print {
+
+    html, body { background: var(--white); }
+
+    /* Force all colors and backgrounds to print */
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+
+    /* Strip screen chrome off the page shell */
+    .page {
+      width: 100%;
+      min-height: auto;
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+      border: none;
+    }
+    .page::before { display: none; }
+
+    /* ────────────────────────────────
+       RUNNING HEADER  (every page)
+       position: fixed in print = repeats on every page.
+       top: 0 = top of @page content area (0.75in from paper edge).
+    ──────────────────────────────── */
+    .rw-running-header {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 0.42in;
+      background: var(--white);
+      border-top: 3px solid var(--blue);
+      border-bottom: 1px solid var(--rule);
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 0;          /* sides handled by @page margin */
+      z-index: 1000;
+    }
+    .rw-running-header .rh-logo {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 10.5pt;
+      letter-spacing: 0.08em;
+      color: var(--blue);
+    }
+    .rw-running-header .rh-logo .teal { color: var(--teal); }
+    .rw-running-header .rh-center {
+      font-family: 'Inter', sans-serif;
+      font-size: 7pt;
+      color: var(--mid);
+      letter-spacing: 0.04em;
+    }
+    .rw-running-header .rh-rule-teal {
+      width: 2px;
+      height: 18px;
+      background: var(--teal);
+    }
+
+    /* ────────────────────────────────
+       RUNNING FOOTER  (every page)
+       bottom: 0 = bottom of @page content area.
+    ──────────────────────────────── */
+    .rw-running-footer {
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 0.34in;
+      background: var(--white);
+      border-top: 1px solid var(--rule);
+      border-bottom: 3px solid var(--blue);
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 0;
+      font-family: 'Inter', sans-serif;
+      font-size: 7pt;
+      color: var(--mid);
+      z-index: 1000;
+    }
+    .rw-running-footer .rf-left  { color: var(--mid); }
+    .rw-running-footer .rf-right { color: var(--teal); }
+
+    /* ────────────────────────────────
+       SCREEN-ONLY ELEMENTS → hidden in print
+    ──────────────────────────────── */
+    .letterhead  { display: none; }
+    .accent-bar  { display: none; }
+    .letterfoot  { display: none; }
+
+    /* ────────────────────────────────
+       BODY
+       padding-top  = header height (0.42in) + breathing room (0.14in) = 0.56in
+       padding-bottom = footer height (0.34in) + breathing room (0.14in) = 0.48in
+       sides = 0 (the @page margins handle side spacing)
+    ──────────────────────────────── */
+    .body {
+      padding: 0.56in 0 0.48in;
+    }
+
+    /* ────────────────────────────────
+       PAGE BREAK CONTROL
+    ──────────────────────────────── */
+    .section           { break-inside: avoid; page-break-inside: avoid; }
+    .section-title     { break-after: avoid;  page-break-after: avoid; }
+    h3                 { break-after: avoid;  page-break-after: avoid; }
+    .sig-section       { break-inside: avoid; page-break-inside: avoid; }
+    .important-clause  { break-inside: avoid; page-break-inside: avoid; }
+    p, li              { orphans: 3; widows: 3; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── PRINT RUNNING HEADER (all pages) ── -->
+<div class="rw-running-header">
+  <div class="rh-logo">REC<span class="teal">A</span>LL&nbsp;W<span class="teal">I</span>RE</div>
+  <div class="rh-center">Independent Contractor Agreement &nbsp;·&nbsp; Channel Sales Representative &nbsp;·&nbsp; State of Florida</div>
+  <div class="rh-rule-teal"></div>
+</div>
+
+<!-- ── PRINT RUNNING FOOTER (all pages) ── -->
+<div class="rw-running-footer">
+  <div class="rf-left">Confidential &nbsp;·&nbsp; RecallWire &nbsp;·&nbsp; v1.0 April 2026</div>
+  <div class="rf-right">www.recallwire.com</div>
+</div>
+
+<!-- ══ STATIONERY PAGE ══ -->
+<div class="page">
+
+  <!-- Letterhead -->
+  <div class="letterhead">
+    <div class="lh-left">
+      <div class="lh-logo">
+        <span>REC<span class="teal">A</span>LL</span>
+        <span>W<span class="teal">I</span>RE</span>
+      </div>
+      <div class="lh-tagline">AI-Powered Medical Device Recall Management</div>
+      <div class="lh-rule"></div>
+    </div>
+    <div class="lh-right">
+      <span class="doc-title">Independent Contractor Agreement</span>
+      Channel Sales Representative<br>
+      Healthcare &amp; Medical Device Vertical<br>
+      Governing State: Florida<br>
+      Version 1.0 &nbsp;·&nbsp; April 2026
+    </div>
+  </div>
+
+  <div class="accent-bar"></div>
+
+  <!-- Body -->
+  <div class="body">
+
+    <!-- Document Title -->
+    <div class="doc-title-block">
+      <h1>Independent Contractor Agreement</h1>
+      <div class="doc-subtitle">Channel Sales Representative — Healthcare &amp; Medical Device</div>
+    </div>
+
+    <!-- Date -->
+    <div class="date-block">
+      <span class="label">Agreement Date</span>
+      <div class="fill" style="padding-top:2px; font-weight:500;">April 20, 2026</div>
+    </div>
+
+    <!-- Parties -->
+    <div class="parties-block">
+      <p class="preamble">This Independent Contractor Agreement (the <strong>"Agreement"</strong>) is entered into as of the date written above, by and between:</p>
+
+      <div class="party-line">
+        <span class="label">Company</span>
+        <span class="fixed-val">RecallWire</span>
+        <span style="color:var(--mid); font-size:10pt;"> ("Company")</span>
+      </div>
+
+      <div class="between">— and —</div>
+
+      <div class="party-line">
+        <span class="label">Contractor Name</span>
+        <div class="fill" style="padding-top:2px; font-weight:600;">Melonie Burnett</div>
+      </div>
+      <div class="party-line">
+        <span class="label">Entity Type</span>
+        <span style="color:var(--mid);">[ ] Individual &nbsp;&nbsp;&nbsp; [✓] Corporation / LLC</span>
+      </div>
+      <div class="party-line">
+        <span class="label">Address</span>
+        <div class="fill" style="padding-top:2px; font-weight:500;">12402 Las Vegas, Nevada 89141</div>
+      </div>
+      <div class="party-line">
+        <span class="label">State of Formation</span>
+        <div class="fill" style="padding-top:2px; font-weight:500;">Nevada</div>
+        <span style="color:var(--mid); font-size:10pt; white-space:nowrap;">&nbsp;(if entity)</span>
+      </div>
+
+      <p style="margin-top:6px;">(each a <strong>"Party"</strong>, collectively the <strong>"Parties"</strong>)</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 1. Engagement -->
+    <div class="section">
+      <div class="section-title">1. &nbsp; Engagement &amp; Role</div>
+      <p>RecallWire engages the Contractor as an <strong>Independent Contractor</strong> in the capacity of <strong>VP of Business Development / Channel Sales Representative</strong> on a non-exclusive basis. The Contractor is not an employee, partner, or publicly recognized staff member of RecallWire. Nothing in this Agreement creates an employment relationship.</p>
+      <p>RecallWire is seeking a high-caliber business development professional to spearhead market expansion into large healthcare facilities and multi-site health systems. The Contractor will lead executive-level conversations to demonstrate how RecallWire's recall management platform reduces manual steps and clinical risk.</p>
+    </div>
+
+    <!-- 2. Scope -->
+    <div class="section">
+      <div class="section-title">2. &nbsp; Scope of Services</div>
+      <p>The Contractor agrees to perform the following services on behalf of RecallWire:</p>
+      <ol>
+        <li><strong>Strategic Growth.</strong> Own the front-end of the sales cycle — from initial prospecting through qualified appointment setting. Conduct outreach with the goal of booking qualified demos for RecallWire Co-Founders.</li>
+        <li><strong>Stakeholder Engagement.</strong> Navigate complex healthcare hierarchies to engage decision-makers in supply chain, clinical engineering, quality, compliance, and C-suite.</li>
+        <li><strong>Pipeline Management.</strong> Maintain accurate records of outreach activity and pipeline status, reporting on conversion metrics and market feedback during weekly meetings.</li>
+        <li><strong>Cross-Functional Partnership.</strong> Participate in required weekly virtual meetings and provide field intelligence to refine messaging and product positioning.</li>
+      </ol>
+      <p><strong>Primary Deliverable.</strong> At this stage, the Contractor's primary deliverable is <strong>qualified appointment setting</strong> for RecallWire Co-Founders. Closing contracts and post-sale account management are handled by RecallWire unless otherwise agreed in writing.</p>
+    </div>
+
+    <!-- 3. Target Market -->
+    <div class="section">
+      <div class="section-title">3. &nbsp; Target Market</div>
+      <p>The Contractor shall focus outreach efforts on the following:</p>
+      <ul>
+        <li><strong>Geography:</strong> United States (regions and verticals to be determined collaboratively).</li>
+        <li><strong>Primary Targets:</strong> Large care facilities, multi-site health systems, Integrated Delivery Networks (IDNs), and Academic Medical Centers.</li>
+        <li><strong>Key Buyer Personas:</strong> Supply Chain Directors, Materials Managers, Risk Managers, Quality Directors, Biomedical Engineering leadership, and C-suite executives.</li>
+      </ul>
+    </div>
+
+    <!-- 4. Compensation -->
+    <div class="section">
+      <div class="section-title">4. &nbsp; Compensation — Commission Structure</div>
+
+      <h3>4.1 &nbsp; Commission Rate</h3>
+      <p>The Contractor will earn a commission of <strong>thirty percent (30%)</strong> of gross sales revenue for each client contract signed as a direct result of the Contractor's outreach and appointment-setting activity.</p>
+
+      <h3>4.2 &nbsp; Commission Basis &amp; Term</h3>
+      <p>Commission is calculated on the gross sales value of the signed client contract. Payout applies to the <strong>life of the first contract only</strong>, typically a period of twelve (12) months. Subsequent contract renewals or upsells are not subject to commission under this Agreement unless a separate written amendment is executed.</p>
+
+      <h3>4.3 &nbsp; Commission Triggers</h3>
+      <p>A commission obligation is created only when <em>all</em> of the following conditions are simultaneously satisfied: (i) a client contract is fully executed by both RecallWire and the client; (ii) the Contractor is the documented source of the initial client introduction and appointment; and (iii) RecallWire has received cleared, collected payment from the client as provided in Section 4.5 below.</p>
+
+      <h3>4.4 &nbsp; Payment Schedule</h3>
+      <p>Commissions shall be paid within <strong>five (5) to seven (7) business days</strong> of RecallWire receiving cleared payment from the client. The Contractor is responsible for providing valid payment details prior to the first payout (see Section 9).</p>
+
+      <h3>4.5 &nbsp; Contingency — No Client Payment, No Commission</h3>
+      <div class="important-clause">
+        RecallWire's obligation to pay commission to the Contractor is <strong>strictly contingent upon RecallWire's actual receipt of full, cleared payment from the client.</strong> If a client fails to pay, disputes a charge, initiates a chargeback, becomes insolvent, or if RecallWire does not receive collected funds for any reason whatsoever, <strong>no commission shall be owed or payable</strong> to the Contractor with respect to that contract or any unpaid portion thereof. Commission obligations arise solely to the extent that RecallWire has actually collected payment from the applicable client. This provision shall survive termination of this Agreement.
+      </div>
+
+      <h3>4.6 &nbsp; No Base Salary</h3>
+      <p>This is a <strong>commission-only</strong> engagement. No base salary, draw, advances, benefits, or expense reimbursement is provided unless separately agreed upon in a signed written amendment.</p>
+    </div>
+
+    <!-- 5. Performance -->
+    <div class="section">
+      <div class="section-title">5. &nbsp; Performance Expectations</div>
+      <p>RecallWire does not impose rigid quantitative metrics at this stage of growth. The quality of conversations and the caliber of relationships developed are of primary importance.</p>
+
+      <h3>5.1 &nbsp; Preferred Candidate Profile</h3>
+      <ul>
+        <li><strong>5 to 30 years</strong> of B2B healthcare sales experience with a verifiable record of exceeding multi-million dollar quotas.</li>
+        <li><strong>Medical Device sales background</strong> strongly preferred; Pharma, Supply Chain software, or Health-SaaS experience is highly valued.</li>
+        <li>Exceptional verbal and written communication skills; demonstrated ability to lead discovery at the C-suite level.</li>
+        <li>An established <strong>book of business</strong> with existing relationships within regional or national health systems.</li>
+        <li>Active <strong>LinkedIn presence</strong> (required minimum tool for this role).</li>
+      </ul>
+
+      <h3>5.2 &nbsp; Conduct Standards</h3>
+      <ul>
+        <li>The Contractor shall represent RecallWire's product and mission honestly and professionally at all times.</li>
+        <li>The Contractor shall not make representations about RecallWire's product, pricing, or capabilities beyond what is documented in RecallWire-provided materials.</li>
+        <li>The Contractor shall not publicly identify as a RecallWire employee, officer, or staff member.</li>
+      </ul>
+    </div>
+
+    <!-- 6. Meetings -->
+    <div class="section">
+      <div class="section-title">6. &nbsp; Meeting Requirements</div>
+      <p>The Contractor shall participate in <strong>two (2) one-hour virtual meetings per week</strong> with RecallWire Co-Founders, scheduled on <strong>Tuesdays and Fridays</strong>. The purpose of these meetings is pipeline review, strategy alignment, field feedback exchange, and deal support coordination.</p>
+      <p>Missed meetings must be communicated at least twenty-four (24) hours in advance. Consistent unavailability without notice may constitute grounds for termination of this Agreement.</p>
+    </div>
+
+    <!-- 7. Tools -->
+    <div class="section">
+      <div class="section-title">7. &nbsp; Tools &amp; Resources</div>
+      <p>The Contractor is expected to utilize their own professional toolset for business development activities, including but not limited to CRM, email and phone outreach platforms, and LinkedIn (required minimum). RecallWire will provide the Contractor with sales collateral, battlecards, pitch decks, and Co-Founder availability for deal support. RecallWire is open to providing additional tools upon mutual written agreement.</p>
+    </div>
+
+    <!-- 8. IC Status -->
+    <div class="section">
+      <div class="section-title">8. &nbsp; Independent Contractor Status</div>
+      <p>The Contractor is, and shall remain, an independent contractor. RecallWire shall not withhold income taxes or payroll taxes from any payments made hereunder, nor shall RecallWire provide workers' compensation, unemployment insurance, health benefits, or any other employee benefit. RecallWire shall not direct or control the Contractor's day-to-day methods of work or schedule, except as expressly required by this Agreement.</p>
+      <p>The Contractor is solely responsible for all applicable federal, state, and local taxes on compensation received under this Agreement. RecallWire shall issue a <strong>Form 1099-NEC</strong> (or equivalent) where required by applicable law. The Contractor may not subcontract or assign their obligations under this Agreement without prior written consent from RecallWire.</p>
+    </div>
+
+    <!-- 9. Payment Info -->
+    <div class="section">
+      <div class="section-title">9. &nbsp; Payment Information</div>
+      <p>Prior to the first commission disbursement, the Contractor must provide RecallWire with the following information through a secure channel designated by RecallWire:</p>
+      <ul>
+        <li>Preferred payment method (Wise, Airwallex, ACH, or Wire);</li>
+        <li>Full account and routing details as required by the selected method;</li>
+        <li>Tax identification number (SSN for individuals, EIN for U.S. entities, BSN or equivalent for international contractors); and</li>
+        <li>Completed IRS Form W-9 or Form W-8BEN, as applicable.</li>
+      </ul>
+    </div>
+
+    <!-- 10. Confidentiality -->
+    <div class="section">
+      <div class="section-title">10. &nbsp; Confidentiality</div>
+      <p>The Contractor agrees to keep all RecallWire business information, client lists, prospect data, pricing, product details, and proprietary materials strictly confidential; not to disclose, use, or share such information outside of this engagement without the prior written consent of RecallWire; and to return or permanently destroy all confidential materials promptly upon termination of this Agreement. This obligation shall survive termination for a period of <strong>two (2) years</strong>.</p>
+    </div>
+
+    <!-- 11. Non-Solicitation -->
+    <div class="section">
+      <div class="section-title">11. &nbsp; Non-Solicitation</div>
+      <p>During the term of this Agreement and for a period of <strong>twelve (12) months</strong> following termination for any reason, the Contractor agrees not to directly solicit, divert, or accept business from RecallWire's existing clients or identified prospects (those introduced to or identified by the Contractor during the term hereof) for competing recall management products or services.</p>
+    </div>
+
+    <!-- 12. IP -->
+    <div class="section">
+      <div class="section-title">12. &nbsp; Intellectual Property</div>
+      <p>Any sales materials, prospect lists, written communications, reports, or other work product created specifically for RecallWire under this Agreement shall be considered works made for hire and shall remain the sole property of RecallWire. The Contractor retains ownership of all pre-existing tools, templates, and methodologies.</p>
+    </div>
+
+    <!-- 13. Term & Termination -->
+    <div class="section">
+      <div class="section-title">13. &nbsp; Term &amp; Termination</div>
+      <p>This Agreement commences on the date first written above and continues until terminated by either Party. Either Party may terminate this Agreement for convenience upon <strong>thirty (30) days' written notice</strong> to the other Party. Either Party may terminate immediately upon written notice in the event of a material breach of this Agreement by the other Party that remains uncured for ten (10) days following notice of such breach.</p>
+      <p>Upon termination, commissions earned on client contracts that were both signed and for which cleared payment was received by RecallWire prior to the effective date of termination shall be paid in accordance with Section 4.</p>
+    </div>
+
+    <!-- 14. Liability -->
+    <div class="section">
+      <div class="section-title">14. &nbsp; Limitation of Liability</div>
+      <p>RecallWire's aggregate liability under this Agreement shall not exceed the total commissions actually paid to the Contractor in the three (3) calendar months immediately preceding the event giving rise to the applicable claim. In no event shall either Party be liable to the other for any indirect, incidental, consequential, special, or punitive damages, regardless of the form of the claim or the theory of liability.</p>
+    </div>
+
+    <!-- 15. Governing Law -->
+    <div class="section">
+      <div class="section-title">15. &nbsp; Governing Law &amp; Dispute Resolution</div>
+      <p>This Agreement shall be governed by and construed in accordance with the laws of the <strong>State of Florida</strong>, without regard to its conflict of laws provisions. Any dispute arising out of or related to this Agreement shall first be submitted to good-faith negotiation between the Parties. If unresolved within thirty (30) days, the dispute shall be submitted to binding arbitration administered by the American Arbitration Association in accordance with its Commercial Arbitration Rules.</p>
+    </div>
+
+    <!-- 16. Entire Agreement -->
+    <div class="section">
+      <div class="section-title">16. &nbsp; Entire Agreement</div>
+      <p>This Agreement constitutes the entire agreement between the Parties with respect to the subject matter hereof and supersedes all prior and contemporaneous discussions, representations, and agreements, whether oral or written. This Agreement may not be amended except by a written instrument signed by authorized representatives of both Parties.</p>
+    </div>
+
+    <!-- 17. Required Docs -->
+    <div class="section">
+      <div class="section-title">17. &nbsp; Required Contractor Documentation</div>
+      <p>Prior to execution and first commission disbursement, the Contractor must deliver the following to RecallWire:</p>
+      <ul class="checklist">
+        <li><span class="checkbox"></span><span><strong>Entity type declaration:</strong> Individual or Corporation / LLC</span></li>
+        <li><span class="checkbox"></span><span><strong>If Corporation / LLC:</strong> Articles of Incorporation or official state formation documents</span></li>
+        <li><span class="checkbox"></span><span><strong>If Individual:</strong> Current mailing address</span></li>
+        <li><span class="checkbox"></span><span><strong>Driver's License:</strong> Clear copy, front and back</span></li>
+        <li><span class="checkbox"></span><span><strong>Payment &amp; banking details:</strong> Wise, Airwallex, or ACH information</span></li>
+        <li><span class="checkbox"></span><span><strong>Tax identification:</strong> SSN, EIN, BSN, or equivalent</span></li>
+        <li><span class="checkbox"></span><span><strong>Completed W-9 or W-8BEN</strong> as applicable</span></li>
+      </ul>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Signatures -->
+    <div class="sig-section">
+      <p class="sig-intro">IN WITNESS WHEREOF, the Parties have executed this Agreement as of the date first written above. Each signatory represents that they have full authority to enter into this Agreement on behalf of the Party indicated.</p>
+
+      <div class="sig-grid">
+        <div class="sig-block">
+          <div class="sig-party">RecallWire &nbsp;—&nbsp; Company</div>
+          <div class="sig-row">
+            <div class="sig-label">Authorized Signature</div>
+            <div class="sig-line"></div>
+          </div>
+          <div class="sig-row">
+            <div class="sig-label">Printed Name</div>
+            <div class="sig-line" style="padding-top:3px; font-weight:600;">Charles Conterelli</div>
+          </div>
+          <div class="sig-row">
+            <div class="sig-label">Title</div>
+            <div class="sig-line" style="padding-top:3px; color:var(--mid);">Co-Founder</div>
+          </div>
+          <div class="sig-row" style="margin-bottom:0;">
+            <div class="sig-label">Date</div>
+            <div class="sig-line" style="padding-top:3px; font-weight:500;">April 20, 2026</div>
+          </div>
+        </div>
+
+        <div class="sig-block">
+          <div class="sig-party">Contractor</div>
+          <div class="sig-row">
+            <div class="sig-label">Authorized Signature</div>
+            <div class="sig-line"></div>
+          </div>
+          <div class="sig-row">
+            <div class="sig-label">Printed Name</div>
+            <div class="sig-line" style="padding-top:3px; font-weight:600;">Melonie Burnett</div>
+          </div>
+          <div class="sig-row">
+            <div class="sig-label">Title (if entity)</div>
+            <div class="sig-line" style="padding-top:3px; font-weight:500;">Principal</div>
+          </div>
+          <div class="sig-row">
+            <div class="sig-label">Entity Name (if applicable)</div>
+            <div class="sig-line" style="padding-top:3px; font-weight:500;">MB International Consulting and Investing</div>
+          </div>
+          <div class="sig-row" style="margin-bottom:0;">
+            <div class="sig-label">Date</div>
+            <div class="sig-line"></div>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size:8.5pt; color:var(--mid); font-style:italic; margin-top:0.12in; text-align:center;">
+        This is a working draft. A formalized Channel Sales Agreement with base performance metrics will follow upon mutual acceptance of these terms.
+      </p>
+    </div>
+
+  </div><!-- /body -->
+
+  <!-- Letterfoot -->
+  <div class="letterfoot">
+    <div class="lf-brand">REC<span class="teal">A</span>LL&nbsp;W<span class="teal">I</span>RE</div>
+    <div>Independent Contractor Agreement &nbsp;·&nbsp; Channel Sales &nbsp;·&nbsp; State of Florida &nbsp;·&nbsp; v1.0 April 2026 &nbsp;·&nbsp; Confidential</div>
+    <div><a href="https://www.recallwire.com">www.recallwire.com</a></div>
+  </div>
+
+</div><!-- /page -->
+
+</body>
+</html>
