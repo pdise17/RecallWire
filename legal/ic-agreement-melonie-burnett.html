@@ -251,8 +251,6 @@
     padding: 5px 12px;
     margin: 7px 0;
     font-style: italic;
-    break-inside: avoid;
-    page-break-inside: avoid;
   }
 
   /* ── DIVIDER ── */
@@ -402,18 +400,27 @@
     }
 
     .body {
-      padding: 0.15in 0 0.1in;
+      padding: 0.12in 0 0.1in;
     }
+
+    /* Tighter section/paragraph spacing in print so pages fill cleanly */
+    .section        { margin-bottom: 0.07in; }
+    p               { margin-bottom: 4px; }
+    ul, ol          { margin-bottom: 4px; }
+    li              { margin-bottom: 2px; }
+    .doc-title-block { margin-bottom: 0.1in; }
+    .date-block     { margin-bottom: 0.07in; }
+    .parties-block  { margin-bottom: 0.07in; }
 
     /* ────────────────────────────────
        PAGE BREAK CONTROL
+       Avoid break-inside on sections — it causes large white gaps.
+       Only lock the signature block together.
     ──────────────────────────────── */
-    .section           { break-inside: avoid; page-break-inside: avoid; }
     .section-title     { break-after: avoid;  page-break-after: avoid; }
     h3                 { break-after: avoid;  page-break-after: avoid; }
     .sig-section       { break-inside: avoid; page-break-inside: avoid; }
-    .important-clause  { break-inside: avoid; page-break-inside: avoid; }
-    p, li              { orphans: 3; widows: 3; }
+    p, li              { orphans: 2; widows: 2; }
   }
 </style>
 </head>
