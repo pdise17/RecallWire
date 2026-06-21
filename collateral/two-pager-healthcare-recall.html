@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RecallWire — Healthcare Recall Management | Medical Device & Pharmaceutical</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+  /* ─── TOKENS ─── */
+  :root {
+    --blue:   #1E3A5F;
+    --teal:   #00B4A0;
+    --red:    #DC2626;
+    --dark:   #1F2937;
+    --mid:    #4B5563;
+    --border: #D1D5DB;
+    --bg:     #F9FAFB;
+    --white:  #ffffff;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  @page { size: 8.5in 11in; margin: 0; }
+
+  html, body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    background: #e5e7eb;
+  }
+
+  body {
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    color: var(--dark);
+    padding: 28px 0;
+  }
+
+  @media print {
+    html, body { background: white; padding: 0; }
+  }
+
+  /* ─── FIXED PAGE CONTAINER ─── */
+  .page {
+    width: 8.5in;
+    height: 11in;
+    overflow: hidden;
+    margin: 0 auto 28px;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 28px rgba(0,0,0,0.18);
+  }
+
+  @media print {
+    .page {
+      box-shadow: none;
+      margin: 0 auto;
+      page-break-after: always;
+    }
+    .page:last-child { page-break-after: auto; }
+  }
+
+  /* ─── PAGE HEADER ─── */
+  .page-header {
+    background: var(--blue);
+    padding: 16px 44px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-shrink: 0;
+  }
+  .logo {
+    font-weight: 800;
+    font-size: 22pt;
+    letter-spacing: 0.07em;
+    line-height: 1;
+    color: var(--white);
+    white-space: nowrap;
+  }
+  .logo .teal { color: var(--teal); }
+  .logo-sub {
+    font-size: 7pt;
+    color: #93C5FD;
+    letter-spacing: 0.04em;
+    margin-top: 5px;
+  }
+  .doc-meta {
+    text-align: right;
+    font-size: 8pt;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.75;
+  }
+  .doc-meta .label {
+    color: var(--teal);
+    font-weight: 700;
+    font-size: 8.5pt;
+    display: block;
+    margin-bottom: 2px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ─── INTRO STRIP ─── */
+  .intro-strip {
+    background: var(--teal);
+    color: var(--white);
+    padding: 8px 44px;
+    font-size: 8.5pt;
+    font-weight: 500;
+    letter-spacing: 0.015em;
+    flex-shrink: 0;
+  }
+
+  /* ─── MAIN CONTENT AREA ─── */
+  .content {
+    flex: 1;
+    padding: 14px 44px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow: hidden;
+  }
+
+  /* ─── SECTION HEADERS ─── */
+  .sh {
+    background: var(--blue);
+    color: var(--white);
+    padding: 5px 12px;
+    font-weight: 700;
+    font-size: 8.5pt;
+    letter-spacing: 0.04em;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 0;
+  }
+  .sh .dot {
+    width: 6px; height: 6px;
+    background: var(--teal);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ─── STAT BAR ─── */
+  .stat-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7px;
+    flex-shrink: 0;
+  }
+  .stat-card {
+    background: var(--blue);
+    border-radius: 5px;
+    padding: 9px 8px 8px;
+    text-align: center;
+  }
+  .stat-num {
+    font-size: 17pt;
+    font-weight: 800;
+    color: var(--teal);
+    line-height: 1.1;
+    display: block;
+  }
+  .stat-lbl {
+    font-size: 6.5pt;
+    color: rgba(255,255,255,0.72);
+    margin-top: 2px;
+    line-height: 1.3;
+  }
+
+  /* ─── PROSE ─── */
+  p {
+    font-size: 8.5pt;
+    line-height: 1.5;
+    color: var(--dark);
+  }
+
+  /* ─── TWO COLUMN ─── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  .col-box {
+    border: 1.5px solid var(--border);
+    border-radius: 5px;
+    padding: 10px 11px;
+  }
+  .col-title {
+    font-weight: 700;
+    color: var(--blue);
+    font-size: 7.5pt;
+    border-bottom: 2px solid var(--teal);
+    padding-bottom: 4px;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .col-box ul {
+    padding-left: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .col-box li {
+    font-size: 8pt;
+    line-height: 1.4;
+    color: var(--dark);
+  }
+
+  /* ─── THREE COLUMN SCOPE GRID ─── */
+  .three-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .scope-card {
+    border: 1.5px solid var(--border);
+    border-top: 3px solid var(--teal);
+    border-radius: 5px;
+    padding: 9px 10px;
+    background: var(--bg);
+  }
+  .sc-cat {
+    font-size: 6pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--teal);
+    margin-bottom: 2px;
+  }
+  .sc-title {
+    font-size: 9pt;
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 4px;
+    line-height: 1.2;
+  }
+  .sc-desc {
+    font-size: 7.5pt;
+    color: var(--mid);
+    line-height: 1.4;
+  }
+
+  /* ─── CALLOUTS ─── */
+  .callout {
+    border-left: 4px solid var(--red);
+    background: #FEF2F2;
+    border-radius: 0 5px 5px 0;
+    padding: 8px 12px;
+    font-size: 8.5pt;
+    line-height: 1.5;
+    flex-shrink: 0;
+  }
+  .callout .ct {
+    font-weight: 700;
+    font-size: 7.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--red);
+    margin-bottom: 3px;
+  }
+  .callout-teal { border-color: var(--teal); background: #F0FDFA; }
+  .callout-teal .ct { color: var(--teal); }
+  .callout-blue { border-color: var(--blue); background: #EFF6FF; }
+  .callout-blue .ct { color: var(--blue); }
+
+  /* ─── WORKFLOW ─── */
+  .workflow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .wf-step {
+    border: 1.5px solid var(--border);
+    border-radius: 5px;
+    padding: 10px 10px 9px;
+    background: var(--bg);
+    text-align: center;
+  }
+  .wf-num {
+    width: 22px; height: 22px;
+    background: var(--teal);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 9.5pt;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 6px;
+  }
+  .wf-name {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 5px;
+  }
+  .wf-desc {
+    font-size: 7.5pt;
+    color: var(--mid);
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  /* ─── MINI STAT ROW ─── */
+  .mini-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7px;
+    flex-shrink: 0;
+  }
+  .mini-stat {
+    border: 1.5px solid var(--border);
+    border-radius: 5px;
+    padding: 7px 8px;
+    background: var(--bg);
+    text-align: center;
+  }
+  .mini-num {
+    font-size: 13pt;
+    font-weight: 800;
+    color: var(--teal);
+    line-height: 1.1;
+  }
+  .mini-lbl {
+    font-size: 6.5pt;
+    color: var(--mid);
+    margin-top: 2px;
+    line-height: 1.3;
+  }
+
+  /* ─── PRICING ─── */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  .price-card {
+    border: 1.5px solid var(--border);
+    border-top: 3px solid var(--blue);
+    border-radius: 5px;
+    padding: 10px 11px;
+  }
+  .price-card.featured { border-top-color: var(--teal); }
+  .price-tier {
+    font-size: 8pt;
+    font-weight: 700;
+    color: var(--blue);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 3px;
+  }
+  .price-num {
+    font-size: 15pt;
+    font-weight: 800;
+    color: var(--blue);
+    line-height: 1.1;
+  }
+  .price-num span {
+    font-size: 8pt;
+    font-weight: 400;
+    color: var(--mid);
+  }
+  .price-sub {
+    font-size: 7pt;
+    color: var(--mid);
+    margin: 2px 0 7px;
+  }
+  .price-card ul {
+    padding-left: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .price-card li { font-size: 7.5pt; color: var(--dark); line-height: 1.35; }
+
+  /* ─── TABLE ─── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8pt;
+    flex-shrink: 0;
+  }
+  thead { background: var(--blue); color: var(--white); }
+  thead th { padding: 5px 9px; text-align: left; font-size: 7.5pt; font-weight: 600; }
+  tbody tr:nth-child(even) { background: var(--bg); }
+  tbody td { padding: 5px 9px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.4; }
+  tbody tr:last-child td { border-bottom: none; }
+  .tv { color: var(--teal); font-weight: 700; }
+
+  /* ─── PAGE 2 MINI HEADER ─── */
+  .p2-header {
+    background: var(--blue);
+    padding: 10px 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+  .p2-logo {
+    font-weight: 800;
+    font-size: 12pt;
+    letter-spacing: 0.07em;
+    color: var(--white);
+  }
+  .p2-logo .teal { color: var(--teal); }
+  .p2-meta { font-size: 7.5pt; color: rgba(255,255,255,0.65); }
+
+  /* ─── FOOTER ─── */
+  .page-footer {
+    border-top: 1.5px solid var(--blue);
+    padding: 7px 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 7pt;
+    color: var(--mid);
+    flex-shrink: 0;
+  }
+  .footer-logo {
+    font-weight: 800;
+    font-size: 9pt;
+    color: var(--blue);
+    letter-spacing: 0.06em;
+  }
+  .footer-logo .teal { color: var(--teal); }
+  .page-footer a { color: var(--teal); text-decoration: none; }
+
+  /* ─── BADGE ─── */
+  .badge {
+    display: inline-block;
+    background: var(--teal);
+    color: var(--white);
+    font-size: 6pt;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 1px 6px;
+    border-radius: 10px;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+  .badge-blue { background: var(--blue); }
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════
+     PAGE 1
+════════════════════════════════════ -->
+<div class="page">
+
+  <div class="page-header">
+    <div>
+      <div class="logo">REC<span class="teal">A</span>LL&nbsp;W<span class="teal">I</span>RE</div>
+      <div class="logo-sub">www.recallwire.com</div>
+    </div>
+    <div class="doc-meta">
+      <span class="label">PRODUCT OVERVIEW</span>
+      Healthcare Recall Management<br>
+      Medical Device &amp; Pharmaceutical<br>
+      April 2026
+    </div>
+  </div>
+
+  <div class="intro-strip">
+    AI-powered recall management for the full healthcare supply chain — medical devices and pharmaceuticals — automated inventory matching and complete compliance documentation, one platform.
+  </div>
+
+  <div class="content">
+
+    <!-- STAT BAR -->
+    <div class="stat-bar">
+      <div class="stat-card">
+        <span class="stat-num">10x</span>
+        <div class="stat-lbl">Faster recall<br>response</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">98%</span>
+        <div class="stat-lbl">Alert noise<br>eliminated</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">100%</span>
+        <div class="stat-lbl">Audit<br>traceability</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">747%</span>
+        <div class="stat-lbl">ROI, mid-size<br>health system</div>
+      </div>
+    </div>
+
+    <!-- PROBLEM -->
+    <div class="sh"><span class="dot"></span> The Problem: Recall Volume Is Accelerating — Across Both Categories</div>
+
+    <p>Healthcare facilities face recall exposure across two critical domains. Most still manage both with spreadsheets, inboxes, and manual cross-referencing. The volume is unsustainable — and the compliance stakes have never been higher.</p>
+
+    <div class="two-col">
+      <div class="col-box">
+        <div class="col-title">Medical Device Recalls</div>
+        <ul>
+          <li><strong>2,812+</strong> device recalls in 2025 — unprecedented volume</li>
+          <li><strong>75+ Class I recalls in 2024</strong> — 15-year high since 2009</li>
+          <li>11.1% caused by device failures — highest rate in 5+ years</li>
+          <li>FDA processing lags <strong>25–45 days</strong> behind real-time manufacturer actions</li>
+          <li>UDI matching across complex multi-site inventories is still largely manual</li>
+          <li>Joint Commission requires documented response at every facility</li>
+        </ul>
+      </div>
+      <div class="col-box">
+        <div class="col-title">Pharmaceutical Recalls</div>
+        <ul>
+          <li>FDA issues <strong>hundreds of drug recalls annually</strong> — Class I through III</li>
+          <li>DSCSA compliance requires lot-level drug traceability across the supply chain</li>
+          <li>NDC and lot number matching across formularies remains largely manual</li>
+          <li>Pharmacy teams receive alerts via separate channels — no unified recall view</li>
+          <li>Contamination, mislabeling, and counterfeit events demand immediate, documented response</li>
+          <li>Documentation required for DEA, state boards, and accreditation bodies</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="ct">⚠ The Common Thread</div>
+      Whether it's a recalled infusion pump or a contaminated injectable — the failure is the same: manual processes, fragmented alerts, and documentation that can't survive an audit. A Materials Manager or Director of Pharmacy spends <strong>20–40 hours</strong> on a single significant recall event. RecallWire eliminates that entirely.
+    </div>
+
+    <!-- WHO WE SERVE -->
+    <div class="sh"><span class="dot"></span> Who RecallWire Serves</div>
+
+    <div class="three-col">
+      <div class="scope-card">
+        <div class="sc-cat">Medical Devices</div>
+        <div class="sc-title">Hospitals &amp; Health Systems</div>
+        <div class="sc-desc">Materials Managers, Supply Chain Directors, Biomedical Engineering — device recall tracking across surgical instruments, imaging equipment, implantables, and capital equipment at every location.</div>
+      </div>
+      <div class="scope-card">
+        <div class="sc-cat">Pharmaceuticals</div>
+        <div class="sc-title">Pharmacy &amp; Drug Supply Chain</div>
+        <div class="sc-desc">Directors of Pharmacy, Pharmacy Managers, GPO and distributor partners — drug recall management with NDC/lot matching and full DSCSA compliance documentation, automatically generated.</div>
+      </div>
+      <div class="scope-card">
+        <div class="sc-cat">Compliance &amp; Quality</div>
+        <div class="sc-title">Risk &amp; Quality Teams</div>
+        <div class="sc-desc">Quality Directors, Risk Managers, Compliance Officers — one unified audit trail across device and drug recalls for Joint Commission, FDA, state regulators, and accreditation bodies.</div>
+      </div>
+    </div>
+
+  </div><!-- /content -->
+
+  <div class="page-footer">
+    <div class="footer-logo">REC<span class="teal">A</span>LL&nbsp;W<span class="teal">I</span>RE</div>
+    <div>Healthcare Recall Management — Medical Device &amp; Pharmaceutical &nbsp;·&nbsp; April 2026</div>
+    <div><a href="https://www.recallwire.com">www.recallwire.com</a></div>
+  </div>
+
+</div><!-- /page 1 -->
+
+
+<!-- ════════════════════════════════════
+     PAGE 2
+════════════════════════════════════ -->
+<div class="page">
+
+  <div class="p2-header">
+    <div class="p2-logo">REC<span class="teal">A</span>LL&nbsp;W<span class="teal">I</span>RE</div>
+    <div class="p2-meta">Healthcare Recall Management — Medical Device &amp; Pharmaceutical &nbsp;·&nbsp; www.recallwire.com</div>
+  </div>
+
+  <div class="content">
+
+    <!-- HOW IT WORKS -->
+    <div class="sh"><span class="dot"></span> How RecallWire Works — One Platform, Both Domains</div>
+
+    <div class="workflow">
+      <div class="wf-step">
+        <div class="wf-num">1</div>
+        <div class="wf-name">Detect</div>
+        <div class="wf-desc">Monitors FDA recall databases and manufacturer signals in real time — for both medical devices and pharmaceuticals. New alerts are ingested 25–45 days ahead of traditional notification methods.</div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-num">2</div>
+        <div class="wf-name">Match</div>
+        <div class="wf-desc">AI cross-references each recall against your specific inventory — device UDIs and drug NDCs/lot numbers — across every location. 98% of irrelevant alerts are eliminated automatically.</div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-num">3</div>
+        <div class="wf-name">Resolve</div>
+        <div class="wf-desc">Guided workflows walk your team through every required action — quarantine, return, destruction, patient notification. Audit-ready compliance reports generate automatically for Joint Commission and FDA.</div>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="sh"><span class="dot"></span> Results That Matter</div>
+
+    <div class="mini-stats">
+      <div class="mini-stat">
+        <div class="mini-num">10x</div>
+        <div class="mini-lbl">Faster response<br>40 hrs → 4 hrs</div>
+      </div>
+      <div class="mini-stat">
+        <div class="mini-num">98%</div>
+        <div class="mini-lbl">Noise eliminated<br>device &amp; pharma</div>
+      </div>
+      <div class="mini-stat">
+        <div class="mini-num">60%</div>
+        <div class="mini-lbl">Fewer manual<br>workflow steps</div>
+      </div>
+      <div class="mini-stat">
+        <div class="mini-num">4–8 wk</div>
+        <div class="mini-lbl">To go live — no<br>IT project required</div>
+      </div>
+    </div>
+
+    <!-- PRICING -->
+    <div class="sh"><span class="dot"></span> Pricing</div>
+
+    <div class="pricing-grid">
+      <div class="price-card featured">
+        <div class="price-tier">Standard <span class="badge">1–5 Locations</span></div>
+        <div class="price-num">$4,999 <span>/year</span></div>
+        <div class="price-sub">Or $449/month billed monthly</div>
+        <ul>
+          <li>Full recall lifecycle — devices &amp; pharmaceuticals</li>
+          <li>500 AI queries/month · Audit-ready documentation</li>
+          <li>Basic support · Live in 4–8 weeks</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <div class="price-tier">Enterprise <span class="badge badge-blue">6+ Locations</span></div>
+        <div class="price-num">$25,000+ <span>/year</span></div>
+        <div class="price-sub">Custom quote; volume discounts at 15+ locations</div>
+        <ul>
+          <li>Unlimited AI · Custom device &amp; pharma workflows</li>
+          <li>Dedicated CSM · SSO &amp; EHR/ERP integration</li>
+          <li>Advanced analytics · Multi-site command center</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout callout-teal">
+      <div class="ct">RMaaS — Recall Management as a Service</div>
+      The only managed option in the market. Essentials $499/mo · Core $999/mo · Complete $2,499/mo — dedicated RecallWire specialists handle daily triage, active management, vendor communication, and audit support across medical devices and pharmaceuticals.
+    </div>
+
+    <!-- WHY RECALLWIRE -->
+    <div class="sh"><span class="dot"></span> Why RecallWire</div>
+
+    <table>
+      <thead><tr><th>Compared To</th><th>RecallWire Advantage</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Inmar / OneRecall</strong> — legacy market leader, ~60% share</td>
+          <td>Modern AI, transparent pricing, device &amp; pharma in one platform, 10x faster implementation</td>
+        </tr>
+        <tr>
+          <td><strong>ECRI Alerts</strong> — premium enterprise (~$76K/yr)</td>
+          <td>40% lower cost; 24/7 AI vs. a human advisor who isn't available at 2 AM during a Class I event</td>
+        </tr>
+        <tr>
+          <td><strong>PAR Excellence</strong> — basic task notifications</td>
+          <td>PAR logs that a recall was received. RecallWire documents that every device and drug is accounted for and closed — what auditors require</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout callout-blue">
+      <div class="ct">Ready to See It in Action?</div>
+      RecallWire is actively onboarding channel partners and direct clients. Whether your relationships are on the device side, the pharma side, or both — RecallWire's platform covers the full healthcare recall landscape. Contact <strong>dan.roffino@recallwire.com</strong> or visit <strong>www.recallwire.com</strong> to schedule a demo.
+    </div>
+
+  </div><!-- /content -->
+
+  <div class="page-footer">
+    <div class="footer-logo">REC<span class="teal">A</span>LL&nbsp;W<span class="teal">I</span>RE</div>
+    <div>Healthcare Recall Management — Medical Device &amp; Pharmaceutical &nbsp;·&nbsp; April 2026</div>
+    <div><a href="https://www.recallwire.com">www.recallwire.com</a></div>
+  </div>
+
+</div><!-- /page 2 -->
+
+</body>
+</html>
